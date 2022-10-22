@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b563c37b37d64713aaf49dbdba319155, type: 3}
   m_Name: SingletonAsset
   m_EditorClassIdentifier: 
-  singletons: []
+  singletons:
+  - {fileID: 11400000}
