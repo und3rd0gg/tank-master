@@ -20,6 +20,12 @@ namespace TankMaster.Infrastructure
 
         private IEnumerator LoadScene(string sceneName, Action onLoaded = null)
         {
+            if (SceneManager.GetActiveScene().name == sceneName)
+            {
+                onLoaded?.Invoke();
+                yield break;
+            }
+            
             var waitNextScene = SceneManager.LoadSceneAsync(sceneName);
 
             while (!waitNextScene.isDone)

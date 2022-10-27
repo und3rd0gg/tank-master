@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TankMaster.Infrastructure.GameStates;
+using UnityEngine;
 
 namespace TankMaster.Infrastructure
 {
@@ -8,7 +9,7 @@ namespace TankMaster.Infrastructure
 
         private void Awake()
         {
-            _game = new Game();
+            _game = new Game(this);
             _game.StateMachine.Enter<BootstrapState>();
             DontDestroyOnLoad(this);
         }
