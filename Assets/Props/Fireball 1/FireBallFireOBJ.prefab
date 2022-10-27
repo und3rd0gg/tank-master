@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 450904}
   - component: {fileID: 13576440}
   - component: {fileID: 5479992}
-  - component: {fileID: 11464288}
   - component: {fileID: 5316135478076422133}
+  - component: {fileID: 2432700707682084373}
   m_Layer: 0
   m_Name: FireBallFireOBJ
   m_TagString: Missile
@@ -46,7 +46,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5479992
 Rigidbody:
@@ -64,23 +64,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11464288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactParticle: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
-  projectileParticle: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 3}
-  muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
-  colliderRadius: 0.1
-  collideOffset: 0.1
 --- !u!114 &5316135478076422133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,4 +76,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5baa5e1b4f4fb8b4602a92e0dc06e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _impactRadius: 0.5
   _rigidbody: {fileID: 5479992}
+  _flyTime: 2.5
+--- !u!114 &2432700707682084373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd792ba652cacb749911168867893a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 5316135478076422133}
+  impactParticle: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  projectileParticle: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 3}
+  muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
+  colliderRadius: 1
+  collideOffset: 0.15

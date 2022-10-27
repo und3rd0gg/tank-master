@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using Dythervin.AutoAttach;
+using TankMaster.Gameplay.Projectiles;
+using UnityEngine;
 
 public class ETFXProjectileScript : MonoBehaviour
     {
-
+        [SerializeField][Attach] private Projectile _projectile;
 
         public GameObject impactParticle; // Effect spawned when projectile hits a collider
         public GameObject projectileParticle; // Effect attached to the gameobject as child
@@ -49,7 +51,7 @@ public class ETFXProjectileScript : MonoBehaviour
             {
                 transform.position = hit.point + (hit.normal * collideOffset); // Move projectile to point of collision
 
-                Debug.Log("collision");
+                _projectile.DoImpact();
 
                 GameObject impactP = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, hit.normal)) as GameObject; // Spawns impact effect
 

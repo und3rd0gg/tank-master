@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323b7abf7361492ca32a29ffc43cd6b6, type: 3}
   m_Name: Goblin
   m_EditorClassIdentifier: 
+  _projectiles:
+    items:
+    - <Key>k__BackingField: {fileID: 0}
+      <Value>k__BackingField: 0
+    - <Key>k__BackingField: {fileID: 0}
+      <Value>k__BackingField: 0
