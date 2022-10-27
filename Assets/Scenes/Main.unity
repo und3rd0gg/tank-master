@@ -12357,7 +12357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-82586
+  m_Name: pb_Mesh531684
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16980,30 +16980,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c635baeb0168dde44a142ef5ad8f8725, type: 3}
   m_PrefabInstance: {fileID: 1197354035}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1198419749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2255681282383591001, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-  m_PrefabInstance: {fileID: 2255681281716504236}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1198419759 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2255681282383590999, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-  m_PrefabInstance: {fileID: 2255681281716504236}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1198419760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198419749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853a9aea521741669dbed8fcccaf91a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shootPoint: {fileID: 1505394658}
-  _projectile: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}
 --- !u!1001 &1202427970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21292,37 +21268,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c635baeb0168dde44a142ef5ad8f8725, type: 3}
   m_PrefabInstance: {fileID: 1491646099}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1505394657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1505394658}
-  m_Layer: 0
-  m_Name: ShootPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1505394658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505394657}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1198419759}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1510431958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29296,21 +29241,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 605801698249196051, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: _shooter
-      value: 
-      objectReference: {fileID: 1198419760}
-    - target: {fileID: 605801698249196051, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: _missilePrefab
-      value: 
-      objectReference: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}
     - target: {fileID: 2255681282383590998, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 832437832}
     - target: {fileID: 2255681282383590998, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_VersionIndex
-      value: 3044
+      value: 3047
       objectReference: {fileID: 0}
     - target: {fileID: 2255681282383590999, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_RootOrder
