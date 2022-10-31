@@ -307,20 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305f3fc6d033440a9c18fcbc430d96d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6646393232857641890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7435156634963818627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853a9aea521741669dbed8fcccaf91a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shootPoint: {fileID: 3497605715201486203}
-  _projectile: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}
 --- !u!114 &8553601048612075751
 MonoBehaviour:
   m_ObjectHideFlags: 0

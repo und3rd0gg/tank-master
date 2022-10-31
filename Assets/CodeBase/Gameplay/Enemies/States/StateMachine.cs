@@ -27,7 +27,7 @@ namespace TankMaster.Gameplay.Enemies.States
                 _states = new Dictionary<Type, ITickableState>
                 {
                     [typeof(Idle)] = new Idle(this, _detector),
-                    [typeof(Chase)] = new Chase(this, _navMeshAgent, _shooter),
+                    [typeof(ChaseAndShoot)] = new ChaseAndShoot(this, _navMeshAgent, _shooter, _detector),
                 };
             }
         }

@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using TankMaster.Gameplay.Projectiles;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankMaster.Gameplay.Enemies
 {
-    [CreateAssetMenu(fileName = "New Enemy Profile", menuName = "Gameplay/Enemy Profile", order = 0)]
+    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     public class EnemyProfile : ScriptableObject
     {
-        public List<ProjectileInfo> ProjectileInfo;
-    }
+        [SerializeField] private ShootProfile _shootProfile;
 
-    [Serializable]
-    public struct ProjectileInfo
-    {
-        [field: SerializeField] [Tooltip("Projectile prefab")] public Projectile Projectile { get; private set; }
-        [field: SerializeField] [Tooltip("Delay between shots")] public float Delay { get; private set; }
+        public EnemyProfile()
+        {
+            _shootProfile = CreateInstance<ShootProfile>();
+        }
     }
 }
