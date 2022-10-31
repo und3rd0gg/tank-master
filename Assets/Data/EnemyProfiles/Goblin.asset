@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 323b7abf7361492ca32a29ffc43cd6b6, type: 3}
+  m_Script: {fileID: 11500000, guid: b5cec80ab06c49b9ad02fe6c4c164438, type: 3}
   m_Name: Goblin
   m_EditorClassIdentifier: 
-  ProjectileInfo:
-  - <Projectile>k__BackingField: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}
-    <Delay>k__BackingField: 3500
-  - <Projectile>k__BackingField: {fileID: 2206146130334083824, guid: f3afbc0cdb391fb43b561a754d476bde, type: 3}
-    <Delay>k__BackingField: 1500
+  <ChaseCooldown>k__BackingField: 3.5
+  <ShootProfile>k__BackingField:
+    ProjectileInfo:
+    - <Projectile>k__BackingField: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}
+      <Delay>k__BackingField: 1500
+    - <Projectile>k__BackingField: {fileID: 2206146130334083824, guid: f3afbc0cdb391fb43b561a754d476bde, type: 3}
+      <Delay>k__BackingField: 3500

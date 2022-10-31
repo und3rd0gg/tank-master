@@ -10,7 +10,7 @@ namespace TankMaster.Gameplay.Enemies.States
     {
         [SerializeField] [Attach(Attach.Child)]
         private Detector _detector;
-
+        [SerializeField] [Attach] private Enemy _enemy;
         [SerializeField] [Attach] private NavMeshAgent _navMeshAgent;
         [SerializeField] [Attach] private Shooter _shooter;
 
@@ -27,7 +27,7 @@ namespace TankMaster.Gameplay.Enemies.States
                 _states = new Dictionary<Type, ITickableState>
                 {
                     [typeof(Idle)] = new Idle(this, _detector),
-                    [typeof(ChaseAndShoot)] = new ChaseAndShoot(this, _navMeshAgent, _shooter, _detector),
+                    [typeof(ChaseAndShoot)] = new ChaseAndShoot(this, _enemy.EnemyProfile, _navMeshAgent, _shooter, _detector),
                 };
             }
         }

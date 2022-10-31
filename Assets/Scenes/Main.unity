@@ -29241,29 +29241,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 354330644, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198419760, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198419760, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: _projectile
-      value: 
-      objectReference: {fileID: 2206146130334083824, guid: f3afbc0cdb391fb43b561a754d476bde, type: 3}
-    - target: {fileID: 1198419760, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
-      propertyPath: _shootProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: 13f2056b213673e4784e006ecaae957b, type: 2}
     - target: {fileID: 2255681282383590998, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 832437832}
     - target: {fileID: 2255681282383590998, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_VersionIndex
-      value: 3056
+      value: 3083
       objectReference: {fileID: 0}
     - target: {fileID: 2255681282383590999, guid: ea10951a5d2b87845b737ca8ce91a5f5, type: 3}
       propertyPath: m_RootOrder

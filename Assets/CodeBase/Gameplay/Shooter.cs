@@ -10,10 +10,15 @@ namespace TankMaster.Gameplay
     public class Shooter : MonoBehaviour
     {
         [SerializeField] private Transform _shootPoint;
-        [SerializeField] public ShootProfile _shootProfile;
-
+        
+        private ShootProfile _shootProfile;
         private IDamageable _target;
         private CancellationTokenSource _shootTasksToken;
+
+        private void Awake()
+        {
+            _shootProfile = GetComponent<Enemy>().EnemyProfile.ShootProfile;
+        }
 
         private void OnEnable()
         {
@@ -43,8 +48,9 @@ namespace TankMaster.Gameplay
 
         private void Shoot(Transform target, Projectile projectile)
         {
-            var proj = Instantiate(projectile, _shootPoint.position, Quaternion.identity);
-            proj.Launch(_shootPoint.position, target);
+            var position = _shootPoint.position;
+            var proj = Instantiate(projectile, position, Quaternion.identity);
+            proj.Launch(position, target);
         }
         
         private async UniTask RepeatShootAsync(ProjectileInfo projectileInfo, CancellationToken cancellationToken)

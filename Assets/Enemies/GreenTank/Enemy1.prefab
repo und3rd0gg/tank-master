@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2255681282383591002}
   - component: {fileID: 2255681282383590993}
   - component: {fileID: 354330644}
+  - component: {fileID: 2485083565720256226}
   - component: {fileID: 2255681282383590992}
   - component: {fileID: 605801698249196051}
   - component: {fileID: 1198419760}
@@ -385,7 +386,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3044
+  m_VersionIndex: 3080
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -515,7 +516,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 7
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -523,6 +524,19 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2485083565720256226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255681282383591001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3760b59ca58b4f15a6bc9fb70e585fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyProfile: {fileID: 11400000, guid: 13f2056b213673e4784e006ecaae957b, type: 2}
 --- !u!114 &2255681282383590992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _detector: {fileID: 1049664862}
+  _enemy: {fileID: 2485083565720256226}
   _navMeshAgent: {fileID: 354330644}
   _shooter: {fileID: 1198419760}
 --- !u!114 &1198419760
@@ -558,10 +573,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2255681282383591001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 853a9aea521741669dbed8fcccaf91a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 1505394658}
-  _projectile: {fileID: 5316135478076422133, guid: 9451d4950e185b74185dd4b2f33defdf, type: 3}

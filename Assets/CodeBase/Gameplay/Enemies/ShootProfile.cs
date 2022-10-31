@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace TankMaster.Gameplay.Enemies
 {
-    [CreateAssetMenu(fileName = "New Enemy Profile", menuName = "Gameplay/Enemy Profile", order = 0)]
-    public class ShootProfile : ScriptableObject
+    [Serializable]
+    public class ShootProfile
     {
         public List<ProjectileInfo> ProjectileInfo;
     }

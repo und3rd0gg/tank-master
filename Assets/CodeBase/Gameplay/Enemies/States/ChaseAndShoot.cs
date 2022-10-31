@@ -9,17 +9,18 @@ namespace TankMaster.Gameplay.Enemies.States
     public class ChaseAndShoot : IPayloadedState<IDamageable>
     {
         private readonly StateMachine _stateMachine;
+        private readonly EnemyProfile _enemyProfile;
         private readonly NavMeshAgent _navMeshAgent;
         private readonly Shooter _shooter;
+        private readonly Detector _detector;
+        private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
         private IDamageable _target;
-        private const float StoppingDistance = 5f;
-        private const float ChaseDelay = 2.5f;
-        private Detector _detector;
-        private CancellationTokenSource _chaseCooldownCancellationToken = new();
 
-        public ChaseAndShoot(StateMachine stateMachine, NavMeshAgent navMeshAgent, Shooter shooter, Detector detector)
+        public ChaseAndShoot(StateMachine stateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
+            Shooter shooter, Detector detector)
         {
             _stateMachine = stateMachine;
+            _enemyProfile = enemyProfile;
             _navMeshAgent = navMeshAgent;
             _shooter = shooter;
             _detector = detector;
@@ -29,6 +30,7 @@ namespace TankMaster.Gameplay.Enemies.States
         {
             _target = payload;
             InitializeShooter();
+            _navMeshAgent.isStopped = false;
             _detector.ObjectDetected += OnObjectDetected;
             _detector.DetectionReleased += OnDetectionReleased;
 
@@ -71,11 +73,13 @@ namespace TankMaster.Gameplay.Enemies.States
 
         private async UniTask ChaseCooldownAsync(CancellationToken cancellationToken)
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(ChaseDelay), cancellationToken: cancellationToken);
+            await UniTask.Delay(TimeSpan.FromSeconds(_enemyProfile.ChaseCooldown),
+                cancellationToken: cancellationToken);
             _stateMachine.Enter<Idle>();
         }
 
         private bool PlayerNotReached() =>
-            Vector3.Distance(_navMeshAgent.transform.position, _target.transform.position) >= StoppingDistance;
+            Vector3.Distance(_navMeshAgent.transform.position, _target.transform.position) >=
+            _navMeshAgent.stoppingDistance;
     }
 }

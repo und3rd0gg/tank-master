@@ -2,14 +2,10 @@
 
 namespace TankMaster.Gameplay.Enemies
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "New Enemy Profile", menuName = "Gameplay/Enemy Profile", order = 0)]
     public class EnemyProfile : ScriptableObject
     {
-        [SerializeField] private ShootProfile _shootProfile;
-
-        public EnemyProfile()
-        {
-            _shootProfile = CreateInstance<ShootProfile>();
-        }
+        [field: SerializeField] public float ChaseCooldown { get; private set; } = 3f;
+        [field: SerializeField] public ShootProfile ShootProfile { get; private set; }
     }
 }
