@@ -39,7 +39,7 @@ namespace TankMaster.Infrastructure.GameStates
 
         private void CameraFollow(GameObject player)
         {
-            var followTarget = player.GetComponent<Player>().CameraFollowTarget;
+            var followTarget = player.GetComponentInChildren<Player>().CameraFollowTarget;
             var camera = GameObject.FindWithTag("MainVirtualCamera").GetComponent<CinemachineVirtualCamera>();
             camera.Follow = followTarget;
             camera.LookAt = followTarget;

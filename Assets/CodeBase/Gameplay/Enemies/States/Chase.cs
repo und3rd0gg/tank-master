@@ -1,16 +1,16 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace TankMaster.Gameplay.Enemies.States
 {
-    public class Chase : IPayloadedState<Transform>
+    public class Chase : IPayloadedState<IDamageable>
     {
         private readonly NavMeshAgent _navMeshAgent;
         private readonly Shooter _shooter;
-        private Transform _target;
+        private IDamageable _target;
+        private const int ShootDelay = 2;
         private const float StoppingDistance = 5f;
 
         public Chase(StateMachine stateMachine, NavMeshAgent navMeshAgent, Shooter shooter)
@@ -19,36 +19,35 @@ namespace TankMaster.Gameplay.Enemies.States
             _shooter = shooter;
         }
 
-        public void Exit()
-        {
-        }
-
-        public void Enter(Transform payload)
+        public void Enter(IDamageable payload)
         {
             _target = payload;
-            RepeatShoot();
+            RepeatShootAsync();
         }
+
+        public void Exit()
+        { }
 
         public void Tick()
         {
-            // if (PlayerNotReached())
-            // {
-            //     _navMeshAgent.destination = _target.position;
-            // }
-        }
-
-        private async void RepeatShoot()
-        {
-            while (true)
+            if (PlayerNotReached())
             {
-                _shooter.Shoot(_target.position);
-                await UniTask.Delay(TimeSpan.FromSeconds(2));
+                _navMeshAgent.destination = _target.transform.position;
             }
         }
 
-        private bool PlayerNotReached()
+        private bool PlayerNotReached() =>
+            Vector3.Distance(_navMeshAgent.transform.position, _target.transform.position) >= StoppingDistance;
+
+        private async void RepeatShootAsync()
         {
-            return Vector3.Distance(_navMeshAgent.transform.position, _target.position) >= StoppingDistance;
+            while (true)
+            {
+                _shooter.Shoot(_target.transform);
+                await UniTask.Delay(TimeSpan.FromSeconds(ShootDelay));
+            }
         }
+        
+        
     }
 }

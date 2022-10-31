@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private Projectile _projectile;
 
-        public void Shoot(Vector3 target)
+        public void Shoot(Transform target)
         {
             var projectile = Instantiate(_projectile, _shootPoint.position, Quaternion.identity);
             projectile.Launch(_shootPoint.position, target);

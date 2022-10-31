@@ -76,7 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5baa5e1b4f4fb8b4602a92e0dc06e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _impactRadius: 0.5
+  ImpactRadius: 0.5
+  Damage: 10
   _rigidbody: {fileID: 5479992}
   _flyTime: 2.5
 --- !u!114 &2432700707682084373
