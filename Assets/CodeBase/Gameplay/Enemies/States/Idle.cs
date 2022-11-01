@@ -25,7 +25,7 @@ namespace TankMaster.Gameplay.Enemies.States
 
         private void OnObjectDetected(GameObject source, GameObject detectedObject)
         {
-            _stateMachine.Enter<ChaseAndShoot, IDamageable>(detectedObject.GetComponent<IDamageable>());
+            _stateMachine.Enter<ChaseAndAttack, IDamageable>(detectedObject.GetComponent<IDamageable>());
         }
 
         public void Tick()

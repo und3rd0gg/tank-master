@@ -190,13 +190,29 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8080526990643980554, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8080526990643980556, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8080526990643980556, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8080526990643980558, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080526990643980558, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080526990645983182, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8982973773095360591, guid: be1cba5390326964c83a8b9f8b58f596, type: 3}
       propertyPath: m_Layer

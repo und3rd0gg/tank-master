@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 namespace TankMaster.Gameplay.Enemies.States
 {
-    public class ChaseAndShoot : IPayloadedState<IDamageable>
+    public class ChaseAndAttack : IPayloadedState<IDamageable>
     {
         private readonly StateMachine _stateMachine;
         private readonly EnemyProfile _enemyProfile;
@@ -16,7 +16,7 @@ namespace TankMaster.Gameplay.Enemies.States
         private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
         private IDamageable _target;
 
-        public ChaseAndShoot(StateMachine stateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
+        public ChaseAndAttack(StateMachine stateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
             Shooter shooter, Detector detector)
         {
             _stateMachine = stateMachine;
