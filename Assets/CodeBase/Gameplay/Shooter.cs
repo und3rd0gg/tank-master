@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using TankMaster.Gameplay.Enemies;
+using TankMaster.Gameplay.Actors.Enemies;
 using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
@@ -15,9 +15,9 @@ namespace TankMaster.Gameplay
         private IDamageable _target;
         private CancellationTokenSource _shootTasksToken;
 
-        private void Awake()
+        private void Reset()
         {
-            _shootProfile = GetComponent<Enemy>().EnemyProfile.ShootProfile;
+            enabled = false;
         }
 
         private void OnEnable()
@@ -42,6 +42,9 @@ namespace TankMaster.Gameplay
 
             void StopShootTasks() => _shootTasksToken.Cancel();
         }
+
+        public void SetShootProfile(ShootProfile shootProfile) =>
+            _shootProfile = shootProfile;
 
         public void SetTarget(IDamageable target) =>
             _target = target;

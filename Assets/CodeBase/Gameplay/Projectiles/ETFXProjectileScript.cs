@@ -1,8 +1,9 @@
 ﻿using Dythervin.AutoAttach;
-using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
-public class ETFXProjectileScript : MonoBehaviour
+namespace TankMaster.Gameplay.Projectiles
+{
+    public class ETFXProjectileScript : MonoBehaviour
     {
         [SerializeField][Attach] private Projectile _projectile;
 
@@ -27,10 +28,10 @@ public class ETFXProjectileScript : MonoBehaviour
 		
         void FixedUpdate()
         {	
-			if (GetComponent<Rigidbody>().velocity.magnitude != 0)
-			{
-			    transform.rotation = Quaternion.LookRotation(GetComponent<Rigidbody>().velocity); // Sets rotation to look at direction of movement
-			}
+            if (GetComponent<Rigidbody>().velocity.magnitude != 0)
+            {
+                transform.rotation = Quaternion.LookRotation(GetComponent<Rigidbody>().velocity); // Sets rotation to look at direction of movement
+            }
 			
             RaycastHit hit;
 			
@@ -74,3 +75,4 @@ public class ETFXProjectileScript : MonoBehaviour
             }
         }
     }
+}

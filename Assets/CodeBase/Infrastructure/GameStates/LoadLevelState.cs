@@ -1,6 +1,6 @@
 ﻿using System;
 using Cinemachine;
-using TankMaster.Gameplay.MainPlayer;
+using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
 using TankMaster.Infrastructure.Services;
 using UnityEngine;
