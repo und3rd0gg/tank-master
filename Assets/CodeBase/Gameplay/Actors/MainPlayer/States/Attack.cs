@@ -31,5 +31,10 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
         {
             _shooter.enabled = false;
         }
+
+        private void SetNearestDetectedObjectAsTarget()
+        {
+            _detector.GetClosestDetectedObejct();
+        }
     }
 }

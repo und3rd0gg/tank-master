@@ -2,10 +2,9 @@
 using Cinemachine;
 using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
-using TankMaster.Infrastructure.Services;
 using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster.Logic;
 using UnityEngine;
-using Object = System.Object;
 
 namespace TankMaster.Infrastructure.GameStates
 {
@@ -54,7 +53,17 @@ namespace TankMaster.Infrastructure.GameStates
         {
             var player = _gameFactory.CreatePlayer(GameObject.FindWithTag("PlayerInitialPoint").transform.position);
             CameraFollow(player);
+            //InitSpawners();
         }
+
+        // private void InitSpawners()
+        // {
+        //     foreach (var gameObject in GameObject.FindGameObjectsWithTag("EnemySpawner"))
+        //     {
+        //         var spawner = gameObject.GetComponent<EnemySpawner>();
+        //         _gameFactory.Register(spawner);
+        //     }
+        // }
 
         private void CameraFollow(GameObject player)
         {

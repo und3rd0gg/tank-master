@@ -13,5 +13,6 @@ namespace TankMaster.Infrastructure.Factory
         public List<IProgressSaver> ProgressWriters { get; }
         public void Cleanup();
         CinemachineVirtualCamera GetVirtualCamera();
+        void Register(ISavedProgressReader progressReader);
     }
 }

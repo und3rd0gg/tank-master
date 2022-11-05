@@ -8,6 +8,8 @@ namespace TankMaster.Infrastructure.GameStates
 {
     public class BootstrapState : IState
     {
+        private const string InitialSceneName = "Initial";
+        
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
 
@@ -20,18 +22,15 @@ namespace TankMaster.Infrastructure.GameStates
 
         public void Enter()
         {
-            _sceneLoader.Load(Constants.Scenes.Initial, EnterLoadLevel);
+            _sceneLoader.Load(sceneName: InitialSceneName, EnterLoadLevel);
         }
 
         private void EnterLoadLevel()
         {
             _stateMachine.Enter<LoadProgressState>();
-            //_stateMachine.Enter<LoadLevelState, string>(Constants.Scenes.Main);
         }
 
-        public void Exit()
-        {
-        }
+        public void Exit() { }
 
         private void RegisterServices()
         {

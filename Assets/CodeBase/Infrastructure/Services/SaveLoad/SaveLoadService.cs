@@ -18,8 +18,7 @@ namespace TankMaster.Infrastructure.Services.SaveLoad
             _gameFactory = gameFactory;
             _progressService = progressService;
         }
-
-        [MenuItem("Tools/Save Progress")]
+        
         public void SaveProgress()
         {
             foreach (var writer in _gameFactory.ProgressWriters)

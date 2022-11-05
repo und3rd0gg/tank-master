@@ -1,4 +1,5 @@
 ﻿using Dythervin.AutoAttach;
+using TankMaster.StaticData;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Actors.Enemies

@@ -22,12 +22,9 @@ namespace TankMaster.Infrastructure.GameStates
         {
             LoadProgressOrInitNew();
             _stateMachine.Enter<LoadLevelState, string>(_progressService.PlayerProgress.LastLevel);
-            //_stateMachine.Enter<GameLoopState>();
         }
 
-        public void Exit()
-        {
-        }
+        public void Exit() { }
 
         private void LoadProgressOrInitNew()
         {

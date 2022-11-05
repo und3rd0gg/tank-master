@@ -2,6 +2,7 @@
 using Cinemachine;
 using TankMaster.Infrastructure.AssetManagement;
 using TankMaster.Infrastructure.Services.PersistentProgress;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace TankMaster.Infrastructure.Factory
@@ -9,6 +10,7 @@ namespace TankMaster.Infrastructure.Factory
     public class GameFactory : IGameFactory
     {
         private const string MainVirtualCameraTag = "MainVirtualCamera";
+
         private readonly IAssetProvider _assetProvider;
 
         public List<ISavedProgressReader> ProgressReaders { get; } = new();
@@ -23,7 +25,7 @@ namespace TankMaster.Infrastructure.Factory
 
         public GameObject CreatePlayer(Vector3 creationPoint)
         {
-            return _assetProvider.Instantiate(AssetPaths.MainPlayer, creationPoint, Quaternion.Euler(0, 90, 0));
+            return InstantiateRegistered(AssetPaths.MainPlayer, Vector3.zero, Quaternion.Euler(0,90,0));
         }
 
         public void Cleanup()
@@ -32,8 +34,28 @@ namespace TankMaster.Infrastructure.Factory
             ProgressWriters.Clear();
         }
 
-        public CinemachineVirtualCamera GetVirtualCamera() => 
+        public CinemachineVirtualCamera GetVirtualCamera() =>
             _virtualCamera ??= GameObject.FindWithTag(MainVirtualCameraTag).GetComponent<CinemachineVirtualCamera>();
+
+        public void Register(ISavedProgressReader progressReader)
+        {
+            if (progressReader is IProgressSaver progressWriter)
+                ProgressWriters.Add(progressWriter);
+
+            ProgressReaders.Add(progressReader);
+        }
+
+        private GameObject InstantiateRegistered(string prefabPath, Vector3 creationPoint, Quaternion startRotation)
+        {
+            var gameObject = _assetProvider.Instantiate(prefabPath, creationPoint, startRotation);
+            RegisterProgressWatchers(gameObject);
+            return gameObject;
+        }
+
+        private GameObject InstantiateRegistered(string prefabPath)
+        {
+            return InstantiateRegistered(prefabPath, Vector3.zero, Quaternion.identity);
+        }
 
         private void RegisterProgressWatchers(GameObject gameObject)
         {
@@ -41,14 +63,6 @@ namespace TankMaster.Infrastructure.Factory
             {
                 Register(reader);
             }
-        }
-
-        private void Register(ISavedProgressReader progressReader)
-        {
-            if(progressReader is IProgressSaver progressWriter)
-                ProgressWriters.Add(progressWriter);
-
-            ProgressReaders.Add(progressReader);
         }
     }
 }
