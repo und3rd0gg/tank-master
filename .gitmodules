@@ -4,6 +4,3 @@
 [submodule "Assets/Plugins/unity.auto-attach"]
 	path = Assets/Plugins/unity.auto-attach
 	url = https://github.com/dythervin/unity.auto-attach.git
-[submodule "Assets/Plugins/unity.serialized-reference"]
-	path = Assets/Plugins/unity.serialized-reference
-	url = https://github.com/dythervin/unity.serialized-reference.git

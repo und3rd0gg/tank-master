@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster.Infrastructure.Services.SaveLoad;
 
 namespace TankMaster.Infrastructure.GameStates
 {
@@ -12,11 +16,17 @@ namespace TankMaster.Infrastructure.GameStates
         public GameStateMachine(SceneLoader sceneLoader)
         {
             _sceneLoader = sceneLoader;
-            
+            var services = AllServices.Container;
+
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, _sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, _sceneLoader),
+                [typeof(LoadLevelState)] = new LoadLevelState(this, _sceneLoader, services.Single<IGameFactory>(),
+                    services.Single<IPersistentProgressService>()),
+                [typeof(LoadProgressState)] =
+                    new LoadProgressState(this, services.Single<IPersistentProgressService>(),
+                        services.Single<ISaveLoadService>()),
+                [typeof(GameLoopState)] = new GameLoopState(this),
             };
         }
 

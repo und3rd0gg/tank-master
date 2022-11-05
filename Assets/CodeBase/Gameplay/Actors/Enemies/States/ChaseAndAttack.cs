@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
 {
     public class ChaseAndAttack : IPayloadedState<IDamageable>
     {
-        private readonly StateMachine _stateMachine;
+        private readonly EnemyStateMachine _enemyStateMachine;
         private readonly EnemyProfile _enemyProfile;
         private readonly NavMeshAgent _navMeshAgent;
         private readonly Shooter _shooter;
@@ -16,10 +16,10 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
         private IDamageable _target;
 
-        public ChaseAndAttack(StateMachine stateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
+        public ChaseAndAttack(EnemyStateMachine enemyStateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
             Shooter shooter, Detector detector)
         {
-            _stateMachine = stateMachine;
+            _enemyStateMachine = enemyStateMachine;
             _enemyProfile = enemyProfile;
             _navMeshAgent = navMeshAgent;
             _shooter = shooter;
@@ -75,7 +75,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         {
             await UniTask.Delay(TimeSpan.FromSeconds(_enemyProfile.ChaseCooldown),
                 cancellationToken: cancellationToken);
-            _stateMachine.Enter<Idle>();
+            _enemyStateMachine.Enter<Idle>();
         }
 
         private bool PlayerNotReached() =>

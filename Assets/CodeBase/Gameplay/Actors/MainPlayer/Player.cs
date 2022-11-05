@@ -1,19 +1,15 @@
+using Dythervin.AutoAttach;
 using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Actors.MainPlayer
 {
-    public class Player : MonoBehaviour, IActor, IDamageable
+    public class Player : MonoBehaviour, IActor
     {
         [field: SerializeField] public Transform CameraFollowTarget { get; private set; }
-        [SerializeField] private Health _health;
+        [field: SerializeField][field: Attach] public Health Health { get; private set; }
         [SerializeField] private ShootProfile _shootProfile;
         [SerializeField] private Shooter _shooter;
-
-        public uint Health => _health.Value;
-
-        public void ApplyDamage(uint damage) => 
-            _health.Value -= damage;
 
         private void Awake()
         {

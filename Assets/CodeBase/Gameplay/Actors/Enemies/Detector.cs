@@ -54,6 +54,31 @@ namespace TankMaster.Gameplay.Actors.Enemies
             }
         }
 
+        public Transform GetClosestDetectedObject()
+        {
+            Transform _closestObject;
+
+            if (DetectedObjects.Count < 1)
+                return null;
+
+            _closestObject = DetectedObjects[0].transform;
+
+            for (int i = 1; i < DetectedObjects.Count; i++)
+            {
+                var distanceToClosestObject = Vector3.Distance(transform.position, _closestObject.position);
+                var distanceToCurrentObject =
+                    Vector3.Distance(transform.position, DetectedObjects[i].transform.position);
+
+                if (distanceToCurrentObject < distanceToClosestObject)
+                    _closestObject = DetectedObjects[i].transform;
+            }
+
+            return _closestObject;
+        }
+
+        public GameObject GetClosestDetectedObejct() => 
+            GetClosestDetectedObejct().gameObject;
+
         private void OnTriggerEnter(Collider other)
         {
             if (IsColliderDetectableObject(other, out var detectedObject))

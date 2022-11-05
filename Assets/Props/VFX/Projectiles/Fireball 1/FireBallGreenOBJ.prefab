@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &128572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450904}
+  - component: {fileID: 13576440}
+  - component: {fileID: 5479992}
+  - component: {fileID: 6389342816050689637}
+  - component: {fileID: 2206146130334083824}
+  - component: {fileID: 3494460643094599185}
+  m_Layer: 0
+  m_Name: FireBallGreenOBJ
+  m_TagString: Missile
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.313633, y: 5.892903, z: -13.319157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &13576440
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5479992
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6389342816050689637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd792ba652cacb749911168867893a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 2206146130334083824}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 1082368
+  impactParticle: {fileID: 150592, guid: 2c82b2af38b82f442bd9a24539b8d33c, type: 3}
+  projectileParticle: {fileID: 122746, guid: 2600ac3c92a32344aac7a38b64dc2f5c, type: 3}
+  muzzleParticle: {fileID: 132130, guid: db3d9495050fd0541a5cf71c72d85e54, type: 3}
+  colliderRadius: 0.15
+  collideOffset: 0.15
+--- !u!114 &2206146130334083824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89abdd58ba1d48b48b3e724daf6023b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpactRadius: 0.5
+  Damage: 10
+  _rigidbody: {fileID: 5479992}
+  _launchForce: 10
+--- !u!114 &3494460643094599185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb20d64deb4107499b277b77fae6ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lifeTime: 3
+  m_onNewTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+  m_searchRange: 10
+  m_searchAngle: 30
+  m_canLooseTarget: 1
+  m_guidanceIntensity: 3
+  m_distanceInfluence:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_targetOffset: {x: 0, y: 0.3, z: 0}
+  m_targetTag: Player
+  m_zoneColor: {r: 255, g: 0, b: 155, a: 0.1}
+  m_lineColor: {r: 255, g: 0, b: 155, a: 1}
+  m_drawSearchZone: 1

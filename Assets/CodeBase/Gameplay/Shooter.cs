@@ -40,7 +40,8 @@ namespace TankMaster.Gameplay
         {
             StopShootTasks();
 
-            void StopShootTasks() => _shootTasksToken.Cancel();
+            void StopShootTasks() => 
+                _shootTasksToken.Cancel();
         }
 
         public void SetShootProfile(ShootProfile shootProfile) =>
@@ -61,7 +62,7 @@ namespace TankMaster.Gameplay
             while (true)
             {
                 Shoot(_target.transform, projectileInfo.Projectile);
-                await UniTask.Delay(TimeSpan.FromMilliseconds(projectileInfo.Delay),
+                await UniTask.Delay(TimeSpan.FromSeconds(projectileInfo.Delay),
                     cancellationToken: cancellationToken);
             }
         }

@@ -6,7 +6,9 @@ namespace TankMaster.Gameplay
     {
         public GameObject gameObject { get; }
         public Transform transform { get; }
-        public uint Health { get; }
-        public void ApplyDamage(uint damage);
+        public Health Health { get; }
+
+        public void ApplyDamage(uint damage) => 
+            Health.ApplyDamage(damage);
     }
 }

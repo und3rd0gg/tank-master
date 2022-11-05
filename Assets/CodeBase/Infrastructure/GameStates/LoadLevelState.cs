@@ -3,6 +3,7 @@ using Cinemachine;
 using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
 using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 using Object = System.Object;
 
@@ -13,12 +14,15 @@ namespace TankMaster.Infrastructure.GameStates
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
         private IGameFactory _gameFactory;
+        private readonly IPersistentProgressService _progressService;
 
-        public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader)
+        public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, IGameFactory gameFactory,
+            IPersistentProgressService progressService)
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
-            _gameFactory = AllServices.Container.Single<IGameFactory>();
+            _gameFactory = gameFactory;
+            _progressService = progressService;
         }
 
         public void Exit()
@@ -28,10 +32,25 @@ namespace TankMaster.Infrastructure.GameStates
 
         public void Enter(string payload)
         {
+            _gameFactory.Cleanup();
             _sceneLoader.Load(payload, OnSceneLoaded);
         }
 
         private void OnSceneLoaded()
+        {
+            InitGameWorld();
+            InformProgressReaders();
+        }
+
+        private void InformProgressReaders()
+        {
+            foreach (var progressReader in _gameFactory.ProgressReaders)
+            {
+                progressReader.LoadProgress(_progressService.PlayerProgress);
+            }
+        }
+
+        private void InitGameWorld()
         {
             var player = _gameFactory.CreatePlayer(GameObject.FindWithTag("PlayerInitialPoint").transform.position);
             CameraFollow(player);

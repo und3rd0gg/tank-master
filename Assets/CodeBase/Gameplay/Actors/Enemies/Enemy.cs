@@ -3,12 +3,11 @@ using UnityEngine;
 
 namespace TankMaster.Gameplay.Actors.Enemies
 {
-    public class Enemy : MonoBehaviour, IActor, IDamageable
+    public class Enemy : MonoBehaviour, IActor
     {
         [field: SerializeField] public EnemyProfile EnemyProfile;
+        [field: SerializeField][field: Attach]public Health Health { get; private set; }
         [SerializeField][Attach] private Shooter _shooter;
-
-        public uint Health { get; }
 
         private void Awake()
         {
@@ -17,10 +16,5 @@ namespace TankMaster.Gameplay.Actors.Enemies
 
         private void InitializeShooterComponent() => 
             _shooter.SetShootProfile(EnemyProfile.ShootProfile);
-
-        public void ApplyDamage(uint damage)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

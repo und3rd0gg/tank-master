@@ -1,5 +1,5 @@
 ﻿namespace TankMaster.Gameplay
 {
-    public interface IActor
+    public interface IActor : IDamageable
     { }
 }

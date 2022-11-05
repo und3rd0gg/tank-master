@@ -4,18 +4,13 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
 {
     public class Idle : IDefaultState
     {
-        private readonly StateMachine _stateMachine;
+        private readonly EnemyStateMachine _enemyStateMachine;
         private readonly Detector _detector;
 
-        public Idle(StateMachine stateMachine, Detector detector)
+        public Idle(EnemyStateMachine enemyStateMachine, Detector detector)
         {
-            _stateMachine = stateMachine;
+            _enemyStateMachine = enemyStateMachine;
             _detector = detector;
-        }
-
-        public void Exit()
-        {
-            _detector.ObjectDetected -= OnObjectDetected;
         }
 
         public void Enter()
@@ -23,12 +18,17 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
             _detector.ObjectDetected += OnObjectDetected;
         }
 
-        private void OnObjectDetected(GameObject source, GameObject detectedObject)
+        public void Exit()
         {
-            _stateMachine.Enter<ChaseAndAttack, IDamageable>(detectedObject.GetComponent<IDamageable>());
+            _detector.ObjectDetected -= OnObjectDetected;
         }
 
         public void Tick()
         { }
+
+        private void OnObjectDetected(GameObject source, GameObject detectedObject)
+        {
+            _enemyStateMachine.Enter<ChaseAndAttack, IDamageable>(detectedObject.GetComponent<IDamageable>());
+        }
     }
 }
