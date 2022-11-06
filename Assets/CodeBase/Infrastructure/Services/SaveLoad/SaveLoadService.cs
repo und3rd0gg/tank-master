@@ -1,7 +1,6 @@
 ﻿using TankMaster.Data;
 using TankMaster.Infrastructure.Factory;
 using TankMaster.Infrastructure.Services.PersistentProgress;
-using UnityEditor;
 using UnityEngine;
 
 namespace TankMaster.Infrastructure.Services.SaveLoad

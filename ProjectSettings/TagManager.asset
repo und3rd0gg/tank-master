@@ -8,6 +8,7 @@ TagManager:
   - MainVirtualCamera
   - PlayerInitialPoint
   - Missile
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

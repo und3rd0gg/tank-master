@@ -18,13 +18,19 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
 
         public void Enter()
         {
-            _shooter.SetTarget(_detector.DetectedObjects[0].GetComponent<IDamageable>());
+            SetNearestDetectedObjectAsTarget();
             _shooter.enabled = true;
         }
 
         public void Tick()
         {
-            //_shooter.SetTarget(_detector.DetectedObjects[0].GetComponent<IDamageable>());
+            if (_detector.DetectedObjects.Count < 1)
+            {
+                _stateMachine.Enter<Idle>();
+                return;
+            }
+            
+            SetNearestDetectedObjectAsTarget();
         }
 
         public void Exit()
@@ -32,9 +38,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
             _shooter.enabled = false;
         }
 
-        private void SetNearestDetectedObjectAsTarget()
-        {
-            _detector.GetClosestDetectedObejct();
-        }
+        private void SetNearestDetectedObjectAsTarget() => 
+            _shooter.SetTarget(_detector.GetClosestEnemy());
     }
 }

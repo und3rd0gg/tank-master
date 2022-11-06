@@ -9,10 +9,11 @@ namespace TankMaster.Gameplay
 {
     public class Shooter : MonoBehaviour
     {
-        [SerializeField] private Transform _shootPoint;
-        
+        [SerializeField] private ShootPoints _shootPoints;
+        [SerializeField] private EnemyAnimator _enemyAnimator;
+
         private ShootProfile _shootProfile;
-        private IDamageable _target;
+        private Transform _target;
         private CancellationTokenSource _shootTasksToken;
 
         private void Reset()
@@ -22,6 +23,7 @@ namespace TankMaster.Gameplay
 
         private void OnEnable()
         {
+            _enemyAnimator.Attacked += OnAttack;
             RunShootTasks();
 
             void RunShootTasks()
@@ -38,23 +40,43 @@ namespace TankMaster.Gameplay
 
         private void OnDisable()
         {
+            _enemyAnimator.Attacked -= OnAttack;
             StopShootTasks();
 
             void StopShootTasks() => 
                 _shootTasksToken.Cancel();
         }
 
+        private void OnAttack()
+        {
+            Shoot(_target.transform, _shootProfile.ProjectileInfo[0].Projectile);
+        }
+
         public void SetShootProfile(ShootProfile shootProfile) =>
             _shootProfile = shootProfile;
 
-        public void SetTarget(IDamageable target) =>
+        public void SetTarget(Transform target) =>
             _target = target;
 
         private void Shoot(Transform target, Projectile projectile)
         {
-            var position = _shootPoint.position;
-            var proj = Instantiate(projectile, position, Quaternion.identity);
-            proj.Launch(position, target);
+            var spawnPoint = Vector3.zero;
+
+            switch (projectile)
+            {
+                case Bullet bullet:
+                    spawnPoint = _shootPoints.BulletShootPoint.position; 
+                    break;
+                case Missile missile:
+                    spawnPoint = _shootPoints.MissileShootPoint1.position;
+                    break;
+                case HomingMissile homingMissile:
+                    spawnPoint = _shootPoints.MissileShootPoint2.position;
+                    break;
+            }
+            
+            var proj = Instantiate(projectile, spawnPoint, Quaternion.identity);
+            proj.Launch(spawnPoint, target);
         }
         
         private async UniTask RepeatShootAsync(ProjectileInfo projectileInfo, CancellationToken cancellationToken)

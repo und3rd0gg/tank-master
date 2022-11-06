@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 namespace TankMaster.Gameplay.Actors.Enemies.States
 {
-    public class ChaseAndAttack : IPayloadedState<IDamageable>
+    public class ChaseAndAttack : IPayloadedState<Transform>
     {
         private readonly EnemyStateMachine _enemyStateMachine;
         private readonly EnemyProfile _enemyProfile;
@@ -15,7 +15,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private readonly Shooter _shooter;
         private readonly Detector _detector;
         private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
-        private IDamageable _target;
+        private Transform _target;
 
         public ChaseAndAttack(EnemyStateMachine enemyStateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
             Shooter shooter, Detector detector)
@@ -27,7 +27,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
             _detector = detector;
         }
 
-        public void Enter(IDamageable payload)
+        public void Enter(Transform payload)
         {
             _target = payload;
             InitializeShooter();

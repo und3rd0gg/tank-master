@@ -54,7 +54,7 @@ namespace TankMaster.Gameplay.Actors.Enemies
             }
         }
 
-        Transform GetClosestEnemy()
+        public Transform GetClosestEnemy()
         {
             Transform closestEnemy = null;
             var minDist = Mathf.Infinity;

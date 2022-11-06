@@ -2,7 +2,6 @@
 using Cinemachine;
 using TankMaster.Infrastructure.AssetManagement;
 using TankMaster.Infrastructure.Services.PersistentProgress;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace TankMaster.Infrastructure.Factory

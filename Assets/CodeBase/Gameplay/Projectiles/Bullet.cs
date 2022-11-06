@@ -7,13 +7,12 @@ namespace TankMaster.Gameplay.Projectiles
     public class Bullet : Projectile
     {
         [SerializeField] [Attach] private Rigidbody _rigidbody;
-        [SerializeField] private float _flyTime = 2.5f;
+        [SerializeField] private float _launchForce;
 
         public override void Launch(Vector3 startPosition, Transform target)
         {
-            var force = Blobcreate.ProjectileToolkit.Projectile.VelocityByTime(startPosition, target.position,
-                _flyTime);
-            _rigidbody.AddForce(force, ForceMode.VelocityChange);
+            transform.LookAt(target);
+            _rigidbody.AddForce(transform.forward * _launchForce, ForceMode.VelocityChange);
         }
 
         protected override List<IDamageable> GetDamageables()
