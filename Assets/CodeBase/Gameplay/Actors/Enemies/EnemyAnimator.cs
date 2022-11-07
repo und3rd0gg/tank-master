@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay.Actors.Enemies
     public class EnemyAnimator : MonoBehaviour
     {
         private readonly int Die = Animator.StringToHash(nameof(Die));
-        private readonly int IsStopped = Animator.StringToHash(nameof(IsStopped));
+        private readonly int IsRunning = Animator.StringToHash(nameof(IsRunning));
         private readonly int IsAttacking = Animator.StringToHash(nameof(IsAttacking));
 
         public event Action Attacked;
@@ -21,10 +21,10 @@ namespace TankMaster.Gameplay.Actors.Enemies
         public void PlayDeath() =>
             _animator.SetTrigger(Die);
 
-        public void PlayRun() =>
-            _animator.SetBool(IsStopped, true);
+        public void SetRun(bool isRunning) =>
+            _animator.SetBool(IsRunning, isRunning);
 
-        public void PlayAttack() =>
-            _animator.SetBool(IsAttacking, true);
+        public void SetAttack(bool isAttacking) =>
+            _animator.SetBool(IsAttacking, isAttacking);
     }
 }

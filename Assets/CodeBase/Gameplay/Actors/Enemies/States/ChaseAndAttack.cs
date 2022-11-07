@@ -14,23 +14,26 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private readonly NavMeshAgent _navMeshAgent;
         private readonly Shooter _shooter;
         private readonly Detector _detector;
+        private readonly EnemyAnimator _enemyAnimator;
         private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
         private Transform _target;
 
         public ChaseAndAttack(EnemyStateMachine enemyStateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
-            Shooter shooter, Detector detector)
+            Shooter shooter, Detector detector, EnemyAnimator enemyAnimator)
         {
             _enemyStateMachine = enemyStateMachine;
             _enemyProfile = enemyProfile;
             _navMeshAgent = navMeshAgent;
             _shooter = shooter;
             _detector = detector;
+            _enemyAnimator = enemyAnimator;
         }
 
         public void Enter(Transform payload)
         {
             _target = payload;
             InitializeShooter();
+            _enemyAnimator.SetAttack(true);
             _navMeshAgent.isStopped = false;
             _detector.ObjectDetected += OnObjectDetected;
             _detector.DetectionReleased += OnDetectionReleased;

@@ -1439,21 +1439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305f3fc6d033440a9c18fcbc430d96d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5914596925401751141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7435156634963818627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8e89444dbe48f5913d8992bfc4ae48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _turretRotator: {fileID: 4509034153161664712}
-  _shooter: {fileID: 1319026157194210339}
-  _detector: {fileID: 1806970431762389502}
 --- !u!1001 &3963949380617627236
 PrefabInstance:
   m_ObjectHideFlags: 0

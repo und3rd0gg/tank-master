@@ -103,6 +103,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49989986
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4562500827117819787, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -160,6 +172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6223894726549358731, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: _enemyAnimator
+      value: 
+      objectReference: {fileID: 4466847853966335269}
+    - target: {fileID: 6789046868298982824, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: _enemyAnimator
       value: 
       objectReference: {fileID: 4466847853966335269}

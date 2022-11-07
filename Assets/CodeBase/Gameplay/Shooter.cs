@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using Cysharp.Threading.Tasks;
+﻿using System.Threading;
 using TankMaster.Gameplay.Actors.Enemies;
 using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
@@ -24,27 +22,15 @@ namespace TankMaster.Gameplay
         private void OnEnable()
         {
             _enemyAnimator.Attacked += OnAttack;
-            RunShootTasks();
-
-            void RunShootTasks()
-            {
-                _shootTasksToken = new();
-                var usedProjectiles = _shootProfile.ProjectileInfo;
-
-                foreach (var projectile in usedProjectiles)
-                {
-                    RepeatShootAsync(projectile, _shootTasksToken.Token);
-                }
-            }
         }
 
         private void OnDisable()
         {
             _enemyAnimator.Attacked -= OnAttack;
-            StopShootTasks();
-
-            void StopShootTasks() => 
-                _shootTasksToken.Cancel();
+            // StopShootTasks();
+            //
+            // void StopShootTasks() => 
+            //     _shootTasksToken.Cancel();
         }
 
         private void OnAttack()
@@ -58,7 +44,7 @@ namespace TankMaster.Gameplay
         public void SetTarget(Transform target) =>
             _target = target;
 
-        private void Shoot(Transform target, Projectile projectile)
+        public void Shoot(Transform target, Projectile projectile)
         {
             var spawnPoint = Vector3.zero;
 
@@ -78,15 +64,10 @@ namespace TankMaster.Gameplay
             var proj = Instantiate(projectile, spawnPoint, Quaternion.identity);
             proj.Launch(spawnPoint, target);
         }
-        
-        private async UniTask RepeatShootAsync(ProjectileInfo projectileInfo, CancellationToken cancellationToken)
+
+        public void Shoot()
         {
-            while (true)
-            {
-                Shoot(_target.transform, projectileInfo.Projectile);
-                await UniTask.Delay(TimeSpan.FromSeconds(projectileInfo.Delay),
-                    cancellationToken: cancellationToken);
-            }
+            Shoot(_target, _shootProfile.ProjectileInfo[0].Projectile);
         }
     }
 }

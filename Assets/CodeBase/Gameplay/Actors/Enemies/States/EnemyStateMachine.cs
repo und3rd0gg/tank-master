@@ -12,8 +12,9 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private Detector _detector;
 
         [SerializeField] [Attach] private Enemy _enemy;
-        [SerializeField] [Attach] private NavMeshAgent _navMeshAgent;
+        [SerializeField] [Attach] private Mover _mover;
         [SerializeField] [Attach] private Shooter _shooter;
+        [SerializeField] private EnemyAnimator _enemyAnimator;
 
         private ITickableState _activeState;
 
@@ -22,8 +23,8 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
             States = new Dictionary<Type, ITickableState>
             {
                 [typeof(Idle)] = new Idle(this, _detector),
-                [typeof(ChaseAndAttack)] =
-                    new ChaseAndAttack(this, _enemy.EnemyProfile, _navMeshAgent, _shooter, _detector),
+                [typeof(Chase)] = new Chase(this, _enemyAnimator, _enemy.EnemyProfile, _mover, _detector),
+                [typeof(Attack)] = new Attack(this, _enemyAnimator, _enemy.EnemyProfile, _shooter, _mover, _detector),
             };
         }
 

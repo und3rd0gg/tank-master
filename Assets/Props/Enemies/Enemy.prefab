@@ -74,9 +74,10 @@ GameObject:
   - component: {fileID: 5265408815732363756}
   - component: {fileID: 8368670045959756121}
   - component: {fileID: 6789046868298982824}
+  - component: {fileID: 3432188617980016892}
   - component: {fileID: 6223894726549358731}
-  - component: {fileID: 8078401547216704121}
   - component: {fileID: 6223894727315820463}
+  - component: {fileID: 8078401547216704121}
   - component: {fileID: 6223894727063751160}
   - component: {fileID: 1141283301553554146}
   - component: {fileID: 8167381925296569805}
@@ -135,8 +136,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detector: {fileID: 6223894726938475237}
   _enemy: {fileID: 8368670045959756121}
-  _navMeshAgent: {fileID: 6223894727315820463}
+  _mover: {fileID: 3432188617980016892}
   _shooter: {fileID: 6223894726549358731}
+  _enemyAnimator: {fileID: 0}
+--- !u!114 &3432188617980016892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5265408815732363746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75079ea1c644520b02622af08f2d22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: 6223894727315820463}
 --- !u!114 &6223894726549358731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,20 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoints: {fileID: 4527773381722127281}
---- !u!114 &8078401547216704121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265408815732363746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97187064407a42e18a5d99b1c83c02da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 50
-  <Value>k__BackingField: 50
+  _enemyAnimator: {fileID: 0}
 --- !u!195 &6223894727315820463
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -186,6 +188,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8078401547216704121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5265408815732363746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97187064407a42e18a5d99b1c83c02da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 50
+  <Value>k__BackingField: 50
 --- !u!114 &6223894727063751160
 MonoBehaviour:
   m_ObjectHideFlags: 0
