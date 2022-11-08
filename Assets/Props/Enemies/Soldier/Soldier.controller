@@ -31,7 +31,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dragon Spark
+  m_Name: Soldier
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsRunning
@@ -284,7 +284,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 07df210eb9f20304a92b9c33a82df75c, type: 3}
+  m_Motion: {fileID: 7400000, guid: 638d120434f593843bc81a8fc8e1af25, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -312,7 +312,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7921125393d2cb74b8f60622be713488, type: 3}
+  m_Motion: {fileID: 7400000, guid: 4df77c878aeb9024c9a2278a6833faf1, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -339,7 +339,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 13dac0aa8649d484ca62534f7003ad29, type: 3}
+  m_Motion: {fileID: 7400000, guid: 2ccfa9aa2e9de3d47b16a7a914bf5aac, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -353,7 +353,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack
-  m_Speed: 1
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3404495465534345990}
@@ -366,7 +366,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6985ad2f09dd4824793c2140309026eb, type: 3}
+  m_Motion: {fileID: 7400000, guid: c148916fd68c9954695bf85eb5ff5581, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

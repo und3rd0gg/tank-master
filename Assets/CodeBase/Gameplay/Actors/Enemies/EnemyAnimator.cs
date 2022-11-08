@@ -11,12 +11,12 @@ namespace TankMaster.Gameplay.Actors.Enemies
         private readonly int IsRunning = Animator.StringToHash(nameof(IsRunning));
         private readonly int IsAttacking = Animator.StringToHash(nameof(IsAttacking));
 
-        public event Action Attacked;
+        public event Action HasAttacked;
 
         [SerializeField] [Attach] private Animator _animator;
 
         private void OnAttack() =>
-            Attacked?.Invoke();
+            HasAttacked?.Invoke();
 
         public void PlayDeath() =>
             _animator.SetTrigger(Die);

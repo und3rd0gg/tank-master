@@ -21,12 +21,12 @@ namespace TankMaster.Gameplay
 
         private void OnEnable()
         {
-            _enemyAnimator.Attacked += OnAttack;
+            _enemyAnimator.HasAttacked += OnAttack;
         }
 
         private void OnDisable()
         {
-            _enemyAnimator.Attacked -= OnAttack;
+            _enemyAnimator.HasAttacked -= OnAttack;
             // StopShootTasks();
             //
             // void StopShootTasks() => 
