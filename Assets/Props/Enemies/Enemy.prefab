@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853a9aea521741669dbed8fcccaf91a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shootPoints: {fileID: 4527773381722127281}
+  _shootPoint: {fileID: 0}
   _enemyAnimator: {fileID: 0}
 --- !u!195 &6223894727315820463
 NavMeshAgent:
@@ -470,6 +470,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1050386686399570803, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1310126976187717081, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
       propertyPath: m_Name
       value: ShootPoints
@@ -566,21 +570,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7357174806419308696, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
 --- !u!4 &1177716586590131348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5229832115039629245, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
   m_PrefabInstance: {fileID: 6398505007978101545}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4527773381722127281 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7357174806419308696, guid: 8a4fe676d03089d48b68596a717ba44e, type: 3}
-  m_PrefabInstance: {fileID: 6398505007978101545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ca564a295588404382463e00fcd04d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

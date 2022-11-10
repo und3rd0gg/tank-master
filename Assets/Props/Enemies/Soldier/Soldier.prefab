@@ -8076,15 +8076,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.20000076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5998999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1177716586590131348, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.70000005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4562500827117819787, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8143,6 +8143,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6223894726549358731, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: _shootPoint
+      value: 
+      objectReference: {fileID: 12455583972893458}
+    - target: {fileID: 6223894726549358731, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: _navMeshAgent
+      value: 
+      objectReference: {fileID: 3285109510802805118}
+    - target: {fileID: 6223894726549358731, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: _enemyAnimator
       value: 
       objectReference: {fileID: 8601413686830391170}
@@ -8152,7 +8160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223894727315820463, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_StoppingDistance
-      value: 14
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453215628921297045, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6789046868298982824, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: _enemyAnimator
@@ -8162,8 +8174,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.2498999
       objectReference: {fileID: 0}
+    - target: {fileID: 8927536060013100483, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1792
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927536060013100483, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.577
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927536060013100483, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6181
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5849e1208df09a45916e842bde48771, type: 3}
+--- !u!4 &12455583972893458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8927536060013100483, guid: f5849e1208df09a45916e842bde48771, type: 3}
+  m_PrefabInstance: {fileID: 8919584630865043153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &3285109510802805118 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 6223894727315820463, guid: f5849e1208df09a45916e842bde48771, type: 3}
+  m_PrefabInstance: {fileID: 8919584630865043153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4167258899158794149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4764149890530894196, guid: f5849e1208df09a45916e842bde48771, type: 3}

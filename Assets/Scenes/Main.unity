@@ -9355,6 +9355,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3285109510802805118, guid: b42ac918f54dfbb4bb13f40ff7063c2d, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3664460724216696627, guid: b42ac918f54dfbb4bb13f40ff7063c2d, type: 3}
       propertyPath: m_Name
       value: Soldier
@@ -17431,10 +17435,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
-    - target: {fileID: 2657863793197082402, guid: dfafdcfebb071c74cbff905a3095161a, type: 3}
-      propertyPath: EnemyProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: 92fac2f4353297b46ad7457f59bc469d, type: 2}
     - target: {fileID: 8039099387781638640, guid: dfafdcfebb071c74cbff905a3095161a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

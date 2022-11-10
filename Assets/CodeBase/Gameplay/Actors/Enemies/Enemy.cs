@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay.Actors.Enemies
     {
         [field: SerializeField] public EnemyProfile EnemyProfile;
         [field: SerializeField][field: Attach]public Health Health { get; private set; }
-        [SerializeField][Attach] private Shooter _shooter;
+        [SerializeField][Attach] private EnemyShooter _shooter;
 
         private void Awake()
         {

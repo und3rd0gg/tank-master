@@ -8,6 +8,7 @@ namespace TankMaster.Gameplay.Actors.Enemies
     [Serializable]
     public class ShootProfile
     {
+        [field: SerializeField] public float EffectiveDistance { get; private set; }
         public List<ProjectileInfo> ProjectileInfo;
     }
 

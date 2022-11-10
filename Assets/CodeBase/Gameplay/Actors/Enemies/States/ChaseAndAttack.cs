@@ -12,14 +12,14 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private readonly EnemyStateMachine _enemyStateMachine;
         private readonly EnemyProfile _enemyProfile;
         private readonly NavMeshAgent _navMeshAgent;
-        private readonly Shooter _shooter;
+        private readonly EnemyShooter _shooter;
         private readonly Detector _detector;
         private readonly EnemyAnimator _enemyAnimator;
         private readonly CancellationTokenSource _chaseCooldownCancellationToken = new();
         private Transform _target;
 
         public ChaseAndAttack(EnemyStateMachine enemyStateMachine, EnemyProfile enemyProfile, NavMeshAgent navMeshAgent,
-            Shooter shooter, Detector detector, EnemyAnimator enemyAnimator)
+            EnemyShooter shooter, Detector detector, EnemyAnimator enemyAnimator)
         {
             _enemyStateMachine = enemyStateMachine;
             _enemyProfile = enemyProfile;

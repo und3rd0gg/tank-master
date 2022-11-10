@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2533544000934479594
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1050386686399570800
 Transform:
   m_ObjectHideFlags: 0
@@ -71,7 +71,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5229832115039629245}
-  - component: {fileID: 7357174806419308696}
   m_Layer: 0
   m_Name: ShootPoints
   m_TagString: Untagged
@@ -97,21 +96,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7357174806419308696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310126976187717081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ca564a295588404382463e00fcd04d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <BulletShootPoint>k__BackingField: {fileID: 1050386686399570800}
-  <MissileShootPoint1>k__BackingField: {fileID: 2533544000934479594}
-  <MissileShootPoint2>k__BackingField: {fileID: 8314592001254945905}
 --- !u!1 &7460402871889866962
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +111,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8314592001254945905
 Transform:
   m_ObjectHideFlags: 0

@@ -8,14 +8,14 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         private readonly EnemyStateMachine _enemyStateMachine;
         private readonly EnemyAnimator _enemyAnimator;
         private readonly EnemyProfile _enemyProfile;
-        private readonly Shooter _shooter;
+        private readonly EnemyShooter _shooter;
         private readonly Mover _mover;
         private readonly Detector _detector;
 
         private Transform _target;
 
         public Attack(EnemyStateMachine enemyStateMachine, EnemyAnimator enemyAnimator, EnemyProfile enemyProfile,
-            Shooter shooter, Mover mover, Detector detector)
+            EnemyShooter shooter, Mover mover, Detector detector)
         {
             _enemyStateMachine = enemyStateMachine;
             _enemyAnimator = enemyAnimator;
@@ -42,7 +42,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         {
             _mover.RotateToTarget(_target);
             
-            if (_mover.TargetNotReached())
+            if (!_shooter.IsInEffectiveDistance())
             {
                 _enemyStateMachine.Enter<Chase, Transform>(_target);
                 return;

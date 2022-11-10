@@ -6,10 +6,10 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
     public class Attack : IDefaultState
     {
         private readonly ActorStateMachine _stateMachine;
-        private readonly Shooter _shooter;
+        private readonly EnemyShooter _shooter;
         private readonly Detector _detector;
 
-        public Attack(ActorStateMachine stateMachine, Shooter shooter, Detector detector)
+        public Attack(ActorStateMachine stateMachine, EnemyShooter shooter, Detector detector)
         {
             _stateMachine = stateMachine;
             _shooter = shooter;

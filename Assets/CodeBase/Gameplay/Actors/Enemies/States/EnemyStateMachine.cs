@@ -13,7 +13,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
 
         [SerializeField] [Attach] private Enemy _enemy;
         [SerializeField] [Attach] private Mover _mover;
-        [SerializeField] [Attach] private Shooter _shooter;
+        [SerializeField] [Attach] private EnemyShooter _shooter;
         [SerializeField] private EnemyAnimator _enemyAnimator;
 
         private ITickableState _activeState;

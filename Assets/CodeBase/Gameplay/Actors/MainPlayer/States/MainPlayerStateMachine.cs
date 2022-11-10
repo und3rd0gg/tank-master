@@ -9,7 +9,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
     public class MainPlayerStateMachine : ActorStateMachine
     {
         [SerializeField] private TurretRotator _turretRotator;
-        [SerializeField] private Shooter _shooter;
+        [SerializeField] private EnemyShooter _shooter;
         [SerializeField] private Detector _detector;
 
         protected override void InitializeStates()
