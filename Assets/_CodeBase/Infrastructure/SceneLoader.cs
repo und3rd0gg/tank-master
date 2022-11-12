@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-namespace TankMaster.Infrastructure
+namespace TankMaster._CodeBase.Infrastructure
 {
     public class SceneLoader
     {

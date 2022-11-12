@@ -1,7 +1,7 @@
-﻿using TankMaster.Infrastructure.Services;
+﻿using TankMaster._CodeBase.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster.Infrastructure.AssetManagement
+namespace TankMaster._CodeBase.Infrastructure.AssetManagement
 {
     public interface IAssetProvider : IService
     {

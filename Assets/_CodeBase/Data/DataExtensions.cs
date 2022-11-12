@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Data
+namespace TankMaster._CodeBase.Data
 {
     public static class DataExtensions
     {

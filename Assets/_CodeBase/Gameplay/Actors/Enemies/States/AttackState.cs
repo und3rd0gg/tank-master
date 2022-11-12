@@ -1,26 +1,26 @@
-﻿using TankMaster.StaticData;
+﻿using TankMaster._CodeBase.StaticData;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies.States
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies.States
 {
-    public class Attack : IPayloadedState<Transform>
+    public class AttackState : IPayloadedState<Transform>
     {
-        private readonly EnemyStateMachine _enemyStateMachine;
+        private readonly ActorStateMachine _enemyStateMachine;
         private readonly EnemyAnimator _enemyAnimator;
         private readonly EnemyProfile _enemyProfile;
-        private readonly Shooter _shooter;
+        private readonly IAttacker _attacker;
         private readonly Mover _mover;
         private readonly Detector _detector;
 
         private Transform _target;
 
-        public Attack(EnemyStateMachine enemyStateMachine, EnemyAnimator enemyAnimator, EnemyProfile enemyProfile,
-            Shooter shooter, Mover mover, Detector detector)
+        public AttackState(EnemyStateMachine enemyStateMachine, EnemyAnimator enemyAnimator, EnemyProfile enemyProfile,
+            IAttacker attacker, Mover mover, Detector detector)
         {
             _enemyStateMachine = enemyStateMachine;
             _enemyAnimator = enemyAnimator;
             _enemyProfile = enemyProfile;
-            _shooter = shooter;
+            _attacker = attacker;
             _mover = mover;
             _detector = detector;
         }
@@ -28,13 +28,13 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         public void Enter(Transform payload)
         {
             _target = payload;
-            InitializeShooter();
+            InitializeAttacker();
             _enemyAnimator.SetAttack(true);
 
-            void InitializeShooter()
+            void InitializeAttacker()
             {
-                _shooter.SetTarget(payload);
-                _shooter.enabled = true;
+                _attacker.SetTarget(payload);
+                _attacker.enabled = true;
             }
         }
 
@@ -42,9 +42,9 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         {
             _mover.RotateToTarget(_target);
             
-            if (!_shooter.IsInEffectiveDistance())
+            if (!_attacker.IsInEffectiveDistance())
             {
-                _enemyStateMachine.Enter<Chase, Transform>(_target);
+                _enemyStateMachine.Enter<ChaseState, Transform>(_target);
                 return;
             }
         }
@@ -52,7 +52,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         public void Exit()
         {
             _enemyAnimator.SetAttack(false);
-            _shooter.enabled = false;
+            _attacker.enabled = false;
         }
     }
 }

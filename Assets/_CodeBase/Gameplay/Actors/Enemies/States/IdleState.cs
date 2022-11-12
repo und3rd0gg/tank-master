@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies.States
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies.States
 {
-    public class Idle : IDefaultState
+    public class IdleState : IDefaultState
     {
-        private readonly EnemyStateMachine _enemyStateMachine;
+        private readonly ActorStateMachine _enemyStateMachine;
         private readonly Detector _detector;
 
-        public Idle(EnemyStateMachine enemyStateMachine, Detector detector)
+        public IdleState(ActorStateMachine enemyStateMachine, Detector detector)
         {
             _enemyStateMachine = enemyStateMachine;
             _detector = detector;
@@ -28,7 +28,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
 
         private void OnObjectDetected(GameObject source, GameObject detectedObject)
         {
-            _enemyStateMachine.Enter<Chase, Transform>(detectedObject.transform);
+            _enemyStateMachine.Enter<ChaseState, Transform>(detectedObject.transform);
         }
     }
 }

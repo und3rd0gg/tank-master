@@ -1,8 +1,8 @@
-﻿using TankMaster.Infrastructure.Factory;
-using TankMaster.Infrastructure.Services;
+﻿using TankMaster._CodeBase.Infrastructure.Factory;
+using TankMaster._CodeBase.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster.Gameplay
+namespace TankMaster._CodeBase.Gameplay
 {
     public class PlayerHealth : Health
     {

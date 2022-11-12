@@ -1,4 +1,4 @@
-﻿namespace TankMaster.Infrastructure.Services
+﻿namespace TankMaster._CodeBase.Infrastructure.Services
 {
     public interface IService
     { }

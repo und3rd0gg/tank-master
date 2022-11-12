@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using TankMaster.Gameplay.Actors.Enemies;
-using TankMaster.Gameplay.Actors.Enemies.States;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies.States;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer.States
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.States
 {
     public class MainPlayerStateMachine : ActorStateMachine
     {
@@ -16,14 +16,14 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
         {
             States = new Dictionary<Type, ITickableState>
             {
-                [typeof(Idle)] = new Idle(this, _detector, _turretRotator),
-                [typeof(Attack)] = new Attack(this, _shooter, _detector),
+                [typeof(IdleState)] = new IdleState(this, _detector, _turretRotator),
+                [typeof(AttackState)] = new AttackState(this, _shooter, _detector),
             };
         }
 
         protected override void SetDefaultState()
         {
-            Enter<Idle>();
+            Enter<IdleState>();
         }
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
 using Cinemachine;
-using TankMaster.Gameplay.Actors.MainPlayer;
-using TankMaster.Infrastructure.Factory;
-using TankMaster.Infrastructure.Services.PersistentProgress;
-using TankMaster.Logic;
+using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
+using TankMaster._CodeBase.Infrastructure.Factory;
+using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
-namespace TankMaster.Infrastructure.GameStates
+namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
     public class LoadLevelState : IPayloadedState<string>
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using TankMaster.Logic;
+using TankMaster._CodeBase.Logic;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace TankMaster.CodeBase.Editor
+namespace TankMaster._CodeBase.Editor
 {
     [CustomEditor(typeof(UniqueId))]
     public class UniqueIdEditor : UnityEditor.Editor

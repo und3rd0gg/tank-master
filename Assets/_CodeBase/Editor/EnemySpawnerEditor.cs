@@ -1,8 +1,8 @@
-﻿using TankMaster.Logic;
+﻿using TankMaster._CodeBase.Logic;
 using UnityEditor;
 using UnityEngine;
 
-namespace TankMaster.CodeBase.Editor
+namespace TankMaster._CodeBase.Editor
 {
     [CustomEditor(typeof(EnemySpawner))]
     public class EnemySpawnerEditor : UnityEditor.Editor

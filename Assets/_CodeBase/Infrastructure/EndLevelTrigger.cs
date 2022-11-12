@@ -1,7 +1,7 @@
 ﻿using Dythervin.AutoAttach;
 using UnityEngine;
 
-namespace TankMaster.Infrastructure
+namespace TankMaster._CodeBase.Infrastructure
 {
     [RequireComponent(typeof(BoxCollider))]
     public class EndLevelTrigger : MonoBehaviour

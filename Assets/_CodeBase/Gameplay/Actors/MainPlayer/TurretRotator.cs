@@ -1,7 +1,7 @@
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class TurretRotator : MonoBehaviour
     {

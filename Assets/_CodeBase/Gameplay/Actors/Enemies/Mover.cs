@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
     public class Mover : MonoBehaviour
     {

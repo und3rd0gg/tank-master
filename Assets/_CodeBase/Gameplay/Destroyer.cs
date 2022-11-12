@@ -1,9 +1,8 @@
-﻿using System;
-using Dythervin.AutoAttach;
+﻿using Dythervin.AutoAttach;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace TankMaster.Gameplay
+namespace TankMaster._CodeBase.Gameplay
 {
     [RequireComponent(typeof(Health))]
     public class Destroyer : MonoBehaviour
@@ -27,15 +26,15 @@ namespace TankMaster.Gameplay
                 Destroy();
         }
 
-        private void HealthOnDied()
-        {
-            Destroy();
-        }
-
-        private void Destroy()
+        public void Destroy()
         {
             Destroy(gameObject);
             Instantiate(_destroyVFX, transform.position, quaternion.identity);
+        }
+
+        private void HealthOnDied()
+        {
+            Destroy();
         }
     }
 }

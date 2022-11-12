@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Infrastructure
+namespace TankMaster._CodeBase.Infrastructure
 {
     public class GameRunner : MonoBehaviour
     {

@@ -1,15 +1,13 @@
-﻿using System.Threading;
-using TankMaster.Gameplay.Projectiles;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
-    public class Shooter : MonoBehaviour
+    public class Shooter : MonoBehaviour, IAttacker
     {
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private EnemyAnimator _enemyAnimator;
 
-        private ShootProfile _shootProfile;
+        private AttackProfile _attackProfile;
         private Transform _target;
 
         private void Reset()
@@ -29,23 +27,23 @@ namespace TankMaster.Gameplay.Actors.Enemies
 
         private void OnAttack()
         {
-            Shoot(_target.transform, _shootProfile.ProjectileInfo[0].Projectile);
+            Attack(_target);
         }
 
-        public void SetShootProfile(ShootProfile shootProfile) =>
-            _shootProfile = shootProfile;
+        public void SetShootProfile(AttackProfile attackProfile) =>
+            _attackProfile = attackProfile;
 
         public void SetTarget(Transform target) =>
             _target = target;
 
         public bool IsInEffectiveDistance() =>
             Vector3.Distance(transform.position, _target.transform.position) <
-            _shootProfile.EffectiveDistance;
+            _attackProfile.EffectiveDistance;
 
-        public void Shoot(Transform target, Projectile projectile)
+        public void Attack(Transform target)
         {
             var shootPoint = _shootPoint.position;
-            var proj = Instantiate(projectile, shootPoint, Quaternion.identity);
+            var proj = Instantiate(_attackProfile.ProjectileInfo[0].Projectile, shootPoint, Quaternion.identity);
             proj.Launch(shootPoint, target);
         }
     }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class PlayerShooter : MonoBehaviour
     {

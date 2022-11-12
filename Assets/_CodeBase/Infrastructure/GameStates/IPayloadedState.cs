@@ -1,4 +1,4 @@
-﻿namespace TankMaster.Infrastructure.GameStates
+﻿namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
     public interface IPayloadedState<TPayload> : IExitableState
     {

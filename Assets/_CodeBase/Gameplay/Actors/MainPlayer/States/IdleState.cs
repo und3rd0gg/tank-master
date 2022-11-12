@@ -1,16 +1,16 @@
-﻿using TankMaster.Gameplay.Actors.Enemies;
-using TankMaster.Gameplay.Actors.Enemies.States;
+﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies.States;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer.States
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.States
 {
-    public class Idle : IDefaultState
+    public class IdleState : IDefaultState
     {
         private readonly ActorStateMachine _stateMachine;
         private readonly Detector _detector;
         private readonly TurretRotator _turretRotator;
 
-        public Idle(ActorStateMachine stateMachine, Detector detector, TurretRotator turretRotator)
+        public IdleState(ActorStateMachine stateMachine, Detector detector, TurretRotator turretRotator)
         {
             _stateMachine = stateMachine;
             _detector = detector;
@@ -24,7 +24,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
 
         private void DetectorOnObjectDetected(GameObject source, GameObject detectedObject)
         {
-            _stateMachine.Enter<Attack>();
+            _stateMachine.Enter<AttackState>();
         }
 
         public void Tick() { }

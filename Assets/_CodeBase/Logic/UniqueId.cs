@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Logic
+namespace TankMaster._CodeBase.Logic
 {
     public class UniqueId : MonoBehaviour
     {

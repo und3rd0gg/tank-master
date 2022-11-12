@@ -1,4 +1,4 @@
-﻿namespace TankMaster.Infrastructure.AssetManagement
+﻿namespace TankMaster._CodeBase.Infrastructure.AssetManagement
 {
     public static class AssetPaths
     {

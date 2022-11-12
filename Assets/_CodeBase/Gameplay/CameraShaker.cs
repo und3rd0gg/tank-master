@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using Dythervin.AutoAttach;
 using UnityEngine;
 
-namespace TankMaster.Gameplay
+namespace TankMaster._CodeBase.Gameplay
 {
     public class CameraShaker : MonoBehaviour
     {

@@ -1,9 +1,9 @@
 ﻿using DavidJalbert.TinyCarControllerAdvance;
 using Dythervin.AutoAttach;
-using TankMaster.Infrastructure.Services;
+using TankMaster._CodeBase.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class PlayerInputHandler : MonoBehaviour
     {

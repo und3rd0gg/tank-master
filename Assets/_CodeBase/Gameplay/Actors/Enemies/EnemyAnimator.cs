@@ -2,7 +2,7 @@ using System;
 using Dythervin.AutoAttach;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
     [RequireComponent(typeof(Animator))]
     public class EnemyAnimator : MonoBehaviour
@@ -13,18 +13,18 @@ namespace TankMaster.Gameplay.Actors.Enemies
 
         public event Action Attacked;
 
-        [SerializeField] [Attach] private Animator _animator;
+        [SerializeField] [Attach] protected Animator Animator;
 
         private void OnAttack() =>
             Attacked?.Invoke();
 
         public void PlayDeath() =>
-            _animator.SetTrigger(Die);
+            Animator.SetTrigger(Die);
 
         public void SetRun(bool isRunning) =>
-            _animator.SetBool(IsRunning, isRunning);
+            Animator.SetBool(IsRunning, isRunning);
 
         public void SetAttack(bool isAttacking) =>
-            _animator.SetBool(IsAttacking, isAttacking);
+            Animator.SetBool(IsAttacking, isAttacking);
     }
 }

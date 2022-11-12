@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using TankMaster.StaticData;
+using TankMaster._CodeBase.StaticData;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace TankMaster.Gameplay.Actors.Enemies.States
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies.States
 {
     public class ChaseAndAttack : IPayloadedState<Transform>
     {
@@ -79,7 +79,7 @@ namespace TankMaster.Gameplay.Actors.Enemies.States
         {
             await UniTask.Delay(TimeSpan.FromSeconds(_enemyProfile.ChaseCooldown),
                 cancellationToken: cancellationToken);
-            _enemyStateMachine.Enter<Idle>();
+            _enemyStateMachine.Enter<IdleState>();
         }
 
         private bool PlayerNotReached() =>

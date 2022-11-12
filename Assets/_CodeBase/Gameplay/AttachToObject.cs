@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Gameplay
+namespace TankMaster._CodeBase.Gameplay
 {
     public class AttachToObject : MonoBehaviour
     {

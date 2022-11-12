@@ -1,7 +1,7 @@
-﻿namespace TankMaster.Infrastructure
-{
-    using UnityEngine;
+﻿using UnityEngine;
 
+namespace TankMaster._CodeBase.Infrastructure
+{
     public static class UnityExtensions{
  
         /// <summary>

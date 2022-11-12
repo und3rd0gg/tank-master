@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TankMaster.UI
+namespace TankMaster._CodeBase.UI
 {
     public class RotateToCamera : MonoBehaviour
     {

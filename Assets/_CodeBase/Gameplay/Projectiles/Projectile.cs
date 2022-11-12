@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Projectiles
+namespace TankMaster._CodeBase.Gameplay.Projectiles
 {
     public abstract class Projectile : MonoBehaviour
     {

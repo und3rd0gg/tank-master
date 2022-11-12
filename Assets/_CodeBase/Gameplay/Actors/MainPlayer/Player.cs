@@ -1,8 +1,9 @@
 using Dythervin.AutoAttach;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class Player : MonoBehaviour, IActor
     {
@@ -12,6 +13,6 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
         [field: Attach]
         public Health Health { get; private set; }
 
-        [SerializeField] private ShootProfile _shootProfile;
+        [FormerlySerializedAs("_shootProfile")] [SerializeField] private AttackProfile _attackProfile;
     }
 }

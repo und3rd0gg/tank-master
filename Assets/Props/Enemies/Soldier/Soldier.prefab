@@ -5630,7 +5630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20904d6a0aaab2b4d9053405a2af86a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 872110617736459446}
+  Animator: {fileID: 872110617736459446}
 --- !u!1 &872110617742888753
 GameObject:
   m_ObjectHideFlags: 0
@@ -8170,6 +8170,14 @@ PrefabInstance:
       propertyPath: _enemyAnimator
       value: 
       objectReference: {fileID: 8601413686830391170}
+    - target: {fileID: 6789046868298982824, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: _shootingEnemy
+      value: 
+      objectReference: {fileID: 1147230328962451336}
+    - target: {fileID: 6789046868298982824, guid: f5849e1208df09a45916e842bde48771, type: 3}
+      propertyPath: _attacker._underlyingValue
+      value: 
+      objectReference: {fileID: 3285109509430203994}
     - target: {fileID: 7225007322340620112, guid: f5849e1208df09a45916e842bde48771, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.2498999
@@ -8193,6 +8201,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8927536060013100483, guid: f5849e1208df09a45916e842bde48771, type: 3}
   m_PrefabInstance: {fileID: 8919584630865043153}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1147230328962451336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8368670045959756121, guid: f5849e1208df09a45916e842bde48771, type: 3}
+  m_PrefabInstance: {fileID: 8919584630865043153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3760b59ca58b4f15a6bc9fb70e585fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3285109509430203994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6223894726549358731, guid: f5849e1208df09a45916e842bde48771, type: 3}
+  m_PrefabInstance: {fileID: 8919584630865043153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853a9aea521741669dbed8fcccaf91a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &3285109510802805118 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 6223894727315820463, guid: f5849e1208df09a45916e842bde48771, type: 3}

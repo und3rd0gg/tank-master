@@ -1,4 +1,4 @@
-﻿namespace TankMaster.Gameplay.Actors.Enemies.States
+﻿namespace TankMaster._CodeBase.Gameplay.Actors.Enemies.States
 {
     public interface IExittableState
     {

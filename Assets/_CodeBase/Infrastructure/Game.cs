@@ -1,6 +1,6 @@
-﻿using TankMaster.Infrastructure.GameStates;
+﻿using TankMaster._CodeBase.Infrastructure.GameStates;
 
-namespace TankMaster.Infrastructure
+namespace TankMaster._CodeBase.Infrastructure
 {
     public class Game
     {

@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TankMaster.AIPerception
+namespace TankMaster._CodeBase.AIPerception
 {
     public delegate void ObjectDetectionHandler(GameObject source, GameObject detectedObject);
     

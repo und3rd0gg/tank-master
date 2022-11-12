@@ -1,4 +1,4 @@
-﻿namespace TankMaster.StaticData
+﻿namespace TankMaster._CodeBase.StaticData
 {
     public enum EnemyTypeId
     {

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   <ChaseCooldown>k__BackingField: 5.5
-  <ShootProfile>k__BackingField:
+  <AttackProfile>k__BackingField:
     <EffectiveDistance>k__BackingField: 10
     ProjectileInfo:
     - <Projectile>k__BackingField: {fileID: -7443388888226927487, guid: 49806ded8ac71a842ba8ccddc8cbdf01, type: 3}
-      <Delay>k__BackingField: 2
+      <Delay>k__BackingField: 0

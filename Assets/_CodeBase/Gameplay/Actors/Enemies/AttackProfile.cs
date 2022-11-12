@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using TankMaster.Gameplay.Projectiles;
+using TankMaster._CodeBase.Gameplay.Projectiles;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
     [Serializable]
-    public class ShootProfile
+    public class AttackProfile
     {
         [field: SerializeField] public float EffectiveDistance { get; private set; }
         public List<ProjectileInfo> ProjectileInfo;

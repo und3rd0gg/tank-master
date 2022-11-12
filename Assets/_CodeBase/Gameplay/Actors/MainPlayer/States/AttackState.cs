@@ -1,15 +1,15 @@
-﻿using TankMaster.Gameplay.Actors.Enemies;
-using TankMaster.Gameplay.Actors.Enemies.States;
+﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies.States;
 
-namespace TankMaster.Gameplay.Actors.MainPlayer.States
+namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.States
 {
-    public class Attack : IDefaultState
+    public class AttackState : IDefaultState
     {
         private readonly ActorStateMachine _stateMachine;
         private readonly Shooter _shooter;
         private readonly Detector _detector;
 
-        public Attack(ActorStateMachine stateMachine, Shooter shooter, Detector detector)
+        public AttackState(ActorStateMachine stateMachine, Shooter shooter, Detector detector)
         {
             _stateMachine = stateMachine;
             _shooter = shooter;
@@ -26,7 +26,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer.States
         {
             if (_detector.DetectedObjects.Count < 1)
             {
-                _stateMachine.Enter<Idle>();
+                _stateMachine.Enter<IdleState>();
                 return;
             }
             

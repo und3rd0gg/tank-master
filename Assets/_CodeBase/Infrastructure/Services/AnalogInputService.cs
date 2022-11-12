@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.Infrastructure.Services
+namespace TankMaster._CodeBase.Infrastructure.Services
 {
     public class AnalogInputService : IInputService
     {

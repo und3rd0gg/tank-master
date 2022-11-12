@@ -1,11 +1,11 @@
 ﻿using AYellowpaper;
 using Cysharp.Threading.Tasks;
 using Dythervin.AutoAttach;
-using TankMaster.Gameplay;
+using TankMaster._CodeBase.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TankMaster.UI
+namespace TankMaster._CodeBase.UI
 {
     public class HealthBar : MonoBehaviour
     {

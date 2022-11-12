@@ -1,7 +1,7 @@
-﻿using TankMaster.Infrastructure.GameStates;
+﻿using TankMaster._CodeBase.Infrastructure.GameStates;
 using UnityEngine;
 
-namespace TankMaster.Infrastructure
+namespace TankMaster._CodeBase.Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Cinemachine;
-using TankMaster.Infrastructure.Services;
-using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
-namespace TankMaster.Infrastructure.Factory
+namespace TankMaster._CodeBase.Infrastructure.Factory
 {
     public interface IGameFactory : IService
     {

@@ -1,8 +1,8 @@
-﻿using TankMaster.Data;
-using TankMaster.Infrastructure.Services.PersistentProgress;
-using TankMaster.Infrastructure.Services.SaveLoad;
+﻿using TankMaster._CodeBase.Data;
+using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
+using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
 
-namespace TankMaster.Infrastructure.GameStates
+namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
     public class LoadProgressState : IState
     {

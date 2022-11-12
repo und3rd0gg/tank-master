@@ -2,7 +2,7 @@
 using Dythervin.AutoAttach;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Projectiles
+namespace TankMaster._CodeBase.Gameplay.Projectiles
 {
     public class Missile : Projectile
     {

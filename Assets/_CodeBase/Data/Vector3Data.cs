@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TankMaster.Data
+namespace TankMaster._CodeBase.Data
 {
     [Serializable]
     public class Vector3Data

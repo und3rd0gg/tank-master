@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster.AIPerception
+namespace TankMaster._CodeBase.AIPerception
 {
     public interface IDetectableObject
     {

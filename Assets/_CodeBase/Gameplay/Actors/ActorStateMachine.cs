@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TankMaster.Gameplay.Actors.Enemies.States;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies.States;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors
+namespace TankMaster._CodeBase.Gameplay.Actors
 {
     public abstract class ActorStateMachine : MonoBehaviour
     {
