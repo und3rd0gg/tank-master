@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TankMaster._CodeBase.Gameplay.Projectiles;
+using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
@@ -6,23 +7,28 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
     {
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private EnemyAnimator _enemyAnimator;
-
-        private AttackProfile _attackProfile;
+        [SerializeField] private Projectile _projectile;
+        
         private Transform _target;
 
-        private void Reset()
-        {
+        private void Reset() => 
             enabled = false;
-        }
 
         private void OnEnable()
         {
+            _enemyAnimator.SetAttack(true);
             _enemyAnimator.Attacked += OnAttack;
+        }
+
+        private void Update()
+        {
+            RotateToTarget(_target);
         }
 
         private void OnDisable()
         {
             _enemyAnimator.Attacked -= OnAttack;
+            _enemyAnimator.SetAttack(false);
         }
 
         private void OnAttack()
@@ -30,21 +36,23 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
             Attack(_target);
         }
 
-        public void SetShootProfile(AttackProfile attackProfile) =>
-            _attackProfile = attackProfile;
-
         public void SetTarget(Transform target) =>
             _target = target;
 
         public bool IsInEffectiveDistance() =>
             Vector3.Distance(transform.position, _target.transform.position) <
-            _attackProfile.EffectiveDistance;
+            EffectiveDistance;
+
+        private const float EffectiveDistance = 0;
 
         public void Attack(Transform target)
         {
             var shootPoint = _shootPoint.position;
-            var proj = Instantiate(_attackProfile.ProjectileInfo[0].Projectile, shootPoint, Quaternion.identity);
+            var proj = Instantiate(_projectile, shootPoint, Quaternion.identity);
             proj.Launch(shootPoint, target);
         }
+        
+        private void RotateToTarget(Transform target) => 
+            transform.LookAt(target);
     }
 }

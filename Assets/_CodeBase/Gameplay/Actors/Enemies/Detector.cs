@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class Detector : MonoBehaviour, IDetector
     {
         private List<GameObject> _detectedObjects = new();

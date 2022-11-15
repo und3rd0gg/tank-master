@@ -9,10 +9,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 
         private void Awake()
         {
-            InitializeShooterComponent();
+            //InitializeShooterComponent();
         }
-
-        private void InitializeShooterComponent() => 
-            _shooter.SetShootProfile(EnemyProfile.AttackProfile);
     }
 }

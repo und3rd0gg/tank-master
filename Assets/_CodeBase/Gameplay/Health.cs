@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay
 {
-    public class Health : MonoBehaviour, IСharacterСharacteristic
+    [Serializable]
+    public class Health : IСharacterСharacteristic
     {
         [field: SerializeField] public uint MaxValue { get; private set; } = 100;
         [field: SerializeField] public uint Value { get; private set; } = 100;

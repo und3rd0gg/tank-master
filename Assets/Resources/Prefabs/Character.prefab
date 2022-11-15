@@ -1371,21 +1371,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0.54, z: 0}
---- !u!114 &1570577064346423612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7435156634963818627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d035b0457633435096740e1edb27e989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 100
-  <Value>k__BackingField: 100
-  _shakeThreshold: 20
 --- !u!114 &4378074552553838279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,7 +1384,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CameraFollowTarget>k__BackingField: {fileID: 7435156634963818626}
-  <Health>k__BackingField: {fileID: 1570577064346423612}
+  <Health>k__BackingField:
+    <MaxValue>k__BackingField: 100
+    <Value>k__BackingField: 100
   _attackProfile:
     <EffectiveDistance>k__BackingField: 10
     ProjectileInfo:
