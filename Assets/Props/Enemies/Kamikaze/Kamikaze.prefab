@@ -60,6 +60,14 @@ PrefabInstance:
       value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _maxAttackDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _minAttackDistance
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _stopAgentAfterSwitch
       value: 1
       objectReference: {fileID: 0}

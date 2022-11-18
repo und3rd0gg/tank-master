@@ -33,7 +33,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 
         private void OnAttack()
         {
-            Attack(_target);
+            Attack();
         }
 
         public void SetTarget(Transform target) =>
@@ -45,11 +45,11 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
 
         private const float EffectiveDistance = 0;
 
-        public void Attack(Transform target)
+        public void Attack()
         {
             var shootPoint = _shootPoint.position;
             var proj = Instantiate(_projectile, shootPoint, Quaternion.identity);
-            proj.Launch(shootPoint, target);
+            proj.Launch(shootPoint, _target);
         }
         
         private void RotateToTarget(Transform target) => 

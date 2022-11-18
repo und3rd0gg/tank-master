@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UIText_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: dec752ac344ebcb4a8b3493cfac2f187, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1509826863104
+    m_Localized: STORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7195944132608
+    m_Localized: UPGRADE MISSILE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7054805803008
+    m_Localized: MAX HEALTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891613822976
+    m_Localized: INCREASE INCOME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7447455571968
+    m_Localized: FULL REPAIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597519380480
+    m_Localized: SPLIT BULLET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7768697315328
+    m_Localized: RANDOM UPGRADE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14597158445056
+    m_Localized: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16718528356352
+    m_Localized: SELECT ITEMS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22108565512192
+    m_Localized: FREE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30887554162688
+    m_Localized: REPAIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31476405084160
+    m_Localized: STAGE CLEAR!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32135267328000
+    m_Localized: CLAIM X2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32428465954816
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32597303468032
+    m_Localized: REWARDS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125622344065024
+    m_Localized: LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126274822578176
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126499842793472
+    m_Localized: Sound Fx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126738469330944
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127833941843968
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

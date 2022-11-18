@@ -203,6 +203,10 @@ PrefabInstance:
       value: 1.893
       objectReference: {fileID: 0}
     - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _minAttackDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _attacker._underlyingValue
       value: 
       objectReference: {fileID: 8249105044407791977}

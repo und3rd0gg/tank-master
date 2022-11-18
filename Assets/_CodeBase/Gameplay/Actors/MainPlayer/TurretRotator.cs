@@ -1,13 +1,11 @@
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class TurretRotator : MonoBehaviour
     {
-        [SerializeField] private Detector _detector;
-
         private Quaternion _defaultRotation;
+        private Transform _currentTarget;
 
         private void Awake()
         {
@@ -16,44 +14,31 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 
         private void Update()
         {
-            var closestObject = GetClosestObject();
-
-            if (closestObject == null)
-            {
-                RotateToDefault();
-            }
-            else
-            {
-                transform.LookAt(closestObject);
-            }
+            LookAtClosestObject();
         }
+
+        public void EnableRotation(Transform newTarget)
+        {
+            _currentTarget = newTarget;
+            enabled = true;
+        }
+
+        public void DisableRotation() => 
+            enabled = false;
+
+        private void LookAtClosestObject() => 
+            LookAtOneAxis(_currentTarget);
 
         private void RotateToDefault()
         {
             transform.rotation = _defaultRotation;
         }
 
-        private Transform GetClosestObject()
+        private void LookAtOneAxis(Transform target)
         {
-            Transform _closestObject;
-            var detectedObjects = _detector.DetectedObjects;
-
-            if (detectedObjects.Count < 1)
-                return null;
-
-            _closestObject = detectedObjects[0].transform;
-
-            for (int i = 1; i < detectedObjects.Count; i++)
-            {
-                var distanceToClosestObject = Vector3.Distance(transform.position, _closestObject.position);
-                var distanceToCurrentObject =
-                    Vector3.Distance(transform.position, detectedObjects[i].transform.position);
-
-                if (distanceToCurrentObject < distanceToClosestObject)
-                    _closestObject = detectedObjects[i].transform;
-            }
-
-            return _closestObject;
+            var lookPosition = new Vector3(target.transform.position.x, transform.position.y,
+                target.transform.position.z);
+            transform.LookAt(lookPosition);
         }
     }
 }

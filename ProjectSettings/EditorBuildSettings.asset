@@ -116,4 +116,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Plugins/Epic Toon FX/Demo/Scenes/Extras/etfx_videopreview.unity
     guid: 455fd77e8f405b04c810d29ad2dff2db
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 5be779e759c15d1479d9710a32db287d, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: eeeb5e4975e416644926144f6c1288e4, type: 2}

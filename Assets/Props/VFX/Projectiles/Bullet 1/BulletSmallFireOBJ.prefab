@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 450904}
   - component: {fileID: 13576440}
   - component: {fileID: 5479992}
-  - component: {fileID: 11464288}
+  - component: {fileID: -9188005752462614957}
+  - component: {fileID: 343169572174998294}
   m_Layer: 0
   m_Name: BulletSmallFireOBJ
   m_TagString: Missile
@@ -63,7 +64,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11464288
+--- !u!114 &-9188005752462614957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,11 +73,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 128572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b49caace2a94a7ebe015c7c9c066f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ImpactRadius: 0.5
+  Damage: 10
+  _rigidbody: {fileID: 5479992}
+  _launchForce: 30
+--- !u!114 &343169572174998294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd792ba652cacb749911168867893a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: -9188005752462614957}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 1082368
   impactParticle: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
   projectileParticle: {fileID: 193226, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
   muzzleParticle: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
-  colliderRadius: 0.1
-  collideOffset: 0.1
+  colliderRadius: 1
+  collideOffset: 0.15

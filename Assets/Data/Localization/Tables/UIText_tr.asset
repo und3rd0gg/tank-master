@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UIText_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: dec752ac344ebcb4a8b3493cfac2f187, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6375348170124951577
+  m_TableData:
+  - m_Id: 1509826863104
+    m_Localized: "MA\u011EAZA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7195944132608
+    m_Localized: "Y\xDCKSELTME F\xDCZES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7054805803008
+    m_Localized: "MAKS SA\u011ELIK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891613822976
+    m_Localized: "GEL\u0130R ARTI\u015EI"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7447455571968
+    m_Localized: TAM ONARIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7597519380480
+    m_Localized: "B\xD6L\xDCNM\xDC\u015E MERM\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7768697315328
+    m_Localized: "RASTGELE Y\xDCKSELTME"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14597158445056
+    m_Localized: DEVAM ET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16718528356352
+    m_Localized: "E\u015EYALARI SE\xC7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22108565512192
+    m_Localized: BEDAVA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30887554162688
+    m_Localized: ONARIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31476405084160
+    m_Localized: "B\xD6LGE TEM\u0130Z!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32135267328000
+    m_Localized: ALMAK X2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32428465954816
+    m_Localized: ALMAK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32597303468032
+    m_Localized: "\xD6D\xDCLLER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125622344065024
+    m_Localized: "D\u0130L"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126274822578176
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126499842793472
+    m_Localized: Sesler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126738469330944
+    m_Localized: "M\xFCzik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127833941843968
+    m_Localized: "T\xFCrk Dili"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6375348170124951577
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00a0717d0100000000a0714e0b01000000a031130a04000000a0f1a82805000000a0718a6d050000
