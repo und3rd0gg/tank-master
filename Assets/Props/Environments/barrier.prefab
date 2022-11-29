@@ -94,8 +94,9 @@ GameObject:
   - component: {fileID: 400002}
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
-  - component: {fileID: 4521542992048789536}
   - component: {fileID: 7647897941147660197}
+  - component: {fileID: 4319841746186547691}
+  - component: {fileID: 7115863454580104677}
   m_Layer: 0
   m_Name: barrier
   m_TagString: Untagged
@@ -169,20 +170,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4521542992048789536
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a49d210b33bdfe64fb6ec022d972cc1d, type: 3}
 --- !u!95 &7647897941147660197
 Animator:
   serializedVersion: 4
@@ -203,3 +190,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &4319841746186547691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2407366, y: 1.3671764, z: 0.7183181}
+  m_Center: {x: -2.3543465, y: 0.6835882, z: -0.07272919}
+--- !u!65 &7115863454580104677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2627007, y: 1.5213405, z: 0.8257463}
+  m_Center: {x: 2.3919334, y: 0.6064986, z: -0.019014841}

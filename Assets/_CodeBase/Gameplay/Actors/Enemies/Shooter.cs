@@ -8,7 +8,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private EnemyAnimator _enemyAnimator;
         [SerializeField] private Projectile _projectile;
-        
+        [SerializeField][Range(0, 2)] private float _yOffset;
+
         private Transform _target;
 
         private void Reset() => 
@@ -49,7 +50,9 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
         {
             var shootPoint = _shootPoint.position;
             var proj = Instantiate(_projectile, shootPoint, Quaternion.identity);
-            proj.Launch(shootPoint, _target);
+            var target = _target.position;
+            target.y += _yOffset;
+            proj.Launch(shootPoint, target);
         }
         
         private void RotateToTarget(Transform target) => 

@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.41
+      value: 30.25
       objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.83
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_LocalRotation.w
@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084697, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_Name
-      value: Soldier
+      value: Soldier.001
       objectReference: {fileID: 0}
     - target: {fileID: 7357773196427005995, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: _attacker._underlyingValue
       value: 
       objectReference: {fileID: 8249105044407791977}
+    - target: {fileID: 8233795334791771387, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _chaseCooldown
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8805780290139670126, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _animator
       value: 
@@ -236,6 +240,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 8971054341792667121}
   _enemyAnimator: {fileID: 2879422387839556626}
   _projectile: {fileID: 2206146130334083824, guid: f3afbc0cdb391fb43b561a754d476bde, type: 3}
+  _yOffset: 0.5
 --- !u!4 &993893840428951386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4631326908512339471, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}

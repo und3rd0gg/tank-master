@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI
 {
     public class LocaleSelector : MonoBehaviour
     {

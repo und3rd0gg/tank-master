@@ -46,6 +46,18 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 358049468037719090, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398094925360656624, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398094925360656624, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -154,6 +166,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 494463221241094153}
   _enemyAnimator: {fileID: 8450654251442015138}
   _projectile: {fileID: -7443388888226927487, guid: 49806ded8ac71a842ba8ccddc8cbdf01, type: 3}
+  _yOffset: 0.236
 --- !u!114 &7351366594349031284 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8233795334791771387, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}

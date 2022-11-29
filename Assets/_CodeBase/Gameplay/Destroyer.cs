@@ -1,15 +1,17 @@
 ﻿using AYellowpaper;
-using Dythervin.AutoAttach;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay
 {
-    [RequireComponent(typeof(Health))]
     public class Destroyer : MonoBehaviour
     {
+        [SerializeField] private Coin _coin;
+        [SerializeField] private int _coinsCount;
         [SerializeField] private InterfaceReference<IActor> _actor;
         [SerializeField] private ParticleSystem _destroyVFX;
+
+        private static readonly float _coinCreationOffsetY = 0.5f;
 
         private void OnEnable()
         {
@@ -21,13 +23,24 @@ namespace TankMaster._CodeBase.Gameplay
             _actor.Value.Health.Died -= OnDied;
         }
 
-        public void Destroy()
+        public virtual void Destroy()
         {
             Destroy(gameObject);
             Instantiate(_destroyVFX, transform.position, quaternion.identity);
+            InstantiateCoins();
         }
 
-        private void OnDied() => 
+        private void InstantiateCoins()
+        {
+            for (var i = 0; i < _coinsCount; i++)
+            {
+                var creationPoint = transform.position;
+                creationPoint.y += _coinCreationOffsetY;
+                var coin = Instantiate(_coin, creationPoint, Quaternion.identity);
+            }
+        }
+
+        private void OnDied() =>
             Destroy();
     }
 }

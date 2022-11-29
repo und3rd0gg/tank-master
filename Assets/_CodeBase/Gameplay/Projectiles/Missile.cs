@@ -9,9 +9,9 @@ namespace TankMaster._CodeBase.Gameplay.Projectiles
         [SerializeField] [Attach] private Rigidbody _rigidbody;
         [SerializeField] private float _flyTime = 2.5f;
 
-        public override void Launch(Vector3 startPosition, Transform target)
+        public override void Launch(Vector3 startPosition, Vector3 target)
         {
-            var force = Blobcreate.ProjectileToolkit.Projectile.VelocityByTime(startPosition, target.position,
+            var force = Blobcreate.ProjectileToolkit.Projectile.VelocityByTime(startPosition, target,
                 _flyTime);
             _rigidbody.AddForce(force, ForceMode.VelocityChange);
         }

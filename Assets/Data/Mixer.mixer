@@ -9,13 +9,14 @@ AudioMixerGroupController:
   m_Name: VFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 523672b71b2730d40baef9173bd8cc9a
-  m_Children: []
+  m_Children:
+  - {fileID: -893893944228773762}
   m_Volume: 6fde6bde002324a48901d978adbd7769
   m_Pitch: 4e5fdd4060bf48947904e26d36d36d67
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -1833445516955360916}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 4
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -34,7 +35,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 7614161052643351198}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 7
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -85,8 +86,12 @@ AudioMixerController:
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
-  m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_UpdateMode: 1
+  m_ExposedParameters:
+  - guid: 9dd9754f70946ac40b21485888eba87a
+    name: Music
+  - guid: 6fde6bde002324a48901d978adbd7769
+    name: VFX
   m_AudioMixerGroupViews:
   - guids:
     - fcb53fc489071e94eac60607f63b172f
@@ -106,7 +111,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: fcb53fc489071e94eac60607f63b172f
   m_Children:
-  - {fileID: -893893944228773762}
   - {fileID: -7369197831789431011}
   - {fileID: -9017323633419172756}
   m_Volume: 6847fd81e0b070c478def5d7032c01e7
@@ -143,8 +147,9 @@ AudioMixerSnapshotController:
   m_SnapshotID: 6949666b91eda5a4a987223f00086d53
   m_FloatValues:
     6847fd81e0b070c478def5d7032c01e7: -0.025776558
-    06d21fb99daab03409abe5420f167a73: -9.960263
-    6fde6bde002324a48901d978adbd7769: -24.162655
+    06d21fb99daab03409abe5420f167a73: -0.10231405
+    6fde6bde002324a48901d978adbd7769: -40
+    9dd9754f70946ac40b21485888eba87a: -40
   m_TransitionOverrides: {}
 --- !u!244 &4878255158915978844
 AudioMixerEffectController:

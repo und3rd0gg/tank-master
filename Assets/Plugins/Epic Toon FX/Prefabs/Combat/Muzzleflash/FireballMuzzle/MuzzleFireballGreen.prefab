@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 441616}
   - component: {fileID: 19832794}
   - component: {fileID: 19918682}
-  m_Layer: 25
+  m_Layer: 0
   m_Name: MuzzleFireballGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4833,7 +4833,7 @@ GameObject:
   - component: {fileID: 416414}
   - component: {fileID: 19826178}
   - component: {fileID: 19912554}
-  m_Layer: 25
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9680,7 +9680,7 @@ GameObject:
   - component: {fileID: 450422}
   - component: {fileID: 19801788}
   - component: {fileID: 19963692}
-  m_Layer: 25
+  m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

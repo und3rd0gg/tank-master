@@ -27,8 +27,11 @@ namespace TankMaster._CodeBase.Gameplay.Actors
             _detectionZoneObserver.TriggerEnter -= DetectionZoneEnter;
         }
 
-        public void StartAggro() => 
+        public void StartAggro()
+        {
+            DetectionZoneExit(null);
             _follower.enabled = true;
+        }
 
         public void StopAggro() => 
             _follower.enabled = false;

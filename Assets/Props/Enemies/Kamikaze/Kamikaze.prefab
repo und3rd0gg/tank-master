@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358049468037719090, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398094925360656624, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398094925360656624, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 6055046934610140573, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_Radius
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357773196427005995, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.685
       objectReference: {fileID: 0}
     - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _maxAttackDistance
@@ -115,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyer: {fileID: 6534928529802905174}
   _enemyAnimator: {fileID: 7609010430935347424}
+  _impactRadius: 2
+  _damage: 50
 --- !u!4 &7543859973511050590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4631326908512339471, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
@@ -127,6 +145,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7543859973511050590}
     m_Modifications:
+    - target: {fileID: 4782802089901604181, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782802090089736522, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7037138832937157945, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
       propertyPath: m_Name
       value: Bomb

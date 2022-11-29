@@ -99,6 +99,14 @@ MonoBehaviour:
     m_Localized: "T\xFCrk Dili"
     m_Metadata:
       m_Items: []
+  - m_Id: 416110783602688
+    m_Localized: "KAYBETT\u0130N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 416493274767360
+    m_Localized: "TEKRAR BA\u015ELAT"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

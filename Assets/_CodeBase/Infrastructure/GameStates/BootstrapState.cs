@@ -1,8 +1,11 @@
-﻿using TankMaster._CodeBase.Infrastructure.AssetManagement;
+﻿using System.Collections;
+using Agava.YandexGames;
+using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
+using TankMaster._CodeBase.Infrastructure.Services.YandexGames;
 
 namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
@@ -35,6 +38,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private void RegisterServices()
         {
             var services = AllServices.Container;
+            services.RegisterSingle<IYandexGamesService>(new YandexGamesService());
             services.RegisterSingle<IInputService>(new AnalogInputService());
             services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
             services.RegisterSingle<ISaveLoadService>(

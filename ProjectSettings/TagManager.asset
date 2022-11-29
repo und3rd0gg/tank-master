@@ -35,13 +35,13 @@ TagManager:
   - EnemyAttackZone
   - 
   - 
+  - PlayerTrigger
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
+  - Coin
   m_SortingLayers:
   - name: Default
     uniqueID: 0

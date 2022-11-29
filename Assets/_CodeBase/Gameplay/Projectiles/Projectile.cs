@@ -8,7 +8,7 @@ namespace TankMaster._CodeBase.Gameplay.Projectiles
         [SerializeField] protected float ImpactRadius = 0.5f;
         [SerializeField] protected uint Damage;
 
-        public abstract void Launch(Vector3 startPosition, Transform target);
+        public abstract void Launch(Vector3 startPosition, Vector3 target);
 
         public void DoImpact()
         {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cinemachine;
 using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
@@ -11,8 +12,10 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public GameObject CreatePlayer(Vector3 creationPoint);
         public List<ISavedProgressReader> ProgressReaders { get; }
         public List<IProgressSaver> ProgressWriters { get; }
+        GameObject PlayerGameObject { get; set; }
         public void Cleanup();
         CinemachineVirtualCamera GetVirtualCamera();
         void Register(ISavedProgressReader progressReader);
+        event Action PlayerCreated;
     }
 }

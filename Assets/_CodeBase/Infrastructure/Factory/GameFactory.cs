@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cinemachine;
 using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
@@ -11,11 +12,12 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         private const string MainVirtualCameraTag = "MainVirtualCamera";
 
         private readonly IAssetProvider _assetProvider;
-
         public List<ISavedProgressReader> ProgressReaders { get; } = new();
         public List<IProgressSaver> ProgressWriters { get; } = new();
-
         private CinemachineVirtualCamera _virtualCamera;
+
+        public GameObject PlayerGameObject { get; set; }
+        public event Action PlayerCreated;
 
         public GameFactory(IAssetProvider assetProvider)
         {
@@ -24,7 +26,11 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
 
         public GameObject CreatePlayer(Vector3 creationPoint)
         {
-            return InstantiateRegistered(AssetPaths.MainPlayer, Vector3.zero, Quaternion.Euler(0,90,0));
+            PlayerGameObject = InstantiateRegistered(AssetPaths.MainPlayer,
+                Vector3.zero,
+                Quaternion.Euler(0, 90, 0));
+            PlayerCreated?.Invoke();
+            return PlayerGameObject;
         }
 
         public void Cleanup()

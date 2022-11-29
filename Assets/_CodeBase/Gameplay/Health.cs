@@ -31,5 +31,17 @@ namespace TankMaster._CodeBase.Gameplay
             Value = (uint) newValue;
             ValueChanged?.Invoke(Value, MaxValue);
         }
+
+        public void UpgradeMaxValue(uint newValue)
+        {
+            MaxValue = newValue;
+            ValueChanged?.Invoke(Value, MaxValue);
+        }
+
+        public void RestoreHealth()
+        {
+            Value = MaxValue;
+            ValueChanged?.Invoke(Value, MaxValue);
+        }
     }
 }

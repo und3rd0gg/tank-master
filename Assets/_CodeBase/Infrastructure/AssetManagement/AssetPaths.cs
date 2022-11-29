@@ -2,6 +2,6 @@
 {
     public static class AssetPaths
     {
-        public const string MainPlayer = "Prefabs/Character";
+        public const string MainPlayer = "Prefabs/GamePlay/Character/Character";
     }
 }

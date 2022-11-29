@@ -10,9 +10,9 @@ namespace TankMaster._CodeBase.Gameplay.Projectiles
         [SerializeField] [Attach] private Rigidbody _rigidbody;
         [SerializeField] private float _launchForce;
         
-        private Transform _target;
+        private Vector3 _target;
 
-        public override void Launch(Vector3 startPosition, Transform target)
+        public override void Launch(Vector3 startPosition, Vector3 target)
         {
             _target = target;
             transform.LookAt(target);
