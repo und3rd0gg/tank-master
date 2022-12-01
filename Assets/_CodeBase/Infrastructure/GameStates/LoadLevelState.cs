@@ -9,6 +9,9 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
     public class LoadLevelState : IPayloadedState<string>
     {
+        private const string PlayerInitPointTag = "PlayerInitialPoint";
+        private const string MainVirtualCameraTag = "MainVirtualCamera";
+
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
         private IGameFactory _gameFactory;
@@ -23,10 +26,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             _progressService = progressService;
         }
 
-        public void Exit()
-        {
-            throw new NotImplementedException();
-        }
+        public void Exit() { }
 
         public void Enter(string payload)
         {
@@ -38,6 +38,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         {
             InitGameWorld();
             InformProgressReaders();
+            _stateMachine.Enter<GameLoopState>();
         }
 
         private void InformProgressReaders()
@@ -50,7 +51,9 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private void InitGameWorld()
         {
-            var player = _gameFactory.CreatePlayer(GameObject.FindWithTag("PlayerInitialPoint").transform.position);
+            _gameFactory.CreateLevelTransition(Vector3.zero);
+            _gameFactory.CreateLight();
+            var player = _gameFactory.CreatePlayer(GameObject.FindWithTag(PlayerInitPointTag).transform.position);
             CameraFollow(player);
             //InitSpawners();
         }
@@ -67,7 +70,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private void CameraFollow(GameObject player)
         {
             var followTarget = player.GetComponentInChildren<Player>().CameraFollowTarget;
-            var camera = GameObject.FindWithTag("MainVirtualCamera").GetComponent<CinemachineVirtualCamera>();
+            var camera = GameObject.FindWithTag(MainVirtualCameraTag).GetComponent<CinemachineVirtualCamera>();
             camera.Follow = followTarget;
             camera.LookAt = followTarget;
         }

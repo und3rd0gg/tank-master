@@ -1,7 +1,7 @@
 ﻿using Agava.YandexGames;
 using UnityEngine;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public class RandomUpgradeButton : StoreItemButton
     {

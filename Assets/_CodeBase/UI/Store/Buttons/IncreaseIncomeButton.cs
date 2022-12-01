@@ -4,7 +4,7 @@ using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public class IncreaseIncomeButton : UpgradeButton
     {

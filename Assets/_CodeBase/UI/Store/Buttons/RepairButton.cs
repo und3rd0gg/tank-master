@@ -2,7 +2,7 @@
 using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public class RepairButton : StoreItemButton
     {

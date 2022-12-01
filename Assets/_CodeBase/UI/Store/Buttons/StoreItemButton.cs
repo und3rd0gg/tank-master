@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public abstract class StoreItemButton : MonoBehaviour, IPointerClickHandler
     {

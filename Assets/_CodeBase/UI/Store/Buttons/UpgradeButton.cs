@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public abstract class UpgradeButton : StoreItemButton
     {
