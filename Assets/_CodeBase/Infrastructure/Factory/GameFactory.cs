@@ -55,7 +55,7 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             _assetProvider.Instantiate(_transition, creationPoint);
         }
 
-        public void CreateLevel(Vector3 creationPoint)
+        public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true)
         {
             var level = _assetProvider.Instantiate(GetRandomLevel(), creationPoint);
             var transitionCreationPoint = level.GetComponent<Level>().TransitionConnectionPoint.position;

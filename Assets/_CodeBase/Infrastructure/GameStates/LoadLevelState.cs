@@ -53,6 +53,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         {
             _gameFactory.CreateLevelTransition(Vector3.zero);
             _gameFactory.CreateLight();
+            _gameFactory.CreateInterface();
             var player = _gameFactory.CreatePlayer(GameObject.FindWithTag(PlayerInitPointTag).transform.position);
             CameraFollow(player);
             //InitSpawners();

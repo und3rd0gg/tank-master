@@ -2,10 +2,9 @@ using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using TankMaster._CodeBase.Infrastructure;
 using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Logic;
 using UnityEngine;
 
-namespace TankMaster
+namespace TankMaster._CodeBase.Logic
 {
     public class ChangeDateTimeTrigger : MonoBehaviour
     {

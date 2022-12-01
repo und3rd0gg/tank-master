@@ -9,18 +9,22 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
 {
     public interface IGameFactory : IService
     {
-        public GameObject CreatePlayer(Vector3 creationPoint);
         public List<ISavedProgressReader> ProgressReaders { get; }
         public List<IProgressSaver> ProgressWriters { get; }
-        GameObject PlayerGameObject { get; }
-        GameObject MainLight { get; }
+        public GameObject PlayerGameObject { get; }
+        public GameObject MainLight { get; }
+        public GameObject Interface { get; }
+        
+        public event Action PlayerCreated;
+        public event Action MainLightCreated;
+
+        public GameObject CreatePlayer(Vector3 creationPoint);
         public void Cleanup();
-        CinemachineVirtualCamera GetVirtualCamera();
-        void Register(ISavedProgressReader progressReader);
-        event Action PlayerCreated;
-        void CreateLevelTransition(Vector3 creationPoint);
-        void CreateLevel(Vector3 creationPoint);
-        GameObject CreateLight();
-        event Action MainLightCreated;
+        public CinemachineVirtualCamera GetVirtualCamera();
+        public void Register(ISavedProgressReader progressReader);
+        public void CreateLevelTransition(Vector3 creationPoint);
+        public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true);
+        public GameObject CreateLight();
+        public GameObject CreateInterface();
     }
 }
