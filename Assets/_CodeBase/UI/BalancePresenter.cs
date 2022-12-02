@@ -38,22 +38,22 @@ namespace TankMaster._CodeBase.UI
 
         public void Open()
         {
-            _rectTransform.DOAnchorPosX(0, _openTime);
+            _rectTransform.DOAnchorPosX(0, _openTime).SetUpdate(UpdateType.Normal, true);
         }
 
         public void Close()
         {
-            _rectTransform.DOAnchorPosX(300, _openTime);
+            _rectTransform.DOAnchorPosX(300, _openTime).SetUpdate(UpdateType.Normal, true);
         }
 
         private void RunCloseDelayTimer()
         {
             if (!_timerStarted) return;
-            
+
             _timer -= Time.deltaTime;
 
             if (!(_timer <= 0)) return;
-            
+
             Close();
             _timerStarted = false;
         }
@@ -76,7 +76,7 @@ namespace TankMaster._CodeBase.UI
             _timer = _showDelay;
 
             if (_timerStarted) return;
-            
+
             _timerStarted = true;
             Open();
         }

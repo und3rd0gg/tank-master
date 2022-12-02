@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cinemachine;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
@@ -22,7 +23,7 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public void Cleanup();
         public CinemachineVirtualCamera GetVirtualCamera();
         public void Register(ISavedProgressReader progressReader);
-        public void CreateLevelTransition(Vector3 creationPoint);
+        public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter);
         public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true);
         public GameObject CreateLight();
         public GameObject CreateInterface();

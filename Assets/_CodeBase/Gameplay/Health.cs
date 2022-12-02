@@ -10,7 +10,7 @@ namespace TankMaster._CodeBase.Gameplay
         [field: SerializeField] public uint Value { get; private set; } = 100;
 
         public event Action<uint, uint> ValueChanged;
-        public event Action Died;
+        public event Action<Health> Died;
 
         private void OnValidate()
         {
@@ -24,7 +24,7 @@ namespace TankMaster._CodeBase.Gameplay
 
             if (newValue <= 0)
             {
-                Died?.Invoke();
+                Died?.Invoke(this);
                 newValue = 0;
             }
 

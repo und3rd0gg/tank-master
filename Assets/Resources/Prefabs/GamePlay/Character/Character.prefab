@@ -1438,3 +1438,18 @@ MonoBehaviour:
   _actor:
     _underlyingValue: {fileID: 4378074552553838279}
   _destroyVFX: {fileID: 198717222519016466, guid: af0c0bb7c53230e4e8381d5781bec6b0, type: 3}
+  _destroyCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8873964436739240898}
+        m_TargetAssemblyTypeName: TankMaster._CodeBase.Gameplay.Destroyer, Assembly-CSharp
+        m_MethodName: ShowLoseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

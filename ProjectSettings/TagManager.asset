@@ -9,6 +9,7 @@ TagManager:
   - PlayerInitialPoint
   - Missile
   - EnemySpawner
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,10 @@
 ﻿using AYellowpaper;
+using TankMaster._CodeBase.Infrastructure.Factory;
+using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster._CodeBase.UI;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TankMaster._CodeBase.Gameplay
 {
@@ -10,6 +14,7 @@ namespace TankMaster._CodeBase.Gameplay
         [SerializeField] private int _coinsCount;
         [SerializeField] private InterfaceReference<IActor> _actor;
         [SerializeField] private ParticleSystem _destroyVFX;
+        [SerializeField] private UnityEvent _destroyCallback;
 
         private static readonly float _coinCreationOffsetY = 0.5f;
 
@@ -23,14 +28,7 @@ namespace TankMaster._CodeBase.Gameplay
             _actor.Value.Health.Died -= OnDied;
         }
 
-        public virtual void Destroy()
-        {
-            Destroy(gameObject);
-            Instantiate(_destroyVFX, transform.position, quaternion.identity);
-            InstantiateCoins();
-        }
-
-        private void InstantiateCoins()
+        public void InstantiateCoins()
         {
             for (var i = 0; i < _coinsCount; i++)
             {
@@ -40,7 +38,19 @@ namespace TankMaster._CodeBase.Gameplay
             }
         }
 
-        private void OnDied() =>
+        public void ShowLoseScreen() => 
+            AllServices.Container.Single<IGameFactory>().Interface.GetComponent<Interface>().LosePanel.Enable();
+
+        public void DeleteObject() => 
+            Destroy(gameObject);
+
+        public virtual void Destroy()
+        {
+            Instantiate(_destroyVFX, transform.position, quaternion.identity);
+            _destroyCallback?.Invoke();
+        }
+
+        private void OnDied(Health health) =>
             Destroy();
     }
 }

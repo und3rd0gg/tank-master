@@ -4,11 +4,11 @@ namespace TankMaster._CodeBase.UI.Panels
 {
     public class Panel : MonoBehaviour
     {
-        public bool IsStoppingTime = true;
+        public bool IsStoppingTimeOnEnable = true;
         
         public virtual void Enable()
         {
-            if (IsStoppingTime)
+            if (IsStoppingTimeOnEnable)
                 Time.timeScale = 0;
             
             gameObject.SetActive(true);

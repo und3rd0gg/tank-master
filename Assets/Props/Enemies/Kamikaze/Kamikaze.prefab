@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: _chaseCooldown
       value: 5.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8233795334791771399, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _coin
+      value: 
+      objectReference: {fileID: -8792648478927384887, guid: e92098f0438288f47b2c4957fdc4e88c, type: 3}
     - target: {fileID: 8805780290139670126, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _animator
       value: 

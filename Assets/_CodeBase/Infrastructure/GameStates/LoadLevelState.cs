@@ -1,5 +1,4 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
 using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
@@ -51,7 +50,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private void InitGameWorld()
         {
-            _gameFactory.CreateLevelTransition(Vector3.zero);
+            _gameFactory.CreateLevelTransition(Vector3.zero, null);
             _gameFactory.CreateLight();
             _gameFactory.CreateInterface();
             var player = _gameFactory.CreatePlayer(GameObject.FindWithTag(PlayerInitPointTag).transform.position);

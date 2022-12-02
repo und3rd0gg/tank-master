@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cinemachine;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Logic;
@@ -12,6 +13,7 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
     public class GameFactory : IGameFactory
     {
         private const string MainVirtualCameraTag = "MainVirtualCamera";
+        private const string EnemyTag = "Enemy";
 
         private readonly IAssetProvider _assetProvider;
 
@@ -50,16 +52,23 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             return Interface;
         }
 
-        public void CreateLevelTransition(Vector3 creationPoint)
+        public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter)
         {
-            _assetProvider.Instantiate(_transition, creationPoint);
+            var transition = _assetProvider.Instantiate(_transition, creationPoint);
+            transition.GetComponent<LevelTransition>().EnterBarrier.SetEnterLimitThreshold(enemiesToEnter);
         }
 
         public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true)
         {
             var level = _assetProvider.Instantiate(GetRandomLevel(), creationPoint);
             var transitionCreationPoint = level.GetComponent<Level>().TransitionConnectionPoint.position;
-            CreateLevelTransition(transitionCreationPoint);
+            var enemiesGameObjects = GameObject.FindGameObjectsWithTag(EnemyTag);
+            var enemies = new Enemy[enemiesGameObjects.Length];
+
+            for (var i = 0; i < enemiesGameObjects.Length; i++)
+                enemies[i] = enemiesGameObjects[i].GetComponent<Enemy>();
+
+            CreateLevelTransition(transitionCreationPoint, enemies);
         }
 
         public GameObject CreateLight()
