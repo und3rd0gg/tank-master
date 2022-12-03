@@ -5,8 +5,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     public class CoinCollector : MonoBehaviour
     {
-        [SerializeField][Attach] private Player _player;
-        
+        [SerializeField] [Attach] private Player _player;
+
         [SerializeField] private PhysicsDetector _physicsDetector;
 
         private int CoinLayer;
@@ -31,7 +31,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
         private void CheckCoinTriggerEnter(Collider coin)
         {
             if (coin.gameObject.layer != CoinLayer) return;
-            
+
             Money.Add(1);
             Destroy(coin.gameObject);
         }
@@ -45,7 +45,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
                 if (coin != null)
                 {
                     var coinPosition = coin.transform.position;
-                    coin.transform.position = Vector3.Lerp(coinPosition, transform.position, Time.deltaTime * 3f);
+                    coin.transform.position = Vector3.Lerp(coinPosition, transform.position, Time.deltaTime * 5.5f);
                 }
             }
         }

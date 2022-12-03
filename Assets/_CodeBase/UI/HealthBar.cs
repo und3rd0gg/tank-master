@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Dythervin.AutoAttach;
 using TankMaster._CodeBase.Gameplay;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,10 +10,11 @@ namespace TankMaster._CodeBase.UI
 {
     public class HealthBar : MonoBehaviour
     {
-        [SerializeField] private InterfaceReference<IActor> _target;
-
         [SerializeField] [Attach(Attach.Child)]
         private Slider _slider;
+
+        [SerializeField] private InterfaceReference<IActor> _target;
+        [SerializeField] private TMP_Text _HealthAmountText;
 
         private IСharacterСharacteristic _observableHealth;
 
@@ -21,6 +23,7 @@ namespace TankMaster._CodeBase.UI
         private void Awake()
         {
             _observableHealth = _target.Value.Health;
+            OnValueChanged(_observableHealth.Value, _observableHealth.MaxValue);
         }
 
         private void OnEnable()
@@ -37,7 +40,11 @@ namespace TankMaster._CodeBase.UI
         {
             var normalizedValue = NormalizeValue(currentValue, maxValue);
             ChangeBarAmountAsync(normalizedValue);
+            UpdateText(currentValue, maxValue);
         }
+
+        private void UpdateText(uint currentValue, uint maxValue) => 
+            _HealthAmountText.text = $"{currentValue}/{maxValue}";
 
         private float NormalizeValue(uint value, uint maxValue) =>
             Mathf.Abs((float) value / maxValue);

@@ -28,14 +28,13 @@ namespace TankMaster._CodeBase.Gameplay
 
         private void OnEnable()
         {
-            Jump();
-            Rotate();
+            PerformSideJump();
         }
 
         private void OnDisable() =>
             _coinSequence.Pause();
 
-        private void OnDestroy() => 
+        private void OnDestroy() =>
             _coinSequence.Kill();
 
         private void OnCollisionEnter(Collision collision)
@@ -48,15 +47,10 @@ namespace TankMaster._CodeBase.Gameplay
             }
         }
 
-        private void Jump()
+        private void PerformSideJump()
         {
             var randomVector = new Vector3(Random.Range(-_offset, _offset), 0, Random.Range(-_offset, _offset));
             _rigidbody.AddForce(Vector3.up * 5 + randomVector, ForceMode.Impulse);
-        }
-
-        private void Rotate()
-        {
-            _rigidbody.AddTorque(1000, 1000, 0, ForceMode.Impulse);
         }
 
         private void CreateSequence()

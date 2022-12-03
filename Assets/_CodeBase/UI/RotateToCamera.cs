@@ -4,7 +4,7 @@ namespace TankMaster._CodeBase.UI
 {
     public class RotateToCamera : MonoBehaviour
     {
-        [SerializeField] private Camera _camera;
+        private Camera _camera;
 
         private void Awake()
         {
@@ -12,14 +12,10 @@ namespace TankMaster._CodeBase.UI
                 _camera = Camera.main;
         }
 
-        private void Reset()
-        {
+        private void Reset() => 
             _camera = Camera.main;
-        }
 
-        private void LateUpdate()
-        {
+        private void LateUpdate() => 
             transform.LookAt(_camera.transform);
-        }
     }
 }
