@@ -46,11 +46,12 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             return PlayerGameObject;
         }
 
-        public GameObject CreateInterface()
-        {
+        public GameObject CreateInterface() =>
             Interface = _assetProvider.Instantiate(AssetPaths.Interface, Vector3.zero);
-            return Interface;
-        }
+
+        public UltimateJoystick CreateJoystick() =>
+            _assetProvider.Instantiate(AssetPaths.Joystick, Vector3.zero, true)
+                .GetComponentInChildren<UltimateJoystick>();
 
         public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter)
         {

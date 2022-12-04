@@ -27,5 +27,6 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true);
         public GameObject CreateLight();
         public GameObject CreateInterface();
+        public UltimateJoystick CreateJoystick();
     }
 }

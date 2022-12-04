@@ -12,6 +12,7 @@ namespace TankMaster._CodeBase.UI.Store
         public override void Enable()
         {
             base.Enable();
+            AllServices.Container.Single<IInputService>().HideVisuals();
             _interface ??= AllServices.Container.Single<IGameFactory>().Interface.GetComponent<Interface>();
             _interface.BalancePresenter.Open();
         }
@@ -19,6 +20,7 @@ namespace TankMaster._CodeBase.UI.Store
         public override void Disable()
         {
             base.Disable();
+            AllServices.Container.Single<IInputService>().ShowVisuals();
             _interface.BalancePresenter.Close();
         }
     }

@@ -6,7 +6,22 @@ namespace TankMaster._CodeBase.Infrastructure.Services
     {
         private PlayerInput _playerInput;
 
+        public bool IsActive()
+        {
+            return true;
+        }
+
         public Vector2 MovementAxis => _playerInput.Player.Move.ReadValue<Vector2>();
+
+        public void ShowVisuals()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void HideVisuals()
+        {
+            throw new System.NotImplementedException();
+        }
 
         public AnalogInputService()
         {

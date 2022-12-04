@@ -38,15 +38,15 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private void RegisterServices()
         {
             var services = AllServices.Container;
+            services.RegisterSingle<IAssetProvider>(new AssetProvider());
+            services.RegisterSingle<IGameFactory>(
+                new GameFactory(services.Single<IAssetProvider>()));
             services.RegisterSingle<IYandexGamesService>(new YandexGamesService());
-            services.RegisterSingle<IInputService>(new AnalogInputService());
+            services.RegisterSingle<IInputService>(new TouchInputService());
             services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
             services.RegisterSingle<ISaveLoadService>(
                 new SaveLoadService(services.Single<IGameFactory>(),
                     services.Single<IPersistentProgressService>()));
-            services.RegisterSingle<IAssetProvider>(new AssetProvider());
-            services.RegisterSingle<IGameFactory>(
-                new GameFactory(services.Single<IAssetProvider>()));
         }
     }
 }

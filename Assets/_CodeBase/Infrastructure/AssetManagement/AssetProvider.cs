@@ -19,10 +19,15 @@ namespace TankMaster._CodeBase.Infrastructure.AssetManagement
             return Object.Instantiate(prefab, creationPoint, startRotation);
         }
 
-        public GameObject Instantiate(string path, Vector3 creationPoint)
+        public GameObject Instantiate(string path, Vector3 creationPoint, bool dontDestroyOnLoad = false)
         {
             var prefab = Resources.Load<GameObject>(path);
-            return GameObject.Instantiate(prefab, creationPoint, prefab.transform.rotation);
+            var obj = GameObject.Instantiate(prefab, creationPoint, prefab.transform.rotation);
+            
+            if(dontDestroyOnLoad)
+                GameObject.DontDestroyOnLoad(obj);
+
+            return obj;
         }
 
         public GameObject[] LoadAll(string path) => 
