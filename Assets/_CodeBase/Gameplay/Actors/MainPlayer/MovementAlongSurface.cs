@@ -11,7 +11,7 @@ namespace TankMaster
         [SerializeField] private CollisionObserver _collisionObserver;
         [SerializeField] private CharacterController _controller;
         [SerializeField] private float _speed;
-        [Header("Sound")]
+        [Header("Sound")] 
         [SerializeField] private CharacterSound _soundPlayer;
 
         private IInputService _inputService;
@@ -41,20 +41,19 @@ namespace TankMaster
         {
             if (_inputService.IsActive())
             {
+                _soundPlayer.EngineAccelerate();
                 var motionVector = new Vector3(_inputService.MovementAxis.y, 0,
                     -_inputService.MovementAxis.x);
                 transform.rotation =
                     Quaternion.LookRotation(motionVector);
-                // var directionAlongSurface =
-                //     Project(transform.forward);
-                // var offset = directionAlongSurface * (_speed * Time.deltaTime);
-                // _rigidbody.velocity =
-                //     new Vector3(_inputService.MovementAxis.y, 0, -_inputService.MovementAxis.x) * _speed;
-
                 var motion = motionVector *
                              (Time.fixedDeltaTime * _speed);
                 motion.y = Physics.gravity.y * Time.deltaTime;
                 _controller.Move(motion);
+            }
+            else
+            {
+                _soundPlayer.EngineDeccelerate();
             }
 
             var offset = Physics.gravity * Time.fixedDeltaTime;
