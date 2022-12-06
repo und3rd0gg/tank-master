@@ -1,36 +1,29 @@
 ﻿using System;
-using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
 
 namespace TankMaster._CodeBase.Infrastructure
 {
     public class SceneLoader
     {
-        private readonly ICoroutineRunner _coroutineRunner;
-
-        public SceneLoader(ICoroutineRunner coroutineRunner)
-        {
-            _coroutineRunner = coroutineRunner;
-        }
-
         public void Load(string sceneName, Action onLoaded = null)
         {
-            _coroutineRunner.StartCoroutine(LoadScene(sceneName, onLoaded));
+            LoadScene(sceneName, onLoaded);
         }
 
-        private IEnumerator LoadScene(string sceneName, Action onLoaded = null)
+        public async UniTask LoadScene(string sceneName, Action onLoaded = null)
         {
             if (SceneManager.GetActiveScene().name == sceneName)
             {
                 onLoaded?.Invoke();
-                yield break;
+                return;
             }
             
             var waitNextScene = SceneManager.LoadSceneAsync(sceneName);
 
             while (!waitNextScene.isDone)
             {
-                yield return null;
+                await UniTask.Yield();
             }
             
             onLoaded?.Invoke();

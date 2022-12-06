@@ -19,7 +19,7 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public event Action PlayerCreated;
         public event Action MainLightCreated;
 
-        public GameObject CreatePlayer(Vector3 creationPoint);
+        public GameObject CreatePlayer(Vector3? creationPoint = null);
         public void Cleanup();
         public CinemachineVirtualCamera GetVirtualCamera();
         public void Register(ISavedProgressReader progressReader);
@@ -28,5 +28,6 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public GameObject CreateLight();
         public GameObject CreateInterface();
         public UltimateJoystick CreateJoystick();
+        void CreateEventSystem();
     }
 }

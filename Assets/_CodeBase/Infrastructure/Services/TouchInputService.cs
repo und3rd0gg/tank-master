@@ -10,6 +10,7 @@ namespace TankMaster._CodeBase.Infrastructure.Services
         public TouchInputService()
         {
             _joystick = AllServices.Container.Single<IGameFactory>().CreateJoystick();
+            HideVisuals();
         }
 
         public bool IsActive() => 

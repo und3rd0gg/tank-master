@@ -1,4 +1,5 @@
 ﻿using TankMaster._CodeBase.Data;
+using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
 
@@ -9,22 +10,36 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private readonly GameStateMachine _stateMachine;
         private readonly IPersistentProgressService _progressService;
         private readonly ISaveLoadService _saveLoadService;
+        private readonly SceneLoader _sceneLoader;
 
         public LoadProgressState(GameStateMachine stateMachine, IPersistentProgressService persistentProgressService,
-            ISaveLoadService saveLoadService)
+            ISaveLoadService saveLoadService, SceneLoader sceneLoader)
         {
             _stateMachine = stateMachine;
             _progressService = persistentProgressService;
             _saveLoadService = saveLoadService;
+            _sceneLoader = sceneLoader;
         }
 
         public void Enter()
         {
             LoadProgressOrInitNew();
-            _stateMachine.Enter<LoadLevelState, string>(_progressService.PlayerProgress.LastLevel);
+            LoadRequiredScene();
         }
 
-        public void Exit() { }
+        private void LoadRequiredScene()
+        {
+            if (true)
+                _stateMachine.Enter<TutorialState>();
+            // else
+            // {
+            //    _stateMachine.Enter<LoadPlayableLevelState, string>(_progressService.PlayerProgress.LastLevel);
+            //}
+        }
+
+        public void Exit()
+        {
+        }
 
         private void LoadProgressOrInitNew()
         {
@@ -32,6 +47,6 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         }
 
         private PlayerProgress NewProgress() =>
-            new PlayerProgress("Main");
+            new PlayerProgress(initialLevel: AssetPaths.Scenes.Main);
     }
 }

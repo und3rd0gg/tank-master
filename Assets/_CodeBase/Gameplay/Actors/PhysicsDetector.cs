@@ -40,7 +40,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors
         {
             Transform _closestObject;
 
-            if (_buffer[0] == null)
+            if (_buffer == null || _buffer[0] == null)
                 return null;
             
             _closestObject = _buffer[0].transform;

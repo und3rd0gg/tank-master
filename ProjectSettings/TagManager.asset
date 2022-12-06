@@ -10,6 +10,7 @@ TagManager:
   - Missile
   - EnemySpawner
   - Enemy
+  - CutsceneHandler
   layers:
   - Default
   - TransparentFX

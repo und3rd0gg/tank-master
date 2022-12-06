@@ -9,8 +9,6 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
     public class BootstrapState : IState
     {
-        private const string InitialSceneName = "Initial";
-        
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
 
@@ -23,7 +21,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         public void Enter()
         {
-            _sceneLoader.Load(sceneName: InitialSceneName, EnterLoadLevel);
+            _sceneLoader.Load(sceneName: AssetPaths.Scenes.Initial, EnterLoadLevel);
         }
 
         private void EnterLoadLevel()

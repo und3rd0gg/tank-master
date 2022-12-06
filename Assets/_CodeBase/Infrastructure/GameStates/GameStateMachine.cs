@@ -21,12 +21,13 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, _sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, _sceneLoader, services.Single<IGameFactory>(),
+                [typeof(LoadPlayableLevelState)] = new LoadPlayableLevelState(this, _sceneLoader, services.Single<IGameFactory>(),
                     services.Single<IPersistentProgressService>()),
                 [typeof(LoadProgressState)] =
                     new LoadProgressState(this, services.Single<IPersistentProgressService>(),
-                        services.Single<ISaveLoadService>()),
+                        services.Single<ISaveLoadService>(), _sceneLoader),
                 [typeof(GameLoopState)] = new GameLoopState(this),
+                [typeof(TutorialState)] = new TutorialState(this, _sceneLoader),
             };
         }
 

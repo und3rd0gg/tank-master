@@ -14,6 +14,7 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
     {
         private const string MainVirtualCameraTag = "MainVirtualCamera";
         private const string EnemyTag = "Enemy";
+        private const string PlayerInitialPointTag = "PlayerInitialPoint";
 
         private readonly IAssetProvider _assetProvider;
 
@@ -37,11 +38,22 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             _transition = assetProvider.Load(AssetPaths.Transition);
         }
 
-        public GameObject CreatePlayer(Vector3 creationPoint)
+        public GameObject CreatePlayer(Vector3? creationPoint = null)
         {
-            PlayerGameObject = InstantiateRegistered(AssetPaths.MainPlayer,
-                GameObject.FindWithTag("PlayerInitialPoint").transform.position,
-                Quaternion.Euler(0, 90, 0));
+            var playerInitialRotation = Quaternion.Euler(0, 90, 0);
+
+            if (!creationPoint.HasValue)
+            {
+                PlayerGameObject = InstantiateRegistered(AssetPaths.MainPlayer,
+                    GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
+                    playerInitialRotation);
+            }
+            else
+            {
+                PlayerGameObject =
+                    InstantiateRegistered(AssetPaths.MainPlayer, creationPoint.Value, playerInitialRotation);
+            }
+
             PlayerCreated?.Invoke();
             return PlayerGameObject;
         }
@@ -78,6 +90,9 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             MainLightCreated?.Invoke();
             return MainLight;
         }
+
+        public void CreateEventSystem() => 
+            _assetProvider.Instantiate(AssetPaths.EventSystem, Vector3.zero);
 
         public void Cleanup()
         {
