@@ -13,8 +13,7 @@ namespace TankMaster._CodeBase.Infrastructure.Services
             HideVisuals();
         }
 
-        public bool IsActive() => 
-            _joystick.GetJoystickState();
+        public bool IsActive => _joystick.GetJoystickState();
 
         public Vector2 MovementAxis => 
             new(_joystick.GetHorizontalAxis(), _joystick.GetVerticalAxis());

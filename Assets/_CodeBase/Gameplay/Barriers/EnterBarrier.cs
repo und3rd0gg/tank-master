@@ -1,4 +1,7 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+﻿using System;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
 using TankMaster._CodeBase.UI;
 using UnityEngine;
 
@@ -31,6 +34,14 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             _triggerCloseObserver.TriggerEnter -= OnPlayerOpenZoneExit;
         }
 
+        
+        //todo todelete
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.O))
+                SaveProgress();
+        }
+
         public void SetEnterLimitThreshold(Enemy[] enemies)
         {
             if (enemies == null)
@@ -60,7 +71,14 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             if (_killedEnemiesOnLevel == _enemiesOnLevel)
             {
                 ActivateTrigger();
+                SaveProgress();
             }
+        }
+
+        private void SaveProgress()
+        {
+            AllServices.Container.Single<ISaveLoadService>().SaveProgress();
+            Debug.Log("Progress Saved!");
         }
 
         private void ActivateTrigger()

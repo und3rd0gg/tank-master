@@ -116,4 +116,8 @@ MonoBehaviour:
       <Value>k__BackingField: {fileID: 11400000, guid: 86ac5a964c1b7e1499c8d5468d2a5cdd, type: 2}
     - <Key>k__BackingField: 2
       <Value>k__BackingField: {fileID: 11400000, guid: 98335a238aee4744982e03b6dd34413e, type: 2}
+  _fogEndAllowedValues:
+  - 50
+  - 100
+  - 150
   _switchTime: 6

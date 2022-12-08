@@ -29,11 +29,11 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private void LoadRequiredScene()
         {
-            if (true)
-                _stateMachine.Enter<TutorialState>();
+            // if (true)
+            //     _stateMachine.Enter<TutorialState>();
             // else
             // {
-            //    _stateMachine.Enter<LoadPlayableLevelState, string>(_progressService.PlayerProgress.LastLevel);
+                _stateMachine.Enter<LoadPlayableLevelState, string>(_progressService.PlayerProgress.LastLevel);
             //}
         }
 

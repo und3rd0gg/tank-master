@@ -39,7 +39,7 @@ namespace TankMaster
 
         private void FixedUpdate()
         {
-            if (_inputService.IsActive())
+            if (_inputService.IsActive)
             {
                 _soundPlayer.EngineAccelerate();
                 var motionVector = new Vector3(_inputService.MovementAxis.y, 0,

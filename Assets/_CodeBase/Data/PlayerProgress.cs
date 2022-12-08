@@ -6,6 +6,7 @@ namespace TankMaster._CodeBase.Data
     public class PlayerProgress
     {
         public string LastLevel { get; set; }
+        public uint MoneyBalance { get; set; }
 
         public PlayerProgress(string initialLevel)
         {

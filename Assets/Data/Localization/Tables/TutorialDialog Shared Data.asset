@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TutorialDialog Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TutorialDialog
+  m_TableCollectionNameGuidString: 969114c8a14fe174bba8ed1e8e5df5b3
+  m_Entries:
+  - m_Id: 6542172160
+    m_Key: Explanation - Joystick 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4169120456704
+    m_Key: Explanation - Joystick 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168394342113280
+    m_Key: Explanation - Joystick End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168925445857280
+    m_Key: Explanation - Transition Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336852065296384
+    m_Key: 'Explanation - Shooting '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336953496150016
+    m_Key: Explanation - Shooting 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337404559990784
+    m_Key: Explanation - Shooting 3
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7920797261715472390
+  references:
+    version: 2
+    RefIds:
+    - rid: 7920797261715472390
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1670367949069

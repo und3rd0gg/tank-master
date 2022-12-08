@@ -61,7 +61,7 @@ MonoBehaviour:
   _detectionMask:
     serializedVersion: 2
     m_Bits: 2181038080
-  _detectionRadius: 3
+  _detectionRadius: 2.93
   _bufferSize: 15
 --- !u!1 &693569341364096828
 GameObject:
@@ -480,14 +480,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913450399102385134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1095724875665044717}
-  m_Father: {fileID: 9188206398604822517}
-  m_RootOrder: 1
+  m_Father: {fileID: 9188206397738486998}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3222441473210280481
 GameObject:
@@ -671,14 +671,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7412046928248821183}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.973, z: -1.083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.973, z: -1.083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3503680085781897585}
-  m_Father: {fileID: 9188206398604822517}
-  m_RootOrder: 0
+  m_Father: {fileID: 9188206397738486998}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9188206397455015703
 GameObject:
@@ -868,11 +868,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9188206397738486998}
+  - component: {fileID: 1287820037090871695}
+  - component: {fileID: 2279116376057366768}
   - component: {fileID: 1778335372613492750}
   - component: {fileID: 328688526511013018}
-  - component: {fileID: 2279116376057366768}
-  - component: {fileID: 5343680528082422235}
-  m_Layer: 0
+  - component: {fileID: 7006327568686159164}
+  - component: {fileID: 2072734533318814229}
+  - component: {fileID: 304201268797679416}
+  m_Layer: 15
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -900,9 +903,48 @@ Transform:
   - {fileID: 8574641723907353458}
   - {fileID: 9117051405771766315}
   - {fileID: 2315972521539384144}
+  - {fileID: 7867359878380907108}
+  - {fileID: 8406509918731089420}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1287820037090871695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188206397738486993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485221d305b4e9046969adc5e2f3f0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
+  _playerHealth:
+    <MaxValue>k__BackingField: 100
+    <Value>k__BackingField: 100
+    _cameraShakeThreshold: 10
+  _money:
+    <Value>k__BackingField: 0
+--- !u!143 &2279116376057366768
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188206397738486993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.07
+  m_Radius: 1.13
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1778335372613492750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,40 +973,65 @@ MonoBehaviour:
   _controller: {fileID: 2279116376057366768}
   _speed: 5
   _soundPlayer: {fileID: 56644832360191246}
---- !u!143 &2279116376057366768
-CharacterController:
+--- !u!114 &7006327568686159164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188206397738486993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c481224d8d164a789fdde1a8512aa028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1287820037090871695}
+  _physicsDetector: {fileID: 3046730437255213770}
+--- !u!114 &2072734533318814229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188206397738486993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f819fd5cfa14e45beeb2c1882148d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coin: {fileID: 0}
+  _coinsCount: 0
+  _actor:
+    _underlyingValue: {fileID: 1287820037090871695}
+  _destroyVFX: {fileID: 198717222519016466, guid: af0c0bb7c53230e4e8381d5781bec6b0, type: 3}
+  _destroyCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2072734533318814229}
+        m_TargetAssemblyTypeName: TankMaster._CodeBase.Gameplay.Destroyer, Assembly-CSharp
+        m_MethodName: ShowLoseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &304201268797679416
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188206397738486993}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.07
-  m_Radius: 1.13
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!54 &5343680528082422235
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206397738486993}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 1.06
+  m_Center: {x: 0, y: 0.61, z: 0}
 --- !u!1 &9188206398050140321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,10 +1169,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9188206398604822517}
-  - component: {fileID: 8311502967537641651}
-  - component: {fileID: 2625564520352967088}
-  - component: {fileID: 8245683119492313962}
-  - component: {fileID: 7172911745754549429}
   m_Layer: 15
   m_Name: CarBodyRoot
   m_TagString: Player
@@ -1124,90 +1187,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8406509918731089420}
-  - {fileID: 7867359878380907108}
+  m_Children: []
   m_Father: {fileID: 9188206397738486998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8311502967537641651
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206398604822516}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: 0.54, z: 0}
---- !u!114 &2625564520352967088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206398604822516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 485221d305b4e9046969adc5e2f3f0e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
-  _playerHealth:
-    <MaxValue>k__BackingField: 100
-    <Value>k__BackingField: 100
-    _cameraShakeThreshold: 10
-  _money:
-    <Value>k__BackingField: 0
---- !u!114 &8245683119492313962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206398604822516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c481224d8d164a789fdde1a8512aa028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 2625564520352967088}
-  _physicsDetector: {fileID: 3046730437255213770}
---- !u!114 &7172911745754549429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206398604822516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f819fd5cfa14e45beeb2c1882148d9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coin: {fileID: 0}
-  _coinsCount: 0
-  _actor:
-    _underlyingValue: {fileID: 2625564520352967088}
-  _destroyVFX: {fileID: 198717222519016466, guid: af0c0bb7c53230e4e8381d5781bec6b0, type: 3}
-  _destroyCallback:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7172911745754549429}
-        m_TargetAssemblyTypeName: TankMaster._CodeBase.Gameplay.Destroyer, Assembly-CSharp
-        m_MethodName: ShowLoseScreen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &9188206399328671323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1428,7 @@ PrefabInstance:
     - target: {fileID: 1064276879793773138, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: _target._underlyingValue
       value: 
-      objectReference: {fileID: 2625564520352967088}
+      objectReference: {fileID: 1287820037090871695}
     - target: {fileID: 3599075535579092793, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1481,6 +1464,10 @@ PrefabInstance:
     - target: {fileID: 5633674785873188395, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_Name
       value: CharacterHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521442361434271760, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}

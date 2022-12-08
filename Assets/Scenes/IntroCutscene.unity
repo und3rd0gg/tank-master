@@ -557,12 +557,12 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 9.7, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 10
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -571,7 +571,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100.388855
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5268,6 +5268,8 @@ PlayableDirector:
     value: {fileID: 616995043}
   - key: {fileID: -679191322549888866, guid: dd03d2fc551d8194ca63e6ae80e66890, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -8159696631098212727, guid: dd03d2fc551d8194ca63e6ae80e66890, type: 2}
+    value: {fileID: 195239958}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &616995041

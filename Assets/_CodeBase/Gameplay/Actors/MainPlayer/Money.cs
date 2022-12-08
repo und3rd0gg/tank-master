@@ -1,10 +1,12 @@
 ﻿using System;
+using TankMaster._CodeBase.Data;
+using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 {
     [Serializable]
-    public class Money : IСharacterСharacteristic
+    public class Money : IСharacterСharacteristic, IProgressSaver
     {
         [field: SerializeField] public uint Value { get; private set; }
 
@@ -31,6 +33,16 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 
             Add((uint) amount);
             ValueChanged?.Invoke(Value, MaxValue);
+        }
+
+        public void LoadProgress(PlayerProgress playerProgress)
+        {
+            Value = playerProgress.MoneyBalance;
+        }
+
+        public void UpdateProgress(PlayerProgress playerProgress)
+        {
+            playerProgress.MoneyBalance = Value;
         }
     }
 }

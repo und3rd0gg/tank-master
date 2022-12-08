@@ -6,12 +6,13 @@ namespace TankMaster._CodeBase.Infrastructure.Services
     {
         private PlayerInput _playerInput;
 
-        public bool IsActive()
-        {
-            return true;
-        }
-
+        public bool IsActive => true;
         public Vector2 MovementAxis => _playerInput.Player.Move.ReadValue<Vector2>();
+
+        public void SetActive(bool state)
+        {
+            throw new System.NotImplementedException();
+        }
 
         public void ShowVisuals()
         {

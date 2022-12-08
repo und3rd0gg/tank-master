@@ -40,9 +40,9 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private void InitGameWorld()
         {
             _gameFactory.CreateEventSystem();
-            var player = _gameFactory.CreatePlayer();
             AllServices.Container.Single<IInputService>().ShowVisuals();
             _gameFactory.CreateInterface();
+            var player = _gameFactory.CreatePlayer();
             CameraFollow(player);
         }
         

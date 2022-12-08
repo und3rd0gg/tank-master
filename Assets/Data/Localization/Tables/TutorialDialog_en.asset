@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialDialog_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 969114c8a14fe174bba8ed1e8e5df5b3, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6542172160
+    m_Localized: Move the Joystick to drive forward!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4169120456704
+    m_Localized: Try driving a few meters ahead to get used to it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168394342113280
+    m_Localized: Excellent! You've mastered the controls!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168925445857280
+    m_Localized: Try to drive a little further!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336852065296384
+    m_Localized: The enemy is ahead! You have to kill him!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336953496150016
+    m_Localized: Just get closer to him. Shooting will start automatically!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337404559990784
+    m_Localized: Don't forget to dodge bullets. At this level, you are immortal,
+      but in the future it will be more difficult!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

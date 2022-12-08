@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerObserver: {fileID: 3333984047655282415}
-  _daytimeSwitchChance: 40
+  _daytimeSwitchChance: 65
 --- !u!1 &6081811184869057671
 GameObject:
   m_ObjectHideFlags: 0

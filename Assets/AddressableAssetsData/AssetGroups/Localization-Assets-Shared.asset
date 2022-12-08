@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Localization/Tables/UISprites Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 969114c8a14fe174bba8ed1e8e5df5b3
+    m_Address: Assets/Data/Localization/Tables/TutorialDialog Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: bf8e0e72c9522ed4e8e20f6628ca126f, type: 2}
   m_SchemaSet:
