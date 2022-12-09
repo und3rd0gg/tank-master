@@ -30,10 +30,10 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private void LoadRequiredScene()
         {
             // if (true)
-            //     _stateMachine.Enter<TutorialState>();
+                 _stateMachine.Enter<CutsceneState>();
             // else
             // {
-                _stateMachine.Enter<LoadPlayableLevelState, string>(AssetPaths.Scenes.Main);
+            //    _stateMachine.Enter<LoadPlayableLevelState, string>(AssetPaths.Scenes.Main);
             //}
         }
 

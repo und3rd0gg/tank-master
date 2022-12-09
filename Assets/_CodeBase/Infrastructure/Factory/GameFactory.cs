@@ -65,6 +65,11 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             _assetProvider.Instantiate(AssetPaths.Joystick, Vector3.zero, true)
                 .GetComponentInChildren<UltimateJoystick>();
 
+        public GameObject CreateMusicSource()
+        {
+            return _assetProvider.Instantiate(AssetPaths.Music, Vector3.zero);
+        }
+
         public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter)
         {
             var transition = _assetProvider.Instantiate(_transition, creationPoint);

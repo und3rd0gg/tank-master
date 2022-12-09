@@ -9,6 +9,7 @@
         public const string Interface = "Prefabs/UI/[INTERFACE]";
         public const string Joystick = "Prefabs/UI/Joystick";
         public const string EventSystem = "Prefabs/Infrastructure/EventSystem";
+        public const string Music = "Prefabs/GamePlay/Music";
 
         public static class Scenes
         {

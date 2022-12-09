@@ -1,5 +1,4 @@
-﻿using System;
-using TankMaster._CodeBase.Infrastructure.Factory;
+﻿using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.UI.Panels;
 

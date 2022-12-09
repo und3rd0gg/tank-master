@@ -107,6 +107,14 @@ MonoBehaviour:
     m_Localized: "TEKRAR BA\u015ELAT"
     m_Metadata:
       m_Items: []
+  - m_Id: 7560115178807296
+    m_Localized: "Sahneyi atlamak i\xE7in dokunun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7603608563589120
+    m_Localized: "Ba\u015Flamak i\xE7in dokun"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

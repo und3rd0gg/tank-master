@@ -15,9 +15,6 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
 
         public event Action<uint, uint> ValueChanged;
 
-        public void Add(uint amount) =>
-            Value += amount * Multiplier;
-
         public void UpgradeMultiplier(int newMultiplier)
         {
             if (newMultiplier < Multiplier)
@@ -26,12 +23,15 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
             Multiplier = (uint) newMultiplier;
         }
 
+        public void Add(uint amount) =>
+            Value += amount * Multiplier;
+
         public void Add(int amount)
         {
             if (amount < 0)
                 throw new ArgumentException("Invalid amount");
 
-            Add(amount);
+            Add((uint) amount);
             ValueChanged?.Invoke(Value, MaxValue);
         }
 

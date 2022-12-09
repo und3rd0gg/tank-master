@@ -103,6 +103,14 @@ MonoBehaviour:
     m_Key: RESTART
     m_Metadata:
       m_Items: []
+  - m_Id: 7560115178807296
+    m_Key: TAPTOSKIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7603608563589120
+    m_Key: TAPTOSTART
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

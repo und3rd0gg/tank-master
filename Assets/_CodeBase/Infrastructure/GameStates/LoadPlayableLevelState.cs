@@ -52,6 +52,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         {
             _gameFactory.CreateLevelTransition(Vector3.zero, null);
             _gameFactory.CreateLight();
+            _gameFactory.CreateMusicSource();
             _gameFactory.CreateInterface();
             _gameFactory.CreateEventSystem();
             var player = _gameFactory.CreatePlayer();

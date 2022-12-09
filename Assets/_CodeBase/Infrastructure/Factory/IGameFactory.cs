@@ -29,5 +29,6 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public GameObject CreateInterface();
         public UltimateJoystick CreateJoystick();
         void CreateEventSystem();
+        public GameObject CreateMusicSource();
     }
 }

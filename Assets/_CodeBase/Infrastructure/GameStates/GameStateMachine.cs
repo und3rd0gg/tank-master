@@ -27,6 +27,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
                     new LoadProgressState(this, services.Single<IPersistentProgressService>(),
                         services.Single<ISaveLoadService>(), _sceneLoader),
                 [typeof(GameLoopState)] = new GameLoopState(this),
+                [typeof(CutsceneState)] = new CutsceneState(this, _sceneLoader),
                 [typeof(TutorialState)] = new TutorialState(this, _sceneLoader),
             };
         }

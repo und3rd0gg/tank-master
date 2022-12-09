@@ -11,12 +11,11 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
         [SerializeField] private TMP_Text _pricePresenter;
         [SerializeField] private Image[] _stars;
         [SerializeField] private GameObject _glow;
-        
 
-        private Color _disabledStarColor = new Color(0.51f, 0.51f, 0.51f);
+        private Color _disabledStarColor = new(0.51f, 0.51f, 0.51f);
         private Color _enabledStarColor = Color.white;
 
-        protected static Dictionary<uint, uint> PriceMap = new()
+        protected Dictionary<uint, uint> PriceMap = new()
         {
             [1] = 100,
             [2] = 200,
@@ -46,7 +45,7 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
         {
             var starsCountToEnable = UpgradeLevel;
 
-            for (int i = 0; i < _stars.Length; i++)
+            for (var i = 0; i < _stars.Length; i++)
             {
                 if (starsCountToEnable > 0)
                 {
