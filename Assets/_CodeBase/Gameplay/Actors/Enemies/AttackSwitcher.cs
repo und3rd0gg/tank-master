@@ -40,7 +40,6 @@ namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
             {
                 if (collider != null)
                 {
-                    Debug.Log("entered attack zone");
                     OnAttackZoneEnter(collider);
                 }
             }

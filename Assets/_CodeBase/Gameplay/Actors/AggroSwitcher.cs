@@ -38,7 +38,6 @@ namespace TankMaster._CodeBase.Gameplay.Actors
 
         private void DetectionZoneEnter(Collider target)
         {
-            Debug.Log("DetectionZoneEnter");
             _chaseCooldownCancellationTokenSource.Cancel();
             _follower.SetTarget(target.gameObject.transform);
             _follower.enabled = true;

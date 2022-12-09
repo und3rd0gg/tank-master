@@ -31,7 +31,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
             if (amount < 0)
                 throw new ArgumentException("Invalid amount");
 
-            Add((uint) amount);
+            Add(amount);
             ValueChanged?.Invoke(Value, MaxValue);
         }
 

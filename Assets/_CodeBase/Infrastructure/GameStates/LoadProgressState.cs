@@ -33,7 +33,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             //     _stateMachine.Enter<TutorialState>();
             // else
             // {
-                _stateMachine.Enter<LoadPlayableLevelState, string>(_progressService.PlayerProgress.LastLevel);
+                _stateMachine.Enter<LoadPlayableLevelState, string>(AssetPaths.Scenes.Main);
             //}
         }
 
@@ -47,6 +47,6 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         }
 
         private PlayerProgress NewProgress() =>
-            new PlayerProgress(initialLevel: AssetPaths.Scenes.Main);
+            new PlayerProgress();
     }
 }

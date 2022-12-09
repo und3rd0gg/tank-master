@@ -26,6 +26,7 @@ namespace TankMaster._CodeBase.Infrastructure.Services.SaveLoad
             }
             
             PlayerPrefs.SetString(ProgressKey, _progressService.PlayerProgress.ToJson());
+
         }
 
         public PlayerProgress LoadProgress()
