@@ -1,9 +1,10 @@
-﻿namespace TankMaster._CodeBase.UI.Store.Buttons
+﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
+
+namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public class UpgradeMissileButton : UpgradeButton
     {
-
-        public override void OnClick()
+        protected override void OnUpgrade()
         {
             throw new System.NotImplementedException();
         }

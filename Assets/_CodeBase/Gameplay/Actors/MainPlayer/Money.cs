@@ -35,6 +35,29 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
             ValueChanged?.Invoke(Value, MaxValue);
         }
 
+        public bool HasEnough(uint amount)
+        {
+            if ((int)Value - amount < 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool TrySpendMoney(uint amount)
+        {
+            if (!HasEnough(amount))
+            {
+                Debug.Log("не прошло");
+                return false;
+            }
+
+            Value -= amount;
+            ValueChanged?.Invoke(Value, MaxValue);
+            return true;
+        }
+
         public void LoadProgress(PlayerProgress playerProgress)
         {
             Value = playerProgress.MoneyBalance;

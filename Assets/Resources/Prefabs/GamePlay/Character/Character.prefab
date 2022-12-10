@@ -921,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
+  <Shooter>k__BackingField: {fileID: 7762396181470131058}
   _playerHealth:
     <MaxValue>k__BackingField: 100
     <Value>k__BackingField: 100

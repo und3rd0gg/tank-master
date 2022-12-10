@@ -1,49 +1,65 @@
-﻿using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace TankMaster._CodeBase.UI.Store.Buttons
 {
     public abstract class UpgradeButton : StoreItemButton
     {
-        [SerializeField] private TMP_Text _pricePresenter;
         [SerializeField] private Image[] _stars;
         [SerializeField] private GameObject _glow;
 
-        private Color _disabledStarColor = new(0.51f, 0.51f, 0.51f);
-        private Color _enabledStarColor = Color.white;
+        private readonly Color _disabledStarColor = new(0.51f, 0.51f, 0.51f);
+        private readonly Color _enabledStarColor = Color.white;
 
-        protected Dictionary<uint, uint> PriceMap = new()
+        public uint CurrentPrice => UpgradeInfo[BoughtUpgradeLevel + 1].Price;
+        public int MaxLevel => UpgradeInfo.Count;
+
+        protected override bool BuyCondition => 
+            !MaxLevelReached && PlayerMoney.HasEnough(UpgradeInfo[NextUpgradeLevel].Price);
+
+        private bool MaxLevelReached =>
+            BoughtUpgradeLevel == MaxLevel;
+
+        public override void OnClick()
         {
-            [1] = 100,
-            [2] = 200,
-            [3] = 500,
-        };
-
-        public uint CurrentPrice { get; protected set; } = 100;
-        public uint UpgradeLevel { get; protected set; } = 0;
-        public int MaxLevel => PriceMap.Count;
-
-        public override void OnPointerClick(PointerEventData eventData)
-        {
-            IncreasePrice();
-            UpdatePresenter(CurrentPrice);
+            if (!BuyCondition)
+            {
+                PlayErrorSound();
+                return;
+            }
+                
+            SpendMoney();
+            IncreaseUpgradeLevel();
+            OnUpgrade();
+            PlayBuySound();
             UpdateStars();
-            CheckMaxLevelReach();
-            base.OnPointerClick(eventData);
+            EnableGlowIfAppropriate();
+            UpdatePresenter();
         }
 
-        private void CheckMaxLevelReach()
+        protected abstract void OnUpgrade();
+
+        private void UpdatePresenter()
         {
-            if (UpgradeLevel == MaxLevel)
+            if (MaxLevelReached)
+            {
+                UpdatePresenter(null);
+            }
+            else
+            {
+                UpdatePresenter(CurrentPrice);
+            }
+        }
+
+        private void EnableGlowIfAppropriate()
+        {
+            if (MaxLevelReached)
                 _glow.SetActive(true);
         }
 
         private void UpdateStars()
         {
-            var starsCountToEnable = UpgradeLevel;
+            var starsCountToEnable = BoughtUpgradeLevel;
 
             for (var i = 0; i < _stars.Length; i++)
             {
@@ -59,21 +75,10 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
             }
         }
 
-        private void IncreasePrice()
+        private void IncreaseUpgradeLevel()
         {
-            if (UpgradeLevel + 1 <= MaxLevel)
-                UpgradeLevel++;
-            else
-            {
-                return;
-            }
-
-            CurrentPrice = PriceMap[UpgradeLevel];
-        }
-
-        private void UpdatePresenter(uint value)
-        {
-            _pricePresenter.text = value.ToString();
+            if (!MaxLevelReached)
+                BoughtUpgradeLevel = NextUpgradeLevel;
         }
     }
 }

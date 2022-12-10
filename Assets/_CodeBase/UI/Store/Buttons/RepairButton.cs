@@ -8,7 +8,7 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
     {
         public override void OnClick()
         {
-            RepairCar();
+            throw new System.NotImplementedException();
         }
 
         private void RepairCar()
