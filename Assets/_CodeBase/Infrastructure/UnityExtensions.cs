@@ -28,7 +28,14 @@ namespace TankMaster._CodeBase.Infrastructure
 
             return _random.NextDouble() < chance / 100.0;
         }
-
+        
+        /// <summary>
+        /// Returns next enum element
+        /// </summary>
+        /// <param name="src"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static T Next<T>(this T src) where T : struct
         {
             if (!typeof(T).IsEnum)

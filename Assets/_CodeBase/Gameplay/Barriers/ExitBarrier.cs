@@ -13,7 +13,7 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
 
         private static readonly int IsOpened = Animator.StringToHash(nameof(IsOpened));
 
-        private bool _firstExit = true;
+        private static bool _firstExit = true;
 
         private void OnEnable()
         {
@@ -42,13 +42,20 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             {
                 barrier.SetBool(IsOpened, false);
                 _blocker.SetActive(true);
+            }
+            
+            ShowInterstitial();
+        }
 
-                if (_firstExit)
-                {
-                    _firstExit = false;
-                    return;
-                }
-
+        private void ShowInterstitial()
+        {
+            if (_firstExit)
+            {
+                _firstExit = false;
+                _triggerCloseObserver.Disable();
+            }
+            else
+            {
                 InterstitialAd.Show(
                     onOpenCallback: () => Time.timeScale = 0,
                     onCloseCallback: b => Time.timeScale = 1);

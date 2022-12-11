@@ -124,7 +124,7 @@ MonoBehaviour:
   m_searchRange: 10
   m_searchAngle: 30
   m_canLooseTarget: 1
-  m_guidanceIntensity: 2
+  m_guidanceIntensity: 1.75
   m_distanceInfluence:
     serializedVersion: 2
     m_Curve:
