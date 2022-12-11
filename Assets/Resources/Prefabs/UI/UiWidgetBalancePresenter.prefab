@@ -66,7 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4839f83d6d089346951442fa0395e61, type: 2}
   m_sharedMaterial: {fileID: 400536595760750144, guid: a4839f83d6d089346951442fa0395e61, type: 2}
@@ -5058,8 +5060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 8403229121328378618}
   _text: {fileID: 2761164509622592668}
-  _openTime: 0.4
-  _showDelay: 1
+  _openTime: 0.25
+  _showDelay: 1.5
 --- !u!1 &8403229121765739748
 GameObject:
   m_ObjectHideFlags: 0

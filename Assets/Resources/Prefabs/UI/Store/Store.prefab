@@ -1833,9 +1833,49 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1443029840334695898, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
+--- !u!114 &3860553256950037481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2331658757091208385, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
+  m_PrefabInstance: {fileID: 1569724314970904360}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330866354620470073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4330866354620470073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3013633770167878673, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
+  m_PrefabInstance: {fileID: 1569724314970904360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4870366795973718349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330866354620470073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b86d9d0cfc34ea0930ef410cbc45e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 7513333918633758031}
+  Button: {fileID: 3860553256950037481}
+  UpgradeInfo:
+    items: []
+  PricePresenter: {fileID: 0}
+  _buySound: {fileID: 0}
+  _errorSound: {fileID: 0}
 --- !u!224 &5503025122631071918 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6455465604456116102, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
+  m_PrefabInstance: {fileID: 1569724314970904360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7513333918633758031 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9046744937918192231, guid: 4da1b5518a9ed5746ab8e789a98efd12, type: 3}
   m_PrefabInstance: {fileID: 1569724314970904360}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3088088315545821845
@@ -1943,6 +1983,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+--- !u!114 &439644894190407332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3225414360493730865, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+  m_PrefabInstance: {fileID: 3088088315545821845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &671120825910732760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561241023114249549, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+  m_PrefabInstance: {fileID: 3088088315545821845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5535864960963556813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7352196949973866328, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+  m_PrefabInstance: {fileID: 3088088315545821845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6350515298734445577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8285083940686182044, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+  m_PrefabInstance: {fileID: 3088088315545821845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6435406067745339398 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8328334725810625171, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
@@ -1962,7 +2040,7 @@ AudioSource:
   m_GameObject: {fileID: 6435406067745339399}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9017323633419172756, guid: a4e73c546782c284ab90e0020f517427, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2061,15 +2139,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638679fd5a614ab48e8bb1699d916ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpgradeInfo:
-    items: []
-  PricePresenter: {fileID: 8644486034664895996}
   _audioSource: {fileID: 5841116683636238976}
-  BuySound: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
-  ErrorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
-  CurrentUpgradeLevel: 1
-  _stars: []
-  _glow: {fileID: 0}
+  Button: {fileID: 6435406067745339446}
+  UpgradeInfo:
+    items:
+    - <Key>k__BackingField: 1
+      <Value>k__BackingField:
+        Value: 0
+        Price: 0
+    - <Key>k__BackingField: 2
+      <Value>k__BackingField:
+        Value: 0
+        Price: 0
+    - <Key>k__BackingField: 3
+      <Value>k__BackingField:
+        Value: 0
+        Price: 0
+  PricePresenter: {fileID: 8644486034664895996}
+  _buySound: {fileID: 8300000, guid: 117815ce261287645960c97838e40321, type: 3}
+  _errorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
+  _stars:
+  - {fileID: 439644894190407332}
+  - {fileID: 5535864960963556813}
+  - {fileID: 671120825910732760}
+  _glow: {fileID: 6350515298734445577}
+--- !u!114 &6435406067745339446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8328334725810625187, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
+  m_PrefabInstance: {fileID: 3088088315545821845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435406067745339399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8644486034664895996 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6713870653489026921, guid: 743b6cbee04907741bff249dd70b40a7, type: 3}
@@ -2208,6 +2312,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3468468457119789587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1943706042964967712, guid: 77523b7f38f8a114ab3488b818f8dc71, type: 3}
+  m_PrefabInstance: {fileID: 3088088316230284083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3468468457119789602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3468468457119789602 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1943706042964967697, guid: 77523b7f38f8a114ab3488b818f8dc71, type: 3}
@@ -2223,7 +2338,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9017323633419172756, guid: a4e73c546782c284ab90e0020f517427, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2321,6 +2436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145a79c275334cd491f5851248677b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 9190676658191817915}
+  Button: {fileID: 3468468457119789587}
   UpgradeInfo:
     items:
     - <Key>k__BackingField: 1
@@ -2336,10 +2453,8 @@ MonoBehaviour:
         Value: 6
         Price: 600
   PricePresenter: {fileID: 2205141110888185817}
-  _audioSource: {fileID: 9190676658191817915}
-  BuySound: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
-  ErrorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
-  CurrentUpgradeLevel: 1
+  _buySound: {fileID: 8300000, guid: 445549bd8c6a7534ca82ea0948d15a9f, type: 3}
+  _errorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
   _stars:
   - {fileID: 8031238253956269185}
   - {fileID: 2719622004186333160}
@@ -2487,6 +2602,149 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2367263132757779969, guid: aa2f85d57a714904e83a548a352ad44f, type: 3}
   m_PrefabInstance: {fileID: 3088088316575748293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &720895557038503621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2367263132757779968, guid: aa2f85d57a714904e83a548a352ad44f, type: 3}
+  m_PrefabInstance: {fileID: 3088088316575748293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5056281925635101667
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720895557038503621}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -9017323633419172756, guid: a4e73c546782c284ab90e0020f517427, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8376200969049605156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720895557038503621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f090becabc924d8b868cfe053f9e4f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 5056281925635101667}
+  Button: {fileID: 720895557038503668}
+  UpgradeInfo:
+    items: []
+  PricePresenter: {fileID: 2646259745772796734}
+  _buySound: {fileID: 8300000, guid: ef35e9af53a6ac640af92ca921d009fb, type: 3}
+  _errorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
+  _price: 10
+--- !u!114 &720895557038503668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2367263132757780017, guid: aa2f85d57a714904e83a548a352ad44f, type: 3}
+  m_PrefabInstance: {fileID: 3088088316575748293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720895557038503621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2646259745772796734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1036514840807205883, guid: aa2f85d57a714904e83a548a352ad44f, type: 3}
+  m_PrefabInstance: {fileID: 3088088316575748293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3088088316866409020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2759,6 +3017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cccac06fba4cfd89841a0f21186bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 3895468319986352967}
+  Button: {fileID: 7704774300375644452}
   UpgradeInfo:
     items:
     - <Key>k__BackingField: 1
@@ -2774,15 +3034,24 @@ MonoBehaviour:
         Value: 4
         Price: 500
   PricePresenter: {fileID: 4923734981813925102}
-  _audioSource: {fileID: 3895468319986352967}
-  BuySound: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
-  ErrorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
-  CurrentUpgradeLevel: 1
+  _buySound: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
+  _errorSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
   _stars:
   - {fileID: 3871427088177221558}
   - {fileID: 9183027680183579871}
   - {fileID: 4247932433236682442}
   _glow: {fileID: 7746874000993178907}
+--- !u!114 &7704774300375644452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4627392069209017112, guid: 0194b0d61bd03004c9725a50cfaf38fc, type: 3}
+  m_PrefabInstance: {fileID: 3088088316866409020}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7704774300375644437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7746874000993178907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4708930320965265191, guid: 0194b0d61bd03004c9725a50cfaf38fc, type: 3}
@@ -2911,11 +3180,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9017323633419172756, guid: a4e73c546782c284ab90e0020f517427, type: 2}
     - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
+      propertyPath: Button
+      value: 
+      objectReference: {fileID: 8157262091787375601}
+    - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
       propertyPath: BuySound
       value: 
       objectReference: {fileID: 8300000, guid: b734d940cc82a5b4dbe7ff7d0ad190f9, type: 3}
     - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
+      propertyPath: _buySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b4cedeba4e8fec4a8e1b1ab19f1c52f, type: 3}
+    - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
       propertyPath: ErrorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
+    - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
+      propertyPath: _errorSound
       value: 
       objectReference: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
     - target: {fileID: 9178337296841939785, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
@@ -3000,3 +3281,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6624651364597440588, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
   m_PrefabInstance: {fileID: 3088088316887446413}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8157262091787375601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6624651364597440636, guid: 977a6ca8628fe1445b1d3546aa427cb2, type: 3}
+  m_PrefabInstance: {fileID: 3088088316887446413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

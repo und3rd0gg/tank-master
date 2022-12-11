@@ -4,11 +4,11 @@ using TankMaster._CodeBase.Infrastructure.Services;
 
 namespace TankMaster._CodeBase.UI.Store.Buttons
 {
-    public class RepairButton : StoreItemButton
+    public class RepairButton : OneTimeButton
     {
-        public override void OnClick()
+        protected override void OnUpgrade()
         {
-            throw new System.NotImplementedException();
+            RepairCar();
         }
 
         private void RepairCar()

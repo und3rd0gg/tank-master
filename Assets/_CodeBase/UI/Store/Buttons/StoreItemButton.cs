@@ -9,46 +9,41 @@ using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 namespace TankMaster._CodeBase.UI.Store.Buttons
 {
-    [RequireComponent(typeof(AudioSource))]
-    public abstract class StoreItemButton : MonoBehaviour, IPointerClickHandler, IProgressSaver
+    [RequireComponent(typeof(AudioSource), typeof(UnityEngine.UI.Button))]
+    public abstract class StoreItemButton : MonoBehaviour, IProgressSaver
     {
         [SerializeField] [Attach] private AudioSource _audioSource;
         
+        [SerializeField] [Attach] protected UnityEngine.UI.Button Button;
+
         [SerializeField] protected InspectableDictionary<uint, UpgradeInfo> UpgradeInfo;
         [SerializeField] protected TMP_Text PricePresenter;
-        [SerializeField] private AudioClip BuySound;
-        [SerializeField] private AudioClip ErrorSound;
+        
+        [SerializeField] private AudioClip _buySound;
+        [SerializeField] private AudioClip _errorSound;
 
         private Money _playerMoney;
-
-        public uint BoughtUpgradeLevel = 0;
-
+        
         protected Money PlayerMoney => _playerMoney ??= AllServices.Container.Single<IGameFactory>().PlayerGameObject
             .GetComponent<Player>()
             .Money;
-        protected uint NextUpgradeLevel =>
-            BoughtUpgradeLevel + 1;
 
-        protected virtual bool BuyCondition { get; } 
+        protected virtual bool BuyCondition { get; }
 
         protected virtual void Awake()
         {
-            UpdatePresenter(UpgradeInfo[NextUpgradeLevel].Price);
-        }
-
-        public virtual void OnPointerClick(PointerEventData eventData)
-        {
-            OnClick();
+            Button.onClick.AddListener(OnClick);
         }
 
         protected void PlayBuySound() => 
-            _audioSource.PlayOneShot(BuySound);
+            PlayIfExists(_buySound);
 
         protected void PlayErrorSound() => 
-            _audioSource.PlayOneShot(ErrorSound);
+            PlayIfExists(_errorSound);
 
         protected virtual void UpdatePresenter(uint? value)
         {
@@ -62,8 +57,14 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
             }
         }
 
-        protected void SpendMoney() =>
-            PlayerMoney.TrySpendMoney(UpgradeInfo[NextUpgradeLevel].Price);
+        protected void SpendMoney(uint amount) =>
+            PlayerMoney.TrySpendMoney(amount);
+
+        private void PlayIfExists(AudioClip audioClip)
+        {
+            if (audioClip != null) 
+                _audioSource.PlayOneShot(audioClip);
+        }
 
         public abstract void OnClick();
 
