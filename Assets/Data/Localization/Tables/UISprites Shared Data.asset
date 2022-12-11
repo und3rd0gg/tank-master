@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: LANG
     m_Metadata:
       m_Items: []
+  - m_Id: 8300844150792192
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 6375348178098323464
