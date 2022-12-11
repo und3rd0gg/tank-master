@@ -1,3 +1,4 @@
+using TankMaster._CodeBase.Infrastructure;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -16,7 +17,9 @@ namespace TankMaster._CodeBase.UI.Panels
         public void ChangeVFXVolume(float volume) => 
             _mixer.SetFloat(VFX, GetVolume(volume));
 
-        private static float GetVolume(float volume) => 
-            Mathf.Lerp(-80, 0, volume);
+        private float GetVolume(float volume)
+        {
+            return UnityExtensions.Remap.DoRemap(0, 1, -80, 0, volume);
+        }
     }
 }

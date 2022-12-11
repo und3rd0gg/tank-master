@@ -1,6 +1,4 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
 {
@@ -8,9 +6,12 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
     {
         [SerializeField] private AudioSource _engineSound;
         [SerializeField] private MovementAlongSurface _engine;
-        [Header("Sound Values")] 
-        [SerializeField] private float _engineLowPitch;
+
+        [Header("Sound Values")] [SerializeField]
+        private float _engineLowPitch;
+
         [SerializeField] private float _engineHighPitch;
+        [SerializeField] private float _engineHighPitchSecondary;
         [SerializeField] private float _pitchIncreaseSpeed;
 
         private void OnEnable()
@@ -28,10 +29,13 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
 
         public void EngineAccelerate()
         {
-            _engineSound.pitch =
-                Mathf.MoveTowards(_engineSound.pitch, _engineHighPitch, Time.deltaTime * _pitchIncreaseSpeed);
+            if (Mathf.Approximately(_engineSound.pitch, _engineHighPitch))
+                _engineSound.pitch = _engineHighPitchSecondary;
+            else
+                _engineSound.pitch =
+                    Mathf.MoveTowards(_engineSound.pitch, _engineHighPitch, Time.deltaTime * _pitchIncreaseSpeed);
         }
-        
+
         public void EngineDeccelerate()
         {
             _engineSound.pitch =
@@ -42,7 +46,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
         {
             _engineSound.Play();
         }
-        
+
         private void OnEngineStopped()
         {
             _engineSound.Stop();

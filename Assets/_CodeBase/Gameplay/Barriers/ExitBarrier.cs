@@ -1,4 +1,5 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+﻿using Agava.YandexGames;
+using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Barriers
@@ -11,6 +12,8 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
         [SerializeField] private GameObject _blocker;
 
         private static readonly int IsOpened = Animator.StringToHash(nameof(IsOpened));
+
+        private bool _firstExit = true;
 
         private void OnEnable()
         {
@@ -39,6 +42,16 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             {
                 barrier.SetBool(IsOpened, false);
                 _blocker.SetActive(true);
+
+                if (_firstExit)
+                {
+                    _firstExit = false;
+                    return;
+                }
+
+                InterstitialAd.Show(
+                    onOpenCallback: () => Time.timeScale = 0,
+                    onCloseCallback: b => Time.timeScale = 1);
             }
         }
     }

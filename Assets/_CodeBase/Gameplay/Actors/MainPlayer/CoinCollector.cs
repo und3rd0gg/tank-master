@@ -6,7 +6,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
     public class CoinCollector : MonoBehaviour
     {
         [SerializeField] [Attach] private Player _player;
-
+        
+        [SerializeField] private AudioSource _coinSource;
         [SerializeField] private PhysicsDetector _physicsDetector;
 
         private int CoinLayer;
@@ -33,6 +34,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
             if (coin.gameObject.layer != CoinLayer) return;
 
             Money.Add(1);
+            _coinSource.Play();
             Destroy(coin.gameObject);
         }
 

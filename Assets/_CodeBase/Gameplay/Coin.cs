@@ -1,5 +1,4 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Dythervin.AutoAttach;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -37,9 +36,9 @@ namespace TankMaster._CodeBase.Gameplay
         private void OnDestroy() =>
             _coinSequence.Kill();
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.layer == Environment)
+            if (other.gameObject.layer == Environment)
             {
                 transform.rotation = _defaultRotation;
                 _rigidbody.velocity = Vector3.zero;

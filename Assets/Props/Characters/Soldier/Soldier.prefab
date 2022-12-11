@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 2879422387839556626}
+    - target: {fileID: 8843220856737699806, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
 --- !u!1 &487744802331826124 stripped
