@@ -14,15 +14,9 @@ namespace TankMaster._CodeBase.Infrastructure.Services
             throw new System.NotImplementedException();
         }
 
-        public void ShowVisuals()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void ShowVisuals() { }
 
-        public void HideVisuals()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void HideVisuals() { }
 
         public AnalogInputService()
         {
