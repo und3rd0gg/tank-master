@@ -1,5 +1,4 @@
 ﻿using TankMaster._CodeBase.Data;
-using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
 
@@ -29,12 +28,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private void LoadRequiredScene()
         {
-            // if (true)
-                 _stateMachine.Enter<CutsceneState>();
-            // else
-            // {
-            //    _stateMachine.Enter<LoadPlayableLevelState, string>(AssetPaths.Scenes.Main);
-            //}
+            _stateMachine.Enter<CutsceneState>();
         }
 
         public void Exit()

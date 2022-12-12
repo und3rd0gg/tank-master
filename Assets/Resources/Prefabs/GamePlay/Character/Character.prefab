@@ -61,7 +61,7 @@ MonoBehaviour:
   _detectionMask:
     serializedVersion: 2
     m_Bits: 2181038080
-  _detectionRadius: 2.93
+  _detectionRadius: 4.5
   _bufferSize: 15
 --- !u!1 &693569341364096828
 GameObject:
@@ -75,8 +75,8 @@ GameObject:
   - component: {fileID: 3821422114848824058}
   - component: {fileID: 2755820569821304767}
   - component: {fileID: 7762396181470131058}
-  - component: {fileID: 6164340781730305092}
-  m_Layer: 0
+  - component: {fileID: 4694980323010062116}
+  m_Layer: 15
   m_Name: TurretRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,8 @@ MonoBehaviour:
   _yOffset: 0.84
   _bulletsCount: 1
   _bulletOffset: 0.5
---- !u!114 &6164340781730305092
+  <ShouldShoot>k__BackingField: 1
+--- !u!114 &4694980323010062116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,9 +153,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 693569341364096828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48ccbbd6b7a4baaa7209bebca33b250, type: 3}
+  m_Script: {fileID: 11500000, guid: 77f923aa0bf545b981f1c9be002c5da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectile: {fileID: -5664069237244617882, guid: c7d470b2bed4231469b40ad6b96b6b3f, type: 3}
+  _shootDelay: 2
+  _shootPoint: {fileID: 1371152918821273970}
+  _yOffset: 0.84
+  _bulletsCount: 1
+  _bulletOffset: 0.5
+  <ShouldShoot>k__BackingField: 0
 --- !u!1 &859016302106741628
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +237,7 @@ GameObject:
   - component: {fileID: 1095724875665044705}
   - component: {fileID: 1095724875666339017}
   - component: {fileID: 1095724875667469833}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +321,7 @@ GameObject:
   - component: {fileID: 1095724875665044715}
   - component: {fileID: 1095724875666339019}
   - component: {fileID: 1095724875667469835}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +405,7 @@ GameObject:
   - component: {fileID: 1095724875665044717}
   - component: {fileID: 1095724875666339021}
   - component: {fileID: 1095724875667469837}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: armor_car_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +425,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6547642938790909078}
+  - {fileID: 1371152918821273970}
   m_Father: {fileID: 7867359878380907108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -479,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7867359878380907108}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: '[VISUALS]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917629545157949189}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BulletShootPoint.001
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -660,6 +669,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1095724875665044705}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5415873704562842098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371152918821273970}
+  m_Layer: 15
+  m_Name: MissileShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371152918821273970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415873704562842098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 4.82, z: 1.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1095724875665044717}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7412046928248821183
 GameObject:
@@ -737,7 +777,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -9017323633419172756, guid: a4e73c546782c284ab90e0020f517427, type: 2}
   m_audioClip: {fileID: 8300000, guid: cc6fe694b0f23164caaf75e251a71933, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1064,7 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
-  <Shooter>k__BackingField: {fileID: 7762396181470131058}
+  <BulletShooter>k__BackingField: {fileID: 7762396181470131058}
+  <MissileShooter>k__BackingField: {fileID: 4694980323010062116}
   _playerHealth:
     <MaxValue>k__BackingField: 100
     <Value>k__BackingField: 100
@@ -1164,6 +1205,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9188206397738486993}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &304201268797679416
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1219,7 +1272,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -893893944228773762, guid: a4e73c546782c284ab90e0020f517427, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2511287151526dd4997b1d8cff35558e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4e0786a4788712243a66b1b29218f190, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1227,7 +1280,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 5
   MaxDistance: 500
@@ -1235,7 +1288,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:

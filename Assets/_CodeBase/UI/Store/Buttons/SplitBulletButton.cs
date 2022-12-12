@@ -9,7 +9,7 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
         protected override void OnUpgrade()
         {
             var bulletShooter = AllServices.Container.Single<IGameFactory>().PlayerGameObject.GetComponent<Player>()
-                .Shooter;
+                .BulletShooter;
             bulletShooter.UpgradeBulletCount(UpgradeInfo[BoughtUpgradeLevel].Value);
         }
     }

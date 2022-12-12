@@ -17,17 +17,23 @@ namespace TankMaster._CodeBase.Infrastructure.Services
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            if(hasFocus)
-                ChangeMasterVolume(1);
+            if (hasFocus)
+                UnmuteSound();
             else
-                ChangeMasterVolume(0);
+                MuteSound();
         }
-        
+
         public void ChangeMasterVolume(float volume) => 
             _audioMixer.SetFloat(Master, GetVolume(volume));
 
         public void ChangeMusicVolume(float volume) => 
             _audioMixer.SetFloat(Music, GetVolume(volume));
+
+        public void MuteSound() => 
+            ChangeMasterVolume(0);
+
+        public void UnmuteSound() => 
+            ChangeMasterVolume(1);
 
         public void ChangeVFXVolume(float volume) => 
             _audioMixer.SetFloat(VFX, GetVolume(volume));

@@ -7,7 +7,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
     public class Player : MonoBehaviour, IActor, IProgressSaver
     {
         [field: SerializeField] public Transform CameraFollowTarget { get; private set; }
-        [field: SerializeField] public BulletShooter Shooter { get; private set; }
+        [field: SerializeField] public BulletShooter BulletShooter { get; private set; }
+        [field: SerializeField] public BulletShooter MissileShooter { get; private set; }
         public Health Health => _playerHealth;
         public Money Money => _money;
         

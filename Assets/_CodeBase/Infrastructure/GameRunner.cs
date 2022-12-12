@@ -1,13 +1,10 @@
-﻿using TankMaster._CodeBase.Test;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankMaster._CodeBase.Infrastructure
 {
     public class GameRunner : MonoBehaviour
     {
         [SerializeField] private GameBootstrapper _gameBootstrapper;
-
-        [SerializeField] private YandexGamesTest _yandexGamesTest;
 
         private void Awake()
         {
@@ -17,11 +14,6 @@ namespace TankMaster._CodeBase.Infrastructure
             {
                 Instantiate(_gameBootstrapper);
             }
-
-#if !UNITY_WEBGL || UNITY_EDITOR
-            return;
-#endif
-            _yandexGamesTest.Init();
         }
     }
 }

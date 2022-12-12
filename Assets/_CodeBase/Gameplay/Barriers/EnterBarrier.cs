@@ -34,14 +34,6 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             _triggerCloseObserver.TriggerEnter -= OnPlayerOpenZoneExit;
         }
 
-        
-        //todo todelete
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.O))
-                SaveProgress();
-        }
-
         public void SetEnterLimitThreshold(Enemy[] enemies)
         {
             if (enemies == null)

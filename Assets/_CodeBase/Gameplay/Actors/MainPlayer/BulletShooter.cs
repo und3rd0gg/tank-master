@@ -14,6 +14,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
         [SerializeField] [Min(0)] private float _yOffset;
         [SerializeField] private int _bulletsCount;
         [SerializeField] private float _bulletOffset;
+        
+        [field: SerializeField]public bool ShouldShoot { get; set; }
 
         private Transform _target;
         private CancellationTokenSource _shootCancellationTokenSource;
@@ -36,6 +38,9 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
         public void UpgradeBulletCount(int newCount) =>
             _bulletsCount = newCount;
 
+        public void UpgradeShootDelay(float newDelay) => 
+            _shootDelay = newDelay;
+
         private void StartShooting()
         {
             _shootCancellationTokenSource = new CancellationTokenSource();
@@ -48,7 +53,8 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
             {
                 await UniTask.Delay(TimeSpan.FromSeconds(_shootDelay),
                     cancellationToken: _shootCancellationTokenSource.Token);
-                Attack();
+                if(ShouldShoot)
+                    Attack();
             }
         }
 

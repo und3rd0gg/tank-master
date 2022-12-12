@@ -1,5 +1,6 @@
 ﻿using Agava.YandexGames;
 using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster._CodeBase.Infrastructure.Services;
 using UnityEngine;
 
 namespace TankMaster._CodeBase.Gameplay.Barriers
@@ -57,8 +58,16 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
             else
             {
                 InterstitialAd.Show(
-                    onOpenCallback: () => Time.timeScale = 0,
-                    onCloseCallback: b => Time.timeScale = 1);
+                    onOpenCallback: () =>
+                    {
+                        AllServices.Container.Single<IAudioService>().MuteSound();
+                        Time.timeScale = 0;
+                    },
+                    onCloseCallback: b =>
+                    {
+                        Time.timeScale = 1;
+                        AllServices.Container.Single<IAudioService>().UnmuteSound();
+                    });
             }
         }
     }
