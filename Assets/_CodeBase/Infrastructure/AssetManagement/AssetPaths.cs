@@ -10,6 +10,7 @@
         public const string Joystick = "Prefabs/UI/Joystick";
         public const string EventSystem = "Prefabs/Infrastructure/EventSystem";
         public const string Music = "Prefabs/GamePlay/Music";
+        public const string AudioService = "Prefabs/Infrastructure/AudioService";
 
         public static class Scenes
         {

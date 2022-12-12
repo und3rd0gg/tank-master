@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using TankMaster._CodeBase.Gameplay.Actors.Enemies;
 using TankMaster._CodeBase.Infrastructure.AssetManagement;
+using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Logic;
 using UnityEngine;
@@ -87,6 +88,15 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
                 enemies[i] = enemiesGameObjects[i].GetComponent<Enemy>();
 
             CreateLevelTransition(transitionCreationPoint, enemies);
+        }
+
+        public GameObject CreateMonoService(string path) => 
+            _assetProvider.Instantiate(path, Vector3.zero, true);
+
+        public IAudioService CreateAudioService()
+        {
+            var audioService = CreateMonoService(AssetPaths.AudioService);
+            return audioService.GetComponent<AudioService>();
         }
 
         public GameObject CreateLight()

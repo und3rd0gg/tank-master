@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 3821422114848824058}
   - component: {fileID: 2755820569821304767}
   - component: {fileID: 7762396181470131058}
+  - component: {fileID: 6164340781730305092}
   m_Layer: 0
   m_Name: TurretRoot
   m_TagString: Untagged
@@ -142,6 +143,18 @@ MonoBehaviour:
   _yOffset: 0.84
   _bulletsCount: 1
   _bulletOffset: 0.5
+--- !u!114 &6164340781730305092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693569341364096828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48ccbbd6b7a4baaa7209bebca33b250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &859016302106741628
 GameObject:
   m_ObjectHideFlags: 0

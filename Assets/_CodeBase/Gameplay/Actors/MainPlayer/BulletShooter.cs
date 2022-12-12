@@ -64,7 +64,6 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
                     var proj = Instantiate(_projectile, shootPoint, Quaternion.identity);
                     proj.Launch(shootPoint, target);
                 }
-                //Debug.Break();
             }
         }
 

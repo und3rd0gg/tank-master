@@ -1,9 +1,11 @@
-﻿using TankMaster._CodeBase.Infrastructure.AssetManagement;
+﻿using Agava.WebUtility;
+using TankMaster._CodeBase.Infrastructure.AssetManagement;
 using TankMaster._CodeBase.Infrastructure.Factory;
 using TankMaster._CodeBase.Infrastructure.Services;
 using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
 using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
 using TankMaster._CodeBase.Infrastructure.Services.YandexGames;
+using UnityEngine;
 
 namespace TankMaster._CodeBase.Infrastructure.GameStates
 {
@@ -17,6 +19,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
             RegisterServices();
+            RegisterBackgroundChange();
         }
 
         public void Enter()
@@ -29,7 +32,12 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             _stateMachine.Enter<LoadProgressState>();
         }
 
-        public void Exit() { }
+        public void Exit()
+        {
+        }
+
+        private void RegisterBackgroundChange() => 
+            WebApplication.InBackgroundChangeEvent += inBackground => { Time.timeScale = inBackground ? 0 : 1; };
 
         private void RegisterServices()
         {
@@ -43,6 +51,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             services.RegisterSingle<ISaveLoadService>(
                 new SaveLoadService(services.Single<IGameFactory>(),
                     services.Single<IPersistentProgressService>()));
+            services.RegisterSingle<IAudioService>(services.Single<IGameFactory>().CreateAudioService());
         }
     }
 }
