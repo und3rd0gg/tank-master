@@ -42,7 +42,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Projectile
   - Coin
   m_SortingLayers:
   - name: Default

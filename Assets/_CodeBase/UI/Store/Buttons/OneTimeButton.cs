@@ -18,6 +18,7 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
         {
             if (BuyCondition)
             {
+                SpendMoney(_price);
                 PlayBuySound();
                 OnUpgrade();
                 Button.interactable = false;

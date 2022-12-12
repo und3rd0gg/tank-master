@@ -1,4 +1,6 @@
-﻿using AYellowpaper;
+﻿using System;
+using System.Collections;
+using AYellowpaper;
 using Cysharp.Threading.Tasks;
 using Dythervin.AutoAttach;
 using TankMaster._CodeBase.Gameplay;
@@ -51,7 +53,7 @@ namespace TankMaster._CodeBase.UI
 
         private async UniTask ChangeBarAmountAsync(float normalizedValue)
         {
-            while (!Mathf.Approximately(_slider.value, normalizedValue))
+            while (Math.Abs(_slider.value - normalizedValue) > 0.05f)
             {
                 _slider.value = Mathf.MoveTowards(_slider.value, normalizedValue, Time.deltaTime * _smoothness);
                 await UniTask.Yield();
