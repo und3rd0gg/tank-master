@@ -22,16 +22,19 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9724f3070d3f5c940936bebfafa70cf7
     m_Address: Russian (ru)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6e6a635c4f5ff034784802b1e8e9bb4c
     m_Address: Turkish (tr)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: bf8e0e72c9522ed4e8e20f6628ca126f, type: 2}
   m_SchemaSet:
