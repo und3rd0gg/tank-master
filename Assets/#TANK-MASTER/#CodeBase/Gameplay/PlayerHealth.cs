@@ -1,9 +1,10 @@
 ﻿using System;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     [Serializable]
     public class PlayerHealth : Health
@@ -11,6 +12,12 @@ namespace TankMaster._CodeBase.Gameplay
         [SerializeField] private float _cameraShakeThreshold;
         
         private CameraShaker _cameraShaker;
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
 
         public override void ApplyDamage(uint damage)
         {
@@ -20,7 +27,7 @@ namespace TankMaster._CodeBase.Gameplay
 
         private void ApplyCameraShake(uint damage)
         {
-            _cameraShaker ??= AllServices.Container.Single<IGameFactory>()
+            _cameraShaker ??= _gameFactory
                 .GetVirtualCamera()
                 .GetComponent<CameraShaker>();
             var damagePercentage = GetDamagePercentage(damage, MaxValue);

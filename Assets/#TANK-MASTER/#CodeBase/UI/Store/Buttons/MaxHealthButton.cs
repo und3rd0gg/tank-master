@@ -1,14 +1,22 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     public class MaxHealthButton : UpgradeButton
     {
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
+        
         protected override void OnUpgrade()
         {
-            var playerHealth = AllServices.Container.Single<IGameFactory>().PlayerGameObject
+            var playerHealth = _gameFactory.PlayerGameObject
                 .GetComponentInChildren<Player>().Health;
             playerHealth.UpgradeMaxValue((uint) UpgradeInfo[BoughtUpgradeLevel].Value);
             playerHealth.RestoreHealth();

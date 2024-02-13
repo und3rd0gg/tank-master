@@ -1,8 +1,6 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.MainPlayer;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     public class RepairButton : OneTimeButton
     {
@@ -13,7 +11,7 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
 
         private void RepairCar()
         {
-            var carHealth = AllServices.Container.Single<IGameFactory>().PlayerGameObject
+            var carHealth = GameFactory.PlayerGameObject
                 .GetComponentInChildren<Player>().Health;
             carHealth.RestoreHealth();
         }

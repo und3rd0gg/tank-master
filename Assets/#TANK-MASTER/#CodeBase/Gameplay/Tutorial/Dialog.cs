@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Tutorial
+namespace TankMaster.Gameplay.Tutorial
 {
     public class Dialog : MonoBehaviour
     {

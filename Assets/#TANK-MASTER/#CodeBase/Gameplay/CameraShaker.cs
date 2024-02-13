@@ -1,10 +1,9 @@
 ﻿using System;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     public class CameraShaker : MonoBehaviour
     {
@@ -19,14 +18,13 @@ namespace TankMaster._CodeBase.Gameplay
 
         public void ShakeCamera(float duration, float amplitudeGain = 2f, float frequencyGain = 2f)
         {
-            CameraShakeAsync(duration, amplitudeGain, frequencyGain);
+            CameraShakeAsync(duration, amplitudeGain, frequencyGain).Forget();
         }
 
-        private void InitializePerlinComponent() => 
-            _perlin = _virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>() ??
-                      _virtualCamera.AddCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        private void InitializePerlinComponent() =>
+            _perlin = _virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
-        private async UniTask CameraShakeAsync(float duration, float amplitudeGain = 2f, float frequencyGain = 2f)
+        private async UniTaskVoid CameraShakeAsync(float duration, float amplitudeGain = 2f, float frequencyGain = 2f)
         {
             _perlin.m_AmplitudeGain = amplitudeGain;
             _perlin.m_FrequencyGain = frequencyGain;

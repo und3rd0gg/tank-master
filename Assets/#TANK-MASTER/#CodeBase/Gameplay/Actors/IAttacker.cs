@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors
+namespace TankMaster.Gameplay.Actors
 {
     public interface IAttacker : IDeactivateable
     {

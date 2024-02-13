@@ -2,7 +2,7 @@
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class CustomMaskUI : Image
     {

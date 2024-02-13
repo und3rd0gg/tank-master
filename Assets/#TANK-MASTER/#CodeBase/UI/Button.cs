@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public abstract class Button : MonoBehaviour, IPointerClickHandler
     {

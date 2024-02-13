@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class EnterTransitionLimitPresenter : MonoBehaviour
     {

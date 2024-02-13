@@ -1,10 +1,11 @@
 using System;
-using TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Logic;
+using TankMaster.Gameplay.Actors.MainPlayer.Sound;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Logic;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster
+namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class MovementAlongSurface : MonoBehaviour
     {
@@ -21,9 +22,9 @@ namespace TankMaster
         public event Action EngineStopped;
         public event Action<float> SpeedChanged;
 
-        private void Awake()
-        {
-            _inputService = AllServices.Container.Single<IInputService>();
+        [Inject]
+        internal void Construct(IInputService inputService) {
+            _inputService = inputService;
         }
 
         private void OnEnable()

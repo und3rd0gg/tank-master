@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-namespace TankMaster._CodeBase.Infrastructure.Services
+namespace TankMaster.Infrastructure.Services
 {
     public class AudioService : MonoService, IAudioService
     {

@@ -1,7 +1,7 @@
-﻿using TankMaster._CodeBase.StaticData;
+﻿using TankMaster.StaticData;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class EnemySpawner : MonoBehaviour
     {

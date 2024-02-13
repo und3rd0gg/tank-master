@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     [CreateAssetMenu(fileName = "New Daytime Settings", menuName = "Gameplay/Daytime Settings")]
     public class DaytimeSettings : ScriptableObject

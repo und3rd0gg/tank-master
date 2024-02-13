@@ -1,17 +1,24 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.UI;
-using TankMaster._CodeBase.UI.Panels;
+﻿using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.UI;
+using TankMaster.UI.Panels;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class StoreOpener : MonoBehaviour
     {
         [SerializeField] private TriggerObserver _triggerObserver;
 
         private Panel _store;
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
 
         private void OnEnable()
         {
@@ -26,7 +33,7 @@ namespace TankMaster._CodeBase.Logic
         private void OpenShopWindow(Collider obj)
         {
             enabled = false;
-            _store ??= AllServices.Container.Single<IGameFactory>().Interface.GetComponent<Interface>().Store;
+            _store ??= _gameFactory.Interface.GetComponent<Interface>().Store;
             _store.Enable();
         }
     }

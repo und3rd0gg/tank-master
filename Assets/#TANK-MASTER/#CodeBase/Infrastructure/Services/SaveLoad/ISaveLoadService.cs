@@ -1,6 +1,6 @@
-﻿using TankMaster._CodeBase.Data;
+﻿using TankMaster.Data;
 
-namespace TankMaster._CodeBase.Infrastructure.Services.SaveLoad
+namespace TankMaster.Infrastructure.Services.SaveLoad
 {
     public interface ISaveLoadService : IService
     {

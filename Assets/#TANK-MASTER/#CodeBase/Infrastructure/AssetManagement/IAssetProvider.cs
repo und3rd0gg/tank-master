@@ -1,14 +1,20 @@
-﻿using TankMaster._CodeBase.Infrastructure.Services;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using TankMaster.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.AssetManagement
+namespace TankMaster.Infrastructure.AssetManagement
 {
     public interface IAssetProvider : IService
     {
-        public GameObject Instantiate(string path, Vector3 creationPoint, Quaternion startRotation);
-        public GameObject Instantiate(string path, Vector3 creationPoint, bool dontDestroyOnLoad = false);
-        public GameObject[] LoadAll(string path);
-        GameObject Load(string path);
-        GameObject Instantiate(GameObject prefab, Vector3 creationPoint);
+        public UniTask<IList<GameObject>> LoadAll(string path);
+        UniTask<GameObject> Load(string path);
+
+        UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);
+
+        GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);
     }
 }

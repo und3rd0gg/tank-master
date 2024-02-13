@@ -1,19 +1,28 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Gameplay.Projectiles;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Gameplay.Projectiles;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI.Panels
+namespace TankMaster.UI.Panels.LosePanel
 {
     public class LosePanel : Panel
     {
         [SerializeField] private Counter _counter;
+        private IInputService _inputService;
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IInputService inputService, IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+            _inputService = inputService;
+        }
 
         public override void Enable()
         {
             base.Enable();
-            AllServices.Container.Single<IInputService>().HideVisuals();
+            _inputService.HideVisuals();
         }
 
         public void RestartLevel()
@@ -38,7 +47,7 @@ namespace TankMaster._CodeBase.UI.Panels
             void RevivePlayer()
             {
                 gameObject.SetActive(false);
-                var playerGameObject = AllServices.Container.Single<IGameFactory>().PlayerGameObject;
+                var playerGameObject = _gameFactory.PlayerGameObject;
                 var playerHealth = playerGameObject.GetComponent<Player>().Health;
                 playerHealth.RestoreHealth();
                 playerGameObject.SetActive(true);

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
-namespace TankMaster
+namespace TankMaster.Infrastructure
 {
     public class LocalizationCheckbox : MonoBehaviour
     {

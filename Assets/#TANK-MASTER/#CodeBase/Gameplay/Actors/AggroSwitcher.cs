@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors
+namespace TankMaster.Gameplay.Actors
 {
     public class AggroSwitcher : MonoBehaviour
     {

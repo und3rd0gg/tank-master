@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class SelfExploder : MonoBehaviour, IAttacker
     {

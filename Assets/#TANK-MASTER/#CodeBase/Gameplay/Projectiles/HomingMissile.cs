@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Projectiles
+namespace TankMaster.Gameplay.Projectiles
 {
     [RequireComponent(typeof(ETFXProjectileScript), typeof(SmartMissile3D))]
     public class HomingMissile : Projectile

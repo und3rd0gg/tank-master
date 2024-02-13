@@ -1,19 +1,27 @@
-﻿using TankMaster._CodeBase.Infrastructure.Factory;
+﻿using System;
+using Cysharp.Threading.Tasks;
+using TankMaster.Infrastructure.Factory;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.Services
+namespace TankMaster.Infrastructure.Services
 {
     public class TouchInputService : IInputService
     {
-        private readonly UltimateJoystick _joystick;
+        private UltimateJoystick _joystick;
+        private IGameFactory _gameFactory;
 
-        public TouchInputService()
-        {
-            _joystick = AllServices.Container.Single<IGameFactory>().CreateJoystick();
-            HideVisuals();
+        public TouchInputService(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+            CreateJoystick(HideVisuals).Forget();
         }
 
-        public bool IsActive => _joystick.GetJoystickState();
+        private async UniTaskVoid CreateJoystick(Action onComplete = null) {
+            _joystick = await _gameFactory.CreateJoystick();
+            onComplete?.Invoke();
+        }
+
+        public bool IsActive =>
+            _joystick.GetJoystickState();
 
         public Vector2 MovementAxis => 
             new(_joystick.GetHorizontalAxis(), _joystick.GetVerticalAxis());

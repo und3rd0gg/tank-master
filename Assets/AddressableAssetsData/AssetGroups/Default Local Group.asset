@@ -16,7 +16,52 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: ecc92bfc51b58904eb0c991d976a6b11
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: a2d5799b3f6830e46847d98733ee8116
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Character/Character.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8be234c2d1ad03b45b5a3d5d899da77a
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/UI/(INTERFACE).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2560ace2297d02e40841239dd3b8cbcb
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/GamePlay/MainLight.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 548f77dcf0d7d0d4fbd47a4c18cf5d6d
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/GamePlay/(TRANSITION).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b053b56ab1074a41ba26b612ff32144
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Levels/(LEVEL2).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb63ea1d006ee0b4a8da7cfc0a6e28d7
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/UI/Joystick.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6571fd799fe87c343b2a1cb16d9e7f37
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/Infrastructure/EventSystem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88981a53f4fc83846bdd5efb14f5c349
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Music.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fda3ef41f5cc2514089a01e4b456e443
+    m_Address: Assets/#TANK-MASTER/Res/Prefabs/Infrastructure/AudioService.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bf8e0e72c9522ed4e8e20f6628ca126f, type: 2}
   m_SchemaSet:

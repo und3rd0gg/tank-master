@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using TankMaster._CodeBase.AIPerception;
+using TankMaster.AIPerception;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class Detector : MonoBehaviour, IDetector
     {

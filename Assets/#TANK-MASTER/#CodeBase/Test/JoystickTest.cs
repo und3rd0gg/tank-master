@@ -1,7 +1,4 @@
-using TankMaster._CodeBase.Infrastructure.Services;
-using UnityEngine;
-
-namespace TankMaster
+namespace TankMaster.Test
 {
     // public class JoystickTest : MonoBehaviour
     // {

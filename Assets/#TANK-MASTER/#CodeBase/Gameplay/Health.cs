@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     [Serializable]
     public class Health : IСharacterСharacteristic

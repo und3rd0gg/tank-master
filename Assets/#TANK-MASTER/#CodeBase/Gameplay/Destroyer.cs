@@ -1,12 +1,13 @@
 ﻿using AYellowpaper;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.UI;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.UI;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     public class Destroyer : MonoBehaviour
     {
@@ -17,6 +18,12 @@ namespace TankMaster._CodeBase.Gameplay
         [SerializeField] private UnityEvent _destroyCallback;
 
         private static readonly float _coinCreationOffsetY = 0.5f;
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
 
         private void OnEnable()
         {
@@ -39,7 +46,7 @@ namespace TankMaster._CodeBase.Gameplay
         }
 
         public void ShowLoseScreen() => 
-            AllServices.Container.Single<IGameFactory>().Interface.GetComponent<Interface>().LosePanel.Enable();
+            _gameFactory.Interface.GetComponent<Interface>().LosePanel.Enable();
 
         public void DeleteObject() => 
             Destroy(gameObject);

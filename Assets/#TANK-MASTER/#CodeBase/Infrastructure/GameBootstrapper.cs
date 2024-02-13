@@ -1,15 +1,22 @@
-﻿using TankMaster._CodeBase.Infrastructure.GameStates;
+﻿using TankMaster.Infrastructure.GameStates;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Infrastructure
+namespace TankMaster.Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {
         private Game _game;
+        private IObjectResolver _objectResolver;
+
+        [Inject]
+        internal void Construct(IObjectResolver objectResolver) {
+            _objectResolver = objectResolver;
+        }
 
         private void Awake()
         {
-            _game = new Game();
+            _game = new Game(_objectResolver);
             _game.StateMachine.Enter<BootstrapState>();
             DontDestroyOnLoad(this);
         }

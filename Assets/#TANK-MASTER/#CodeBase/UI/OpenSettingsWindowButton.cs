@@ -1,16 +1,23 @@
-﻿using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.UI.Panels;
+﻿using TankMaster.Infrastructure.Services;
+using TankMaster.UI.Panels;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class OpenSettingsWindowButton : Button
     {
         [SerializeField] private Panel _settingWindow;
+        private IInputService _inputService;
 
+        [Inject]
+        internal void Construct(IInputService inputService) {
+            _inputService = inputService;
+        }
+        
         protected override void OnClick()
         {
-            AllServices.Container.Single<IInputService>().HideVisuals();
+            _inputService.HideVisuals();
             _settingWindow.Enable();
         }
     }

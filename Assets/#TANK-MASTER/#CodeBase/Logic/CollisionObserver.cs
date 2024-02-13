@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class CollisionObserver : MonoBehaviour
     {

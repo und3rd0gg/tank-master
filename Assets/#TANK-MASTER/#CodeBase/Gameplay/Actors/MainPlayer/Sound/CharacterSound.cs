@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using SingularityGroup.HotReload;
+using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
+namespace TankMaster.Gameplay.Actors.MainPlayer.Sound
 {
     public class CharacterSound : MonoBehaviour
     {
@@ -16,6 +17,9 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer.Sound
 
         private void OnEnable()
         {
+            Debug.Assert(_engineSound != null);
+            Debug.Assert(_engine != null);
+            
             _engine.EngineStarted += OnEngineStarted;
             _engine.EngineStopped += OnEngineStopped;
             _engineSound.Play();

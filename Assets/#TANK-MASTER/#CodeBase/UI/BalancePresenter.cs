@@ -1,12 +1,11 @@
 ﻿using DG.Tweening;
-
-using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.Factory;
 using TMPro;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class BalancePresenter : MonoBehaviour
     {
@@ -21,10 +20,13 @@ namespace TankMaster._CodeBase.UI
         private bool _timerStarted;
         private float _timer;
 
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
+
         private void Start()
         {
-            _gameFactory = AllServices.Container.Single<IGameFactory>();
-
             if (_gameFactory.PlayerGameObject != null)
                 InitializeMoney();
             else
@@ -38,12 +40,16 @@ namespace TankMaster._CodeBase.UI
 
         public void Open()
         {
-            _rectTransform.DOAnchorPosX(0, _openTime).SetUpdate(UpdateType.Normal, true);
+            _rectTransform
+                .DOAnchorPosX(0, _openTime)
+                .SetUpdate(UpdateType.Normal, true);
         }
 
         public void Close()
         {
-            _rectTransform.DOAnchorPosX(300, _openTime).SetUpdate(UpdateType.Normal, true);
+            _rectTransform
+                .DOAnchorPosX(300, _openTime)
+                .SetUpdate(UpdateType.Normal, true);
         }
 
         private void RunCloseDelayTimer()

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 
-namespace TankMaster._CodeBase.Gameplay.Tutorial
+namespace TankMaster.Gameplay.Tutorial
 {
     [Serializable]
     public class DialogNode

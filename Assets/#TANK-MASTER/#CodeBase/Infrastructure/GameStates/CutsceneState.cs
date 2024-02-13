@@ -1,8 +1,9 @@
-﻿using TankMaster._CodeBase.Infrastructure.AssetManagement;
-using TankMaster._CodeBase.Logic.FirstStartCutscene;
+﻿using Cysharp.Threading.Tasks;
+using TankMaster.Infrastructure.AssetManagement;
+using TankMaster.Logic.FirstStartCutscene;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.GameStates
+namespace TankMaster.Infrastructure.GameStates
 {
     public class CutsceneState : IState
     {
@@ -21,12 +22,12 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         
         public void Enter()
         {
-            Initialize();
+            Initialize().Forget();
         }
 
         public void Exit() { }
 
-        private async void Initialize()
+        private async UniTaskVoid Initialize()
         {
             await _sceneLoader.LoadScene(AssetPaths.Scenes.IntroCutscene);
             _cutscenePlayableDirector =

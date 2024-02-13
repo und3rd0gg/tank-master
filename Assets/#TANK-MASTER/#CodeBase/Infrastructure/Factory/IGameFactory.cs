@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cinemachine;
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
+using Cysharp.Threading.Tasks;
+using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.Factory
+namespace TankMaster.Infrastructure.Factory
 {
     public interface IGameFactory : IService
     {
@@ -19,17 +20,17 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public event Action PlayerCreated;
         public event Action MainLightCreated;
 
-        public GameObject CreatePlayer(Vector3? creationPoint = null);
+        public UniTask<GameObject> CreatePlayer(Vector3? creationPoint = null);
         public void Cleanup();
         public CinemachineVirtualCamera GetVirtualCamera();
         public void Register(ISavedProgressReader progressReader);
         public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter);
         public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true);
-        public GameObject CreateLight();
-        public GameObject CreateInterface();
-        public UltimateJoystick CreateJoystick();
+        public UniTask<GameObject> CreateLight();
+        public UniTask<GameObject> CreateInterface();
+        public UniTask<UltimateJoystick> CreateJoystick();
         void CreateEventSystem();
-        public GameObject CreateMusicSource();
-        IAudioService CreateAudioService();
+        public UniTask<GameObject> CreateMusicSource();
+        UniTask<IAudioService> CreateAudioService();
     }
 }

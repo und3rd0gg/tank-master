@@ -1,23 +1,25 @@
-﻿namespace TankMaster._CodeBase.Infrastructure.AssetManagement
+﻿namespace TankMaster.Infrastructure.AssetManagement
 {
     public static class AssetPaths
     {
-        public const string MainPlayer = "Prefabs/GamePlay/Character/Character";
-        public const string Levels = "Prefabs/GamePlay/Levels";
-        public const string Transition = "Prefabs/GamePlay/[TRANSITION]";
-        public const string MainLight = "Prefabs/GamePlay/MainLight";
-        public const string Interface = "Prefabs/UI/[INTERFACE]";
-        public const string Joystick = "Prefabs/UI/Joystick";
-        public const string EventSystem = "Prefabs/Infrastructure/EventSystem";
-        public const string Music = "Prefabs/GamePlay/Music";
-        public const string AudioService = "Prefabs/Infrastructure/AudioService";
+        public const string
+            MainPlayerID = "Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Character/Character.prefab",
+            LevelsID = "TANK-MASTER/Res/Prefabs/GamePlay/Levels",
+            TransitionID = "Assets/#TANK-MASTER/Res/Prefabs/GamePlay/(TRANSITION).prefab",
+            MainLightID = "Assets/#TANK-MASTER/Res/Prefabs/GamePlay/MainLight.prefab",
+            InterfaceID = "Assets/#TANK-MASTER/Res/Prefabs/UI/(INTERFACE).prefab",
+            JoystickID = "Assets/#TANK-MASTER/Res/Prefabs/UI/Joystick.prefab",
+            EventSystemID = "Assets/#TANK-MASTER/Res/Prefabs/Infrastructure/EventSystem.prefab",
+            MusicID = "Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Music.prefab",
+            AudioServiceID = "Assets/#TANK-MASTER/Res/Prefabs/Infrastructure/AudioService.prefab";
 
         public static class Scenes
         {
-            public const string Initial = nameof(Initial);
-            public const string IntroCutscene = nameof(IntroCutscene);
-            public const string Tutorial = nameof(Tutorial);
-            public const string Main = nameof(Main);
+            public const string
+                Initial = nameof(Initial),
+                IntroCutscene = nameof(IntroCutscene),
+                Tutorial = nameof(Tutorial), 
+                Main = nameof(Main);
         }
     }
 }

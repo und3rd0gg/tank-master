@@ -1,6 +1,6 @@
-﻿using TankMaster._CodeBase.Data;
+﻿using TankMaster.Data;
 
-namespace TankMaster._CodeBase.Infrastructure.Services.PersistentProgress
+namespace TankMaster.Infrastructure.Services.PersistentProgress
 {
     public interface ISavedProgressReader
     {

@@ -1,14 +1,22 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     public class SplitBulletButton : UpgradeButton
     {
+        private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
+        
         protected override void OnUpgrade()
         {
-            var bulletShooter = AllServices.Container.Single<IGameFactory>().PlayerGameObject.GetComponent<Player>()
+            var bulletShooter = _gameFactory.PlayerGameObject.GetComponent<Player>()
                 .BulletShooter;
             bulletShooter.UpgradeBulletCount(UpgradeInfo[BoughtUpgradeLevel].Value);
         }

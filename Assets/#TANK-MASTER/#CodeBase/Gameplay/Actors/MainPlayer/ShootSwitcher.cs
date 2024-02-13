@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
+namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class ShootSwitcher : MonoBehaviour
     {

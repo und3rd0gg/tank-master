@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace TankMaster._CodeBase.Logic.FirstStartCutscene
+namespace TankMaster.Logic.FirstStartCutscene
 {
     public class CutscenePlayableDirector : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors
+namespace TankMaster.Gameplay.Actors
 {
     public class PhysicsDetector : MonoBehaviour
     {

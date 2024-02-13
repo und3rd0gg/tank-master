@@ -1,8 +1,7 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Barriers
+namespace TankMaster.Gameplay.Barriers
 {
     public class ExitBarrier : MonoBehaviour
     {

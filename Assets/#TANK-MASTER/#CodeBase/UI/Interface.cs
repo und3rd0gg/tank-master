@@ -1,7 +1,7 @@
-﻿using TankMaster._CodeBase.UI.Panels;
+﻿using TankMaster.UI.Panels;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class Interface : MonoBehaviour
     {

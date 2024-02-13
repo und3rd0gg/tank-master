@@ -1,17 +1,15 @@
 using System;
 using BuildingBlocks.DataTypes;
-
-using TankMaster._CodeBase.Data;
-using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
+using TankMaster.Data;
+using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     [RequireComponent(typeof(AudioSource), typeof(UnityEngine.UI.Button))]
     public abstract class StoreItemButton : MonoBehaviour, IProgressSaver
@@ -28,11 +26,18 @@ namespace TankMaster._CodeBase.UI.Store.Buttons
 
         private Money _playerMoney;
         
-        protected Money PlayerMoney => _playerMoney ??= AllServices.Container.Single<IGameFactory>().PlayerGameObject
+        protected IGameFactory GameFactory;
+
+        protected Money PlayerMoney => _playerMoney ??= GameFactory.PlayerGameObject
             .GetComponent<Player>()
             .Money;
 
         protected virtual bool BuyCondition { get; }
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            GameFactory = gameFactory;
+        }
 
         protected virtual void Awake()
         {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using TankMaster._CodeBase.Gameplay.Projectiles;
+using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
+namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class BulletShooter : MonoBehaviour, IAttacker
     {
@@ -44,7 +44,7 @@ namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
         private void StartShooting()
         {
             _shootCancellationTokenSource = new CancellationTokenSource();
-            ShootAsync();
+            ShootAsync().Forget();
         }
 
         private async UniTask ShootAsync()

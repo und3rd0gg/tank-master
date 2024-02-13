@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     public abstract class OneTimeButton : StoreItemButton
     {

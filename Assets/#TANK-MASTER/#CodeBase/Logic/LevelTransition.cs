@@ -1,7 +1,7 @@
-﻿using TankMaster._CodeBase.Gameplay.Barriers;
+﻿using TankMaster.Gameplay.Barriers;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class LevelTransition : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class AnimateAlongAgent : MonoBehaviour

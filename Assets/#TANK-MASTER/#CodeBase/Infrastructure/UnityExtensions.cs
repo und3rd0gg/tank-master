@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = System.Random;
 
-namespace TankMaster._CodeBase.Infrastructure
+namespace TankMaster.Infrastructure
 {
     public static class UnityExtensions
     {

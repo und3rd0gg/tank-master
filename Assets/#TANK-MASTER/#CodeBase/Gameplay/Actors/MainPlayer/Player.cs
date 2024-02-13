@@ -1,8 +1,8 @@
-using TankMaster._CodeBase.Data;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
+using TankMaster.Data;
+using TankMaster.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
+namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class Player : MonoBehaviour, IActor, IProgressSaver
     {

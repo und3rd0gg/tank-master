@@ -1,11 +1,10 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure
+namespace TankMaster.Infrastructure
 {
     [RequireComponent(typeof(BoxCollider))]
     public class EndLevelTrigger : MonoBehaviour
     {
-        [SerializeField]private BoxCollider _collider;
+        [SerializeField] private BoxCollider _collider;
     }
 }

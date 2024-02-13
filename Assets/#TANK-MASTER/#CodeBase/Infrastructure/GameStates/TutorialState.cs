@@ -1,11 +1,12 @@
 ﻿using Cinemachine;
-using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.AssetManagement;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+using Cysharp.Threading.Tasks;
+using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.AssetManagement;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.GameStates
+namespace TankMaster.Infrastructure.GameStates
 {
     public class TutorialState : IState
     {
@@ -14,35 +15,38 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
         private readonly IGameFactory _gameFactory;
+        private IInputService _inputService;
 
-        public TutorialState(GameStateMachine stateMachine, SceneLoader sceneLoader)
+        public TutorialState(GameStateMachine stateMachine, SceneLoader sceneLoader, IGameFactory gameFactory,
+            IInputService inputService)
         {
+            _inputService = inputService;
+            _gameFactory = gameFactory;
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
-            _gameFactory = AllServices.Container.Single<IGameFactory>();
         }
         
         public void Enter()
         {
-            Initialize();
+            Initialize().Forget();
             //todo раскоментить когда будет реализовано
             //_sceneLoader.Load(AssetPaths.Scenes.IntroCutscene);
         }
 
         public void Exit() { }
 
-        private async void Initialize()
+        private async UniTaskVoid Initialize()
         {
             await _sceneLoader.LoadScene(AssetPaths.Scenes.Tutorial);
-            InitGameWorld();
+            InitGameWorld().Forget();
         }
         
-        private void InitGameWorld()
+        private async UniTaskVoid InitGameWorld()
         {
             _gameFactory.CreateEventSystem();
-            AllServices.Container.Single<IInputService>().ShowVisuals();
+            _inputService.ShowVisuals();
             _gameFactory.CreateInterface();
-            var player = _gameFactory.CreatePlayer();
+            var player = await _gameFactory.CreatePlayer();
             CameraFollow(player);
         }
         

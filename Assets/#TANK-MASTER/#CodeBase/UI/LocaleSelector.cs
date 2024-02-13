@@ -2,14 +2,14 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
-namespace TankMaster._CodeBase.UI
+namespace TankMaster.UI
 {
     public class LocaleSelector : MonoBehaviour
     {
         public void SetLocale(int localeIndex) => 
-            ChangeLocale(localeIndex);
+            ChangeLocale(localeIndex).Forget();
 
-        private async UniTask ChangeLocale(int localeIndex)
+        private async UniTaskVoid ChangeLocale(int localeIndex)
         {
             await LocalizationSettings.InitializationOperation.ToUniTask();
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIndex];

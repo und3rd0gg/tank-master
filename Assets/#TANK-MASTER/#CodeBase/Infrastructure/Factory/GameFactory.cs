@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cinemachine;
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure.AssetManagement;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
-using TankMaster._CodeBase.Logic;
+using Cysharp.Threading.Tasks;
+using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure.AssetManagement;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster.Logic;
+using TankMaster.Test;
+using TankMaster.UI;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using VContainer;
 using Random = UnityEngine.Random;
 
-namespace TankMaster._CodeBase.Infrastructure.Factory
+namespace TankMaster.Infrastructure.Factory
 {
     public class GameFactory : IGameFactory
     {
@@ -20,8 +25,9 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         private readonly IAssetProvider _assetProvider;
 
         private CinemachineVirtualCamera _virtualCamera;
-        private GameObject[] _levels;
+        private IList<GameObject> _levels = new List<GameObject>();
         private GameObject _transition;
+        private IObjectResolver _objectResolver;
 
         public List<IProgressSaver> ProgressWriters { get; } = new();
         public List<ISavedProgressReader> ProgressReaders { get; } = new();
@@ -32,56 +38,70 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
         public event Action PlayerCreated;
         public event Action MainLightCreated;
 
-        public GameFactory(IAssetProvider assetProvider)
-        {
+        public GameFactory(IAssetProvider assetProvider, IObjectResolver objectResolver) {
+            _objectResolver = objectResolver;
             _assetProvider = assetProvider;
-            _levels = assetProvider.LoadAll(AssetPaths.Levels);
-            _transition = assetProvider.Load(AssetPaths.Transition);
+            LoadAssets().Forget();
         }
 
-        public GameObject CreatePlayer(Vector3? creationPoint = null)
-        {
+        private async UniTaskVoid LoadAssets() {
+            GameObject loadedObjects = await Addressables
+                .LoadAssetAsync<GameObject>("Assets/#TANK-MASTER/Res/Prefabs/GamePlay/Levels/(LEVEL2).prefab")
+                .ToUniTask();
+            _levels.Add(loadedObjects);
+
+            _transition = await _assetProvider.Load(AssetPaths.TransitionID);
+        }
+
+        public async UniTask<GameObject> CreatePlayer(Vector3? creationPoint = null) {
             var playerInitialRotation = Quaternion.Euler(0, 90, 0);
 
-            if (!creationPoint.HasValue)
-            {
-                PlayerGameObject = InstantiateRegistered(AssetPaths.MainPlayer,
-                    GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
-                    playerInitialRotation);
-            }
-            else
-            {
-                PlayerGameObject =
-                    InstantiateRegistered(AssetPaths.MainPlayer, creationPoint.Value, playerInitialRotation);
-            }
+            // if (!creationPoint.HasValue) {
+            //     PlayerGameObject = await InstantiateRegistered(AssetPaths.MainPlayerID,
+            //         GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
+            //         playerInitialRotation);
+            // } else {
+            //     PlayerGameObject =
+            //         await InstantiateRegistered(AssetPaths.MainPlayerID, creationPoint.Value, playerInitialRotation);
+            // }
+
+            PlayerGameObject = await InstantiateRegistered(AssetPaths.MainPlayerID,
+                         GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
+                         playerInitialRotation);
+            
+            ResolveDependencies(PlayerGameObject);
 
             PlayerCreated?.Invoke();
             return PlayerGameObject;
         }
 
-        public GameObject CreateInterface() =>
-            Interface = _assetProvider.Instantiate(AssetPaths.Interface, Vector3.zero);
-
-        public UltimateJoystick CreateJoystick() =>
-            _assetProvider.Instantiate(AssetPaths.Joystick, Vector3.zero, true)
-                .GetComponentInChildren<UltimateJoystick>();
-
-        public GameObject CreateMusicSource()
-        {
-            return _assetProvider.Instantiate(AssetPaths.Music, Vector3.zero);
+        public async UniTask<GameObject> CreateInterface() {
+            GameObject ui = await InstantiateAndInject(AssetPaths.InterfaceID);
+            return ui;
         }
 
-        public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter)
-        {
-            var transition = _assetProvider.Instantiate(_transition, creationPoint);
+        public async UniTask<UltimateJoystick> CreateJoystick() {
+            GameObject gameObject = await _assetProvider.InstantiateAsync(AssetPaths.JoystickID, 
+                dontDestroyOnLoad: true);
+            return gameObject.GetComponentInChildren<UltimateJoystick>();
+        }
+
+        public async UniTask<GameObject> CreateMusicSource() {
+            GameObject musicSource = await _assetProvider.InstantiateAsync(AssetPaths.MusicID, Vector3.zero);
+            return musicSource;
+        }
+
+        public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter) {
+            GameObject transition = _assetProvider.Instantiate(_transition, creationPoint);
+            ResolveDependencies(transition);
             transition.GetComponent<LevelTransition>().EnterBarrier.SetEnterLimitThreshold(enemiesToEnter);
         }
 
-        public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true)
-        {
-            var level = _assetProvider.Instantiate(GetRandomLevel(), creationPoint);
-            var transitionCreationPoint = level.GetComponent<Level>().TransitionConnectionPoint.position;
-            var enemiesGameObjects = GameObject.FindGameObjectsWithTag(EnemyTag);
+        public void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true) {
+            GameObject level = _assetProvider.Instantiate(GetRandomLevel(), creationPoint);
+            ResolveDependencies(level);
+            Vector3 transitionCreationPoint = level.GetComponent<Level>().TransitionConnectionPoint.position;
+            GameObject[] enemiesGameObjects = GameObject.FindGameObjectsWithTag(EnemyTag);
             var enemies = new Enemy[enemiesGameObjects.Length];
 
             for (var i = 0; i < enemiesGameObjects.Length; i++)
@@ -90,61 +110,77 @@ namespace TankMaster._CodeBase.Infrastructure.Factory
             CreateLevelTransition(transitionCreationPoint, enemies);
         }
 
-        public GameObject CreateMonoService(string path) => 
-            _assetProvider.Instantiate(path, Vector3.zero, true);
+        public async UniTask<GameObject> CreateMonoService(string path) {
+            GameObject gameObject = await _assetProvider.InstantiateAsync(path, dontDestroyOnLoad:true);
+            return gameObject;
+        }
 
-        public IAudioService CreateAudioService()
-        {
-            var audioService = CreateMonoService(AssetPaths.AudioService);
+        public async UniTask<IAudioService> CreateAudioService() {
+            GameObject audioService = await CreateMonoService(AssetPaths.AudioServiceID);
             return audioService.GetComponent<AudioService>();
         }
 
-        public GameObject CreateLight()
-        {
-            MainLight = _assetProvider.Instantiate(AssetPaths.MainLight, Vector3.zero);
+        public async UniTask<GameObject> CreateLight() {
+            MainLight = await _assetProvider.InstantiateAsync(AssetPaths.MainLightID, Vector3.zero);
             MainLightCreated?.Invoke();
             return MainLight;
         }
 
-        public void CreateEventSystem() => 
-            _assetProvider.Instantiate(AssetPaths.EventSystem, Vector3.zero);
+        public void CreateEventSystem() {
+            _assetProvider.InstantiateAsync(AssetPaths.EventSystemID, Vector3.zero);
+        }
 
-        public void Cleanup()
-        {
+        public void Cleanup() {
             ProgressReaders.Clear();
             ProgressWriters.Clear();
         }
 
         public CinemachineVirtualCamera GetVirtualCamera() =>
-            _virtualCamera ??= GameObject.FindWithTag(MainVirtualCameraTag).GetComponent<CinemachineVirtualCamera>();
+            _virtualCamera ??= GameObject
+                .FindWithTag(MainVirtualCameraTag)
+                .GetComponent<CinemachineVirtualCamera>();
 
-        public void Register(ISavedProgressReader progressReader)
-        {
+        public void Register(ISavedProgressReader progressReader) {
             if (progressReader is IProgressSaver progressWriter)
                 ProgressWriters.Add(progressWriter);
 
             ProgressReaders.Add(progressReader);
         }
 
-        private GameObject GetRandomLevel() =>
-            _levels[Random.Range(0, _levels.Length)];
+        private GameObject GetRandomLevel() {
+            return _levels[Random.Range(0, _levels.Count)];
+        }
 
-        private GameObject InstantiateRegistered(string prefabPath, Vector3 creationPoint, Quaternion startRotation)
-        {
-            var gameObject = _assetProvider.Instantiate(prefabPath, creationPoint, startRotation);
+        private async UniTask<GameObject> InstantiateRegistered(string prefabPath, Vector3 creationPoint,
+            Quaternion startRotation) {
+            var gameObject = await _assetProvider.InstantiateAsync(prefabPath, creationPoint, startRotation);
             RegisterProgressWatchers(gameObject);
             return gameObject;
         }
 
-        private GameObject InstantiateRegistered(string prefabPath)
-        {
-            return InstantiateRegistered(prefabPath, Vector3.zero, Quaternion.identity);
+        private async UniTask<GameObject> InstantiateAndInject(string id) {
+            GameObject obj = await _assetProvider.InstantiateAsync(id);
+            ResolveDependencies(obj);
+            return obj;
+        }
+        
+        private void ResolveDependencies(GameObject gameObject) {
+            gameObject.SetActive(false);
+            MonoBehaviour[] objects = gameObject.GetComponentsInChildren<MonoBehaviour>(true);
+
+            for (var i = 0; i < objects.Length; i++) {
+                _objectResolver.Inject(objects[i]);
+            }
+            
+            gameObject.SetActive(true);
         }
 
-        private void RegisterProgressWatchers(GameObject gameObject)
-        {
-            foreach (var reader in gameObject.GetComponentsInChildren<ISavedProgressReader>())
-            {
+        private async UniTask<GameObject> InstantiateRegistered(string prefabPath) {
+            return await InstantiateRegistered(prefabPath, Vector3.zero, Quaternion.identity);
+        }
+
+        private void RegisterProgressWatchers(GameObject gameObject) {
+            foreach (ISavedProgressReader reader in gameObject.GetComponentsInChildren<ISavedProgressReader>()) {
                 Register(reader);
             }
         }

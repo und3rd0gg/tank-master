@@ -1,39 +1,51 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace TankMaster._CodeBase.Infrastructure.AssetManagement
+namespace TankMaster.Infrastructure.AssetManagement
 {
     public class AssetProvider : IAssetProvider
     {
-        public GameObject Instantiate(GameObject prefab, Vector3 creationPoint) => 
-            GameObject.Instantiate(prefab, creationPoint, Quaternion.identity);
+        public async UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false) {
+            creationPoint ??= Vector3.zero;
+            rotation ??= Quaternion.identity;
 
-        public GameObject Instantiate(string path)
-        {
-            var prefab = Resources.Load<GameObject>(path);
-            return Object.Instantiate(prefab);
+            AsyncOperationHandle<GameObject> createdObject = Addressables
+                .InstantiateAsync(path, (Vector3)creationPoint, (Quaternion)rotation, parent);
+            await createdObject.Task;
+
+            if (dontDestroyOnLoad && createdObject.Result != null) {
+                Object.DontDestroyOnLoad(createdObject.Result);
+            }
+
+            return createdObject.Result;
         }
 
-        public GameObject Instantiate(string path, Vector3 creationPoint, Quaternion startRotation)
-        {
-            var prefab = Resources.Load<GameObject>(path);
-            return Object.Instantiate(prefab, creationPoint, startRotation);
-        }
-
-        public GameObject Instantiate(string path, Vector3 creationPoint, bool dontDestroyOnLoad = false)
-        {
-            var prefab = Resources.Load<GameObject>(path);
-            var obj = GameObject.Instantiate(prefab, creationPoint, prefab.transform.rotation);
+        public GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false) {
+            creationPoint ??= Vector3.zero;
+            rotation ??= Quaternion.identity;
             
-            if(dontDestroyOnLoad)
-                GameObject.DontDestroyOnLoad(obj);
+            GameObject createdObject = Object
+                .Instantiate(prefab, (Vector3)creationPoint, (Quaternion)rotation, parent);
+            
+            if (dontDestroyOnLoad) {
+                Object.DontDestroyOnLoad(createdObject);
+            }
 
-            return obj;
+            return createdObject;
         }
 
-        public GameObject[] LoadAll(string path) => 
-            Resources.LoadAll<GameObject>(path);
+        public async UniTask<IList<GameObject>> LoadAll(string path) {
+            IList<GameObject> assets = await Addressables.LoadAssetsAsync<GameObject>(path, null);
+            return assets;
+        }
 
-        public GameObject Load(string path) => 
-            Resources.Load<GameObject>(path);
+        public async UniTask<GameObject> Load(string path) {
+            return await Addressables.LoadAssetAsync<GameObject>(path).Task;
+        }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using DG.Tweening;
-
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     public class Coin : MonoBehaviour
     {

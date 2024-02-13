@@ -1,8 +1,7 @@
 using DG.Tweening;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.UI.Panels.Store
+namespace TankMaster.UI.Panels.Store
 {
     public class ItemsBounce : MonoBehaviour
     {

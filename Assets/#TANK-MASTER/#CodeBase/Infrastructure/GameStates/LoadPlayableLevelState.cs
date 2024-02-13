@@ -1,11 +1,13 @@
 ﻿using Cinemachine;
-using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
+using Cysharp.Threading.Tasks;
+using TankMaster.Gameplay.Actors.MainPlayer;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Infrastructure.GameStates
+namespace TankMaster.Infrastructure.GameStates
 {
     public class LoadPlayableLevelState : IPayloadedState<string>
     {
@@ -13,12 +15,15 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
-        private IGameFactory _gameFactory;
+        private readonly IObjectResolver _objectResolver;
         private readonly IPersistentProgressService _progressService;
+        private IGameFactory _gameFactory;
 
-        public LoadPlayableLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, IGameFactory gameFactory,
+        public LoadPlayableLevelState(IObjectResolver objectResolver, GameStateMachine stateMachine,
+            SceneLoader sceneLoader, IGameFactory gameFactory,
             IPersistentProgressService progressService)
         {
+            _objectResolver = objectResolver;
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
             _gameFactory = gameFactory;
@@ -35,7 +40,7 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
 
         private void OnSceneLoaded()
         {
-            InitGameWorld();
+            InitGameWorld().Forget();
             InformProgressReaders();
             _stateMachine.Enter<GameLoopState>();
         }
@@ -48,27 +53,17 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
             }
         }
 
-        private void InitGameWorld()
+        private async UniTaskVoid InitGameWorld()
         {
             _gameFactory.CreateLevelTransition(Vector3.zero, null);
             _gameFactory.CreateLight();
             _gameFactory.CreateMusicSource();
             _gameFactory.CreateInterface();
             _gameFactory.CreateEventSystem();
-            var player = _gameFactory.CreatePlayer();
+            var player = await _gameFactory.CreatePlayer();
             CameraFollow(player);
-            AllServices.Container.Single<IInputService>().ShowVisuals();
-            //InitSpawners();
+            _objectResolver.Resolve<IInputService>().ShowVisuals();
         }
-
-        // private void InitSpawners()
-        // {
-        //     foreach (var gameObject in GameObject.FindGameObjectsWithTag("EnemySpawner"))
-        //     {
-        //         var spawner = gameObject.GetComponent<EnemySpawner>();
-        //         _gameFactory.Register(spawner);
-        //     }
-        // }
 
         private void CameraFollow(GameObject player)
         {

@@ -1,14 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Data
+namespace TankMaster.Data
 {
     [Serializable]
     public class PlayerProgress
     {
         [SerializeField] public StoreData StoreData;
-        
-        [field: SerializeField] public uint MoneyBalance { get; set; }
+        [SerializeField] public uint MoneyBalance;
     }
 
     [Serializable]

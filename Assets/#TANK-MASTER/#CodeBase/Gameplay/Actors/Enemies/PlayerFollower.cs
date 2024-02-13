@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class PlayerFollower : Follower
     {

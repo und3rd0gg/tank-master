@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TankMaster._CodeBase.Gameplay.Projectiles;
+using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     [Serializable]
     public class AttackProfile

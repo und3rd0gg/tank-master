@@ -1,14 +1,22 @@
-﻿using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Infrastructure.Services;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay.Tutorial
+namespace TankMaster.Gameplay.Tutorial
 {
     public class MovementTutorialEnd : MonoBehaviour
     {
+        private IInputService _inputService;
+
+        [Inject]
+        internal void Construct(IInputService inputService) {
+            _inputService = inputService;
+        }
+        
         public void DisableJoystick() => 
-            AllServices.Container.Single<IInputService>().HideVisuals();
+            _inputService.HideVisuals();
 
         public void EnableJoystick() => 
-            AllServices.Container.Single<IInputService>().ShowVisuals();
+            _inputService.ShowVisuals();
     }
 }

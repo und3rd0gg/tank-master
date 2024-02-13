@@ -1,34 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
-using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster.Infrastructure.Services.SaveLoad;
+using VContainer;
 
-namespace TankMaster._CodeBase.Infrastructure.GameStates
+namespace TankMaster.Infrastructure.GameStates
 {
     public class GameStateMachine
     {
         private readonly SceneLoader _sceneLoader;
         private readonly Dictionary<Type, IExitableState> _states;
+        private readonly IObjectResolver _objectResolver;
+        
         private IExitableState _activeState;
 
-        public GameStateMachine(SceneLoader sceneLoader)
+        public GameStateMachine(SceneLoader sceneLoader, IObjectResolver objectResolver)
         {
+            _objectResolver = objectResolver;
             _sceneLoader = sceneLoader;
-            var services = AllServices.Container;
 
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, _sceneLoader),
-                [typeof(LoadPlayableLevelState)] = new LoadPlayableLevelState(this, _sceneLoader, services.Single<IGameFactory>(),
-                    services.Single<IPersistentProgressService>()),
+                [typeof(LoadPlayableLevelState)] = new LoadPlayableLevelState(objectResolver,this,
+                    _sceneLoader, objectResolver.Resolve<IGameFactory>(),
+                    objectResolver.Resolve<IPersistentProgressService>()),
                 [typeof(LoadProgressState)] =
-                    new LoadProgressState(this, services.Single<IPersistentProgressService>(),
-                        services.Single<ISaveLoadService>(), _sceneLoader),
+                    new LoadProgressState(this, 
+                        objectResolver.Resolve<IPersistentProgressService>(),
+                        objectResolver.Resolve<ISaveLoadService>(), _sceneLoader),
                 [typeof(GameLoopState)] = new GameLoopState(this),
                 [typeof(CutsceneState)] = new CutsceneState(this, _sceneLoader),
-                [typeof(TutorialState)] = new TutorialState(this, _sceneLoader),
+                [typeof(TutorialState)] = new TutorialState(this, _sceneLoader, 
+                    _objectResolver.Resolve<IGameFactory>(), _objectResolver.Resolve<IInputService>()),
             };
         }
 

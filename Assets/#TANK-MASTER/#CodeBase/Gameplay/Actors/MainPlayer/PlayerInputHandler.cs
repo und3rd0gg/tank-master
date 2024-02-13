@@ -1,17 +1,16 @@
-﻿using DavidJalbert.TinyCarControllerAdvance;
-
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Infrastructure.Services;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.MainPlayer
+namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class PlayerInputHandler : MonoBehaviour
     {
         private IInputService _inputService;
 
-        private void Awake()
-        {
-            _inputService = AllServices.Container.Single<IInputService>();
+        [Inject]
+        internal void Construct(IInputService inputService) {
+            _inputService = inputService;
         }
 
         private void Update()

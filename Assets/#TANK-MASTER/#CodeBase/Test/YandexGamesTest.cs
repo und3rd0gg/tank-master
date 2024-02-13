@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Test
+namespace TankMaster.Test
 {
     public class YandexGamesTest : MonoBehaviour
     {

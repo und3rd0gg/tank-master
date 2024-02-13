@@ -1,9 +1,8 @@
 ﻿using System;
 using AYellowpaper;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class AttackSwitcher : MonoBehaviour
     {

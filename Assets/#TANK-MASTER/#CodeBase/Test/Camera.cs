@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.Test
+namespace TankMaster.Test
 {
     public class Camera : MonoBehaviour, ICamera
     {

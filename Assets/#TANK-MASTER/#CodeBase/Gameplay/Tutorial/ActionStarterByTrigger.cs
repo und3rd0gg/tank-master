@@ -1,8 +1,8 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+﻿using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TankMaster._CodeBase.Gameplay.Tutorial
+namespace TankMaster.Gameplay.Tutorial
 {
     public class ActionStarterByTrigger : MonoBehaviour
     {

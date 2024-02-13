@@ -1,10 +1,10 @@
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure;
+using TankMaster.Infrastructure.Factory;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class ChangeDateTimeTrigger : MonoBehaviour
     {
@@ -12,6 +12,11 @@ namespace TankMaster._CodeBase.Logic
         [SerializeField] private int _daytimeSwitchChance;
 
         private IGameFactory _gameFactory;
+
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
 
         private void OnEnable()
         {
@@ -31,10 +36,10 @@ namespace TankMaster._CodeBase.Logic
             enabled = false;
         }
 
-        private static void SwitchDaytime()
+        private void SwitchDaytime()
         {
             var daytimeSwitcher =
-                AllServices.Container.Single<IGameFactory>().MainLight.GetComponent<GlobalLight>();
+                _gameFactory.MainLight.GetComponent<GlobalLight>();
             
             daytimeSwitcher.SetNextDayTime();
         }

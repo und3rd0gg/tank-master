@@ -2,12 +2,11 @@
 using BuildingBlocks.DataTypes;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-
-using TankMaster._CodeBase.Infrastructure;
+using TankMaster.Infrastructure;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TankMaster._CodeBase.Logic
+namespace TankMaster.Logic
 {
     public class GlobalLight : MonoBehaviour
     {

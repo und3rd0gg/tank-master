@@ -1,14 +1,15 @@
-﻿using TankMaster._CodeBase.Data;
-using TankMaster._CodeBase.Infrastructure.Services.PersistentProgress;
-using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
+﻿using TankMaster.Data;
+using TankMaster.Infrastructure.Services.PersistentProgress;
+using TankMaster.Infrastructure.Services.SaveLoad;
+using UnityEngine;
 
-namespace TankMaster._CodeBase.Infrastructure.GameStates
+namespace TankMaster.Infrastructure.GameStates
 {
     public class LoadProgressState : IState
     {
         private readonly GameStateMachine _stateMachine;
         private readonly IPersistentProgressService _progressService;
-        private readonly ISaveLoadService _saveLoadService;
+        private ISaveLoadService _saveLoadService;
         private readonly SceneLoader _sceneLoader;
 
         public LoadProgressState(GameStateMachine stateMachine, IPersistentProgressService persistentProgressService,
@@ -23,10 +24,10 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         public void Enter()
         {
             LoadProgressOrInitNew();
-            LoadRequiredScene();
+            LaunchCutscene();
         }
 
-        private void LoadRequiredScene()
+        private void LaunchCutscene()
         {
             _stateMachine.Enter<CutsceneState>();
         }
@@ -35,12 +36,8 @@ namespace TankMaster._CodeBase.Infrastructure.GameStates
         {
         }
 
-        private void LoadProgressOrInitNew()
-        {
-            _progressService.PlayerProgress = _saveLoadService.LoadProgress() ?? NewProgress();
+        private void LoadProgressOrInitNew() {
+            _progressService.PlayerProgress = _saveLoadService.LoadProgress() ?? new PlayerProgress();
         }
-
-        private PlayerProgress NewProgress() =>
-            new PlayerProgress();
     }
 }

@@ -4,16 +4,16 @@ using UnityEngine.Localization.Settings;
 // ReSharper disable HeuristicUnreachableCode
 #pragma warning disable CS0162
 
-namespace TankMaster._CodeBase.Infrastructure.Services.YandexGames
+namespace TankMaster.Infrastructure.Services.YandexGames
 {
     public class YandexGamesService : IYandexGamesService
     {
         public YandexGamesService()
         {
-            Initialize();
+            Initialize().Forget();
         }
 
-        private async UniTask Initialize()
+        private async UniTaskVoid Initialize()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             return;
@@ -23,10 +23,10 @@ namespace TankMaster._CodeBase.Infrastructure.Services.YandexGames
             // if (PlayerAccount.IsAuthorized && !PlayerAccount.HasPersonalProfileDataPermission)
             //     PlayerAccount.RequestPersonalProfileDataPermission();
 
-            LoadDefaultLocale();
+            LoadDefaultLocale().Forget();
         }
 
-        private async void LoadDefaultLocale()
+        private async UniTaskVoid LoadDefaultLocale()
         {
             await LocalizationSettings.InitializationOperation.ToUniTask();
             //var browserLang = YandexGamesSdk.Environment.i18n.lang;

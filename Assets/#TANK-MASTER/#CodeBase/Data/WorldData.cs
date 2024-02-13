@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TankMaster._CodeBase.Data
+namespace TankMaster.Data
 {
     [Serializable]
     public class WorldData

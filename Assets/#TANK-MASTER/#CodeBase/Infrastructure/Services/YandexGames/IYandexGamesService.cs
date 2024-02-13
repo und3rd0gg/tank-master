@@ -1,5 +1,5 @@
 ﻿
-namespace TankMaster._CodeBase.Infrastructure.Services.YandexGames
+namespace TankMaster.Infrastructure.Services.YandexGames
 {
     public interface IYandexGamesService : IService
     {

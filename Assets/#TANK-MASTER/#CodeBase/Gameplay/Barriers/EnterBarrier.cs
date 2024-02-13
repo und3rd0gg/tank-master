@@ -1,11 +1,11 @@
-﻿using System;
-using TankMaster._CodeBase.Gameplay.Actors.Enemies;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Infrastructure.Services.SaveLoad;
-using TankMaster._CodeBase.UI;
+﻿using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Infrastructure.Services.SaveLoad;
+using TankMaster.UI;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay.Barriers
+namespace TankMaster.Gameplay.Barriers
 {
     public class EnterBarrier : MonoBehaviour
     {
@@ -21,6 +21,12 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
         private int _enemiesOnLevel;
         private int _currentEnemiesOnLevelCount;
         private int _killedEnemiesOnLevel;
+        private ISaveLoadService _saveLoadService;
+
+        [Inject]
+        internal void Construct(ISaveLoadService saveLoadService) {
+            _saveLoadService = saveLoadService;
+        }
 
         private void OnEnable()
         {
@@ -69,7 +75,7 @@ namespace TankMaster._CodeBase.Gameplay.Barriers
 
         private void SaveProgress()
         {
-            AllServices.Container.Single<ISaveLoadService>().SaveProgress();
+            _saveLoadService.SaveProgress();
             Debug.Log("Progress Saved!");
         }
 

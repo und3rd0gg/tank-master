@@ -1,14 +1,16 @@
-﻿using TankMaster._CodeBase.Infrastructure.GameStates;
+﻿using TankMaster.Infrastructure.GameStates;
+using VContainer;
 
-namespace TankMaster._CodeBase.Infrastructure
+namespace TankMaster.Infrastructure
 {
     public class Game
     {
+        private readonly IObjectResolver _objectResolver;
         public readonly GameStateMachine StateMachine;
 
-        public Game()
-        {
-            StateMachine = new GameStateMachine(new SceneLoader());
+        public Game(IObjectResolver objectResolver) {
+            _objectResolver = objectResolver;
+            StateMachine = new GameStateMachine(new SceneLoader(), _objectResolver);
         }
     }
 }

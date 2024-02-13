@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     public interface IСharacterСharacteristic
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TankMaster._CodeBase.UI.Panels
+namespace TankMaster.UI.Panels
 {
     public class Panel : MonoBehaviour
     {

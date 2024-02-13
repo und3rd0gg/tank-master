@@ -1,4 +1,4 @@
-﻿namespace TankMaster._CodeBase.Gameplay
+﻿namespace TankMaster.Gameplay
 {
     public interface IDeactivateable
     {

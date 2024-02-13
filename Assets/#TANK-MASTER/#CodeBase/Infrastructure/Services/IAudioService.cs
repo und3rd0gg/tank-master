@@ -1,4 +1,4 @@
-﻿namespace TankMaster._CodeBase.Infrastructure.Services
+﻿namespace TankMaster.Infrastructure.Services
 {
     public interface IAudioService : IService
     {

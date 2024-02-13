@@ -1,8 +1,9 @@
-﻿using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Infrastructure.Services;
 using TMPro;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.UI.Panels
+namespace TankMaster.UI.Panels
 {
     public class Counter : MonoBehaviour
     {
@@ -10,8 +11,16 @@ namespace TankMaster._CodeBase.UI.Panels
         [SerializeField] private Animator _animator;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _counterSound;
+        private IAudioService _audioService;
+        private IInputService _inputService;
 
         private const string CountDown = "CountDown";
+
+        [Inject]
+        internal void Construct(IInputService inputService, IAudioService audioService) {
+            _inputService = inputService;
+            _audioService = audioService;
+        }
 
         public void StartCount()
         {
@@ -29,8 +38,8 @@ namespace TankMaster._CodeBase.UI.Panels
         {
             Time.timeScale = 1;
             gameObject.SetActive(false);
-            AllServices.Container.Single<IInputService>().ShowVisuals();
-            AllServices.Container.Single<IAudioService>().UnmuteSound();
+            _inputService.ShowVisuals();
+            _audioService.UnmuteSound();
         }
     }
 }

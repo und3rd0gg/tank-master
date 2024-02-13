@@ -1,7 +1,7 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.Enemies;
+﻿using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 
-namespace TankMaster._CodeBase.StaticData
+namespace TankMaster.StaticData
 {
     [CreateAssetMenu(fileName = "New Enemy Profile", menuName = "Gameplay/Enemy Profile", order = 0)]
     public class EnemyProfile : ScriptableObject

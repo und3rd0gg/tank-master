@@ -1,4 +1,4 @@
-﻿namespace TankMaster._CodeBase.Infrastructure
+﻿namespace TankMaster.Infrastructure
 {
     public static class Constants
     { }

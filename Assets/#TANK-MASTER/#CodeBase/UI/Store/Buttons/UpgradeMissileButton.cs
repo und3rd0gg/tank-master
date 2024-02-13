@@ -1,14 +1,12 @@
-﻿using TankMaster._CodeBase.Gameplay.Actors.MainPlayer;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
+﻿using TankMaster.Gameplay.Actors.MainPlayer;
 
-namespace TankMaster._CodeBase.UI.Store.Buttons
+namespace TankMaster.UI.Store.Buttons
 {
     public class UpgradeMissileButton : UpgradeButton
     {
         protected override void OnUpgrade()
         {
-            var missileShooter = AllServices.Container.Single<IGameFactory>().PlayerGameObject.GetComponent<Player>()
+            var missileShooter = GameFactory.PlayerGameObject.GetComponent<Player>()
                 .MissileShooter;
 
             switch (BoughtUpgradeLevel)

@@ -1,8 +1,7 @@
 ﻿using System;
-
 using UnityEngine;
 
-namespace TankMaster._CodeBase.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.Enemies
 {
     [RequireComponent(typeof(Collider))]
     public class TriggerObserver : MonoBehaviour

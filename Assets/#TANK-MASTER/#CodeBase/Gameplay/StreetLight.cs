@@ -1,11 +1,11 @@
-﻿using System.Linq;
-using DG.Tweening;
-using TankMaster._CodeBase.Infrastructure.Factory;
-using TankMaster._CodeBase.Infrastructure.Services;
-using TankMaster._CodeBase.Logic;
+﻿using DG.Tweening;
+using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
+using TankMaster.Logic;
 using UnityEngine;
+using VContainer;
 
-namespace TankMaster._CodeBase.Gameplay
+namespace TankMaster.Gameplay
 {
     public class StreetLight : MonoBehaviour
     {
@@ -14,18 +14,21 @@ namespace TankMaster._CodeBase.Gameplay
         [SerializeField] private float _intensity;
 
         private GlobalLight _globalLight;
+        private IGameFactory _gameFactory;
 
-        private void OnEnable()
-        {
-            var gameFactiory = AllServices.Container.Single<IGameFactory>();
+        [Inject]
+        internal void Construct(IGameFactory gameFactory) {
+            _gameFactory = gameFactory;
+        }
 
-            if (gameFactiory.MainLight != null)
+        private void OnEnable() {
+            if (_gameFactory.MainLight != null)
             {
                 InitializeGlobalLight();
             }
             else
             {
-                gameFactiory.MainLightCreated += InitializeGlobalLight;
+                _gameFactory.MainLightCreated += InitializeGlobalLight;
             }
         }
 
@@ -36,7 +39,7 @@ namespace TankMaster._CodeBase.Gameplay
 
         private void InitializeGlobalLight()
         {
-            _globalLight = AllServices.Container.Single<IGameFactory>().MainLight.GetComponent<GlobalLight>();
+            _globalLight = _gameFactory.MainLight.GetComponent<GlobalLight>();
             _globalLight.DaytimeChanged += GlobalLightOnDaytimeChanged;
             InitializeStreetLight();
         }
