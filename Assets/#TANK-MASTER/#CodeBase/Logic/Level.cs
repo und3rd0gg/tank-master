@@ -2,7 +2,7 @@
 
 namespace TankMaster.Logic
 {
-    public class Level : MonoBehaviour
+    public class Level : LevelBase
     {
         [field: SerializeField] public Transform TransitionConnectionPoint { get; private set; }
     }

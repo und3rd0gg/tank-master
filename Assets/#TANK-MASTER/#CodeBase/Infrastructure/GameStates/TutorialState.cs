@@ -45,7 +45,7 @@ namespace TankMaster.Infrastructure.GameStates
         {
             _gameFactory.CreateEventSystem();
             _inputService.ShowVisuals();
-            _gameFactory.CreateInterface();
+            _gameFactory.CreateUI();
             var player = await _gameFactory.CreatePlayer();
             CameraFollow(player);
         }

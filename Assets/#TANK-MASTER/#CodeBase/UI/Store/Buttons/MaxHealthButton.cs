@@ -18,7 +18,7 @@ namespace TankMaster.UI.Store.Buttons
         {
             var playerHealth = _gameFactory.PlayerGameObject
                 .GetComponentInChildren<Player>().Health;
-            playerHealth.UpgradeMaxValue((uint) UpgradeInfo[BoughtUpgradeLevel].Value);
+            playerHealth.UpgradeMaxValue(UpgradeInfo[BoughtUpgradeLevel].Value);
             playerHealth.RestoreHealth();
         }
     }

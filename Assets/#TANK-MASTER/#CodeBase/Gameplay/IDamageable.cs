@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay
         public Transform transform { get; }
         public Health Health { get; }
 
-        public void ApplyDamage(uint damage) => 
+        public void ApplyDamage(int damage) => 
             Health.ApplyDamage(damage);
     }
 }

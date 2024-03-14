@@ -19,13 +19,13 @@ namespace TankMaster.Gameplay
             _gameFactory = gameFactory;
         }
 
-        public override void ApplyDamage(uint damage)
+        public override void ApplyDamage(int damage)
         {
             ApplyCameraShake(damage);
             base.ApplyDamage(damage);
         }
 
-        private void ApplyCameraShake(uint damage)
+        private void ApplyCameraShake(int damage)
         {
             _cameraShaker ??= _gameFactory
                 .GetVirtualCamera()
@@ -38,7 +38,7 @@ namespace TankMaster.Gameplay
             }
         }
 
-        private float GetDamagePercentage(uint damage, uint maxValue)
+        private float GetDamagePercentage(int damage, int maxValue)
         {
             return (float) damage / maxValue * 100;
         }

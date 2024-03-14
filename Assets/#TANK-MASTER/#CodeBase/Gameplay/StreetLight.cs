@@ -22,14 +22,14 @@ namespace TankMaster.Gameplay
         }
 
         private void OnEnable() {
-            if (_gameFactory.MainLight != null)
-            {
-                InitializeGlobalLight();
-            }
-            else
-            {
-                _gameFactory.MainLightCreated += InitializeGlobalLight;
-            }
+            // if (_gameFactory.MainLight != null)
+            // {
+            //     InitializeGlobalLight();
+            // }
+            // else
+            // {
+            //     _gameFactory.MainLightCreated += InitializeGlobalLight;
+            // }
         }
 
         private void OnDisable()

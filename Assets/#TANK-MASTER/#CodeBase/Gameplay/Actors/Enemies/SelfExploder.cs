@@ -9,7 +9,7 @@ namespace TankMaster.Gameplay.Actors.Enemies
         
         [SerializeField] private EnemyAnimator _enemyAnimator;
         [SerializeField] private float _impactRadius;
-        [SerializeField] private uint _damage;
+        [SerializeField] private int _damage;
 
         private void OnEnable()
         {

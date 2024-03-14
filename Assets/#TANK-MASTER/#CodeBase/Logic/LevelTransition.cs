@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TankMaster.Logic
 {
-    public class LevelTransition : MonoBehaviour
+    public sealed class LevelTransition : LevelBase
     {
         [field: SerializeField] public EnterBarrier EnterBarrier { get; private set; }
     }

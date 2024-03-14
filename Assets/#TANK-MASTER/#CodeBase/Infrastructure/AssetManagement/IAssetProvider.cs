@@ -12,7 +12,7 @@ namespace TankMaster.Infrastructure.AssetManagement
         UniTask<GameObject> Load(string path);
 
         UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
-            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);
+            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false, bool enabled = true);
 
         GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
             Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);

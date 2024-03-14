@@ -6,7 +6,7 @@ using UnityEngine;
 namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     [Serializable]
-    public class Money : IСharacterСharacteristic, IProgressSaver
+    public class Money : IActorAttribute<uint>, IProgressSaver
     {
         [field: SerializeField] public uint Value { get; private set; }
 

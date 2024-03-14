@@ -1,10 +1,11 @@
 ﻿using TankMaster.StaticData;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TankMaster.Logic
 {
     public class EnemySpawner : MonoBehaviour
     {
-        public EnemyTypeId EnemyTypeId;
+        [FormerlySerializedAs("EnemyTypeId")] public EnemyType _enemyType;
     }
 }

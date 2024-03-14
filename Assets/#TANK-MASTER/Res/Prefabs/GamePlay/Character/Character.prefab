@@ -1053,7 +1053,6 @@ GameObject:
   - component: {fileID: 9188206397738486998}
   - component: {fileID: 1287820037090871695}
   - component: {fileID: 2279116376057366768}
-  - component: {fileID: 1778335372613492750}
   - component: {fileID: 328688526511013018}
   - component: {fileID: 7006327568686159164}
   - component: {fileID: 2072734533318814229}
@@ -1064,7 +1063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9188206397738486998
 Transform:
   m_ObjectHideFlags: 0
@@ -1103,13 +1102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485221d305b4e9046969adc5e2f3f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Health>k__BackingField:
+    <MaxValue>k__BackingField: 100
+    <Value>k__BackingField: 100
+  <Head>k__BackingField: {fileID: 0}
+  <Chest>k__BackingField: {fileID: 0}
+  <Pivot>k__BackingField: {fileID: 0}
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
   <BulletShooter>k__BackingField: {fileID: 7762396181470131058}
   <MissileShooter>k__BackingField: {fileID: 4694980323010062116}
-  _playerHealth:
-    <MaxValue>k__BackingField: 100
-    <Value>k__BackingField: 100
-    _cameraShakeThreshold: 10
   _money:
     <Value>k__BackingField: 0
 --- !u!143 &2279116376057366768
@@ -1138,18 +1139,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1778335372613492750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188206397738486993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7004a4c4f53e4b53b438b794575b7c54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &328688526511013018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,11 +1642,11 @@ PrefabInstance:
       objectReference: {fileID: 1287820037090871695}
     - target: {fileID: 3599075535579092798, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3599075535579092798, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3599075535579092799, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_Color.b

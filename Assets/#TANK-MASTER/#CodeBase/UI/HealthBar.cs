@@ -2,6 +2,7 @@
 using AYellowpaper;
 using Cysharp.Threading.Tasks;
 using TankMaster.Gameplay;
+using TankMaster.Gameplay.Actors;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ namespace TankMaster.UI
         [SerializeField] private InterfaceReference<IActor> _target;
         [SerializeField] private TMP_Text _HealthAmountText;
 
-        private IСharacterСharacteristic _observableHealth;
+        private IActorAttribute<int> _observableHealth;
 
         [Range(0.01f, 1)] [SerializeField] private float _smoothness = 0.4f;
 
@@ -36,17 +37,17 @@ namespace TankMaster.UI
             _observableHealth.ValueChanged -= OnValueChanged;
         }
 
-        private void OnValueChanged(uint currentValue, uint maxValue)
+        private void OnValueChanged(int currentValue, int maxValue)
         {
             var normalizedValue = NormalizeValue(currentValue, maxValue);
             ChangeBarAmountAsync(normalizedValue);
             UpdateText(currentValue, maxValue);
         }
 
-        private void UpdateText(uint currentValue, uint maxValue) => 
+        private void UpdateText(int currentValue, int maxValue) => 
             _HealthAmountText.text = $"{currentValue}/{maxValue}";
 
-        private float NormalizeValue(uint value, uint maxValue) =>
+        private float NormalizeValue(int value, int maxValue) =>
             Mathf.Abs((float) value / maxValue);
 
         private async UniTask ChangeBarAmountAsync(float normalizedValue)

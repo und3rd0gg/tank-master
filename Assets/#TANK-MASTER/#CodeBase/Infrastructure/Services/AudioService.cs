@@ -8,7 +8,7 @@ namespace TankMaster.Infrastructure.Services
         [SerializeField] private AudioMixer _audioMixer;
         
         private const string Master = nameof(Master);
-        private const string VFX = nameof(VFX);
+        private const string SFX = nameof(SFX);
         private const string Music = nameof(Music);
         private const float LowSoundValue = -80;
         private const float HighSoundValue = 0;
@@ -36,7 +36,7 @@ namespace TankMaster.Infrastructure.Services
             ChangeMasterVolume(1);
 
         public void ChangeVFXVolume(float volume) => 
-            _audioMixer.SetFloat(VFX, GetVolume(volume));
+            _audioMixer.SetFloat(SFX, GetVolume(volume));
 
         private float GetVolume(float volume) => 
             UnityExtensions.Remap.DoRemap(0, 1, LowSoundValue, HighSoundValue, volume);

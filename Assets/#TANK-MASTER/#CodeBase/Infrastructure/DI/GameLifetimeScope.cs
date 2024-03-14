@@ -17,6 +17,7 @@ namespace TankMaster.Infrastructure.DI
         protected override void Configure(IContainerBuilder builder) {
             builder
                 .Register<AssetProvider>(Lifetime.Singleton)
+                .WithParameter(typeof(GameObject), new GameObject(nameof(AssetProvider)))
                 .As<IAssetProvider>();
 
             builder.Register<IGameFactory>(resolver =>

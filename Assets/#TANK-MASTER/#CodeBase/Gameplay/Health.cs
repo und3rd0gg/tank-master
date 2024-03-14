@@ -1,15 +1,16 @@
 ﻿using System;
+using TankMaster.Gameplay.Actors;
 using UnityEngine;
 
 namespace TankMaster.Gameplay
 {
     [Serializable]
-    public class Health : IСharacterСharacteristic
+    public class Health : IActorAttribute<int>
     {
-        [field: SerializeField] public uint MaxValue { get; private set; } = 100;
-        [field: SerializeField] public uint Value { get; private set; } = 100;
+        [field: SerializeField] public int MaxValue { get; private set; } = 100;
+        [field: SerializeField] public int Value { get; private set; } = 100;
 
-        public event Action<uint, uint> ValueChanged;
+        public event Action<int, int> ValueChanged;
         public event Action<Health> Died;
 
         private void OnValidate()
@@ -18,9 +19,9 @@ namespace TankMaster.Gameplay
                 Value = MaxValue;
         }
 
-        public virtual void ApplyDamage(uint damage)
+        public virtual void ApplyDamage(int damage)
         {
-            var newValue = (int) (Value - damage);
+            var newValue = Value - damage;
 
             if (newValue <= 0)
             {
@@ -28,11 +29,11 @@ namespace TankMaster.Gameplay
                 newValue = 0;
             }
 
-            Value = (uint) newValue;
+            Value = newValue;
             ValueChanged?.Invoke(Value, MaxValue);
         }
 
-        public void UpgradeMaxValue(uint newValue)
+        public void UpgradeMaxValue(int newValue)
         {
             MaxValue = newValue;
             ValueChanged?.Invoke(Value, MaxValue);
