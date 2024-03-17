@@ -1109,6 +1109,13 @@ MonoBehaviour:
   <Chest>k__BackingField: {fileID: 0}
   <Pivot>k__BackingField: {fileID: 0}
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
+  <OverlapDetector>k__BackingField:
+    _radius: 27
+    _overlapPoint: {fileID: 9188206397738486998}
+    _enemyMask:
+      serializedVersion: 2
+      m_Bits: 1048576
+    _bufferSize: 10
   <BulletShooter>k__BackingField: {fileID: 7762396181470131058}
   <MissileShooter>k__BackingField: {fileID: 4694980323010062116}
   _money:

@@ -20,8 +20,15 @@ namespace TankMaster.Infrastructure.DI
                 .WithParameter(typeof(GameObject), new GameObject(nameof(AssetProvider)))
                 .As<IAssetProvider>();
 
-            builder.Register<IGameFactory>(resolver =>
+            builder
+                .Register<IGameFactory>(resolver =>
                 new GameFactory(resolver.Resolve<IAssetProvider>(), resolver.Resolve<IObjectResolver>()),
+                Lifetime.Singleton);
+
+            builder
+                .Register<IEnvFactory>(resolver =>
+                        new EnvFactory(resolver.Resolve<IAssetProvider>(),
+                            resolver.Resolve<IObjectResolver>(), resolver.Resolve<IGameFactory>()),
                 Lifetime.Singleton);
 
             builder

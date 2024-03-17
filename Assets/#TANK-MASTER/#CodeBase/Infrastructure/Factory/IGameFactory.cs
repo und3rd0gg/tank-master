@@ -17,19 +17,18 @@ namespace TankMaster.Infrastructure.Factory
         GameObject PlayerGameObject { get; }
         GameObject MainLight { get; }
         GameObject Interface { get; }
-        LevelTransition Transition { get; }
 
-        UniTask<GameObject> CreatePlayer(Vector3? creationPoint = null);
+        UniTask<GameObject> CreatePlayer();
         void Cleanup();
         CinemachineVirtualCamera GetVirtualCamera();
         void Register(ISavedProgressReader progressReader);
-        void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter);
-        void CreateLevel(Vector3 creationPoint, bool disposePreviousLevel = true);
         UniTask<GameObject> CreateLight();
         UniTask<GameObject> CreateUI();
         UniTask<UltimateJoystick> CreateJoystick();
         void CreateEventSystem();
         public UniTask<GameObject> CreateMusicSource();
         UniTask<IAudioService> CreateAudioService();
+        void ResolveDependencies(GameObject gameObject);
+        Camera GetMainCamera();
     }
 }

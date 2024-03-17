@@ -18,11 +18,13 @@ namespace TankMaster.Infrastructure.GameStates
         private readonly IObjectResolver _objectResolver;
         private readonly IPersistentProgressService _progressService;
         private IGameFactory _gameFactory;
+        private IEnvFactory _envFactory;
 
         public LoadPlayableLevelState(IObjectResolver objectResolver, GameStateMachine stateMachine,
-            SceneLoader sceneLoader, IGameFactory gameFactory,
-            IPersistentProgressService progressService)
+            SceneLoader sceneLoader, IGameFactory gameFactory, IPersistentProgressService progressService,
+            IEnvFactory envFactory)
         {
+            _envFactory = envFactory;
             _objectResolver = objectResolver;
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
@@ -55,7 +57,7 @@ namespace TankMaster.Infrastructure.GameStates
 
         private async UniTaskVoid InitGameWorld()
         {
-            _gameFactory.CreateLevelTransition(Vector3.zero, null);
+            _envFactory.CreateLevelTransition(Vector3.zero, null);
             _gameFactory.CreateLight();
             _gameFactory.CreateMusicSource();
             _gameFactory.CreateEventSystem();

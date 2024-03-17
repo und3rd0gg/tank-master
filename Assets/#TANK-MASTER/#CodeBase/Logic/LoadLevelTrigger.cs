@@ -12,9 +12,11 @@ namespace TankMaster.Logic
         [SerializeField] private Transform _levelConnectionPoint;
 
         private IGameFactory _gameFactory;
+        private IEnvFactory _envFactory;
 
         [Inject]
-        internal void Construct(IGameFactory gameFactory) {
+        internal void Construct(IGameFactory gameFactory, IEnvFactory envFactory) {
+            _envFactory = envFactory;
             _gameFactory = gameFactory;
         }
 
@@ -30,7 +32,7 @@ namespace TankMaster.Logic
 
         private void TriggerObserverOnTriggerEnter(Collider obj)
         {
-            _gameFactory.CreateLevel(_levelConnectionPoint.position);
+            _envFactory.CreateLevel(_levelConnectionPoint.position);
             enabled = false;
         }
     }
