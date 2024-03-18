@@ -17,7 +17,7 @@ namespace TankMaster.Infrastructure.AssetManagement
         }
 
         public async UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
-            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false, bool enabled = true) {
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true) {
             creationPoint ??= Vector3.zero;
             rotation ??= Quaternion.identity;
 
@@ -33,10 +33,6 @@ namespace TankMaster.Infrastructure.AssetManagement
                 createdObject = Addressables
                     .InstantiateAsync(path, (Vector3)creationPoint, (Quaternion)rotation, parent);
                 await createdObject.Task;
-            }
-
-            if (dontDestroyOnLoad && createdObject.Result != null) {
-                Object.DontDestroyOnLoad(createdObject.Result);
             }
 
             return createdObject.Result;

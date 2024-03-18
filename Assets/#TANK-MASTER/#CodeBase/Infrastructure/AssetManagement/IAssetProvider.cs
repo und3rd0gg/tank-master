@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TankMaster.Infrastructure.Services;
 using UnityEngine;
@@ -12,7 +11,7 @@ namespace TankMaster.Infrastructure.AssetManagement
         UniTask<GameObject> Load(string path);
 
         UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
-            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false, bool enabled = true);
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true);
 
         GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
             Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);

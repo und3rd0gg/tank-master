@@ -39,25 +39,23 @@ namespace TankMaster.Infrastructure.Factory
         public async UniTask<GameObject> CreatePlayer() {
             var playerInitialRotation = Quaternion.Euler(0, 90, 0);
 
-            PlayerGameObject = await InstantiateRegistered(AssetPaths.MainPlayerID,
+            PlayerGameObject = await Instantiate(AssetPaths.MainPlayerID,
                 GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
-                playerInitialRotation, false);
-
-            ResolveDependencies(PlayerGameObject);
-            PlayerGameObject.SetActive(true);
+                playerInitialRotation);
 
             return PlayerGameObject;
         }
 
         public async UniTask<GameObject> CreateUI() {
-            GameObject ui = await InstantiateAndInject(AssetPaths.InterfaceID);
+            GameObject ui = await Instantiate(AssetPaths.InterfaceID, resolve: false);
             Interface = ui;
+            ResolveDependencies(ui);
             return ui;
         }
 
         public async UniTask<UltimateJoystick> CreateJoystick() {
-            GameObject gameObject = await _assetProvider.InstantiateAsync(AssetPaths.JoystickID,
-                dontDestroyOnLoad: true);
+            GameObject gameObject = await _assetProvider.InstantiateAsync(AssetPaths.JoystickID);
+            Object.DontDestroyOnLoad(gameObject);
             return gameObject.GetComponentInChildren<UltimateJoystick>();
         }
 
@@ -67,7 +65,8 @@ namespace TankMaster.Infrastructure.Factory
         }
 
         public async UniTask<GameObject> CreateMonoService(string path) {
-            GameObject gameObject = await _assetProvider.InstantiateAsync(path, dontDestroyOnLoad: true);
+            GameObject gameObject = await _assetProvider.InstantiateAsync(path);
+            Object.DontDestroyOnLoad(gameObject);
             return gameObject;
         }
 
@@ -96,27 +95,28 @@ namespace TankMaster.Infrastructure.Factory
                 .GetComponent<CinemachineVirtualCamera>();
         }
 
-        public Camera GetMainCamera() => 
+        public Camera GetMainCamera() =>
             MainCamera ??= Camera.main;
 
-        public void Register(ISavedProgressReader progressReader) {
-            if (progressReader is IProgressSaver progressWriter)
-                ProgressWriters.Add(progressWriter);
+        private async UniTask<GameObject> Instantiate(string id, Vector3? pos = null, Quaternion? rot = null,
+            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true) {
+            Debug.Log("включение 1");
+            GameObject obj = await _assetProvider.InstantiateAsync(id, pos, rot, parent, enabled: false);
+            Debug.Log("включение 2");
 
-            ProgressReaders.Add(progressReader);
-        }
+            if (register) {
+                RegisterProgressWatchers(obj);
+            }
 
-        private async UniTask<GameObject> InstantiateRegistered(string prefabPath, Vector3 creationPoint,
-            Quaternion startRotation, bool isEnabled = true) {
-            var gameObject =
-                await _assetProvider.InstantiateAsync(prefabPath, creationPoint, startRotation, enabled: isEnabled);
-            RegisterProgressWatchers(gameObject);
-            return gameObject;
-        }
+            if (resolve) {
+                ResolveDependencies(obj);
+            }
 
-        private async UniTask<GameObject> InstantiateAndInject(string id) {
-            GameObject obj = await _assetProvider.InstantiateAsync(id);
-            ResolveDependencies(obj);
+            if (dontDestroyOnLoad) {
+                Object.DontDestroyOnLoad(obj);
+            }
+
+            Debug.Log("включение");
             obj.SetActive(true);
             return obj;
         }
@@ -129,14 +129,17 @@ namespace TankMaster.Infrastructure.Factory
             }
         }
 
-        private async UniTask<GameObject> InstantiateRegistered(string prefabPath) {
-            return await InstantiateRegistered(prefabPath, Vector3.zero, Quaternion.identity);
-        }
-
         private void RegisterProgressWatchers(GameObject gameObject) {
-            foreach (ISavedProgressReader reader in gameObject.GetComponentsInChildren<ISavedProgressReader>()) {
+            foreach (ISavedProgressReader reader in gameObject.GetComponentsInChildren<ISavedProgressReader>(true)) {
                 Register(reader);
             }
+        }
+
+        public void Register(ISavedProgressReader progressReader) {
+            if (progressReader is IProgressSaver progressWriter)
+                ProgressWriters.Add(progressWriter);
+
+            ProgressReaders.Add(progressReader);
         }
     }
 
@@ -153,14 +156,14 @@ namespace TankMaster.Infrastructure.Factory
     public sealed class EnvFactory : IEnvFactory
     {
         private const string EnemyTag = "Enemy";
-        
+
         private readonly IAssetProvider _assetProvider;
         private readonly IObjectResolver _objectResolver;
         private readonly IGameFactory _gameFactory;
-        
+
         private IList<GameObject> _levels = new List<GameObject>();
         private GameObject _transition;
-        
+
         public SplineComputer Path { get; private set; }
         public LevelTransition Transition { get; private set; }
         public float PathLength { get; private set; }
@@ -192,7 +195,7 @@ namespace TankMaster.Infrastructure.Factory
 
             _transition = await _assetProvider.Load(AssetPaths.TransitionID);
         }
-        
+
         public void CreateLevelTransition(Vector3 creationPoint, Enemy[] enemiesToEnter) {
             GameObject transition = _assetProvider.Instantiate(_transition, creationPoint);
             _gameFactory.ResolveDependencies(transition);
@@ -231,7 +234,7 @@ namespace TankMaster.Infrastructure.Factory
             MergeSpline(location);
             CreateLevelTransition(transitionCreationPoint, enemies);
         }
-        
+
         private GameObject GetRandomLevel() {
             return _levels[Random.Range(0, _levels.Count)];
         }

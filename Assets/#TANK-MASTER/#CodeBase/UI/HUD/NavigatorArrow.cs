@@ -1,7 +1,5 @@
-﻿using System;
-using Dreamteck.Splines;
+﻿using Dreamteck.Splines;
 using TankMaster.Infrastructure.Factory;
-using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using VContainer;
 
@@ -30,52 +28,33 @@ namespace TankMaster.UI.HUD
             _spline = envFactory.Path;
             _camera = gameFactory.GetMainCamera();
             _canvas = gameFactory.Interface.GetComponent<Interface>().Canvas;
-            _canvas = FindObjectOfType<Canvas>();
-            
-            Debug.Assert(_spline != null);
+        
+            Debug.Assert(_envFactory != null);
             Debug.Assert(_player != null);
+            Debug.Assert(_spline != null);
+            Debug.Assert(_camera != null);
+            Debug.Assert(_canvas != null);
         }
 
         private void Start() {
+            Debug.Log("start");
             worldPointer = GameObject.CreatePrimitive(PrimitiveType.Sphere).transform;
             _offscreenPointer = new OffscreenPointer(FindObjectOfType<Canvas>(), _camera, _player, _arrow);
         }
 
         private void Update() {
-            _canvas = FindObjectOfType<Canvas>();
             _spline.Project(_player.position, ref _splineSample);
             var nearestPos = _splineSample.percent;
             var targetPos = nearestPos + (15 / _envFactory.Path.CalculateLength());
             var pos = _spline.EvaluatePosition(targetPos);
             _offscreenPointer.UpdatePointer(pos);
-            // var toTarget = pos - _player.position;
-            // var ray = new Ray(_player.position, toTarget);
-            // var planes = GeometryUtility.CalculateFrustumPlanes(_camera);
-            //
-            // var minDistance = float.MaxValue;
-            //
-            // for (var i = 0; i < planes.Length; i++) {
-            //     if (planes[i].Raycast(ray, out var dist)) {
-            //         if (dist < minDistance) {
-            //             minDistance = dist;
-            //         }
-            //     }
-            // }
-            //
-            // minDistance = Mathf.Clamp(minDistance, 0, toTarget.magnitude);
-            // var worldPos = ray.GetPoint(minDistance);
-            // worldPointer.position = worldPos;
-            //
-            // var screenPos = _camera.WorldToScreenPoint(worldPointer.position);
-            // RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)_canvas.transform, screenPos, _canvas.worldCamera, out var canvasPos);
-            // _arrow.anchoredPosition = canvasPos;
         }
     }
 
     public class OffscreenPointer
     {
         private readonly Canvas _canvas;
-        private readonly Camera _mainCamera;
+        private Camera _mainCamera;
         private Transform _playerTransform;
         private RectTransform _pointer;
 
@@ -84,10 +63,11 @@ namespace TankMaster.UI.HUD
             _playerTransform = playerTransform;
             _canvas = canvas;
             _mainCamera = mainCamera;
-            Debug.Log( _pointer == null);
-            Debug.Log(_playerTransform == null);
-            Debug.Log(canvas == null);
-            Debug.Log(_mainCamera == null);
+            
+            Debug.Assert( _pointer != null);
+            Debug.Assert(_playerTransform != null);
+            Debug.Assert(canvas != null);
+            Debug.Assert(_mainCamera != null);
         }
 
         public void UpdatePointer(Vector3 targetPos) {
@@ -99,7 +79,7 @@ namespace TankMaster.UI.HUD
             var minDistance = float.MaxValue;
 
             for (var i = 0; i < planes.Length; i++) {
-                if (planes[i].Raycast(ray, out var dist)) {
+                if (planes[i].Raycast(ray, out float dist)) {
                     if (dist < minDistance) {
                         minDistance = dist;
                     }
