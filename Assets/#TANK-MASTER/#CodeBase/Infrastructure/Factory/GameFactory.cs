@@ -47,9 +47,10 @@ namespace TankMaster.Infrastructure.Factory
         }
 
         public async UniTask<GameObject> CreateUI() {
-            GameObject ui = await Instantiate(AssetPaths.InterfaceID, resolve: false);
+            GameObject ui = await Instantiate(AssetPaths.InterfaceID, resolve: false, enable: false);
             Interface = ui;
             ResolveDependencies(ui);
+            Interface.SetActive(true);
             return ui;
         }
 
@@ -99,10 +100,9 @@ namespace TankMaster.Infrastructure.Factory
             MainCamera ??= Camera.main;
 
         private async UniTask<GameObject> Instantiate(string id, Vector3? pos = null, Quaternion? rot = null,
-            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true) {
-            Debug.Log("включение 1");
+            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true,
+            bool enable = true) {
             GameObject obj = await _assetProvider.InstantiateAsync(id, pos, rot, parent, enabled: false);
-            Debug.Log("включение 2");
 
             if (register) {
                 RegisterProgressWatchers(obj);
@@ -116,12 +116,12 @@ namespace TankMaster.Infrastructure.Factory
                 Object.DontDestroyOnLoad(obj);
             }
 
-            Debug.Log("включение");
-            obj.SetActive(true);
+            obj.SetActive(enable);
             return obj;
         }
 
         public void ResolveDependencies(GameObject gameObject) {
+            Debug.Log("resolve deps for " + gameObject.name + "enabled: " + gameObject.activeInHierarchy);
             MonoBehaviour[] objects = gameObject.GetComponentsInChildren<MonoBehaviour>(true);
 
             for (var i = 0; i < objects.Length; i++) {

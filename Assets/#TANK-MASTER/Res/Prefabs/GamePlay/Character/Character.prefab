@@ -1109,8 +1109,8 @@ MonoBehaviour:
   <Chest>k__BackingField: {fileID: 0}
   <Pivot>k__BackingField: {fileID: 0}
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
-  <OverlapDetector>k__BackingField:
-    _radius: 27
+  <OuterRadiusDetector>k__BackingField:
+    _radius: 35
     _overlapPoint: {fileID: 9188206397738486998}
     _enemyMask:
       serializedVersion: 2

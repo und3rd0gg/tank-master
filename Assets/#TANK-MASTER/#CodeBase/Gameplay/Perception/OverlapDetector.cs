@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Perception
@@ -25,31 +24,47 @@ namespace TankMaster.Gameplay.Perception
         }
 
         public void Detect() {
-            Physics.OverlapSphereNonAlloc(_overlapPoint.position, _radius, _buffer, _enemyMask);
+            int numColliders = Physics.OverlapSphereNonAlloc(_overlapPoint.position, _radius, _buffer, _enemyMask);
+            
+            for (int i = _collidersInside.Count - 1; i >= 0; i--)
+            {
+                Collider col = _collidersInside[i];
+                var stillInside = false;
 
-            for (var i = 0; i < _buffer.Length; i++) {
-                Collider col = _buffer[i];
+                for (int j = 0; j < numColliders; j++)
+                {
+                    if (_buffer[j] == col)
+                    {
+                        stillInside = true;
+                        break;
+                    }
+                }
 
-                if (!_collidersInside.Contains(col)) {
-                    _collidersInside.Add(col);
-                    OnDetectionRadiusEnter(col);
+                if (!stillInside)
+                {
+                    _collidersInside.RemoveAt(i);
+                    OnDetectionRadiusExit(col);
                 }
             }
+            
+            for (var i = 0; i < numColliders; i++)
+            {
+                Collider col = _buffer[i];
 
-            for (int i = _collidersInside.Count - 1; i >= 0; i--) {
-                if (!_buffer.Contains(_collidersInside[i])) {
-                    OnDetectionRadiusExit(_collidersInside[i]);
-                    _collidersInside.RemoveAt(i);
+                if (!_collidersInside.Contains(col))
+                {
+                    _collidersInside.Add(col);
+                    OnDetectionRadiusEnter(col);
                 }
             }
         }
 
         private void OnDetectionRadiusExit(Collider col) {
-            OnDetected(col);
+            OnDetectionExit(col);
         }
 
         private void OnDetectionRadiusEnter(Collider col) {
-            OnDetectionExit(col);
+            OnDetected(col);
         }
 
 #if UNITY_EDITOR

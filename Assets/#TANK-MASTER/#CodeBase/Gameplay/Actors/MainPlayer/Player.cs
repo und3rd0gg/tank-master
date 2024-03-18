@@ -1,4 +1,3 @@
-using System;
 using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Trees;
 using TankMaster.Data;
@@ -11,7 +10,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
     public class Player : ActorBase, IProgressSaver
     {
         [field: SerializeField] public Transform CameraFollowTarget { get; private set; }
-        [field: SerializeField] public OverlapDetector OverlapDetector { get; private set; }
+        [field: SerializeField] public OverlapDetector OuterRadiusDetector { get; private set; }
         [field: SerializeField] public BulletShooter BulletShooter { get; private set; }
         [field: SerializeField] public BulletShooter MissileShooter { get; private set; }
         
@@ -22,7 +21,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
         public BehaviorTree _behaviorTree;
 
         private void Awake() {
-            OverlapDetector.Init();
+            OuterRadiusDetector.Init();
             
             _behaviorTree = new BehaviorTreeBuilder(gameObject)
                 .Sequence()
@@ -37,11 +36,11 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
         }
 
         private void Update() {
-            OverlapDetector.Detect();
+            OuterRadiusDetector.Detect();
         }
 
         private void OnDrawGizmos() {
-            OverlapDetector.TryDrawGizmos();
+            OuterRadiusDetector.TryDrawGizmos();
         }
 
         public void LoadProgress(PlayerProgress playerProgress) => 

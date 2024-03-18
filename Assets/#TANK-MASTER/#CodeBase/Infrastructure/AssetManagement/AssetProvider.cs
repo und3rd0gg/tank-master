@@ -10,10 +10,15 @@ namespace TankMaster.Infrastructure.AssetManagement
     {
         private GameObject _providerGo;
 
-        public AssetProvider(GameObject providerGO) {
-            _providerGo = providerGO;
-            _providerGo.SetActive(false);
-            Object.DontDestroyOnLoad(_providerGo);
+        private GameObject ProviderGO {
+            get {
+                if (_providerGo != null)
+                    return _providerGo;
+                
+                _providerGo = new GameObject(nameof(AssetProvider));
+                _providerGo.SetActive(false);
+                return _providerGo;
+            }
         }
 
         public async UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
@@ -25,13 +30,14 @@ namespace TankMaster.Infrastructure.AssetManagement
 
             if (!enabled) {
                 createdObject = Addressables
-                    .InstantiateAsync(path, (Vector3)creationPoint, (Quaternion)rotation, _providerGo.transform);
+                    .InstantiateAsync(path, creationPoint.Value, rotation.Value,
+                        parent: ProviderGO.transform);
                 await createdObject.Task;
                 createdObject.Result.SetActive(false);
                 createdObject.Result.transform.parent = parent;
             } else {
                 createdObject = Addressables
-                    .InstantiateAsync(path, (Vector3)creationPoint, (Quaternion)rotation, parent);
+                    .InstantiateAsync(path, creationPoint.Value, rotation.Value, parent);
                 await createdObject.Task;
             }
 
@@ -44,7 +50,7 @@ namespace TankMaster.Infrastructure.AssetManagement
             rotation ??= Quaternion.identity;
 
             GameObject createdObject = Object
-                .Instantiate(prefab, (Vector3)creationPoint, (Quaternion)rotation, parent);
+                .Instantiate(prefab, creationPoint.Value, rotation.Value, parent);
 
             if (dontDestroyOnLoad) {
                 Object.DontDestroyOnLoad(createdObject);
