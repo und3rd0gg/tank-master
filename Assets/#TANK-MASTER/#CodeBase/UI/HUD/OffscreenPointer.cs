@@ -47,13 +47,12 @@ namespace TankMaster.UI.HUD
 
       var toTargetMagnitude = toTarget.magnitude;
 
-      if (toTargetMagnitude > minDistance) {
-        _pointer.gameObject.SetActive(true);
-      }
-      else {
-        _pointer.gameObject.SetActive(false);
-        return;
-      }
+      // if (toTargetMagnitude > minDistance) {
+      //   _pointer.gameObject.SetActive(true);
+      // }
+      // else {
+      //   _pointer.gameObject.SetActive(false);
+      // }
 
       minDistance = Mathf.Clamp(minDistance, 0, toTargetMagnitude);
       Vector3 worldPos = ray.GetPoint(minDistance);

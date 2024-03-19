@@ -3867,15 +3867,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_Name
       value: Goblin.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041752, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_RootOrder
@@ -4027,15 +4031,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_Name
       value: Goblin.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041752, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_RootOrder
@@ -4101,11 +4109,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1584642460371256225, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1584642460371256225, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7187455642990708166, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
       propertyPath: m_RootOrder
@@ -4154,6 +4162,10 @@ PrefabInstance:
     - target: {fileID: 7187455642990708168, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
       propertyPath: m_Name
       value: Kamikaze
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187455642990708168, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10971,15 +10983,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974682272646634367, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848584132264041750, guid: ac906d7f080064f489d86ab536eea203, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6848584132264041752, guid: ac906d7f080064f489d86ab536eea203, type: 3}
       propertyPath: m_RootOrder
@@ -11255,13 +11271,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier.001
       objectReference: {fileID: 0}
-    - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 487744802331826124, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11329,13 +11349,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
-    - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 487744802331826124, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108711818122269093, guid: 9597a27707dc4684b8b49d0e539eafd4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

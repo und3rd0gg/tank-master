@@ -121,7 +121,6 @@ namespace TankMaster.Infrastructure.Factory
         }
 
         public void ResolveDependencies(GameObject gameObject) {
-            Debug.Log("resolve deps for " + gameObject.name + "enabled: " + gameObject.activeInHierarchy);
             MonoBehaviour[] objects = gameObject.GetComponentsInChildren<MonoBehaviour>(true);
 
             for (var i = 0; i < objects.Length; i++) {
