@@ -44,16 +44,39 @@ namespace TankMaster.Infrastructure.AssetManagement
             return createdObject.Result;
         }
 
-        public GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
-            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false) {
+        public T Instantiate<T>(T prefab, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true) where T : Component {
             creationPoint ??= Vector3.zero;
             rotation ??= Quaternion.identity;
 
-            GameObject createdObject = Object
-                .Instantiate(prefab, creationPoint.Value, rotation.Value, parent);
+            T createdObject;
 
-            if (dontDestroyOnLoad) {
-                Object.DontDestroyOnLoad(createdObject);
+            if (!enabled) {
+                createdObject = Object.Instantiate(prefab, creationPoint.Value, rotation.Value,
+                        parent: ProviderGO.transform);
+                createdObject.gameObject.SetActive(false);
+                createdObject.transform.parent = parent;
+            } else {
+                createdObject = Object.Instantiate(prefab, creationPoint.Value, rotation.Value, parent);
+            }
+
+            return createdObject;
+        }
+
+        public GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true) {
+            creationPoint ??= Vector3.zero;
+            rotation ??= Quaternion.identity;
+
+            GameObject createdObject;
+            
+            if (!enabled) {
+                createdObject = Object.Instantiate(prefab, creationPoint.Value, rotation.Value,
+                    parent: ProviderGO.transform);
+                createdObject.SetActive(false);
+                createdObject.transform.parent = parent;
+            } else {
+                createdObject = Object.Instantiate(prefab, creationPoint.Value, rotation.Value, parent);
             }
 
             return createdObject;

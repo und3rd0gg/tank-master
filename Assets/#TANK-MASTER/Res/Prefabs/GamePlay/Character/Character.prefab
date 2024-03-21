@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9117051405771766315}
   - component: {fileID: 256760972343808233}
-  - component: {fileID: 3046730437255213770}
   m_Layer: 0
   m_Name: CoinDetectionZone
   m_TagString: Untagged
@@ -46,23 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 9188206398604822517}
---- !u!114 &3046730437255213770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283628798615217039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d003937fbb554151aa127fd68d9b5a31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _detectionMask:
-    serializedVersion: 2
-    m_Bits: 2181038080
-  _detectionRadius: 4.5
-  _bufferSize: 15
 --- !u!1 &693569341364096828
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +55,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6547642938790909078}
   - component: {fileID: 3821422114848824058}
-  - component: {fileID: 2755820569821304767}
   - component: {fileID: 7762396181470131058}
   - component: {fileID: 4694980323010062116}
   m_Layer: 15
@@ -111,20 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fb66c021584eff8448e0d6c715770b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _detector: {fileID: 4559853717482902224}
-  _turretRotator: {fileID: 2755820569821304767}
---- !u!114 &2755820569821304767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693569341364096828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c99a8b3a4e01b64eb04ed6ac1dd7091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7762396181470131058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +99,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693569341364096828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f923aa0bf545b981f1c9be002c5da7, type: 3}
   m_Name: 
@@ -151,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693569341364096828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77f923aa0bf545b981f1c9be002c5da7, type: 3}
   m_Name: 
@@ -173,7 +140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8574641723907353458}
   - component: {fileID: 1279864493006898866}
-  - component: {fileID: 4559853717482902224}
   m_Layer: 16
   m_Name: DetectionZone
   m_TagString: Untagged
@@ -209,23 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 9188206398604822517}
---- !u!114 &4559853717482902224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859016302106741628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d003937fbb554151aa127fd68d9b5a31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _detectionMask:
-    serializedVersion: 2
-    m_Bits: 1048576
-  _detectionRadius: 7
-  _bufferSize: 5
 --- !u!1 &1095724875665205441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1287820037090871695}
   _coinSource: {fileID: 3210016016572773446}
-  _physicsDetector: {fileID: 3046730437255213770}
 --- !u!114 &2072734533318814229
 MonoBehaviour:
   m_ObjectHideFlags: 0

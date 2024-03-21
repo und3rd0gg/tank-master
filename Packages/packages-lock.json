@@ -39,6 +39,13 @@
         "com.unity.modules.unitywebrequest": "1.0.0"
       }
     },
+    "com.underdogg.uniext": {
+      "version": "https://github.com/und3rd0gg/com.underdogg.uniext.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "df5565e333804eb3db0e73d850bef6a7a251e81a"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,

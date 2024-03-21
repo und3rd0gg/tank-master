@@ -13,7 +13,10 @@ namespace TankMaster.Infrastructure.AssetManagement
         UniTask<GameObject> InstantiateAsync(string path, Vector3? creationPoint = null,
             Quaternion? rotation = null, Transform parent = null, bool enabled = true);
 
+        T Instantiate<T>(T prefab, Vector3? creationPoint = null,
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true) where T : Component;
+
         GameObject Instantiate(GameObject prefab, Vector3? creationPoint = null,
-            Quaternion? rotation = null, Transform parent = null, bool dontDestroyOnLoad = false);
+            Quaternion? rotation = null, Transform parent = null, bool enabled = true);
     }
 }

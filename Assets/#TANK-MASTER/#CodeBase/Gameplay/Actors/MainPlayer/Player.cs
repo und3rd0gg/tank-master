@@ -1,5 +1,3 @@
-using CleverCrow.Fluid.BTs.Tasks;
-using CleverCrow.Fluid.BTs.Trees;
 using TankMaster.Data;
 using TankMaster.Gameplay.Perception;
 using TankMaster.Infrastructure.Services.PersistentProgress;
@@ -18,21 +16,8 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
         
         public Money Money => _money;
 
-        public BehaviorTree _behaviorTree;
-
         private void Awake() {
             OuterRadiusDetector.Init();
-            
-            _behaviorTree = new BehaviorTreeBuilder(gameObject)
-                .Sequence()
-                .Condition("Custom Condition", () => {
-                    return true;
-                })
-                .Do("Custom Action", () => {
-                    return TaskStatus.Success;
-                })
-                .End()
-                .Build();
         }
 
         private void Update() {

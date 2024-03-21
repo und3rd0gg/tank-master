@@ -31,6 +31,10 @@ namespace TankMaster.Infrastructure.DI
                 Lifetime.Singleton);
 
             builder
+                .Register<NPCFactory>(Lifetime.Singleton)
+                .AsSelf();
+
+            builder
                 .Register<YandexGamesService>(Lifetime.Singleton)
                 .As<IYandexGamesService>();
 

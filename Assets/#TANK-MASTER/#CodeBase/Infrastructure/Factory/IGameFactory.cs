@@ -30,5 +30,9 @@ namespace TankMaster.Infrastructure.Factory
         UniTask<IAudioService> CreateAudioService();
         void ResolveDependencies(GameObject gameObject);
         Camera GetMainCamera();
+
+        UniTask<GameObject> Instantiate(string id, Vector3? pos = null, Quaternion? rot = null,
+            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true,
+            bool enable = true);
     }
 }

@@ -7,7 +7,6 @@ namespace TankMaster.Gameplay.Actors.Enemies
     public class OverlapSettings
     {
         public float Radius;
-        public Transform OverlapPoint;
         public LayerMask EnemyMask;
 
 #if UNITY_EDITOR
@@ -15,9 +14,9 @@ namespace TankMaster.Gameplay.Actors.Enemies
 #endif
 
 #if UNITY_EDITOR
-        public void TryDrawGizmos() {
+        public void TryDrawGizmos(Transform overlapPoint) {
             Gizmos.color = GizmoColor;
-            Gizmos.DrawWireSphere(OverlapPoint.position, Radius);
+            Gizmos.DrawWireSphere(overlapPoint.position, Radius);
         }
 #endif
     }
