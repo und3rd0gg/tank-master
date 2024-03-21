@@ -20,14 +20,16 @@ namespace TankMaster.Infrastructure.Factory
 
     private IList<GameObject> _levels = new List<GameObject>();
     private GameObject _transition;
+    private NPCFactory _npcFactory;
 
     public SplineComputer Path { get; private set; }
     public LevelTransition Transition { get; private set; }
     public float PathLength { get; private set; }
 
     public EnvFactory(IAssetProvider assetProvider, IObjectResolver objectResolver,
-      IGameFactory gameFactory) {
+      IGameFactory gameFactory, NPCFactory npcFactory) {
       LoadAssets().Forget();
+      _npcFactory = npcFactory;
       _assetProvider = assetProvider;
       _objectResolver = objectResolver;
       _gameFactory = gameFactory;
@@ -86,6 +88,12 @@ namespace TankMaster.Infrastructure.Factory
 
       for (var i = 0; i < enemiesGameObjects.Length; i++) {
         enemies[i] = enemiesGameObjects[i].GetComponent<Enemy>();
+      }
+
+      var spawners = level.GetComponentsInChildren<EnemySpawnPoint>(true);
+
+      for (int i = 0; i < spawners.Length; i++) {
+        _npcFactory.CreateNPC(spawners[i].EnemyType, spawners[i].transform.position);
       }
 
       MergeSpline(location);

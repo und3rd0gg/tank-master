@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace TankMaster.Gameplay.Actors.Enemies
 {
@@ -9,14 +10,14 @@ namespace TankMaster.Gameplay.Actors.Enemies
         private const float MinimalVelocity = 0.1f;
 
         [SerializeField]private NavMeshAgent _agent;
-        [SerializeField] private EnemyAnimator _animator;
+        [FormerlySerializedAs("_animator")] [SerializeField] private EnemyAnimatorProvider _animatorProvider;
 
         private void Update()
         {
             if (ShouldMove())
-                _animator.SetRun(true);
+                _animatorProvider.SetRun(true);
             else
-                _animator.SetRun(false);
+                _animatorProvider.SetRun(false);
         }
 
         private bool ShouldMove() =>

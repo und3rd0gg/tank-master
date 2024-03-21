@@ -49,3 +49,4 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _audioService: {fileID: 4226080065796889080, guid: fda3ef41f5cc2514089a01e4b456e443, type: 3}
+  _npcFactory: {fileID: 7025128579536037498, guid: 9644c85c22438364bab354437ff4ac30, type: 3}

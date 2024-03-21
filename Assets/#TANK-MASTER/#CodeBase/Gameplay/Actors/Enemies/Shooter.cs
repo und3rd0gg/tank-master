@@ -1,12 +1,13 @@
 ﻿using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class Shooter : MonoBehaviour, IAttacker
     {
         [SerializeField] private Transform _shootPoint;
-        [SerializeField] private EnemyAnimator _enemyAnimator;
+        [FormerlySerializedAs("_enemyAnimator")] [SerializeField] private EnemyAnimatorProvider _enemyAnimatorProvider;
         [SerializeField] private Projectile _projectile;
         [SerializeField][Range(0, 2)] private float _yOffset;
 
@@ -17,8 +18,8 @@ namespace TankMaster.Gameplay.Actors.Enemies
 
         private void OnEnable()
         {
-            _enemyAnimator.SetAttack(true);
-            _enemyAnimator.Attacked += OnAttack;
+            _enemyAnimatorProvider.SetAttack(true);
+            //_enemyAnimatorProvider.Attacked += OnAttack;
         }
 
         private void Update()
@@ -28,8 +29,8 @@ namespace TankMaster.Gameplay.Actors.Enemies
 
         private void OnDisable()
         {
-            _enemyAnimator.Attacked -= OnAttack;
-            _enemyAnimator.SetAttack(false);
+            //_enemyAnimatorProvider.Attacked -= OnAttack;
+            _enemyAnimatorProvider.SetAttack(false);
         }
 
         private void OnAttack()

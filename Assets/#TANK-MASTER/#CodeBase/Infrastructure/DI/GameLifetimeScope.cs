@@ -10,52 +10,54 @@ using VContainer.Unity;
 
 namespace TankMaster.Infrastructure.DI
 {
-    public class GameLifetimeScope : LifetimeScope
-    {
-        [SerializeField] private AudioService _audioService;
-        
-        protected override void Configure(IContainerBuilder builder) {
-            builder
-                .Register<AssetProvider>(Lifetime.Singleton)
-                .As<IAssetProvider>();
+  public class GameLifetimeScope : LifetimeScope
+  {
+    [SerializeField] private AudioService _audioService;
+    [SerializeField] private NPCFactory _npcFactory;
 
-            builder
-                .Register<IGameFactory>(resolver =>
-                new GameFactory(resolver.Resolve<IAssetProvider>(), resolver.Resolve<IObjectResolver>()),
-                Lifetime.Singleton);
+    protected override void Configure(IContainerBuilder builder) {
+      builder
+        .Register<AssetProvider>(Lifetime.Singleton)
+        .As<IAssetProvider>();
 
-            builder
-                .Register<IEnvFactory>(resolver =>
-                        new EnvFactory(resolver.Resolve<IAssetProvider>(),
-                            resolver.Resolve<IObjectResolver>(), resolver.Resolve<IGameFactory>()),
-                Lifetime.Singleton);
+      builder
+        .Register<IGameFactory>(resolver =>
+            new GameFactory(resolver.Resolve<IAssetProvider>(), resolver.Resolve<IObjectResolver>()),
+          Lifetime.Singleton);
 
-            builder
-                .Register<NPCFactory>(Lifetime.Singleton)
-                .AsSelf();
+      builder
+        .RegisterComponent(_npcFactory)
+        .AsSelf();
 
-            builder
-                .Register<YandexGamesService>(Lifetime.Singleton)
-                .As<IYandexGamesService>();
+      builder
+        .Register<IEnvFactory>(resolver =>
+            new EnvFactory(resolver.Resolve<IAssetProvider>(),
+              resolver.Resolve<IObjectResolver>(), resolver.Resolve<IGameFactory>(), 
+              resolver.Resolve<NPCFactory>()),
+          Lifetime.Singleton);
 
-            builder
-                .Register(resolver => 
-                    new TouchInputService(resolver.Resolve<IGameFactory>()), Lifetime.Singleton)
-                .As<IInputService>();
+      builder
+        .Register<YandexGamesService>(Lifetime.Singleton)
+        .As<IYandexGamesService>();
 
-            builder
-                .Register<PersistentProgressService>(Lifetime.Singleton)
-                .As<IPersistentProgressService>();
-            
-            builder.Register(resolver =>
-                    new SaveLoadService(resolver.Resolve<IGameFactory>(),
-                    resolver.Resolve<IPersistentProgressService>()), Lifetime.Singleton)
-                .As<ISaveLoadService>();
+      builder
+        .Register(resolver =>
+          new TouchInputService(resolver.Resolve<IGameFactory>()), Lifetime.Singleton)
+        .As<IInputService>();
 
-            builder
-                .RegisterComponentInNewPrefab(_audioService, Lifetime.Singleton)
-                .DontDestroyOnLoad()
-                .As<IAudioService>();
-        }
+      builder
+        .Register<PersistentProgressService>(Lifetime.Singleton)
+        .As<IPersistentProgressService>();
+
+      builder.Register(resolver =>
+          new SaveLoadService(resolver.Resolve<IGameFactory>(),
+            resolver.Resolve<IPersistentProgressService>()), Lifetime.Singleton)
+        .As<ISaveLoadService>();
+
+      builder
+        .RegisterComponentInNewPrefab(_audioService, Lifetime.Singleton)
+        .DontDestroyOnLoad()
+        .As<IAudioService>();
     }
+  }
 }
