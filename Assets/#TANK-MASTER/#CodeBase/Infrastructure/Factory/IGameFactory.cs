@@ -34,5 +34,13 @@ namespace TankMaster.Infrastructure.Factory
         UniTask<GameObject> Instantiate(string id, Vector3? pos = null, Quaternion? rot = null,
             Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true,
             bool enable = true);
+
+        GameObject Instantiate(GameObject prefab, Vector3? pos = null, Quaternion? rot = null,
+            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true,
+            bool enable = true);
+
+        T Instantiate<T>(T prefab, Vector3? pos = null, Quaternion? rot = null,
+            Transform parent = null, bool dontDestroyOnLoad = false, bool register = true, bool resolve = true,
+            bool enable = true) where T : Component;
     }
 }

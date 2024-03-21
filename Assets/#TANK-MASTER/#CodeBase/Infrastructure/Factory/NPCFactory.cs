@@ -17,7 +17,8 @@ namespace TankMaster.Infrastructure.Factory
     }
 
     public void CreateNPC(EnemyType enemyType, Vector3 creationPoint) {
-      //_gameFactory.Instantiate()  
+      var enemy = _enemyType[enemyType];
+      _gameFactory.Instantiate(enemy, creationPoint);
     }
   }
 }
