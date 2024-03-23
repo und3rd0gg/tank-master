@@ -1,6 +1,4 @@
-﻿using AYellowpaper;
-using TankMaster.Infrastructure.Factory;
-using TankMaster.Infrastructure.Services;
+﻿using TankMaster.Infrastructure.Factory;
 using TankMaster.UI;
 using Unity.Mathematics;
 using UnityEngine;
@@ -13,7 +11,7 @@ namespace TankMaster.Gameplay
     {
         [SerializeField] private Coin _coin;
         [SerializeField] private int _coinsCount;
-        [SerializeField] private InterfaceReference<IActor> _actor;
+        [SerializeField] private DamageableBase _actor;
         [SerializeField] private ParticleSystem _destroyVFX;
         [SerializeField] private UnityEvent _destroyCallback;
 
@@ -27,12 +25,12 @@ namespace TankMaster.Gameplay
 
         private void OnEnable()
         {
-            _actor.Value.Health.Died += OnDied;
+            _actor.Health.Died += OnDied;
         }
 
         private void OnDisable()
         {
-            _actor.Value.Health.Died -= OnDied;
+            _actor.Health.Died -= OnDied;
         }
 
         public void InstantiateCoins()

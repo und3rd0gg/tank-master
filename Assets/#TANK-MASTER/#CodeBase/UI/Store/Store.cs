@@ -1,5 +1,4 @@
-﻿using AYellowpaper;
-using TankMaster.Data;
+﻿using TankMaster.Data;
 using TankMaster.Infrastructure.Factory;
 using TankMaster.Infrastructure.Services;
 using TankMaster.Infrastructure.Services.PersistentProgress;
@@ -11,7 +10,7 @@ namespace TankMaster.UI.Store
 {
     public class Store : Panel, IProgressSaver
     {
-        [SerializeField] private InterfaceReference<IProgressSaver>[] StoreItems;
+        //[SerializeField] private InterfaceReference<IProgressSaver>[] StoreItems;
 
         private Interface _interface;
         private IInputService _inputService;

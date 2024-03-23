@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e9030a52e34de9a7c51a1a2cd53370, type: 3}
+  m_Script: {fileID: 11500000, guid: 74766c2b6e184671b08a22a88b2c56c2, type: 3}
   m_Name: KamikazeProfile
   m_EditorClassIdentifier: 
   <VisionZoneSettings>k__BackingField:

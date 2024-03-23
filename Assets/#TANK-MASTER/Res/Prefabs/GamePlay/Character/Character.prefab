@@ -1138,8 +1138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coin: {fileID: 0}
   _coinsCount: 0
-  _actor:
-    _underlyingValue: {fileID: 1287820037090871695}
+  _actor: {fileID: 1287820037090871695}
   _destroyVFX: {fileID: 198717222519016466, guid: af0c0bb7c53230e4e8381d5781bec6b0, type: 3}
   _destroyCallback:
     m_PersistentCalls:
@@ -1569,6 +1568,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1064276879793773138, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 1287820037090871695}
     - target: {fileID: 1064276879793773138, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: _target._underlyingValue
       value: 

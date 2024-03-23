@@ -1,5 +1,4 @@
 ﻿using System;
-using AYellowpaper;
 using Cysharp.Threading.Tasks;
 using TankMaster.Gameplay;
 using TankMaster.Gameplay.Actors;
@@ -14,7 +13,7 @@ namespace TankMaster.UI
         [SerializeField]
         private Slider _slider;
 
-        [SerializeField] private InterfaceReference<IActor> _target;
+        [SerializeField] private DamageableBase _target;
         [SerializeField] private TMP_Text _HealthAmountText;
 
         private IActorAttribute<int> _observableHealth;
@@ -23,7 +22,7 @@ namespace TankMaster.UI
 
         private void Awake()
         {
-            _observableHealth = _target.Value.Health;
+            _observableHealth = _target.Health;
             OnValueChanged(_observableHealth.Value, _observableHealth.MaxValue);
         }
 
