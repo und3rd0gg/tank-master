@@ -24,4 +24,7 @@ MonoBehaviour:
   <PatrolSettings>k__BackingField:
     <PatrolRadius>k__BackingField: 10
     <WaitTime>k__BackingField: 3
+  <AttackProfile>k__BackingField:
+    <StoppingDistance>k__BackingField: 2.5
+    ProjectileInfo: []
   <DistanceThreshold>k__BackingField: 1

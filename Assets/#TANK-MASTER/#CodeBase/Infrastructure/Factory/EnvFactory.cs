@@ -93,7 +93,7 @@ namespace TankMaster.Infrastructure.Factory
       var spawners = level.GetComponentsInChildren<EnemySpawnPoint>(true);
 
       for (int i = 0; i < spawners.Length; i++) {
-        _npcFactory.CreateNPC(spawners[i].EnemyType, spawners[i].transform.position);
+        _npcFactory.CreateNPC(spawners[i].NpcType, spawners[i].transform.position);
       }
 
       MergeSpline(location);

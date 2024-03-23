@@ -23,6 +23,11 @@ namespace TankMaster.Gameplay
     [SerializeField] protected BehaviorTree BehaviorTree;
 
     [field: SerializeField] public NPCProfile NpcProfile { get; protected set; }
+    [field: SerializeField] public NPCType NpcType { get; protected set; }
+
+    private void Update() {
+      BehaviorTree.Tick();
+    }
 
     public void SetBehaviorTree(BehaviorTree behaviorTree) {
       BehaviorTree = behaviorTree;
@@ -37,6 +42,12 @@ namespace TankMaster.Gameplay
     [NonSerialized] public Vector3 CurrentPatrolPos;
 
     [field: SerializeField] public NavMeshAgent Agent { get; protected set; }
+    [field: SerializeField] public NPCAnimatorProvider Animator { get; protected set; }
+    [field: SerializeField] public AttackBehaviorBase AttackBehavior { get; protected set; }
+
+    private void Awake() {
+      InitialPos = transform.position;
+    }
   }
 
   public interface INPC

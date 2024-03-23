@@ -1,4 +1,6 @@
-﻿using CleverCrow.Fluid.BTs.Trees;
+﻿using System;
+using CleverCrow.Fluid.BTs.Tasks;
+using CleverCrow.Fluid.BTs.Trees;
 using TankMaster.Common.Extensions;
 using TankMaster.Gameplay;
 using TankMaster.Gameplay.Actors.Enemies;
@@ -10,8 +12,8 @@ namespace TankMaster.Infrastructure.Factory
 {
   public class NPCFactory : MonoBehaviour
   {
-    [SerializeField] private UniDict<EnemyType, Enemy> _enemyType;
-    
+    [SerializeField] private UniDict<NPCType, Enemy> _enemyType;
+
     private IGameFactory _gameFactory;
 
     [Inject]
@@ -19,44 +21,84 @@ namespace TankMaster.Infrastructure.Factory
       _gameFactory = gameFactory;
     }
 
-    public void CreateNPC(EnemyType enemyType, Vector3 creationPoint) {
-      var npcProfile = _enemyType[enemyType];
-      var npc =_gameFactory.Instantiate(npcProfile, creationPoint, enable: false);
-      npc.SetBehaviorTree(SetupBehaviorTree(npc, npc.NpcProfile));
+    public void CreateNPC(NPCType npcType, Vector3 creationPoint) {
+      var npcProfile = _enemyType[npcType];
+      var npc = _gameFactory.Instantiate(npcProfile, creationPoint, enable: false);
+      npc.SetBehaviorTree(GetBehaviorTree(npc, npc.NpcProfile));
       npc.gameObject.SetActive(true);
     }
 
-    private BehaviorTree SetupBehaviorTree(EnemyNPCBase npc, NPCProfile npcProfile) {
-      return new BehaviorTreeBuilder(gameObject)
+    private BehaviorTree GetBehaviorTree(EnemyNPCBase npc, NPCProfile npcProfile) {
+      var bt = new BehaviorTreeBuilder(npc.gameObject)
         .Selector("Is player in sight?")
+        .Splice(GetPatrolBehavior(npc))
+        .Selector("Player left vision zone?")
+        .Parallel()
+        .RepeatUntilFailure()
+        .PlayerInVisionZoneCondition(npc)
+        .End()
+        .Splice(GetAttackBehavior(npc))
+        .End()
+        .Sequence()
+        .StopAction(npc)
+        .WaitTime(npcProfile.ChaseSettings.TargetLostWaitTime)
+        .End()
+        .End()
+        .Build();
+
+      return bt;
+    }
+
+    private BehaviorTree GetPatrolBehavior(EnemyNPCBase npc) {
+      return new BehaviorTreeBuilder(npc.gameObject)
         .Parallel()
         .Inverter()
         .RepeatUntilSuccess()
-        .PlayerInVisionZoneCondition(npc, npcProfile)
+        .PlayerInVisionZoneCondition(npc)
         .End()
         .End()
         .RepeatForever()
         .Sequence("Patrol")
         .SelectPatrolPosAction(npc)
         .MoveToPatrolPosAction(npc)
-        .WaitTime(npcProfile.PatrolSettings.WaitTime)
+        .WaitTime(npc.NpcProfile.PatrolSettings.WaitTime)
         .End()
         .End()
-        .End()
-        .Selector("Player left vision zone?")
-        .Parallel()
-        .RepeatUntilFailure()
-        .PlayerInVisionZoneCondition(npc, npcProfile)
-        .End()
-        .Sequence()
-        .ChaseTargetAction(npc.Agent, npc, npcProfile)
-        .End()
-        .End()
-        .Sequence()
-        .StopAction(npc.Agent, npc.Pivot)
-        .WaitTime(npcProfile.ChaseSettings.TargetLostWaitTime)
         .End()
         .Build();
+    }
+
+    private BehaviorTree GetAttackBehavior(EnemyNPCBase npc) {
+      var bt = new BehaviorTreeBuilder(npc.gameObject);
+
+      switch (npc.NpcType) {
+        case NPCType.Kamikaze:
+          bt.Selector("Effective distance reached?")
+            .Parallel()
+            .Inverter()
+            .RepeatUntilSuccess()
+            .EffectiveDistanceReachedCondition(npc)
+            .End()
+            .End()
+            .ChaseTargetAction(npc)
+            .End()
+            .Sequence()
+            .StopAction(npc)
+            .SelfExplosionAction(npc)
+            .End()
+            .End();
+          break;
+        case NPCType.Soldier:
+          break;
+        case NPCType.Dragon:
+          break;
+        case NPCType.Random:
+          break;
+        default:
+          throw new ArgumentOutOfRangeException();
+      }
+
+      return bt.Build();
     }
   }
 }

@@ -6,13 +6,6 @@ using UnityEngine;
 namespace TankMaster.Gameplay.Actors.Enemies
 {
     [Serializable]
-    public class AttackProfile
-    {
-        [field: SerializeField] public float EffectiveDistance { get; private set; }
-        public List<ProjectileInfo> ProjectileInfo;
-    }
-
-    [Serializable]
     public struct ProjectileInfo
     {
         [field: SerializeField] [Tooltip("Projectile prefab")] public Projectile Projectile { get; private set; }

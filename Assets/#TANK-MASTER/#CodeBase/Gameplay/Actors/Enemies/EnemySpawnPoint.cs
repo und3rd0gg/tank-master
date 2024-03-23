@@ -4,10 +4,10 @@ namespace TankMaster.Gameplay.Actors.Enemies
 {
   public class EnemySpawnPoint : MonoBehaviour
   {
-    [field: SerializeField] public EnemyType EnemyType { get; private set; }
+    [field: SerializeField] public NPCType NpcType { get; private set; }
   }
 
-  public enum EnemyType
+  public enum NPCType
   {
     Kamikaze,
     Soldier,

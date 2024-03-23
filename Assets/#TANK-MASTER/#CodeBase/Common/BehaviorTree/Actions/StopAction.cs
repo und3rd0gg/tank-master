@@ -1,5 +1,7 @@
 using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Tasks.Actions;
+using TankMaster.Gameplay;
+using TankMaster.Gameplay.Actors.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,14 +11,17 @@ namespace TankMaster.Common.BehaviorTree.Actions
   {
     private readonly NavMeshAgent _agent;
     private readonly Transform _pivot;
+    private readonly NPCAnimatorProvider _animator;
 
-    public StopAction(NavMeshAgent agent, Transform pivot) {
-      _pivot = pivot;
-      _agent = agent;
+    public StopAction(EnemyNPCBase npc) {
+      _pivot = npc.Pivot;
+      _agent = npc.Agent;
+      _animator = npc.Animator;
     }
     
     protected override TaskStatus OnUpdate() {
       _agent.SetDestination(_pivot.position);
+      _animator.SetMoveSpeed(0);
       return TaskStatus.Success;
     }
   }

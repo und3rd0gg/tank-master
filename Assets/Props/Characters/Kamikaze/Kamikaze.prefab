@@ -117,6 +117,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: <Animator>k__BackingField
+      value: 
+      objectReference: {fileID: 5812948023307648218}
+    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _visionZoneSettings.Radius
       value: 10
       objectReference: {fileID: 0}
@@ -124,6 +128,10 @@ PrefabInstance:
       propertyPath: <NpcProfile>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: b4325d5fae2d3004292a6e2bbe3a7f13, type: 2}
+    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: <AttackBehavior>k__BackingField
+      value: 
+      objectReference: {fileID: 4174123307788648320}
     - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _chaseSettings._chaseStoppingDistance
       value: 1.5
@@ -336,7 +344,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7037138832937157945, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9045263660507775323}
+      addedObject: {fileID: 5812948023307648218}
   m_SourcePrefab: {fileID: 100100000, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
 --- !u!95 &1804436832807390361 stripped
 Animator:
@@ -358,7 +366,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7037138832937157945, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
   m_PrefabInstance: {fileID: 8692604542956567136}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9045263660507775323
+--- !u!114 &5812948023307648218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,7 +375,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804436832814694233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19ca764c0d690c49a2a5eed37151b18, type: 3}
+  m_Script: {fileID: 11500000, guid: 823b176d67734534902890a6bae2f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 1804436832807390361}

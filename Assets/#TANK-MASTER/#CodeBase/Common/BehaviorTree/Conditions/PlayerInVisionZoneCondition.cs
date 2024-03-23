@@ -11,9 +11,9 @@ namespace TankMaster.Common.BehaviorTree.Conditions
     private readonly NPCProfile _npcProfile;
     private readonly Transform _pivot;
 
-    public PlayerInVisionZoneCondition(EnemyNPCBase npc, NPCProfile npcProfile) {
-      _npcProfile = npcProfile;
+    public PlayerInVisionZoneCondition(EnemyNPCBase npc) {
       _npc = npc;
+      _npcProfile = npc.NpcProfile;
       _pivot = npc.Pivot;
     }
     

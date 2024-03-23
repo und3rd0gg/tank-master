@@ -1,13 +1,12 @@
 ﻿using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TankMaster.Gameplay.Actors.Enemies
 {
     public class Shooter : MonoBehaviour, IAttacker
     {
         [SerializeField] private Transform _shootPoint;
-        [FormerlySerializedAs("_enemyAnimator")] [SerializeField] private EnemyAnimatorProvider _enemyAnimatorProvider;
+        [SerializeField] private NPCAnimatorProvider _enemyAnimatorProvider;
         [SerializeField] private Projectile _projectile;
         [SerializeField][Range(0, 2)] private float _yOffset;
 

@@ -13,15 +13,18 @@ namespace TankMaster.Common.BehaviorTree.Actions
     private readonly NPCProfile _npcProfile;
     private readonly Transform _transform;
     private readonly EnemyNPCBase _npc;
+    private readonly NPCAnimatorProvider _animator;
 
-    public ChaseTargetAction(EnemyNPCBase npc, NPCProfile npcProfile, NavMeshAgent agent) {
+    public ChaseTargetAction(EnemyNPCBase npc) {
       _npc = npc;
-      _npcProfile = npcProfile;
-      _agent = agent;
+      _animator = npc.Animator;
+      _npcProfile = npc.NpcProfile;
+      _agent = npc.Agent;
       _transform = npc.transform;
     }
     protected override TaskStatus OnUpdate() {
       _agent.destination = _npc.DetectionBuffer[0].transform.position;
+      _animator.SetMoveSpeed(_agent.velocity.magnitude / _agent.speed);
 
       if ((_transform.position - _agent.destination).sqrMagnitude < _npcProfile.ChaseSettings.SqrChaseStoppingDistance) {
         return TaskStatus.Success;

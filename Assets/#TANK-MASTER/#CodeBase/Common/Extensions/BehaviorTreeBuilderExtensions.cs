@@ -2,14 +2,15 @@
 using TankMaster.Common.BehaviorTree.Actions;
 using TankMaster.Common.BehaviorTree.Conditions;
 using TankMaster.Gameplay;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Infrastructure.Factory;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace TankMaster.Common.Extensions
 {
   public static class BehaviorTreeBuilderExtensions
   {
+#region Actions
+
     public static BehaviorTreeBuilder SelectPatrolPosAction(this BehaviorTreeBuilder builder, EnemyNPCBase npc,
       string name = "Select patrol position") {
       return builder.AddNode(new SelectPatrolPosAction(npc.NpcProfile, npc) {
@@ -19,30 +20,50 @@ namespace TankMaster.Common.Extensions
 
     public static BehaviorTreeBuilder MoveToPatrolPosAction(this BehaviorTreeBuilder builder, EnemyNPCBase npc,
       string name = "Move to patrol position") {
-      return builder.AddNode(new MoveToPatrolPosAction(npc, npc.Agent) {
+      return builder.AddNode(new MoveToPatrolPosAction(npc) {
         Name = name,
       });
     }
 
-    public static BehaviorTreeBuilder StopAction(this BehaviorTreeBuilder builder, NavMeshAgent agent, Transform pivot,
+    public static BehaviorTreeBuilder StopAction(this BehaviorTreeBuilder builder, EnemyNPCBase npc,
       string name = "Stop") {
-      return builder.AddNode(new StopAction(agent, pivot) {
+      return builder.AddNode(new StopAction(npc) {
         Name = name,
       });
     }
 
-    public static BehaviorTreeBuilder ChaseTargetAction(this BehaviorTreeBuilder builder, NavMeshAgent agent,
-      EnemyNPCBase npc, NPCProfile npcProfile, string name = "ChaseTarget") {
-      return builder.AddNode(new ChaseTargetAction(npc, npcProfile, agent) {
+    public static BehaviorTreeBuilder ChaseTargetAction(this BehaviorTreeBuilder builder,
+      EnemyNPCBase npc, string name = "Chase target") {
+      return builder.AddNode(new ChaseTargetAction(npc) {
         Name = name,
       });
     }
+
+    public static BehaviorTreeBuilder SelfExplosionAction(this BehaviorTreeBuilder builder,
+      EnemyNPCBase npc, string name = "Self explosion") {
+      return builder.AddNode(new SelfExplosionAction(npc) {
+        Name = name,
+      });
+    }
+
+#endregion
+
+#region Conditions
 
     public static BehaviorTreeBuilder PlayerInVisionZoneCondition(this BehaviorTreeBuilder builder, EnemyNPCBase npc,
-      NPCProfile npcProfile, string name = "ChaseTarget") {
-      return builder.AddNode(new PlayerInVisionZoneCondition(npc, npcProfile) {
+      string name = "Player in vision zone") {
+      return builder.AddNode(new PlayerInVisionZoneCondition(npc) {
         Name = name,
       });
     }
+
+    public static BehaviorTreeBuilder EffectiveDistanceReachedCondition(this BehaviorTreeBuilder builder,
+      EnemyNPCBase npc, string name = "Effective distance reached") {
+      return builder.AddNode(new EffectiveDistanceReachedCondition(npc) {
+        Name = name,
+      });
+    }
+
+#endregion
   }
 }
