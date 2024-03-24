@@ -1271,10 +1271,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4782802089901604181, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd187d39ec9ca0e46811c6e71b7716a1, type: 2}
     - target: {fileID: 4782802090089736522, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4782802090089736522, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa1ac5dd63227c94dbd07cbcdd5ceb65, type: 2}
     - target: {fileID: 7037138832937157945, guid: ee962d11fdfd95a47840ec0e79ba2482, type: 3}
       propertyPath: m_Name
       value: Bomb
