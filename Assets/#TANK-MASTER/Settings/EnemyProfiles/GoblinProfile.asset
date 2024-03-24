@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74766c2b6e184671b08a22a88b2c56c2, type: 3}
+  m_Name: GoblinProfile
+  m_EditorClassIdentifier: 
+  <VisionZoneSettings>k__BackingField:
+    Radius: 15
+    EnemyMask:
+      serializedVersion: 2
+      m_Bits: 32768
+    GizmoColor: {r: 0.3306167, g: 1, b: 0, a: 1}
+  <ChaseSettings>k__BackingField:
+    <ChaseStoppingDistance>k__BackingField: 1
+    <TargetLostWaitTime>k__BackingField: 3
+  <PatrolSettings>k__BackingField:
+    <PatrolRadius>k__BackingField: 10
+    <WaitTime>k__BackingField: 3
+  <AttackSettings>k__BackingField:
+    <StoppingDistance>k__BackingField: 3.5
+    <BaseDamage>k__BackingField: 15
+  <DeathSettings>k__BackingField:
+    <DeathParticle>k__BackingField: {fileID: 4464203246196163399, guid: 22bafa7876fe8204cb6253c6eba08a1d, type: 3}

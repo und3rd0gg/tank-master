@@ -13,7 +13,7 @@ namespace TankMaster.Infrastructure.DI
   public class GameLifetimeScope : LifetimeScope
   {
     [SerializeField] private AudioService _audioService;
-    [SerializeField] private NPCFactory _npcFactory;
+    [SerializeField] private NPCDB _npcDB;
 
     protected override void Configure(IContainerBuilder builder) {
       builder
@@ -24,9 +24,10 @@ namespace TankMaster.Infrastructure.DI
         .Register<IGameFactory>(resolver =>
             new GameFactory(resolver.Resolve<IAssetProvider>(), resolver.Resolve<IObjectResolver>()),
           Lifetime.Singleton);
-
+      
       builder
-        .RegisterComponent(_npcFactory)
+        .Register(resolver =>
+          new NPCFactory(resolver.Resolve<IGameFactory>(), _npcDB), Lifetime.Singleton)
         .AsSelf();
 
       builder

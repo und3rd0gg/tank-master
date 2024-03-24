@@ -1,30 +1,27 @@
 ﻿using System;
-using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Trees;
 using TankMaster.Common.Extensions;
 using TankMaster.Gameplay;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
-using UniExt.Dictionary;
 using UnityEngine;
-using VContainer;
 
 namespace TankMaster.Infrastructure.Factory
 {
-  public class NPCFactory : MonoBehaviour
+  public class NPCFactory
   {
-    [SerializeField] private UniDict<NPCType, Enemy> _enemyType;
+    private readonly IGameFactory _gameFactory;
+    private readonly NPCDB _npcDB;
 
-    private IGameFactory _gameFactory;
-
-    [Inject]
-    internal void Construct(IGameFactory gameFactory) {
+    public NPCFactory(IGameFactory gameFactory, NPCDB npcdb) {
+      _npcDB = npcdb;
       _gameFactory = gameFactory;
     }
 
     public void CreateNPC(NPCType npcType, Vector3 creationPoint) {
-      var npcProfile = _enemyType[npcType];
-      var npc = _gameFactory.Instantiate(npcProfile, creationPoint, enable: false);
+      var npcInfo = _npcDB.NPCDict[npcType];
+      var npc = _gameFactory.Instantiate(npcInfo.NPC, creationPoint, enable: false);
+      npc.SetProfile(npcInfo.NPCProfile);
       npc.SetBehaviorTree(GetBehaviorTree(npc, npc.NpcProfile));
       npc.gameObject.SetActive(true);
     }
@@ -74,20 +71,7 @@ namespace TankMaster.Infrastructure.Factory
 
       switch (npc.NpcType) {
         case NPCType.Kamikaze:
-          bt.Selector("Effective distance reached?")
-            .Parallel()
-            .Inverter()
-            .RepeatUntilSuccess()
-            .EffectiveDistanceReachedCondition(npc)
-            .End()
-            .End()
-            .ChaseTargetAction(npc)
-            .End()
-            .Sequence()
-            .StopAction(npc)
-            .SelfExplosionAction(npc)
-            .End()
-            .End();
+          GetKamikazeAttackBeh(npc, bt);
           break;
         case NPCType.Soldier:
           break;
@@ -100,6 +84,40 @@ namespace TankMaster.Infrastructure.Factory
       }
 
       return bt.Build();
+    }
+    
+    private void GetDragonAttackBeh(EnemyNPCBase npc, BehaviorTreeBuilder bt) {
+      bt.Selector("Effective distance reached?")
+        .Parallel()
+        .Inverter()
+        .RepeatUntilSuccess()
+        .EffectiveDistanceReachedCondition(npc)
+        .End()
+        .End()
+        .ChaseTargetAction(npc)
+        .End()
+        .Sequence()
+        .StopAction(npc)
+        .SelfExplosionAction(npc)
+        .End()
+        .End();
+    }
+
+    private void GetKamikazeAttackBeh(EnemyNPCBase npc, BehaviorTreeBuilder bt) {
+      bt.Selector("Effective distance reached?")
+        .Parallel()
+        .Inverter()
+        .RepeatUntilSuccess()
+        .EffectiveDistanceReachedCondition(npc)
+        .End()
+        .End()
+        .ChaseTargetAction(npc)
+        .End()
+        .Sequence()
+        .StopAction(npc)
+        .SelfExplosionAction(npc)
+        .End()
+        .End();
     }
   }
 }

@@ -24,8 +24,9 @@ namespace TankMaster.Gameplay
   {
     [SerializeField] protected BehaviorTree BehaviorTree;
 
-    [field: SerializeField] public NPCProfile NpcProfile { get; protected set; }
     [field: SerializeField] public NPCType NpcType { get; protected set; }
+    
+    public NPCProfile NpcProfile { get; protected set; }
 
     protected virtual void Update() {
       BehaviorTree.Tick();
@@ -33,6 +34,10 @@ namespace TankMaster.Gameplay
 
     public void SetBehaviorTree(BehaviorTree behaviorTree) {
       BehaviorTree = behaviorTree;
+    }
+
+    public void SetProfile(NPCProfile profile) {
+      NpcProfile = profile;
     }
   }
 

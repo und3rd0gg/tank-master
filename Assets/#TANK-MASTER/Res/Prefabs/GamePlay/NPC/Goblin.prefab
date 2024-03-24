@@ -119,14 +119,14 @@ PrefabInstance:
       propertyPath: <Pivot>k__BackingField
       value: 
       objectReference: {fileID: 6848584132264041752}
+    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: <NpcProfile>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: a77a56cbe4205434294d36b1d2c5963c, type: 2}
     - target: {fileID: 6055046934610140573, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: m_Radius
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
-      propertyPath: _aggroSwitcher
-      value: 
-      objectReference: {fileID: 7351366594349031284}
     - target: {fileID: 8233795334791771385, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _maxAttackDistance
       value: 11.5
@@ -199,10 +199,6 @@ PrefabInstance:
       propertyPath: _destroyCallback.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
       value: TankMaster._CodeBase.Gameplay.Destroyer, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 8805780290139670126, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 8450654251442015138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -245,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 494463221241094153}
-  _enemyAnimator: {fileID: 8450654251442015138}
+  _enemyAnimatorProvider: {fileID: 0}
   _projectile: {fileID: -7443388888226927487, guid: 49806ded8ac71a842ba8ccddc8cbdf01, type: 3}
   _yOffset: 0.236
 --- !u!4 &6848584132264041752 stripped
@@ -253,17 +249,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5425169831415084695, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
   m_PrefabInstance: {fileID: 1459480517971864463}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7351366594349031284 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8233795334791771387, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
-  m_PrefabInstance: {fileID: 1459480517971864463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6848584132264041750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4394508156c1499f95b2c938c605d7e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4743838816725469787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,29 +312,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 955717841895258307, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8450654251442015138}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
---- !u!1 &5518849173594239640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 955717841895258307, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
-  m_PrefabInstance: {fileID: 4743838816725469787}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8450654251442015138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5518849173594239640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20904d6a0aaab2b4d9053405a2af86a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 5518849173603713370}
 --- !u!4 &5518849173594402438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 955717841895351517, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
@@ -363,10 +327,5 @@ Transform:
 --- !u!4 &5518849173594402488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 955717841895351523, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
-  m_PrefabInstance: {fileID: 4743838816725469787}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5518849173603713370 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 955717841887824641, guid: f8b62f332c9589e4e847b449066a2967, type: 3}
   m_PrefabInstance: {fileID: 4743838816725469787}
   m_PrefabAsset: {fileID: 0}
