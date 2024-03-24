@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.NPC.Enemies
 {
     [Serializable]
     public struct ProjectileInfo

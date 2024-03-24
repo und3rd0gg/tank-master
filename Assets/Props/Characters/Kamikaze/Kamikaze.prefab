@@ -89,13 +89,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9003596152329771909}
     - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
+      propertyPath: _deathAction
+      value: 
+      objectReference: {fileID: 8423918109452240}
+    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _enemyProfile
       value: 
       objectReference: {fileID: 11400000, guid: b4325d5fae2d3004292a6e2bbe3a7f13, type: 2}
-    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
-      propertyPath: _attackBehavior
-      value: 
-      objectReference: {fileID: 4174123307788648320}
     - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: <Head>k__BackingField
       value: 
@@ -128,10 +128,6 @@ PrefabInstance:
       propertyPath: <NpcProfile>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: b4325d5fae2d3004292a6e2bbe3a7f13, type: 2}
-    - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
-      propertyPath: <AttackBehavior>k__BackingField
-      value: 
-      objectReference: {fileID: 4174123307788648320}
     - target: {fileID: 5753885303573993513, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       propertyPath: _chaseSettings._chaseStoppingDistance
       value: 1.5
@@ -229,7 +225,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5425169831415084697, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 4174123307788648320}
+      addedObject: {fileID: 8423918109452240}
   m_SourcePrefab: {fileID: 100100000, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
 --- !u!4 &7187455642990708166 stripped
 Transform:
@@ -241,7 +237,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5425169831415084697, guid: bc083f1e5b92e8e48904712919d0cc93, type: 3}
   m_PrefabInstance: {fileID: 2951243021678539601}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4174123307788648320
+--- !u!114 &8423918109452240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,7 +246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7187455642990708168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad6d8378fad401dae9bdbc0637400f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1345a6bc8ade4a9482a5c9488a83654e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7434602781494848376 stripped

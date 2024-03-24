@@ -1,7 +1,7 @@
 ﻿using VContainer;
 using VContainer.Unity;
 
-namespace TankMaster
+namespace TankMaster.Infrastructure.DI
 {
     public class InitialSceneLifetimeScope : LifetimeScope
     {

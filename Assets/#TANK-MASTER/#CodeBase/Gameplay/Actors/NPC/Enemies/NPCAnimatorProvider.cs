@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.NPC.Enemies
 {
     public class NPCAnimatorProvider : AnimatorProviderBase
     {

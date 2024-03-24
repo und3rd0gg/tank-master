@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using TankMaster.AIPerception;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies;
 using UnityEngine;
 
 namespace TankMaster.Gameplay

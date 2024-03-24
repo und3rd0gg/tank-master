@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Dreamteck.Splines;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Infrastructure.AssetManagement;
 using TankMaster.Logic;
 using UnityEngine;

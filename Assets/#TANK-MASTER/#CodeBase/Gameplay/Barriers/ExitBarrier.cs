@@ -1,4 +1,5 @@
-﻿using TankMaster.Gameplay.Actors.Enemies;
+﻿using TankMaster.Common;
+using TankMaster.Common.Physics;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Barriers

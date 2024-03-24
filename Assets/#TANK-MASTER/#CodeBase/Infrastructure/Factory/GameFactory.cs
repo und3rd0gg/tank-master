@@ -2,7 +2,7 @@
 using Cinemachine;
 using Cysharp.Threading.Tasks;
 using Dreamteck.Splines;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Infrastructure.AssetManagement;
 using TankMaster.Infrastructure.Services;
 using TankMaster.Infrastructure.Services.PersistentProgress;

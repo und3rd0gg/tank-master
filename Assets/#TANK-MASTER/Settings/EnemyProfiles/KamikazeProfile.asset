@@ -24,7 +24,8 @@ MonoBehaviour:
   <PatrolSettings>k__BackingField:
     <PatrolRadius>k__BackingField: 10
     <WaitTime>k__BackingField: 3
-  <AttackProfile>k__BackingField:
-    <StoppingDistance>k__BackingField: 2.5
-    ProjectileInfo: []
-  <DistanceThreshold>k__BackingField: 1
+  <AttackSettings>k__BackingField:
+    <StoppingDistance>k__BackingField: 3.5
+    <BaseDamage>k__BackingField: 15
+  <DeathSettings>k__BackingField:
+    <DeathParticle>k__BackingField: {fileID: 4464203246196163399, guid: 22bafa7876fe8204cb6253c6eba08a1d, type: 3}

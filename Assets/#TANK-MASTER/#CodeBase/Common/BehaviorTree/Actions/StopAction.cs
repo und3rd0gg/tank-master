@@ -1,7 +1,7 @@
 using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Tasks.Actions;
 using TankMaster.Gameplay;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
 

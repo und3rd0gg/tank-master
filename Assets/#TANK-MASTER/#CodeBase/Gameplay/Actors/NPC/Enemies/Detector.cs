@@ -2,7 +2,7 @@
 using TankMaster.AIPerception;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.NPC.Enemies
 {
     public class Detector : MonoBehaviour, IDetector
     {

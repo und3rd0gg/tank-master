@@ -1,7 +1,7 @@
 ﻿using CleverCrow.Fluid.BTs.Tasks;
 using Drawing;
 using TankMaster.Gameplay;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
 using UnityEngine;
 
 namespace TankMaster.Common.BehaviorTree.Conditions
@@ -22,13 +22,13 @@ namespace TankMaster.Common.BehaviorTree.Conditions
 #if UNITY_EDITOR
       
       using (Draw.WithColor(Color.red)) {
-        Draw.xz.Circle(_npc.transform.position, _profile.AttackProfile.StoppingDistance);
+        Draw.xz.Circle(_npc.transform.position, _profile.AttackSettings.StoppingDistance);
       }
       
 #endif
       
       if ((_transform.position - _npc.DetectionBuffer[0].transform.position).sqrMagnitude <
-          _profile.AttackProfile.StoppingDistance) {
+          _profile.AttackSettings.StoppingDistance) {
         return true;
       }
 

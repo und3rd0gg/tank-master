@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331756726}
   - component: {fileID: 331756728}
-  - component: {fileID: 331756727}
+  - component: {fileID: 6957901381514278300}
   m_Layer: 0
   m_Name: CloseTrigger
   m_TagString: Untagged
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.993103, y: 4.0013275, z: 13.258814}
   m_Center: {x: -0.42043304, y: 1.5006638, z: -0.1568203}
---- !u!114 &331756727
+--- !u!114 &6957901381514278300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 331756725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 331756728}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894851095}
   - component: {fileID: 1894851096}
-  - component: {fileID: 1894851097}
+  - component: {fileID: 6683971945657935991}
   m_Layer: 0
   m_Name: OpenTrigger
   m_TagString: Untagged
@@ -354,7 +354,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.099785, y: 4.0013275, z: 13.258814}
   m_Center: {x: -1.4737735, y: 1.5006638, z: -0.1568203}
---- !u!114 &1894851097
+--- !u!114 &6683971945657935991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894851094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 1894851096}
@@ -417,9 +417,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5170049773083901460}
   - component: {fileID: 7990740656112185982}
-  - component: {fileID: 3333984047655282415}
   - component: {fileID: 1512170846029499806}
   - component: {fileID: 2331167274251120007}
+  - component: {fileID: 3511315138448585802}
   m_Layer: 0
   m_Name: LoadLevelTrigger/DateTimeTrigger
   m_TagString: Untagged
@@ -463,19 +463,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.7322235, y: 8.064417, z: 17.238113}
   m_Center: {x: 2.3661118, y: 3.5322073, z: 2.3057346}
---- !u!114 &3333984047655282415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3136199370058431033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7990740656112185982}
 --- !u!114 &1512170846029499806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76b2683d31e4b0a92740d4a08ee0cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerObserver: {fileID: 3333984047655282415}
+  _triggerObserver: {fileID: 3511315138448585802}
   _levelConnectionPoint: {fileID: 7771240955623403452}
 --- !u!114 &2331167274251120007
 MonoBehaviour:
@@ -502,8 +489,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6862fa035a8858468eed66ed8f3d759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerObserver: {fileID: 3333984047655282415}
+  _triggerObserver: {fileID: 3511315138448585802}
   _daytimeSwitchChance: 65
+--- !u!114 &3511315138448585802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136199370058431033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collider: {fileID: 7990740656112185982}
 --- !u!1 &6081811184869057671
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,8 +567,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3215852890161503659}
   - component: {fileID: 7559398716702764752}
-  - component: {fileID: 750423432819257734}
   - component: {fileID: 3624845502762944067}
+  - component: {fileID: 1436714343948378812}
   m_Layer: 0
   m_Name: OpenShopTrigger
   m_TagString: Untagged
@@ -612,19 +612,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.5885286, y: 9.247559, z: 21.771736}
   m_Center: {x: 0.77238417, y: 4.123781, z: -0.66659164}
---- !u!114 &750423432819257734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164746555976166046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7559398716702764752}
 --- !u!114 &3624845502762944067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +624,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbef00e6510b4155a57614d1acd06a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerObserver: {fileID: 750423432819257734}
+  _triggerObserver: {fileID: 1436714343948378812}
+--- !u!114 &1436714343948378812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164746555976166046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collider: {fileID: 7559398716702764752}
 --- !u!1 &7241251714014574787
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +826,8 @@ MonoBehaviour:
   _barriersAnimators:
   - {fileID: 113220424469016845}
   - {fileID: 113220424277085827}
-  _triggerOpenObserver: {fileID: 1894851097}
-  _triggerCloseObserver: {fileID: 331756727}
+  _triggerOpenObserver: {fileID: 6683971945657935991}
+  _triggerCloseObserver: {fileID: 6957901381514278300}
   _blocker: {fileID: 274240493}
   _limitPresenter: {fileID: 5576398905977468583}
   _boxCollider: {fileID: 1894851096}
@@ -885,8 +885,8 @@ MonoBehaviour:
   _barriersAnimators:
   - {fileID: 113220423287346481}
   - {fileID: 113220424241118045}
-  _triggerOpenObserver: {fileID: 7759974596885689978}
-  _triggerCloseObserver: {fileID: 7759974597959313196}
+  _triggerOpenObserver: {fileID: 7979312324183156344}
+  _triggerCloseObserver: {fileID: 4733977778661870922}
   _blocker: {fileID: 6081811184869057671}
 --- !u!1 &7759974596882676581
 GameObject:
@@ -1078,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7759974596885689979}
   - component: {fileID: 7759974596885689957}
-  - component: {fileID: 7759974596885689978}
+  - component: {fileID: 7979312324183156344}
   m_Layer: 25
   m_Name: OpenTrigger
   m_TagString: Untagged
@@ -1122,7 +1122,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.898713, y: 5.9578753, z: 22.183367}
   m_Center: {x: 2.6142275, y: 2.478938, z: 2.7815363}
---- !u!114 &7759974596885689978
+--- !u!114 &7979312324183156344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7759974596885689976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 7759974596885689957}
@@ -1145,7 +1145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7759974597959313197}
   - component: {fileID: 7759974597959313199}
-  - component: {fileID: 7759974597959313196}
+  - component: {fileID: 4733977778661870922}
   m_Layer: 25
   m_Name: CloseTrigger
   m_TagString: Untagged
@@ -1189,7 +1189,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.898713, y: 5.9578753, z: 22.183367}
   m_Center: {x: 2.6142275, y: 2.478938, z: 2.7815363}
---- !u!114 &7759974597959313196
+--- !u!114 &4733977778661870922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7759974597959313186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4f00b65b61461da19078d0723c8778, type: 3}
+  m_Script: {fileID: 11500000, guid: caa66de8447560f4bab43262b1ecf0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 7759974597959313199}

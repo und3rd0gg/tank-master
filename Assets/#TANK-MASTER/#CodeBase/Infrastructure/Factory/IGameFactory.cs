@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
-using TankMaster.Gameplay.Actors.Enemies;
 using TankMaster.Infrastructure.Services;
 using TankMaster.Infrastructure.Services.PersistentProgress;
 using TankMaster.Logic;

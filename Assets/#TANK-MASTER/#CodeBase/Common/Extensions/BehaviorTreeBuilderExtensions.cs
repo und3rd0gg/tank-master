@@ -41,7 +41,7 @@ namespace TankMaster.Common.Extensions
 
     public static BehaviorTreeBuilder SelfExplosionAction(this BehaviorTreeBuilder builder,
       EnemyNPCBase npc, string name = "Self explosion") {
-      return builder.AddNode(new SelfExplosionAction(npc) {
+      return builder.AddNode(new KSelfExplosionAction(npc) {
         Name = name,
       });
     }

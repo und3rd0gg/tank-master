@@ -1,6 +1,8 @@
 ﻿using System;
 using CleverCrow.Fluid.BTs.Trees;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.DeathActions;
+using TankMaster.Gameplay.Actors.NPC.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -25,7 +27,7 @@ namespace TankMaster.Gameplay
     [field: SerializeField] public NPCProfile NpcProfile { get; protected set; }
     [field: SerializeField] public NPCType NpcType { get; protected set; }
 
-    private void Update() {
+    protected virtual void Update() {
       BehaviorTree.Tick();
     }
 
@@ -36,6 +38,8 @@ namespace TankMaster.Gameplay
 
   public abstract class EnemyNPCBase : NPCBase
   {
+    [SerializeField] private DeathActionBase _deathAction;
+    
     [NonSerialized] public readonly Collider[] DetectionBuffer = new Collider[1];
     
     [NonSerialized] public Vector3 InitialPos;
@@ -43,10 +47,17 @@ namespace TankMaster.Gameplay
 
     [field: SerializeField] public NavMeshAgent Agent { get; protected set; }
     [field: SerializeField] public NPCAnimatorProvider Animator { get; protected set; }
-    [field: SerializeField] public AttackBehaviorBase AttackBehavior { get; protected set; }
 
-    private void Awake() {
+    protected virtual void Awake() {
       InitialPos = transform.position;
+    }
+
+    protected virtual void OnEnable() {
+      Health.Died += _deathAction.OnDeath;
+    }
+
+    protected void OnDisable() {
+      Health.Died -= _deathAction.OnDeath;
     }
   }
 

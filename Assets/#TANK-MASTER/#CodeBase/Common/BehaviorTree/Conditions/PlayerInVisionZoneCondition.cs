@@ -1,6 +1,6 @@
 ﻿using CleverCrow.Fluid.BTs.Tasks;
 using TankMaster.Gameplay;
-using TankMaster.Gameplay.Actors.Enemies;
+using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
 using UnityEngine;
 
 namespace TankMaster.Common.BehaviorTree.Conditions
@@ -19,7 +19,7 @@ namespace TankMaster.Common.BehaviorTree.Conditions
     
     protected override bool OnUpdate() {
       var visionZoneSettings = _npcProfile.VisionZoneSettings;
-      var count = Physics.OverlapSphereNonAlloc(_pivot.position,
+      var count = UnityEngine.Physics.OverlapSphereNonAlloc(_pivot.position,
         visionZoneSettings.Radius, _npc.DetectionBuffer, visionZoneSettings.EnemyMask);
 
       if (count > 0) {

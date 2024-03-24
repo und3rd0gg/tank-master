@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.Enemies
+namespace TankMaster.Gameplay.Actors.NPC.Enemies.Settings
 {
     [Serializable]
     public class ChaseSettings
