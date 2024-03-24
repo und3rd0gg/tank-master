@@ -748,7 +748,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: UEE
-    WebGL: UEE;DYTHERVIN_AUTO_ATTACH;DYTHERVIN_REF;DREAMTECK_SPLINES
+    WebGL: UEE;DYTHERVIN_AUTO_ATTACH;DYTHERVIN_REF;DREAMTECK_SPLINES;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
