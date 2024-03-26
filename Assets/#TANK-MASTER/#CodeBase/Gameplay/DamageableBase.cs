@@ -1,10 +1,13 @@
 ﻿using System;
 using CleverCrow.Fluid.BTs.Trees;
-using TankMaster.Gameplay.Actors.NPC.DeathActions;
+using TankMaster.Gameplay.Actors.NPC.Animators;
+using TankMaster.Gameplay.Actors.NPC.AttackBehaviors;
+using TankMaster.Gameplay.Actors.NPC.DeathBehaviors;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace TankMaster.Gameplay
 {
@@ -25,7 +28,7 @@ namespace TankMaster.Gameplay
     [SerializeField] protected BehaviorTree BehaviorTree;
 
     [field: SerializeField] public NPCType NpcType { get; protected set; }
-    
+
     public NPCProfile NpcProfile { get; protected set; }
 
     protected virtual void Update() {
@@ -43,31 +46,28 @@ namespace TankMaster.Gameplay
 
   public abstract class EnemyNPCBase : NPCBase
   {
-    [SerializeField] private DeathActionBase _deathAction;
-    
+    [FormerlySerializedAs("_deathAction")] [SerializeField] private DeathBehaviorBase _deathBehavior;
+
     [NonSerialized] public readonly Collider[] DetectionBuffer = new Collider[1];
-    
+
     [NonSerialized] public Vector3 InitialPos;
     [NonSerialized] public Vector3 CurrentPatrolPos;
 
     [field: SerializeField] public NavMeshAgent Agent { get; protected set; }
     [field: SerializeField] public NPCAnimatorProvider Animator { get; protected set; }
+    [field: SerializeField] public AttackBehaviorBase AttackBehavior { get; protected set; }
 
     protected virtual void Awake() {
       InitialPos = transform.position;
+      AttackBehavior.Init(this);
     }
 
     protected virtual void OnEnable() {
-      Health.Died += _deathAction.OnDeath;
+      Health.Died += _deathBehavior.OnDeath;
     }
 
     protected void OnDisable() {
-      Health.Died -= _deathAction.OnDeath;
+      Health.Died -= _deathBehavior.OnDeath;
     }
-  }
-
-  public interface INPC
-  {
-    public NPCProfile NpcProfile { get; }
   }
 }

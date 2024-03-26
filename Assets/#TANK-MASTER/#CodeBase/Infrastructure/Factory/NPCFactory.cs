@@ -1,9 +1,14 @@
 ﻿using System;
+using CleverCrow.Fluid.BTs.Tasks;
+using CleverCrow.Fluid.BTs.Tasks.Actions;
 using CleverCrow.Fluid.BTs.Trees;
 using TankMaster.Common.Extensions;
 using TankMaster.Gameplay;
+using TankMaster.Gameplay.Actors.NPC.Animators;
+using TankMaster.Gameplay.Actors.NPC.AttackBehaviors;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace TankMaster.Infrastructure.Factory
@@ -76,6 +81,7 @@ namespace TankMaster.Infrastructure.Factory
         case NPCType.Soldier:
           break;
         case NPCType.Dragon:
+          GetDragonAttackBeh(npc, bt);
           break;
         case NPCType.Random:
           break;
@@ -96,9 +102,14 @@ namespace TankMaster.Infrastructure.Factory
         .End()
         .ChaseTargetAction(npc)
         .End()
+        .Parallel()
+        .RepeatUntilFailure()
+        .EffectiveDistanceReachedCondition(npc)
+        .End()
         .Sequence()
         .StopAction(npc)
-        .SelfExplosionAction(npc)
+        .DAttackAction(npc)
+        .End()
         .End()
         .End();
     }
@@ -115,9 +126,37 @@ namespace TankMaster.Infrastructure.Factory
         .End()
         .Sequence()
         .StopAction(npc)
-        .SelfExplosionAction(npc)
+        .KSelfExplosionAction(npc)
         .End()
         .End();
+    }
+  }
+
+  public class DAttackAction : ActionBase
+  {
+    private readonly EnemyNPCBase _npc;
+    private readonly AttackBehaviorBase _attackBeh;
+    private readonly DragonAnimatorProvider _animator;
+    private readonly Transform _transform;
+
+    public DAttackAction(EnemyNPCBase npc) {
+      _npc = npc;
+      _attackBeh = npc.AttackBehavior;
+      _transform = npc.transform;
+      _animator = (DragonAnimatorProvider)_npc.Animator;
+    }
+    
+    protected override TaskStatus OnUpdate() {
+      _transform.LookAt(_npc.DetectionBuffer[0].transform.position);
+      
+      _animator.SetAttack(OnAttack);
+      
+      return TaskStatus.Continue;
+    }
+
+    private void OnAttack() {
+      var targetPos = _npc.DetectionBuffer[0].GetComponent<ActorBase>().Chest.position;
+      _attackBeh.Attack(targetPos);
     }
   }
 }

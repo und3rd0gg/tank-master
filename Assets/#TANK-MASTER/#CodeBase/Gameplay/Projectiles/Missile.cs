@@ -1,34 +1,35 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankMaster.Gameplay.Projectiles
 {
-    public class Missile : Projectile
-    {
-        [SerializeField] private Rigidbody _rigidbody;
-        [SerializeField] private float _flyTime = 2.5f;
+  public class Missile : ProjectileBase
+  {
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private float _flyTime = 2.5f;
 
-        public override void Launch(Vector3 startPosition, Vector3 target)
-        {
-            var force = Blobcreate.ProjectileToolkit.Projectile.VelocityByTime(startPosition, target,
-                _flyTime);
-            _rigidbody.AddForce(force, ForceMode.VelocityChange);
-        }
+    private void FixedUpdate() {
+      var velocity = _rigidbody.velocity;
+      float detectionDistance = velocity.magnitude * Time.deltaTime;
+      Vector3 direction = velocity;
+      
+      if (_rigidbody.useGravity) {
+        direction += Physics.gravity * Time.deltaTime;
+      }
 
-        protected override List<IDamageable> GetDamageables()
-        {
-            var impactedObjects = Physics.OverlapSphere(transform.position, ImpactRadius);
-            var damageables = new List<IDamageable>(impactedObjects.Length);
+      direction = direction.normalized;
 
-            foreach (var impactedObject in impactedObjects)
-            {
-                if (impactedObject.TryGetComponent(out IDamageable damageable))
-                {
-                    damageables.Add(damageable);
-                }
-            }
-
-            return damageables;
-        }
+      if (Physics.SphereCast(transform.position, ImpactRadius, direction, out var hit,
+            detectionDistance))
+      {
+        Debug.Log("col");
+        DoImpact();
+      }
     }
+
+    public override void Launch(Vector3 startPosition, Vector3 target) {
+      var force = Blobcreate.ProjectileToolkit.Projectile.VelocityByTime(startPosition, target,
+        _flyTime);
+      _rigidbody.AddForce(force, ForceMode.VelocityChange);
+    }
+  }
 }

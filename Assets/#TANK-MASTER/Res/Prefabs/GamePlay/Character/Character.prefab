@@ -1053,9 +1053,9 @@ MonoBehaviour:
   <Health>k__BackingField:
     <MaxValue>k__BackingField: 100
     <Value>k__BackingField: 100
-  <Head>k__BackingField: {fileID: 0}
-  <Chest>k__BackingField: {fileID: 0}
-  <Pivot>k__BackingField: {fileID: 0}
+  <Head>k__BackingField: {fileID: 6547642938790909078}
+  <Chest>k__BackingField: {fileID: 1095724875665044717}
+  <Pivot>k__BackingField: {fileID: 9188206397738486998}
   <CameraFollowTarget>k__BackingField: {fileID: 9188206398604822517}
   <OuterRadiusDetector>k__BackingField:
     _radius: 35

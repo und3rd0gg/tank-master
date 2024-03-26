@@ -72,7 +72,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425169831415084695}
-  - component: {fileID: 5753885303573993513}
   - component: {fileID: 6055046934149687508}
   - component: {fileID: 976939453894763929}
   m_Layer: 20
@@ -100,32 +99,6 @@ Transform:
   - {fileID: 1924011561872150567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5753885303573993513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5425169831415084697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c01843435f24ee18dd97fe0a87b8be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Health>k__BackingField:
-    <MaxValue>k__BackingField: 100
-    <Value>k__BackingField: 100
-  <Head>k__BackingField: {fileID: 0}
-  <Chest>k__BackingField: {fileID: 0}
-  <Pivot>k__BackingField: {fileID: 0}
-  _visionZoneSettings:
-    Radius: 15
-    OverlapPoint: {fileID: 5425169831415084695}
-    EnemyMask:
-      serializedVersion: 2
-      m_Bits: 32768
-    BufferSize: 0
-    GizmoColor: {r: 1, g: 0.9321515, b: 0, a: 1}
 --- !u!195 &6055046934149687508
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -294,10 +267,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1064276879793773138, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
-      propertyPath: _target._underlyingValue
-      value: 
-      objectReference: {fileID: 5753885303573993513}
     - target: {fileID: 5633674785873188395, guid: d8a82f05e7d02854e9acc9bb38b2def3, type: 3}
       propertyPath: m_Name
       value: CharacterHealthBar

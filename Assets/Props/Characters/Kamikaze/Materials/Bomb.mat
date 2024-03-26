@@ -186,7 +186,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 1.4142135, g: 0.0055459356, b: 0.022183742, a: 1}
+    - _EmissionColor: {r: 1.8880861, g: 1.8880861, b: 1.8880861, a: 1}
     - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0.5451996, g: 1, b: 0, a: 1}
     - _RampDark: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}

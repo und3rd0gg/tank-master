@@ -1,8 +1,10 @@
 ﻿using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Tasks.Actions;
 using TankMaster.Gameplay;
+using TankMaster.Gameplay.Actors.NPC.Animators;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
+using TankMaster.Infrastructure.Factory;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,8 +15,8 @@ namespace TankMaster.Common.BehaviorTree.Actions
     private readonly NavMeshAgent _agent;
     private readonly NPCProfile _npcProfile;
     private readonly Transform _transform;
-    private readonly EnemyNPCBase _npc;
     private readonly NPCAnimatorProvider _animator;
+    private readonly EnemyNPCBase _npc;
 
     public ChaseTargetAction(EnemyNPCBase npc) {
       _npc = npc;

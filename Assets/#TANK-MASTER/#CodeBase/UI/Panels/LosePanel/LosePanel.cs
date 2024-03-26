@@ -58,7 +58,7 @@ namespace TankMaster.UI.Panels.LosePanel
 
             void DestroyAllProjectiles()
             {
-                var proj = FindObjectsOfType<Projectile>();
+                var proj = FindObjectsOfType<ProjectileBase>();
 
                 foreach (var projectile in proj)
                 {

@@ -16,11 +16,11 @@ MonoBehaviour:
     Dictionary:
     - Key: 0
       Value:
-        NPC: {fileID: 7434602781494848376, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
+        NPC: {fileID: 7192379400092350081, guid: 2f4fe0e9e26fc3d44a960c2f9a078c9a, type: 3}
         NPCProfile: {fileID: 11400000, guid: b4325d5fae2d3004292a6e2bbe3a7f13, type: 2}
     - Key: 2
       Value:
-        NPC: {fileID: 6600295728865522598, guid: ac906d7f080064f489d86ab536eea203, type: 3}
+        NPC: {fileID: 6875497181382643658, guid: ac906d7f080064f489d86ab536eea203, type: 3}
         NPCProfile: {fileID: 11400000, guid: a77a56cbe4205434294d36b1d2c5963c, type: 2}
     - Key: 1
       Value:

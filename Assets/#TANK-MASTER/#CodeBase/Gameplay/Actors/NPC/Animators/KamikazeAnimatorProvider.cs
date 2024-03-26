@@ -2,7 +2,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace TankMaster.Gameplay.Actors.NPC.Enemies
+namespace TankMaster.Gameplay.Actors.NPC.Animators
 {
   public class KamikazeAnimatorProvider : NPCAnimatorProvider
   {

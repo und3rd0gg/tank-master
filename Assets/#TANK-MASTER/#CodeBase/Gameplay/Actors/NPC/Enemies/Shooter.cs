@@ -1,4 +1,5 @@
-﻿using TankMaster.Gameplay.Projectiles;
+﻿using TankMaster.Gameplay.Actors.NPC.Animators;
+using TankMaster.Gameplay.Projectiles;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Actors.NPC.Enemies
@@ -7,7 +8,7 @@ namespace TankMaster.Gameplay.Actors.NPC.Enemies
     {
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private NPCAnimatorProvider _enemyAnimatorProvider;
-        [SerializeField] private Projectile _projectile;
+        [SerializeField] private ProjectileBase _projectile;
         [SerializeField][Range(0, 2)] private float _yOffset;
 
         private Transform _target;
@@ -17,7 +18,7 @@ namespace TankMaster.Gameplay.Actors.NPC.Enemies
 
         private void OnEnable()
         {
-            _enemyAnimatorProvider.SetAttack(true);
+            //_enemyAnimatorProvider.SetAttack(true);
             //_enemyAnimatorProvider.Attacked += OnAttack;
         }
 
@@ -29,7 +30,7 @@ namespace TankMaster.Gameplay.Actors.NPC.Enemies
         private void OnDisable()
         {
             //_enemyAnimatorProvider.Attacked -= OnAttack;
-            _enemyAnimatorProvider.SetAttack(false);
+            //_enemyAnimatorProvider.SetAttack(false);
         }
 
         private void OnAttack()

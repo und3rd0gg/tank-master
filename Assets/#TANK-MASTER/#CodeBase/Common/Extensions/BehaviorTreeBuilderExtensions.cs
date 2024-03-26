@@ -3,7 +3,6 @@ using TankMaster.Common.BehaviorTree.Actions;
 using TankMaster.Common.BehaviorTree.Conditions;
 using TankMaster.Gameplay;
 using TankMaster.Infrastructure.Factory;
-using UnityEngine;
 
 namespace TankMaster.Common.Extensions
 {
@@ -39,9 +38,16 @@ namespace TankMaster.Common.Extensions
       });
     }
 
-    public static BehaviorTreeBuilder SelfExplosionAction(this BehaviorTreeBuilder builder,
+    public static BehaviorTreeBuilder KSelfExplosionAction(this BehaviorTreeBuilder builder,
       EnemyNPCBase npc, string name = "Self explosion") {
       return builder.AddNode(new KSelfExplosionAction(npc) {
+        Name = name,
+      });
+    }
+    
+    public static BehaviorTreeBuilder DAttackAction(this BehaviorTreeBuilder builder,
+      EnemyNPCBase npc, string name = "D Attack") {
+      return builder.AddNode(new DAttackAction(npc) {
         Name = name,
       });
     }

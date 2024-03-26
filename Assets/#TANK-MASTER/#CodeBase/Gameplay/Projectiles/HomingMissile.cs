@@ -4,7 +4,7 @@ using UnityEngine;
 namespace TankMaster.Gameplay.Projectiles
 {
     [RequireComponent(typeof(ETFXProjectileScript), typeof(SmartMissile3D))]
-    public class HomingMissile : Projectile
+    public class HomingMissile : ProjectileBase
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _launchForce;
@@ -18,14 +18,14 @@ namespace TankMaster.Gameplay.Projectiles
             _rigidbody.AddForce(transform.forward * _launchForce, ForceMode.VelocityChange);
         }
 
-        protected override List<IDamageable> GetDamageables()
+        protected override IEnumerable<DamageableBase> GetDamageables()
         {
             var impactedObjects = Physics.OverlapSphere(transform.position, ImpactRadius);
-            var damageables = new List<IDamageable>(impactedObjects.Length);
+            var damageables = new List<DamageableBase>(impactedObjects.Length);
 
             foreach (var impactedObject in impactedObjects)
             {
-                if (impactedObject.TryGetComponent(out IDamageable damageable))
+                if (impactedObject.TryGetComponent(out DamageableBase damageable))
                 {
                     damageables.Add(damageable);
                 }

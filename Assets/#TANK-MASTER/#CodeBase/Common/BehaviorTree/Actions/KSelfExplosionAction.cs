@@ -1,6 +1,7 @@
 ﻿using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Tasks.Actions;
 using TankMaster.Gameplay;
+using TankMaster.Gameplay.Actors.NPC.Animators;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ namespace TankMaster.Common.BehaviorTree.Actions
 {
   public class KSelfExplosionAction : ActionBase
   {
-    private readonly EnemyNPCBase _npc;
     private readonly KamikazeAnimatorProvider _animator;
+    private readonly EnemyNPCBase _npc;
 
     public KSelfExplosionAction(EnemyNPCBase npc) {
       _npc = npc;

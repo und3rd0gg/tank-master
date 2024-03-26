@@ -8,7 +8,7 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
 {
     public class BulletShooter : MonoBehaviour, IAttacker
     {
-        [SerializeField] private Projectile _projectile;
+        [SerializeField] private ProjectileBase _projectile;
         [SerializeField] private float _shootDelay;
         [SerializeField] private Transform _shootPoint;
         [SerializeField] [Min(0)] private float _yOffset;
