@@ -14,6 +14,11 @@ namespace TankMaster.Gameplay
   public abstract class DamageableBase : MonoBehaviour, IDamageable
   {
     [field: SerializeField] public Health Health { get; protected set; }
+
+    [ContextMenu(nameof(Kill))]
+    public void Kill() {
+      Health.ApplyDamage(Health.MaxValue);
+    }
   }
 
   public abstract class ActorBase : DamageableBase, IActor

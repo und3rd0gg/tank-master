@@ -2,13 +2,14 @@
 using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace TankMaster.UI.HUD
 {
     public class EnemyPointerController : MonoBehaviour
     {
-        [SerializeField] private RectTransform _pointerPrefab;
+        [SerializeField] private EnemyPointer _pointerPrefab;
 
         private Player _player;
         private Dictionary<Collider, EnemyPointer> _enemyPointers = new();
@@ -41,10 +42,11 @@ namespace TankMaster.UI.HUD
         }
 
         private void OnDetected(Collider obj) {
-            var pointer = Instantiate(_pointerPrefab, transform).gameObject
-                .AddComponent<EnemyPointer>()
-                .Init(_canvas, _mainCamera, _player.transform, obj.transform, 
-                    new Vector2(_pointerPrefab.rect.width, _pointerPrefab.rect.height));
+            var pointer = Instantiate(_pointerPrefab, transform);
+            var image = pointer;
+            var rTransform = (RectTransform)pointer.transform;
+                pointer.Init(_canvas, _mainCamera, _player.transform, obj.transform, 
+                    new Vector2(rTransform.rect.width, rTransform.rect.height));
             _enemyPointers.Add(obj, pointer);
         }
     }

@@ -10,9 +10,11 @@ namespace TankMaster.UI.HUD
     private RectTransform _pointer;
     private bool _rotate;
     private Vector2 _pointerHalfSize;
+    private EnemyPointer _enemyPointer;
 
     public OffscreenPointer(Canvas canvas, Camera mainCamera, Transform playerTransform, RectTransform pointer,
-      Vector2 pointerSize, bool rotate = false) {
+      Vector2 pointerSize, EnemyPointer enemyPointer, bool rotate = false) {
+      _enemyPointer = enemyPointer;
       _pointerHalfSize = pointerSize / 2f;
       _rotate = rotate;
       _pointer = pointer;
@@ -47,12 +49,12 @@ namespace TankMaster.UI.HUD
 
       var toTargetMagnitude = toTarget.magnitude;
 
-      // if (toTargetMagnitude > minDistance) {
-      //   _pointer.gameObject.SetActive(true);
-      // }
-      // else {
-      //   _pointer.gameObject.SetActive(false);
-      // }
+      if (toTargetMagnitude > minDistance) {
+        _enemyPointer.Show();
+      }
+      else {
+        _enemyPointer.Hide();
+      }
 
       minDistance = Mathf.Clamp(minDistance, 0, toTargetMagnitude);
       Vector3 worldPos = ray.GetPoint(minDistance);
