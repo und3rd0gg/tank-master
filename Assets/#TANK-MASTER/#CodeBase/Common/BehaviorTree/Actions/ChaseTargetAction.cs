@@ -25,11 +25,13 @@ namespace TankMaster.Common.BehaviorTree.Actions
       _agent = npc.Agent;
       _transform = npc.transform;
     }
+
     protected override TaskStatus OnUpdate() {
       _agent.destination = _npc.DetectionBuffer[0].transform.position;
       _animator.SetMoveSpeed(_agent.velocity.magnitude / _agent.speed);
 
-      if ((_transform.position - _agent.destination).sqrMagnitude < _npcProfile.ChaseSettings.SqrChaseStoppingDistance) {
+      if ((_transform.position - _agent.destination).sqrMagnitude <
+          _npcProfile.ChaseSettings.SqrChaseStoppingDistance) {
         return TaskStatus.Success;
       }
 

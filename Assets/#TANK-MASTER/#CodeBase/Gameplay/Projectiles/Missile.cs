@@ -21,7 +21,6 @@ namespace TankMaster.Gameplay.Projectiles
       if (Physics.SphereCast(transform.position, ImpactRadius, direction, out var hit,
             detectionDistance))
       {
-        Debug.Log("col");
         DoImpact();
       }
     }

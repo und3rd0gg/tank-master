@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImpactRadius: 1
-  Damage: 10
+  Damage: 1
   _rigidbody: {fileID: 1916193380795230161}
   _flyTime: 0.3
 --- !u!114 &5641620827896238275

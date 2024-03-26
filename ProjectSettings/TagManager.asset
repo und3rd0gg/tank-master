@@ -22,22 +22,22 @@ TagManager:
   - 
   - 
   - 
-  - Environment
+  - 
   - 
   - 
   - 
   - 
   - Player
-  - PlayerDetectionZone
+  - 
   - 
   - 
   - 
   - Enemy
-  - EnemyDetectionZone
-  - EnemyAttackZone
   - 
   - 
-  - PlayerTrigger
+  - 
+  - 
+  - 
   - 
   - 
   - 

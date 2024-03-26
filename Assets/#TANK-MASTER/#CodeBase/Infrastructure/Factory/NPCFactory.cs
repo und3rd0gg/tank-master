@@ -8,7 +8,6 @@ using TankMaster.Gameplay.Actors.NPC.Animators;
 using TankMaster.Gameplay.Actors.NPC.AttackBehaviors;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Gameplay.Actors.NPC.Enemies.Settings;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace TankMaster.Infrastructure.Factory
@@ -27,11 +26,11 @@ namespace TankMaster.Infrastructure.Factory
       var npcInfo = _npcDB.NPCDict[npcType];
       var npc = _gameFactory.Instantiate(npcInfo.NPC, creationPoint, enable: false);
       npc.SetProfile(npcInfo.NPCProfile);
-      npc.SetBehaviorTree(GetBehaviorTree(npc, npc.NpcProfile));
+      npc.SetBehaviorTree(GetBehaviorTree(npc));
       npc.gameObject.SetActive(true);
     }
 
-    private BehaviorTree GetBehaviorTree(EnemyNPCBase npc, NPCProfile npcProfile) {
+    private BehaviorTree GetBehaviorTree(EnemyNPCBase npc) {
       var bt = new BehaviorTreeBuilder(npc.gameObject)
         .Selector("Is player in sight?")
         .Splice(GetPatrolBehavior(npc))
@@ -44,7 +43,7 @@ namespace TankMaster.Infrastructure.Factory
         .End()
         .Sequence()
         .StopAction(npc)
-        .WaitTime(npcProfile.ChaseSettings.TargetLostWaitTime)
+        .WaitTime(npc.NpcProfile.ChaseSettings.TargetLostWaitTime)
         .End()
         .End()
         .Build();
