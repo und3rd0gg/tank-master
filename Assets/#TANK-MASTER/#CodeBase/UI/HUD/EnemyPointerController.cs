@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TankMaster.Gameplay;
 using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
 using UnityEngine;
@@ -42,8 +43,8 @@ namespace TankMaster.UI.HUD
         }
 
         private void OnDetected(Collider obj) {
+            var enemy = obj.GetComponent<DamageableBase>();
             var pointer = Instantiate(_pointerPrefab, transform);
-            var image = pointer;
             var rTransform = (RectTransform)pointer.transform;
                 pointer.Init(_canvas, _mainCamera, _player.transform, obj.transform, 
                     new Vector2(rTransform.rect.width, rTransform.rect.height));

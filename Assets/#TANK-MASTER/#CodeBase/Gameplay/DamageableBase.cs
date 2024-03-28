@@ -1,5 +1,6 @@
 ﻿using System;
 using CleverCrow.Fluid.BTs.Trees;
+using NaughtyAttributes;
 using TankMaster.Gameplay.Actors.NPC.Animators;
 using TankMaster.Gameplay.Actors.NPC.AttackBehaviors;
 using TankMaster.Gameplay.Actors.NPC.DeathBehaviors;
@@ -15,9 +16,15 @@ namespace TankMaster.Gameplay
   {
     [field: SerializeField] public Health Health { get; protected set; }
 
-    [ContextMenu(nameof(Kill))]
+    public event Action Destroyed = delegate { };
+
+    [Button]
     public void Kill() {
       Health.ApplyDamage(Health.MaxValue);
+    }
+
+    private void OnDestroy() {
+      Destroyed();
     }
   }
 

@@ -22,13 +22,15 @@ namespace TankMaster.Gameplay.Actors.MainPlayer
 
         private void Update() {
             OuterRadiusDetector.Detect();
-        }
-
+            
 #if UNITY_EDITOR
-        private void OnDrawGizmos() {
+            DrawGizmos();
+#endif
+        }
+        
+        private void DrawGizmos() {
             OuterRadiusDetector.TryDrawGizmos();
         }
-#endif
 
         public void LoadProgress(PlayerProgress playerProgress) => 
             _money.LoadProgress(playerProgress);

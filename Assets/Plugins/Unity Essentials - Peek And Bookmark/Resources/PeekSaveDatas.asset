@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973ff05e1470fd34fb207e8972608121, type: 3}
+  m_Name: PeekSaveDatas
+  m_EditorClassIdentifier: 
+  _selectedObjects:
+  - Asset: {fileID: 11500000, guid: 3f0e69ca980e9d9408504ce851692015, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
+  _selectedObjectsWithoutDuplicate:
+  - Asset: {fileID: 11500000, guid: 3f0e69ca980e9d9408504ce851692015, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
+  _pinnedObjects: []
+  _pinnedObjectsInScenes: []
+  _pinnedObjectsNameInScenes: []
+  _pinnedObjectsScenesLink: []
+  _currentIndex: 0
+  _lastSelectedObject:
+    Asset: {fileID: 11500000, guid: 3f0e69ca980e9d9408504ce851692015, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 

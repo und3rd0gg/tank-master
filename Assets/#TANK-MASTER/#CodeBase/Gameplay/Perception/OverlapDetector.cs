@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Drawing;
 using UnityEngine;
 
 namespace TankMaster.Gameplay.Perception
@@ -38,6 +39,7 @@ namespace TankMaster.Gameplay.Perception
                 }
 
                 if (!stillInside) {
+                    Debug.Log("undetected");
                     _collidersInside.RemoveAt(i);
                     OnDetectionRadiusExit(col);
                 }
@@ -64,8 +66,9 @@ namespace TankMaster.Gameplay.Perception
 #if UNITY_EDITOR
 
         public void TryDrawGizmos() {
-            Gizmos.color = Color.black;
-            Gizmos.DrawWireSphere(_overlapPoint.position, _radius);
+            using (Draw.WithColor(Color.black)) {
+                Draw.xz.Circle(_overlapPoint.position, _radius);
+            }
         }
 
 #endif
