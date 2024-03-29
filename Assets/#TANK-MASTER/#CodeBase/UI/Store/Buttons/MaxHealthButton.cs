@@ -16,8 +16,7 @@ namespace TankMaster.UI.Store.Buttons
         
         protected override void OnUpgrade()
         {
-            var playerHealth = _gameFactory.PlayerGameObject
-                .GetComponentInChildren<Player>().Health;
+            var playerHealth = Player.Health;
             playerHealth.UpgradeMaxValue(UpgradeInfo[BoughtUpgradeLevel].Value);
             playerHealth.RestoreHealth();
         }

@@ -11,8 +11,7 @@ namespace TankMaster.UI.Store.Buttons
 
         private void RepairCar()
         {
-            var carHealth = GameFactory.PlayerGameObject
-                .GetComponentInChildren<Player>().Health;
+            var carHealth = Player.Health;
             carHealth.RestoreHealth();
         }
     }

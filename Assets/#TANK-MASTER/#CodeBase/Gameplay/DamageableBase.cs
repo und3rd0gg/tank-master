@@ -1,6 +1,6 @@
 ﻿using System;
 using CleverCrow.Fluid.BTs.Trees;
-using NaughtyAttributes;
+using Sirenix.OdinInspector;
 using TankMaster.Gameplay.Actors.NPC.Animators;
 using TankMaster.Gameplay.Actors.NPC.AttackBehaviors;
 using TankMaster.Gameplay.Actors.NPC.DeathBehaviors;

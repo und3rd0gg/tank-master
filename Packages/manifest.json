@@ -2,6 +2,8 @@
   "dependencies": {
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.fluid.behavior-tree": "2.2.3",
+    "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+    "com.ligofff.comfygooglesheets": "https://github.com/ligofff/Comfy-Google-Sheets.git",
     "com.nuclearband.projectfoldericons": "https://github.com/und3rd0gg/UnityDirectotyIcons.git",
     "com.underdogg.uniext": "https://github.com/und3rd0gg/com.underdogg.uniext.git",
     "com.unity.2d.sprite": "1.0.0",

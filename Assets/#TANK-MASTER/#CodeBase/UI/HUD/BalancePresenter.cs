@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Infrastructure.Factory;
+using TankMaster.Infrastructure.Services;
 using TMPro;
 using UnityEngine;
 using VContainer;
@@ -15,14 +16,14 @@ namespace TankMaster.UI.HUD
         [SerializeField] private float _showDelay;
 
         private Money _money;
-        private IGameFactory _gameFactory;
         private Coroutine _showRoutine;
         private bool _timerStarted;
         private float _timer;
+        private Player _player;
 
         [Inject]
-        internal void Construct(IGameFactory gameFactory) {
-            _gameFactory = gameFactory;
+        internal void Construct(IPlayerService playerService) {
+            _player = playerService.GetPlayer();
         }
 
         private void Start()
@@ -66,7 +67,7 @@ namespace TankMaster.UI.HUD
 
         private void InitializeMoney()
         {
-            _money = _gameFactory.PlayerGameObject.GetComponentInChildren<Player>().Money;
+            _money = _player.Money;
             _money.ValueChanged += MoneyOnValueChanged;
         }
 

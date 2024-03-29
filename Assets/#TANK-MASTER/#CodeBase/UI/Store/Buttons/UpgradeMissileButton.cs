@@ -6,8 +6,7 @@ namespace TankMaster.UI.Store.Buttons
     {
         protected override void OnUpgrade()
         {
-            var missileShooter = GameFactory.PlayerGameObject.GetComponent<Player>()
-                .MissileShooter;
+            var missileShooter = Player.MissileShooter;
 
             switch (BoughtUpgradeLevel)
             {

@@ -1193,17 +1193,17 @@ MonoBehaviour:
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: 53c3ba1866e3b3742bc06d74980df6e5, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: db9c9a7682bfb0d4488c3e71a7dde806, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: db5c25d5bb66272489ff019d9b3e2cdd, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
@@ -2943,22 +2943,22 @@ MonoBehaviour:
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11400000, guid: 4eb581d6e12407248814641caa4b1e78, type: 2}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 4900000, guid: 07c842d0e5b54e946b36faca1dd42fbd, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11400000, guid: 4eb581d6e12407248814641caa4b1e78, type: 2}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: 00000000000000001000000000000000, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
@@ -3428,2088 +3428,2083 @@ MonoBehaviour:
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: 00000000000000001000000000000000, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11500000, guid: 61fcea5c34eec9c4faf3ab93111cf129, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 102900000, guid: 363c2dad147e99d4186295d831ec18d8, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11500000, guid: 61fcea5c34eec9c4faf3ab93111cf129, type: 3}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
-  - Asset: {fileID: 0}
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11500000, guid: 61fcea5c34eec9c4faf3ab93111cf129, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 00000000000000001000000000000000, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
   - Asset: {fileID: 0}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 363c2dad147e99d4186295d831ec18d8, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 0549e395435a26f43b8c58308d122d21, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 0549e395435a26f43b8c58308d122d21, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: db1b2539dc69a0f49905afaa9c62e03f, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 11400000, guid: e43da55520cc7404bbd3b37dd7489778, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: b2db3b29c7532f34fba6e603789e6332, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: b6c3ba12127c35944a01034fb7eee340, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 4045de3bd9fb45d40a2ca9a571e05adc, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: 69e5cee0826ae4e4da24447e380f3036, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: efd60f9db6c5650448d3de718a795197, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 102900000, guid: efd60f9db6c5650448d3de718a795197, type: 3}
+    IsGameObject: 1
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -14778
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68230
+    ScenePath: Character
+    GameObjectName: Character
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: -29996
+    ScenePath: Character
+    GameObjectName: CharacterHealthBar.001
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68204
+    ScenePath: Character
+    GameObjectName: '[UI]'
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68130
+    ScenePath: Character
+    GameObjectName: armor_car_a
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: -30082
+    ScenePath: Character
+    GameObjectName: Cloud
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68230
+    ScenePath: Character
+    GameObjectName: Character
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68114
+    ScenePath: Character
+    GameObjectName: DetectionZone
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68108
+    ScenePath: Character
+    GameObjectName: CoinDetectionZone
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: 68230
+    ScenePath: Character
+    GameObjectName: Character
+  - Asset: {fileID: 9188206397738486993, guid: a2d5799b3f6830e46847d98733ee8116, type: 3}
+    IsGameObject: 1
+    InstanceId: -37568
+    ScenePath: Main
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -37568
+    ScenePath: Main
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 69200
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 69162
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 69122
+    ScenePath: (INTERFACE)
+    GameObjectName: Arrow
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -51944
+    ScenePath: Main
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -51958
+    ScenePath: Main
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -51958
+    ScenePath: Main
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70764
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70726
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70680
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70686
+    ScenePath: (INTERFACE)
+    GameObjectName: Arrow
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70726
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70730
+    ScenePath: (INTERFACE)
+    GameObjectName: HUD
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70680
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70730
+    ScenePath: (INTERFACE)
+    GameObjectName: HUD
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -61250
+    ScenePath: (INTERFACE)
+    GameObjectName: GameObject
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 70680
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointers
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -61250
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 71416
+    ScenePath: (LEVEL2)
+    GameObjectName: (LEVEL2)
+  - Asset: {fileID: 102900000, guid: 6ea315d0fd7389c41b19996891e99ae3, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 71416
+    ScenePath: (LEVEL2)
+    GameObjectName: (LEVEL2)
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 71416
+    ScenePath: (LEVEL2)
+    GameObjectName: (LEVEL2)
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71956
+    ScenePath: Main
+    GameObjectName: PlayerInitialPoint
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71962
+    ScenePath: Main
+    GameObjectName: Main Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71956
+    ScenePath: Main
+    GameObjectName: PlayerInitialPoint
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71962
+    ScenePath: Main
+    GameObjectName: Main Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71956
+    ScenePath: Main
+    GameObjectName: PlayerInitialPoint
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71956
+    ScenePath: Main
+    GameObjectName: PlayerInitialPoint
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71962
+    ScenePath: Main
+    GameObjectName: Main Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: -90298
+    ScenePath: Main
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -90298
+    ScenePath: Main
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74120
+    ScenePath: (TRANSITION)
+    GameObjectName: (TRANSITION)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -106982
+    ScenePath: (TRANSITION)
+    GameObjectName: GameObject
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74710
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74762
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74672
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74608
+    ScenePath: (INTERFACE)
+    GameObjectName: UiWidgetBalancePresenter
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74672
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74626
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74762
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74626
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 74626
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 74988
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2800000, guid: 52cd9e1233737364084f028b7e6cbd0d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 74988
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2800000, guid: fd80c807764558445911f6b391cb9300, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 74988
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2800000, guid: fd80c807764558445911f6b391cb9300, type: 3}
+    IsGameObject: 1
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: fd80c807764558445911f6b391cb9300, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 102900000, guid: 440fae8712df58947bed6fed08bf8562, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 102900000, guid: db3208c9dad497447aaadb841bd1a1d0, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 52cd9e1233737364084f028b7e6cbd0d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117282
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117306
+    ScenePath: Initial
+    GameObjectName: EventSystem
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117282
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120034
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117306
+    ScenePath: Initial
+    GameObjectName: EventSystem
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120034
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117282
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 75340
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 75256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 1af633ba219f0fc47b21ddfd688d49e3, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42822
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: 920f1a2e38b84a12b06c2e7e9986fc6a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42842
+    ScenePath: (INTERFACE)
+    GameObjectName: FXOVERPOPUP
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42874
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42874
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 11500000, guid: 919af4a55826405b92d416d5ab356b53, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44036
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: -13726
+    ScenePath: EnemyPointer
+    GameObjectName: Canvas (Environment)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44036
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: -13726
+    ScenePath: EnemyPointer
+    GameObjectName: Canvas (Environment)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44036
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: -13726
+    ScenePath: EnemyPointer
+    GameObjectName: Canvas (Environment)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44036
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44328
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44378
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44378
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44378
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44776
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 44776
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44786
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 44786
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44800
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41862
+    ScenePath: Initial
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41826
+    ScenePath: Initial
+    GameObjectName: EventSystem
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44962
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 45014
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44890
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 45014
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 45014
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45038
+    ScenePath: PointerPivot
+    GameObjectName: PointerPivot
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45042
+    ScenePath: PointerPivot
+    GameObjectName: Pointer
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 45042
+    ScenePath: PointerPivot
+    GameObjectName: Pointer
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 45042
+    ScenePath: PointerPivot
+    GameObjectName: Pointer
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 45412
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 45464
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 55296
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 55224
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -64026
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 55868
+    ScenePath: (TRANSITION)
+    GameObjectName: (TRANSITION)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 55808
+    ScenePath: (TRANSITION)
+    GameObjectName: __waypoint
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83398
+    ScenePath: Main
+    GameObjectName: (INTERFACE)(Clone)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83404
+    ScenePath: Main
+    GameObjectName: UICanvas
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83492
+    ScenePath: Main
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83498
+    ScenePath: Main
+    GameObjectName: Image
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83492
+    ScenePath: Main
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83498
+    ScenePath: Main
+    GameObjectName: Image
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -83114
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: -83114
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 56752
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -91508
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: d900c58c01968cd42bb98e37d8e4d05c, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: eda7ff5f6e8175c4da119ea9ed256f6d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 4900000, guid: f59bf2b41588bd44780fc5218f7864e1, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2800000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2100000, guid: 7d5e8e2c082a4c44a9abd7d650cf0a15, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2800000, guid: 170577bce7cbda144b82578f81308d23, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2100000, guid: 7d5e8e2c082a4c44a9abd7d650cf0a15, type: 2}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2800000, guid: 170577bce7cbda144b82578f81308d23, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: f73a3eab49f30d344a207d7d3d931d98, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 31e947e7eb3216d40b72c592fa6847a3, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: cb3e855e7fda2944b91078893f9e8fd8, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: b330b302c69005c4f98a928f7d71b877, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 1010336202903800, guid: 6cb9ffb1fe7e89d4a890b91c62fa7e8b, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 4771330f098d1db4898ad07204154d04, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: f522bd6f08a5c984a9512bb60ebc1818, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 9c8b5f0217e73fa47827cf77f22c2f8d, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 7eacfbf662ad34e46932f36084c15e11, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: ce2355f335dcae94abba806390b1bd76, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
     IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -125088
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -131790
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59528
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137532
+    ScenePath: (INTERFACE)
+    GameObjectName: Image
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59580
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137532
+    ScenePath: (INTERFACE)
+    GameObjectName: Image
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59580
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137532
+    ScenePath: (INTERFACE)
+    GameObjectName: Image
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59580
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59580
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -146436
+    ScenePath: Main
+    GameObjectName: DestinationPointer
   _selectedObjectsWithoutDuplicate:
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
-  - Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -61250
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: 71416
+    ScenePath: (LEVEL2)
+    GameObjectName: (LEVEL2)
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 0
+    InstanceId: 71416
+    ScenePath: (LEVEL2)
+    GameObjectName: (LEVEL2)
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71956
+    ScenePath: Main
+    GameObjectName: PlayerInitialPoint
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71972
+    ScenePath: Main
+    GameObjectName: Main Virtual Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: 71962
+    ScenePath: Main
+    GameObjectName: Main Camera
+  - Asset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    IsGameObject: 1
+    InstanceId: -90298
+    ScenePath: Main
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74120
+    ScenePath: (TRANSITION)
+    GameObjectName: (TRANSITION)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: -106982
+    ScenePath: (TRANSITION)
+    GameObjectName: GameObject
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74710
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74608
+    ScenePath: (INTERFACE)
+    GameObjectName: UiWidgetBalancePresenter
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74672
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74762
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 1
+    InstanceId: 74626
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 74988
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2800000, guid: fd80c807764558445911f6b391cb9300, type: 3}
+    IsGameObject: 1
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: fd80c807764558445911f6b391cb9300, type: 3}
+    IsGameObject: 0
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 102900000, guid: 440fae8712df58947bed6fed08bf8562, type: 3}
+    IsGameObject: 0
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 102900000, guid: db3208c9dad497447aaadb841bd1a1d0, type: 3}
+    IsGameObject: 0
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 52cd9e1233737364084f028b7e6cbd0d, type: 3}
+    IsGameObject: 0
+    InstanceId: -115696
+    ScenePath: EnemyPointer
+    GameObjectName: pointer
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117306
+    ScenePath: Initial
+    GameObjectName: EventSystem
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120034
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -117282
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 0
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120240
+    ScenePath: Initial
+    GameObjectName: Image
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: -120328
+    ScenePath: Initial
+    GameObjectName: GameObject
+  - Asset: {fileID: 2800000, guid: 386d13e7e4d26234ab40b70e5e4cb7f4, type: 3}
+    IsGameObject: 1
+    InstanceId: 75340
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 102900000, guid: 1af633ba219f0fc47b21ddfd688d49e3, type: 3}
+    IsGameObject: 0
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 0
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75392
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 75256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 102900000, guid: 05194aa7be58b0641a469b3175544f13, type: 3}
+    IsGameObject: 1
+    InstanceId: 42822
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 11500000, guid: 920f1a2e38b84a12b06c2e7e9986fc6a, type: 3}
+    IsGameObject: 0
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 0
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42842
+    ScenePath: (INTERFACE)
+    GameObjectName: FXOVERPOPUP
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42784
+    ScenePath: (INTERFACE)
+    GameObjectName: ArrowNavigator
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42874
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: c85eba671512444ab293a9430febf746, type: 3}
+    IsGameObject: 1
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 11500000, guid: 919af4a55826405b92d416d5ab356b53, type: 3}
+    IsGameObject: 0
+    InstanceId: 42738
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: -13726
+    ScenePath: EnemyPointer
+    GameObjectName: Canvas (Environment)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44036
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44328
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44378
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44256
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44776
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 0
+    InstanceId: 44776
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2602228254940864808, guid: c589650eaec43fb46ade5577743f3466, type: 3}
+    IsGameObject: 1
+    InstanceId: 44786
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 0
+    InstanceId: 44786
+    ScenePath: EnemyPointer
+    GameObjectName: EnemyPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44800
+    ScenePath: DestinationPointer
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41842
+    ScenePath: Initial
+    GameObjectName: Canvas
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41862
+    ScenePath: Initial
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 41826
+    ScenePath: Initial
+    GameObjectName: EventSystem
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44962
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 44890
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 4851485717766173845, guid: 579eda8af125e7241bf20a131a0074a0, type: 3}
+    IsGameObject: 1
+    InstanceId: 45014
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45038
+    ScenePath: PointerPivot
+    GameObjectName: PointerPivot
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45042
+    ScenePath: PointerPivot
+    GameObjectName: Pointer
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 0
+    InstanceId: 45042
+    ScenePath: PointerPivot
+    GameObjectName: Pointer
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45412
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 45464
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 55296
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 55224
+    ScenePath: (INTERFACE)
+    GameObjectName: EnemyPointerController
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: -64026
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 5039275596637234460, guid: a25c39f331e004e45bc239e0fc959449, type: 3}
+    IsGameObject: 1
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 0
+    InstanceId: 55348
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: 55868
+    ScenePath: (TRANSITION)
+    GameObjectName: (TRANSITION)
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: 55808
+    ScenePath: (TRANSITION)
+    GameObjectName: __waypoint
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -83398
+    ScenePath: Main
+    GameObjectName: (INTERFACE)(Clone)
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -83404
+    ScenePath: Main
+    GameObjectName: UICanvas
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -83492
+    ScenePath: Main
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -83498
+    ScenePath: Main
+    GameObjectName: Image
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -83114
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: 56752
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: -91508
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 2025093730003974284, guid: 2560ace2297d02e40841239dd3b8cbcb, type: 3}
+    IsGameObject: 1
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: d900c58c01968cd42bb98e37d8e4d05c, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: eda7ff5f6e8175c4da119ea9ed256f6d, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 4900000, guid: f59bf2b41588bd44780fc5218f7864e1, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2800000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2100000, guid: 7d5e8e2c082a4c44a9abd7d650cf0a15, type: 2}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 2800000, guid: 170577bce7cbda144b82578f81308d23, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: f73a3eab49f30d344a207d7d3d931d98, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 31e947e7eb3216d40b72c592fa6847a3, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: cb3e855e7fda2944b91078893f9e8fd8, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: b330b302c69005c4f98a928f7d71b877, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 1010336202903800, guid: 6cb9ffb1fe7e89d4a890b91c62fa7e8b, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 4771330f098d1db4898ad07204154d04, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: f522bd6f08a5c984a9512bb60ebc1818, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 9c8b5f0217e73fa47827cf77f22c2f8d, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: 7eacfbf662ad34e46932f36084c15e11, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 11500000, guid: ce2355f335dcae94abba806390b1bd76, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 0
+    InstanceId: 56804
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -125088
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -131790
+    ScenePath: Main
+    GameObjectName: __waypoint
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59528
+    ScenePath: (INTERFACE)
+    GameObjectName: (INTERFACE)
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137532
+    ScenePath: (INTERFACE)
+    GameObjectName: Image
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -137530
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinationPointer
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: 59580
+    ScenePath: (INTERFACE)
+    GameObjectName: DestinattionPointerController
+  - Asset: {fileID: 102900000, guid: 16b451a71f8c5644886a3d83a5a80de7, type: 3}
+    IsGameObject: 1
+    InstanceId: -146436
+    ScenePath: Main
+    GameObjectName: DestinationPointer
   _pinnedObjects:
-  - Asset: {fileID: 102900000, guid: b540e347e7ad7ff4e89dab0ac77deef6, type: 3}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
   - Asset: {fileID: 4540943004686113506, guid: 8b053b56ab1074a41ba26b612ff32144, type: 3}
     IsGameObject: 0
     InstanceId: 0
@@ -5520,13 +5515,33 @@ MonoBehaviour:
     InstanceId: 0
     ScenePath: 
     GameObjectName: 
+  - Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
+  - Asset: {fileID: 102900000, guid: b540e347e7ad7ff4e89dab0ac77deef6, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
+  - Asset: {fileID: 102900000, guid: 6ea315d0fd7389c41b19996891e99ae3, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
+  - Asset: {fileID: 7759974596882676581, guid: 548f77dcf0d7d0d4fbd47a4c18cf5d6d, type: 3}
+    IsGameObject: 0
+    InstanceId: 0
+    ScenePath: 
+    GameObjectName: 
   _pinnedObjectsInScenes: []
   _pinnedObjectsNameInScenes: []
   _pinnedObjectsScenesLink: []
   _currentIndex: 998
   _lastSelectedObject:
-    Asset: {fileID: 0}
-    IsGameObject: 0
-    InstanceId: 0
-    ScenePath: 
-    GameObjectName: 
+    Asset: {fileID: 6731898253850911803, guid: 8be234c2d1ad03b45b5a3d5d899da77a, type: 3}
+    IsGameObject: 1
+    InstanceId: -146436
+    ScenePath: Main
+    GameObjectName: DestinationPointer

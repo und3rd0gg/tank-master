@@ -13,7 +13,6 @@ namespace TankMaster.Infrastructure.Factory
     {
         List<ISavedProgressReader> ProgressReaders { get; }
         List<IProgressSaver> ProgressWriters { get; }
-        GameObject PlayerGameObject { get; }
         GameObject MainLight { get; }
         GameObject Interface { get; }
 

@@ -26,17 +26,15 @@ namespace TankMaster.UI.Store.Buttons
 
         private Money _playerMoney;
         
-        protected IGameFactory GameFactory;
+        protected Player Player;
 
-        protected Money PlayerMoney => _playerMoney ??= GameFactory.PlayerGameObject
-            .GetComponent<Player>()
-            .Money;
+        protected Money PlayerMoney => _playerMoney ??= Player.Money;
 
         protected virtual bool BuyCondition { get; }
 
         [Inject]
-        internal void Construct(IGameFactory gameFactory) {
-            GameFactory = gameFactory;
+        internal void Construct(IPlayerService playerService) {
+            Player = playerService.GetPlayer();
         }
 
         protected virtual void Awake()

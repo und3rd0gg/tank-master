@@ -2,6 +2,7 @@
 using Cinemachine;
 using Cysharp.Threading.Tasks;
 using Dreamteck.Splines;
+using TankMaster.Gameplay.Actors.MainPlayer;
 using TankMaster.Gameplay.Actors.NPC.Enemies;
 using TankMaster.Infrastructure.AssetManagement;
 using TankMaster.Infrastructure.Services;
@@ -40,6 +41,8 @@ namespace TankMaster.Infrastructure.Factory
       PlayerGameObject = await Instantiate(AssetPaths.MainPlayerID,
         GameObject.FindGameObjectWithTag(PlayerInitialPointTag).transform.position,
         playerInitialRotation);
+      
+      _objectResolver.Resolve<IPlayerService>().SetPlayer(PlayerGameObject.GetComponent<Player>());
 
       return PlayerGameObject;
     }

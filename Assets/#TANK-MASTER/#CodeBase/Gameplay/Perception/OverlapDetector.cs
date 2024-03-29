@@ -39,7 +39,6 @@ namespace TankMaster.Gameplay.Perception
                 }
 
                 if (!stillInside) {
-                    Debug.Log("undetected");
                     _collidersInside.RemoveAt(i);
                     OnDetectionRadiusExit(col);
                 }

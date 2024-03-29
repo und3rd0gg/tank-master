@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "tank-master-418616",
+  "private_key_id": "1678e17f4765fd6e1a0e795d78a4768ad80490a8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCKsmIb3Otn+Cya\n3X1qORRdSNJx8suxTvaC9XKc3v+xl/0bHQ5Swvw34zmCPDNhm1NERom9tZAKU/H9\nl72Gi7COVXOXmcmf9S/R0MZoWJzWI1P98mtD4q0Jw6f4hhM/EJdtn5wXzl1gKdFm\nz3j4ejBLS5GYb1nKvW8qHwU+KrIob+zO9k6Tis3Bd9TNRnQ6V2qzM5ROdzyIQiaO\nlO5Ze13yYUJv/bWX8ut4nxybPVCZGCXpDA4ocxuATxZhtOipiR7MuEWzVkJzDxGc\nENFVcD47iV9RKuSVMG7kVWbA0iGg3cqy0M3sXdIKBG3M1UJVMnOqZ7iOh1nucBZ6\nXacB4tlbAgMBAAECggEAC7TxbzZvKXghbhog5ZAXOT9JNNrQbGrLIUdBAWwYx/wz\nHhB04fGl77x+et3EkBbX6RmzgAkTTq111DjBHUCs/XtjLA1Y6+ctpJ3+VgnL6/U3\nOAAEvTBxkf/rE+3F/rSfTqtb6QeycPuTbbdrl6Mn1v5anGbvSZuoubTv/XNsIaaF\nCdlm3h9gDVe4GD7JIbka8Rs0ce8rFag6acID2lauLGn77qyHEbxs4ATK44HLqjrK\nImI91xZHceOn7DkhcBTzEXJoE+OfoT/rkE5AtS7FON518GF927mP6TuySx+7Wzh1\nF8OSUb2FoS34MnZwixgv/QTFhASAcs9Qr6joDFpnRQKBgQC8txXLfmw107dVxOlx\nMHPNgQ22QIvdo8tKLVMZr7CxYTRPQrOt40D/wahqiyf27OT8KFWZo7QB84B5CcG+\n3GS8LcOhF+frJMa2JO+qIIyZ1560aM8k1b6Qj+yJssNupIeDJnGjvf7g2/arwvz1\nGX6illTx9jSl4UsK123S3G4p7QKBgQC8JeNpthyn0xshoUYU8rYFmaOMfH9Gzsz2\nu04TWGUoEkWkYB1Ebzi9SlzlqxJSAMt6L7ork8uhb2DfkvGJPJriXA+YNsLHwntI\nIi8kgJVuTqJF/+YibCyvTAAcQb61Eggn38pwivHlnpENQPc/fKJ45N7zhdyWdKAo\nAtheoMSHZwKBgAcirRJKr3DBlpcJoQIEoPxOOuR/QEqbHN6rJA8+k2HBmSa+EOks\nRJLnEaUlqdcuUeIu7D2o8O9584ugENFUqAJtgI4gx0Ye19yfPOij3m0auAd+RwbP\nhisVJg520ejnE7CjzXwxfOenqYYJE2N5GU6wfHnBo2/6OsooJyDn8MppAoGASmj1\norY6aQktnsRIkjpXUKmtq/8E2z0ohKAZRb9c6lcnodW9XXZbS0mgqdhZe4MC9kTv\n7RIbo7IH7wQPcIY+fy2HoVxu9k/tL98NI/OSpbiFpweIva5okb+N/57kzHngLdzt\nFEtvVa+7kDFUV5B0NTnXDxqu3fYr7QcLCYmtkBsCgYAciwg/q4zyXO86ajTuIfLG\n0CdeI72KJdv94PLQnxvLjwts7H1lT8EEKhhlR8FvquTRn4qC809dtC1q/N4OgwFD\nLILhFTVziaZYX37kcpvlyG6wqSjGkYcGqkymNTWP9VId3KJrJQMIVjJCj42pJi+0\ngWOa60UrLH+4oPSQGndkFA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tank-master-service@tank-master-418616.iam.gserviceaccount.com",
+  "client_id": "101517047364356700540",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tank-master-service%40tank-master-418616.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

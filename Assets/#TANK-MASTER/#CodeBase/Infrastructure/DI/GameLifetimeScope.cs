@@ -59,6 +59,9 @@ namespace TankMaster.Infrastructure.DI
         .RegisterComponentInNewPrefab(_audioService, Lifetime.Singleton)
         .DontDestroyOnLoad()
         .As<IAudioService>();
+      
+      builder
+        .Register(typeof(IPlayerService), typeof(PlayerService), Lifetime.Singleton);
     }
   }
 }

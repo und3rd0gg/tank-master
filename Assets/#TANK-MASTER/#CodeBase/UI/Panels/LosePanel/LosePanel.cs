@@ -12,10 +12,11 @@ namespace TankMaster.UI.Panels.LosePanel
         [SerializeField] private Counter _counter;
         private IInputService _inputService;
         private IGameFactory _gameFactory;
+        private Player _player;
 
         [Inject]
-        internal void Construct(IInputService inputService, IGameFactory gameFactory) {
-            _gameFactory = gameFactory;
+        internal void Construct(IInputService inputService, IPlayerService playerService) {
+            _player = playerService.GetPlayer();
             _inputService = inputService;
         }
 
@@ -47,10 +48,9 @@ namespace TankMaster.UI.Panels.LosePanel
             void RevivePlayer()
             {
                 gameObject.SetActive(false);
-                var playerGameObject = _gameFactory.PlayerGameObject;
-                var playerHealth = playerGameObject.GetComponent<Player>().Health;
+                var playerHealth =  _player.Health;
                 playerHealth.RestoreHealth();
-                playerGameObject.SetActive(true);
+                _player.gameObject.SetActive(true);
                 _counter.StartCount();
                 DestroyAllProjectiles();
                 playerHealth.RestoreHealth();

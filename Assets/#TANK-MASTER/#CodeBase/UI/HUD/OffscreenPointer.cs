@@ -5,18 +5,20 @@ namespace TankMaster.UI.HUD
   public class OffscreenPointer
   {
     private readonly Canvas _canvas;
-    private Camera _mainCamera;
-    private Transform _playerTransform;
-    private RectTransform _pointer;
-    private bool _rotate;
-    private Vector2 _pointerHalfSize;
-    private EnemyPointer _enemyPointer;
+    private readonly Camera _mainCamera;
+    private readonly Transform _playerTransform;
+    private readonly RectTransform _pointer;
+    private readonly bool _rotate;
+    private readonly Vector2 _pointerHalfSize;
+    private readonly TransformPointer _transformPointer;
+    private readonly bool _hideable;
 
     public OffscreenPointer(Canvas canvas, Camera mainCamera, Transform playerTransform, RectTransform pointer,
-      Vector2 pointerSize, EnemyPointer enemyPointer, bool rotate = false) {
-      _enemyPointer = enemyPointer;
+      Vector2 pointerSize, TransformPointer transformPointer, bool rotate = false, bool hideable = true) {
+      _transformPointer = transformPointer;
       _pointerHalfSize = pointerSize / 2f;
       _rotate = rotate;
+      _hideable = hideable;
       _pointer = pointer;
       _playerTransform = playerTransform;
       _canvas = canvas;
@@ -49,11 +51,11 @@ namespace TankMaster.UI.HUD
 
       var toTargetMagnitude = toTarget.magnitude;
 
-      if (toTargetMagnitude > minDistance) {
-        _enemyPointer.Show();
+      if (_hideable || toTargetMagnitude > minDistance) {
+        _transformPointer.Show();
       }
       else {
-        _enemyPointer.Hide();
+        _transformPointer.Hide();
       }
 
       minDistance = Mathf.Clamp(minDistance, 0, toTargetMagnitude);
@@ -64,18 +66,16 @@ namespace TankMaster.UI.HUD
       _pointer.anchoredPosition = canvasPos + GetOffset(planeIndex);
 
       if (_rotate) {
-        _pointer.rotation = GetRotation(planeIndex);
+        _pointer.localEulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(toTarget.normalized));
       }
     }
 
-    private Quaternion GetRotation(int planeIndex) {
-      return planeIndex switch {
-        0 => Quaternion.Euler(0, 0, 90),
-        1 => Quaternion.Euler(0, 0, -90),
-        2 => Quaternion.Euler(0, 0, 180),
-        3 => Quaternion.Euler(0, 0, 0),
-        _ => Quaternion.identity,
-      };
+    private float GetAngleFromVectorFloat(Vector3 dir) {
+      dir = dir.normalized;
+      float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+      if (n < 0) n += 360;
+
+      return n;
     }
 
     private Vector2 GetOffset(int planeIndex) {

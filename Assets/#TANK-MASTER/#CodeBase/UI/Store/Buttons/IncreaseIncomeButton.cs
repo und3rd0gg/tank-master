@@ -10,8 +10,7 @@ namespace TankMaster.UI.Store.Buttons
         
         protected override void OnUpgrade()
         {
-            var money = GameFactory.PlayerGameObject.GetComponentInChildren<Player>()
-                .Money;
+            var money = Player.Money;
             money.UpgradeMultiplier(UpgradeInfo[BoughtUpgradeLevel].Value);
         }
     }

@@ -21,6 +21,20 @@
       "dependencies": {},
       "url": "https://registry.npmjs.org"
     },
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b93741e2b5fe9073e169853ade0039c7cf2595f0"
+    },
+    "com.ligofff.comfygooglesheets": {
+      "version": "https://github.com/ligofff/Comfy-Google-Sheets.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b850f26084b578fd45593ee0be2f2450caaf9f70"
+    },
     "com.nuclearband.projectfoldericons": {
       "version": "https://github.com/und3rd0gg/UnityDirectotyIcons.git",
       "depth": 0,
